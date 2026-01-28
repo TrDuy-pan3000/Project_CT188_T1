@@ -8,6 +8,149 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/cart.css">
 </head>
+</head>
+<style>
+/* Thiết lập chung cho bố cục chia đôi */
+.cart-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 80vh;
+}
+
+.note-paper {
+    flex: 1;
+    background-color: #fefabc; 
+    padding: 30px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
+    background-size: 100% 30px;
+    border-left: 5px solid #ffadad; 
+}
+
+.note-paper h2 {
+    text-align: center;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.btn-delete {
+    background: #ff5252;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: auto;
+}
+
+.red-envelope {
+    flex: 1;
+    background-color: #d32f2f; /* Đỏ truyền thống */
+    color: #ffecb3; /* Chữ màu vàng kim */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: 3px solid #ffca28; /* Viền vàng óng */
+}
+
+.red-envelope h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #fff;
+    box-sizing: border-box; 
+    font-family: inherit;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 80px;
+}
+
+
+.btn-checkout {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffca28;
+    color: #d32f2f;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.btn-checkout:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+.payment-item  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+.payment-item input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.payment-item label {
+    cursor: pointer;
+    color:#fff;
+    font-size: 1rem;
+}
+
+</style>
 
 <body>
     <!-- Header -->
@@ -25,9 +168,78 @@
 
     <!-- Main Content -->
     <main>
-        <h1>Giỏ hàng</h1>
-        <!-- Giỏ hàng sẽ được thêm ở đây -->
-    </main>
+    <main class="cart-container">
+        <section class="cart-left note-paper">
+            <h2>Danh sách sắm Tết</h2>
+            
+            <div class="cart-items">
+                <div class="item">
+                    <img src="assets/mon-an-1.jpg" alt="Món ăn">
+                    <div class="item-info">
+                        <p class="name">Thịt kho hột vịt</p>
+                        <p class="price"><span class="price-value">150.000</span>đ</p>
+                    </div>
+                    <button class="btn-delete" onclick="removeItem(this)">Xóa</button>
+                </div>
+
+                <div>
+                    <div class="item">
+                        <img src="assets/mon-an-2.jpg" alt="Món ăn">
+                        <div class="item-info">
+                            <p class="name">Bánh chưng</p> 
+                            <p class="price"><span class="price-value">200.000</span>đ</p>    
+                </div>
+                        <button class="btn-delete" onclick="removeItem(this)">Xóa</button>
+                </div>
+                <div>
+                    <div class="item">
+                        <img src="assets/mon-an-3.jpg" alt="Món ăn">
+                        <div class="item-info">
+                            <p class="name">Dưa hấu đỏ</p>
+                            <p class="price"><span class="price-value">50.000</span>đ</p>
+                        </div>
+                        <button class="btn-delete" onclick="removeItem(this)">Xóa</button>
+                </div>
+                </div>
+
+            <div class="cart-total">
+                <h3>Tổng tiền: <span id="total-amount">0</span></h3>
+            </div>
+        </section>
+
+        <section class="cart-right red-envelope">
+            <h2>Thông tin nhận hàng</h2>
+            
+            <form action="#">
+                <div class="input-group">
+                    <label>Tên:</label>
+                    <input type="text" placeholder="Nhập họ tên...">
+                </div>
+                <div class="input-group">
+                    <label>SĐT:</label>
+                    <input type="tel" placeholder="Nhập số điện thoại...">
+                </div>
+                <div class="input-group">
+                    <label>Địa chỉ:</label>
+                    <textarea placeholder="Địa chỉ giao hàng..."></textarea>
+                </div>
+
+                <div class="payment-methods">
+                    <div class="payment-item">
+                    <input type="radio" id="cod" name="pay" value="COD" checked>
+                    <label for="cod">COD</label>
+                    </div>
+                    <div class="payment-item">
+                        <input type="radio" id="qr" name="pay" value="QR">
+                        <label for="qr">Chuyển khoản QR</label>
+                    </div>
+                    
+                </div>
+
+                <button type="submit" class="btn-checkout">CHỐT ĐƠN - RƯỚC LỘC</button>
+            </form>
+        </section>
+</main>
 
     <!-- Footer -->
     <footer>
@@ -36,5 +248,26 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+<script>
+    function removeItem(button) {
+        
+        if (confirm("Bạn có chắc muốn bỏ món này khỏi danh sách sắm Tết không?")) {
+            button.parentElement.remove();
+            updateTotal();
+        }
+    }
+
+    function updateTotal() {
+        let total= 0;
+        document.querySelectorAll('.price-value').forEach(el => {
+            let price= parseInt(el.innerText.replace(/\./g, ''));
+            if (!isNaN(price)) {
+                total += price;
+            }
+        });
+        document.getElementById('total-amount').innerText = total.toLocaleString('vi-VN') + ' đ';
+    }
+    window.onload = updateTotal;
+</script>
 
 </html>
