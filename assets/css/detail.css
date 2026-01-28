@@ -1,1 +1,47 @@
-/* CSS cho trang chi tiết sản phẩm */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.product {
+  display: flex;
+  width: 60%;
+  gap: 40px;
+  justify-content: stretch;
+  margin: 6px;
+  padding: 12px;
+  font-family: "Roboto", sans-serif;
+}
+.product_pictures {
+  width: 35%;
+}
+.product_pictures img {
+  width: 100%;
+}
+.product_info {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.info_list {
+  text-align: justify;
+}
+.info_list h5 {
+  text-align: left;
+  font-weight: bold;
+}
+.food_name {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  flex: 1;
+}
+.food_about {
+  text-align: justify;
+  flex: 8;
+}
+.add_to_cart {
+  flex: 3;
+  height: 500px;
+}
