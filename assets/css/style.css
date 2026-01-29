@@ -13,6 +13,9 @@
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
@@ -41,8 +44,10 @@ header nav a {
 
 /* Main */
 main {
+    flex:1;
     padding: 40px 5%;
     min-height: 500px;
+
 }
 
 /* Footer */
@@ -53,3 +58,4 @@ footer {
     padding: 20px;
     margin-top: 50px;
 }
+
