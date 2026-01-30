@@ -27,13 +27,10 @@ document.querySelectorAll(".category-btn").forEach(btn => {
         applyBtn.disabled = false;
     };
 });
-
+const menuCards = document.querySelectorAll(".menu-card");
 applyBtn.onclick = () => {
     if (!selectedCategory) return;
-
-    const cards = document.querySelectorAll(".menu-card");
-
-    cards.forEach(card => {
+    menuCards.forEach(card => {
         if (selectedCategory === "all" || card.dataset.category === selectedCategory) {
             card.classList.remove("hidden");
         } else {
@@ -45,25 +42,22 @@ applyBtn.onclick = () => {
     overlay.classList.remove("active");
 };
 function boDauTiengViet(str) {
-  return str
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/đ/g, "d")
-    .replace(/Đ/g, "D");
+    return str
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/Đ/g, "D");
 }
 const searchInput = document.getElementById("searchInput");
-const menuCards = document.querySelectorAll(".menu-card");
-
 searchInput.addEventListener("input", () => {
-  const keyword = boDauTiengViet(searchInput.value.toLowerCase().trim());
+    const keyword = boDauTiengViet(searchInput.value.toLowerCase().trim());
+    menuCards.forEach(card => {
+        const name = boDauTiengViet(card.querySelector(".food-name").innerText.toLowerCase());
 
-  menuCards.forEach(card => {
-    const name = boDauTiengViet(card.querySelector(".food-name").innerText.toLowerCase());
-
-    if (name.includes(keyword)) {
-      card.style.display = "";
-    } else {
-      card.style.display = "none";
-    }
-  });
+        if (name.includes(keyword)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
 });
