@@ -16,9 +16,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="products.html">Sản phẩm</a></li>
+                <li><a href="menu.html">Sản phẩm</a></li>
                 <li><a href="cart.html">Giỏ hàng</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="story.html">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
@@ -27,6 +27,163 @@
     <main>
         <h1>Danh sách sản phẩm</h1>
         <!-- Danh sách sản phẩm sẽ được thêm ở đây -->
+            <div class="top-actions">
+            <button id="filterBtn">Bộ lọc</button>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="search" id="searchInput" placeholder="Tìm kiếm..." />
+            </div>
+            </div>
+
+            <div class="overlay" id="overlay"></div>
+
+            <div class="filter-modal" id="filterModal">
+                <h3>Chọn danh mục</h3>
+
+                <div class="category-list">
+                    <button class="category-btn" data-value="all">
+                        Tất cả
+                    </button>
+
+                    <button class="category-btn" data-value="banh-tet">
+                        Bánh Tết
+                    </button>
+
+                    <button class="category-btn" data-value="tet-nham-nhi">
+                        Tết Nhâm Nhi
+                    </button>
+
+                    <button class="category-btn" data-value="do-uong">
+                        Đồ Uống
+                    </button>
+
+                </div>
+
+                <div class="actions">
+                    <button id="closeFilter">Hủy</button>
+                    <button id="applyFilter" disabled>Áp dụng</button>
+                </div>
+            </div>
+
+
+
+            <div class="menu-grid">
+                <div class="menu-card" data-category="banh-tet">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg"
+                            alt="Bánh Tết">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Bánh Tét</h3>
+                    <span class="price">45.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="do-uong">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg" alt="bia">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Bia</h3>
+                    <span class="price">345.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="tet-nham-nhi">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/recipe31982-cook-step5-636650963278909741.jpg" alt="Bánh Tết">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Đồ nhậu</h3>
+                    <span class="price">45.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="banh-tet">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg"
+                            alt="Bánh Tết">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Bánh Tét</h3>
+                    <span class="price">45.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="do-uong">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg" alt="bia">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Bia</h3>
+                    <span class="price">345.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="tet-nham-nhi">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/recipe31982-cook-step5-636650963278909741.jpg" alt="Bánh Tết">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Đồ nhậu</h3>
+                    <span class="price">45.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="banh-tet">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg"
+                            alt="Bánh Tết">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Bánh Tét</h3>
+                    <span class="price">45.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="do-uong">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg" alt="bia">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Bia</h3>
+                    <span class="price">345.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="tet-nham-nhi">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/recipe31982-cook-step5-636650963278909741.jpg" alt="Bánh Tết">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Đồ nhậu</h3>
+                    <span class="price">45.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="banh-tet">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg"
+                            alt="Bánh Tết">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Bánh Tét</h3>
+                    <span class="price">45.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="do-uong">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg" alt="bia">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Bia</h3>
+                    <span class="price">345.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+                <div class="menu-card" data-category="tet-nham-nhi">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/recipe31982-cook-step5-636650963278909741.jpg" alt="Bánh Tết">
+                        <span class="badge new">Mới</span>
+                    </div>
+                    <h3 class="food-name">Đồ nhậu</h3>
+                    <span class="price">45.000₫</span>
+                    <button onclick="location.href='cart.html'" class="buy-btn">Hốt Liền</button>
+                </div>
+            </div>
+
+
+
     </main>
 
     <!-- Footer -->
@@ -35,6 +192,7 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/menu.js"></script>
 </body>
 
 </html>
