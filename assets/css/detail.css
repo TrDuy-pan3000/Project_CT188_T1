@@ -1,1 +1,110 @@
 /* CSS cho trang chi tiết sản phẩm */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.product-container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 40px;
+  max-width: 1280px;
+  margin: auto;
+}
+.product-imgs img {
+  width: 100%;
+  max-width: 836px;
+  object-fit: cover;
+  flex-shrink: 0;
+  height: 600px;
+}
+.sub-img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 15px;
+  gap: 12px;
+}
+.sub-img img {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+.sub-img img:active {
+  border: 5px solid #000;
+}
+.product-info {
+  width: 35%;
+  text-align: left;
+}
+.product-info h2 {
+  color: #ec3323;
+  font-size: 60px;
+  font-weight: 900;
+}
+.product-info h3 {
+  color: #ec3323;
+}
+.product-info del {
+  color: #f37e74;
+  margin-left: 5px;
+}
+.product-info p {
+  color: #590a03;
+}
+.flavor-option {
+  width: 200px;
+  height: 35px;
+  background-color: #fcea65;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.add-to-cart input {
+  width: 50px;
+  height: 35px;
+  background-color: #fcea65;
+  cursor: text;
+  border: 2px solid #000;
+  border-radius: 5px;
+  text-align: center;
+}
+.add-to-cart button {
+  width: 140px;
+  height: 35px;
+  background-color: #ec3323;
+  color: #fff;
+  border-style: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+.add-to-cart button:hover {
+  background-color: #000;
+  transition: 0.5s;
+}
+@media screen and (max-width: 576px) {
+  .product-container {
+    flex-direction: column;
+  }
+  .product-imgs img {
+    object-fit: cover;
+    height: 100px;
+  }
+  .sub-img img {
+    width: 80px;
+    height: 50px;
+  }
+  .product-info {
+    width: 100%;
+  }
+}
