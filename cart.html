@@ -45,50 +45,75 @@
 
     <main class="cart-wrapper">
     <!-- Main Content -->
+     <div class="container">
+        <header>
+            <div class="subtitle">✨ Chúc Mừng Năm Mới - Vạn Sự Như Ý ✨</div>
+        </header>
 
-<main class="cart-wrapper">
-    <section class="cart-left note-paper">
-        <h2>Danh sách sắm Tết</h2>
-        <div id ="cart-display-area" class="cart-items">
-
-        </div>
-        <div class="cart-total">
-            <h3>Tổng tiền: <span id="total-amount">0</span></h3>
-        </div>
-    </section>
-
-    <section class="cart-right red-envelope">
-        <h2>Thông tin nhận hàng</h2>
-        
-        <form action="#">
-            <div class="input-group">
-                <label for="username">Tên người nhận:</label>
-                <input type="text" id="username" placeholder="Nhập họ tên...">
-            </div>
-            <div class="input-group">
-                <label for="phone">Số điện thoại:</label>
-                <input type="tel" id="phone" placeholder="Nhập số điện thoại...">
-            </div>
-            <div class="input-group">
-                <label for="address">Địa chỉ nhận lộc:</label>
-                <textarea id="address" rows="3" placeholder="Địa chỉ giao hàng chi tiết..."></textarea>
-            </div>
-
-            <div class="payment-methods">
-                <p>Phương thức thanh toán:</p>
-                <div class="payment-item">
-                    <input type="radio" id="cod" name="pay" value="COD" checked>
-                    <label for="cod">Tiền mặt (COD)</label>
+        <div class="main-content">
+            <!-- KHU VỰC TRÁI - Danh sách Tết -->
+            <div class="left-section">
+                <h2 class="section-title">🏮 Danh Sách sắm Tết 🏮</h2>
+                <div id="cartItems">
+                    <!-- Sản phẩm sẽ được thêm vào đây -->
                 </div>
-                <div class="payment-item">
-                    <input type="radio" id="qr" name="pay" value="QR">
-                    <label for="qr">Chuyển khoản QR</label>
+                <div class="total-section">
+                    <div class="total-row">
+                        <span>💰 Tổng Tiền:</span>
+                        <span id="totalAmount">0đ</span>
+                    </div>
                 </div>
             </div>
 
-            <button type="submit" class="btn-checkout">CHỐT ĐƠN - RƯỚC LỘC</button>
-        </form>
-    </section>
+            <!-- KHU VỰC PHẢI - Thanh toán -->
+            <div class="right-section">
+                <div class="envelope-decoration">🧧</div>
+                <h2 class="section-title"> Thông Tin Nhận Hàng </h2>
+                
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>👤 Họ và Tên:</label>
+                        <input type="text" id="customerName" placeholder="Nhập họ tên của bạn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>📱 Số Điện Thoại:</label>
+                        <input type="tel" id="customerPhone" placeholder="Nhập số điện thoại" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>🏠 Địa Chỉ Nhận Hàng:</label>
+                        <textarea type="text"id="customerAddress" placeholder="Nhập địa chỉ chi tiết (số nhà, đường, phường, quận/huyện, tỉnh/thành phố)" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>📝 Ghi Chú (Nếu có):</label>
+                        <textarea type="text" id="customerNote" placeholder="Ghi chú thêm về đơn hàng"></textarea>
+                    </div>
+
+                    <div class="payment-methods">
+                        <div class="form-group">
+                            <label> Hình Thức Thanh Toán:</label>
+                            <div class="payment-option">
+                                <input type="radio" id="cod" name="payment" value="cod" checked>
+                                <label for="cod">💵 Thanh Toán Khi Nhận Hàng (COD)</label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="transfer" name="payment" value="transfer">
+                                <label for="transfer">🏦 Chuyển Khoản Ngân Hàng</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="checkout-btn" onclick="checkout()">
+                        Chốt Đơn - Rước Lộc
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
 </main>
 
     <footer class="footer">
