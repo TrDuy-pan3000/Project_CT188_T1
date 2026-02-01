@@ -213,7 +213,8 @@
     transform: scale(1.1) rotate(8deg);
 }
 
-.feature-title {
+.feature-title,
+.feature h3 {
     font-family: 'Baloo 2', cursive;
     font-size: 1.4rem;
     font-weight: 700;
@@ -221,7 +222,8 @@
     color: var(--brown-dark);
 }
 
-.feature-quote {
+.feature-quote,
+.feature .quote {
     font-family: 'Baloo 2', cursive;
     font-size: 0.95rem;
     color: var(--coral);
@@ -229,7 +231,8 @@
     margin-bottom: 0.8rem;
 }
 
-.feature-desc {
+.feature-desc,
+.feature>p:last-child {
     color: var(--brown-light);
     line-height: 1.7;
     font-size: 0.95rem;
@@ -279,7 +282,8 @@
     line-height: 1;
 }
 
-.testimonial-text {
+.testimonial-text,
+.testimonial-card .text {
     font-size: 1.3rem;
     font-style: italic;
     color: var(--brown-dark);
@@ -289,14 +293,16 @@
     line-height: 1.8;
 }
 
-.testimonial-author {
+.testimonial-author,
+.testimonial-card .author {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
-.testimonial-avatar {
+.testimonial-avatar,
+.testimonial-card .avatar {
     width: 60px;
     height: 60px;
     border-radius: var(--radius-full);
@@ -307,18 +313,21 @@
     font-size: 1.5rem;
 }
 
-.testimonial-info h4 {
+.testimonial-info h4,
+.testimonial-card .info h4 {
     font-family: 'Baloo 2', cursive;
     font-weight: 700;
     color: var(--brown-dark);
 }
 
-.testimonial-info p {
+.testimonial-info p,
+.testimonial-card .info p {
     font-size: 0.9rem;
     color: var(--brown-light);
 }
 
-.testimonial-stars {
+.testimonial-stars,
+.testimonial-card .stars {
     margin-top: 1rem;
     color: var(--gold);
     font-size: 1.2rem;
@@ -410,7 +419,8 @@
     margin: 0 auto;
 }
 
-.process-step {
+.process-step,
+.step {
     background: var(--white);
     padding: 2rem 1.5rem;
     border-radius: var(--radius-xl);
@@ -451,7 +461,8 @@
     color: var(--red-tet);
 }
 
-.step-title {
+.step-title,
+.step h3 {
     font-family: 'Baloo 2', cursive;
     font-size: 1.1rem;
     font-weight: 700;
@@ -459,12 +470,14 @@
     margin-bottom: 0.3rem;
 }
 
-.step-desc {
+.step-desc,
+.step>p {
     font-size: 0.85rem;
     color: var(--brown-light);
 }
 
-.process-arrow {
+.process-arrow,
+.arrow {
     color: var(--coral);
     font-size: 1.5rem;
 }
@@ -545,7 +558,8 @@
         font-size: 2.2rem;
     }
 
-    .process-arrow {
+    .process-arrow,
+    .arrow {
         display: none;
     }
 
@@ -578,4 +592,94 @@
     .stat-item {
         width: 45%;
     }
+}
+
+/* ==================== */
+/* Simplified Classes   */
+/* ==================== */
+
+/* Card styles for homepage */
+.card .price {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--red-tet);
+    margin-bottom: 0.8rem;
+}
+
+.card h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brown-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* Button styles */
+.btn-buy {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, var(--red-tet), var(--coral));
+    color: var(--white);
+    border-radius: var(--radius-full);
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, var(--red-tet), var(--coral));
+    color: var(--white);
+    border-radius: var(--radius-full);
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--white);
+    color: var(--brown-dark);
+    border-radius: var(--radius-full);
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadow-clay);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-clay-hover);
+}
+
+/* CTA styles */
+.cta-banner h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brown-dark);
+    margin-bottom: 0.8rem;
+}
+
+.cta-banner p {
+    font-size: 1.1rem;
+    color: var(--brown-dark);
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
 }
