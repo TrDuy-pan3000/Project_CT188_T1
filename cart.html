@@ -4,34 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng - Website Bán Hàng</title>
+    <meta name="description" content="Giỏ hàng - Bếp Nhà Ngọ. Xem và thanh toán đơn hàng món ăn Tết của bạn.">
+    <title>Giỏ hàng - Bếp Nhà Ngọ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/cart.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">LOGO</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="menu.html">Sản phẩm</a></li>
-                <li><a href="cart.html">Giỏ hàng</a></li>
-                <li><a href="story.html">Liên hệ</a></li>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ Logo"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="logo-text">🐴 Bếp Nhà Ngọ</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+                <li><a href="menu.html" class="nav-link">Thực đơn</a></li>
+                <li><a href="about.html" class="nav-link">Câu chuyện</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <button class="icon-btn" aria-label="Tìm kiếm"><i class="fas fa-search"></i></button>
+            <button class="icon-btn" aria-label="Tài khoản"><i class="fas fa-user"></i></button>
+            <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge">0</span>
+            </a>
+        </div>
     </header>
 
-    <!-- Main Content -->
     <main>
         <h1>Giỏ hàng</h1>
-        <!-- Giỏ hàng sẽ được thêm ở đây -->
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Group 1 - Website Bán Hàng</p>
+    <footer class="footer">
+        <div class="footer-deco"></div>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ">
+                    <span class="footer-brand-text">Bếp Nhà Ngọ</span>
+                </div>
+                <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà.</p>
+                <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
+                <div class="social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
+                    <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Thực đơn</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> Câu chuyện</a></li>
+                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Giỏ hàng</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Liên Hệ Ngựa</h4>
+                <ul class="contact">
+                    <li><i class="fas fa-map-marker-alt"></i><span>123 Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</span></li>
+                    <li><i class="fas fa-phone"></i><span>0909 123 456</span></li>
+                    <li><i class="fas fa-envelope"></i><span>xin.chao@bepnhangngo.vn</span></li>
+                    <li><i class="fas fa-clock"></i><span>7:00 - 22:00 (Giao cả Tết!)</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1 | Năm Giáp Ngọ 🐴</p>
+        </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
