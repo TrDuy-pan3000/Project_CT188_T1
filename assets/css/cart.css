@@ -1,0 +1,364 @@
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #ff0000, #ff6b00);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+}
+
+header::after {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+}
+
+h1 {
+    color: #ffd700;
+    font-size: 2em;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    font-weight: 700;
+}
+
+.subtitle {
+    color: white;
+    font-size: 1em;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Khu vực TRÁI - Danh sách Tết */
+.left-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+    border: 3px solid #ff6b00;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #ff0000;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #ffd700;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #fff9e6;
+    border-radius: 12px;
+    border: 2px solid #ffd700;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.cart-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+}
+
+.item-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ff6b00;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.item-price {
+    font-size: 1.1em;
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.remove-btn {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.remove-btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+.total-section {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff6b00, #ff0000);
+    border-radius: 15px;
+    color: white;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+/* Khu vực PHẢI - Thanh toán */
+.right-section {
+    background: linear-gradient(135deg, #ff0000, #ff6b00);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+    border: 3px solid #ffd700;
+    position: relative;
+}
+
+.envelope-decoration {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+}
+
+.right-section .section-title {
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    border-bottom-color: #ffd700;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    font-size: 1em;
+    background: white;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.payment-methods {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.payment-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #ff0000;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+    text-transform: uppercase;
+    position: relative;
+}
+
+.checkout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.8);
+    background: linear-gradient(135deg, #ffed4e, #ffd700);
+}
+
+.checkout-btn:active {
+    transform: translateY(0);
+}
+
+.checkout-btn::before {
+    content: '🧧 ';
+}
+
+.checkout-btn::after {
+    content: ' 🧧';
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.empty-message {
+    font-size: 1.1em;
+    color: #666;
+    font-weight: 400;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff0000;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+    display: none;
+    border: 2px solid #ffd700;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 968px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    header::before,
+    header::after {
+        font-size: 2em;
+    }
+    
+    .section-title {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+    }
+
+    .checkout-btn {
+        font-size: 1.1em;
+    }
+    
+    .total-row {
+        font-size: 1.2em;
+    }
+}
