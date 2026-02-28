@@ -8,6 +8,18 @@
     overflow: visible;
 }
 
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
 .hero-bg {
     position: absolute;
     inset: 0;
@@ -33,6 +45,8 @@
     flex: 1;
     max-width: 600px;
     padding-right: 2rem;
+    position: relative;
+    z-index: 3;
 }
 
 .hero-badge {
@@ -124,13 +138,16 @@
 .products::before {
     content: '';
     position: absolute;
-    top: -60px;
+    top: -100px;
     left: 0;
     right: 0;
-    height: 120px;
-    background: linear-gradient(180deg, transparent, var(--cream));
+    height: 200px;
+    background: linear-gradient(180deg, transparent 0%, var(--cream) 60%, var(--cream) 100%);
     pointer-events: none;
+    z-index: -1;
 }
+
+
 
 .products .product-list {
     max-width: 1400px;
@@ -140,12 +157,37 @@
 .products .section-foot {
     text-align: center;
     margin-top: 3rem;
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .features {
     padding: 6rem 5%;
-    background: linear-gradient(180deg, var(--white), var(--cream));
+    background: linear-gradient(180deg, var(--white) 0%, var(--cream) 30%, var(--cream) 70%, var(--pink-light) 100%);
     position: relative;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, var(--white) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.features::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent 0%, var(--pink-light) 100%);
+    pointer-events: none;
 }
 
 .feature-list {
@@ -240,9 +282,20 @@
 
 .testimonials {
     padding: 6rem 5%;
-    background: linear-gradient(135deg, var(--pink-light), var(--mint-light));
+    background: linear-gradient(135deg, var(--pink-light) 0%, var(--mint-light) 50%, var(--cream) 100%);
     position: relative;
     overflow: hidden;
+}
+
+.testimonials::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
+    pointer-events: none;
 }
 
 .testimonials::before {
@@ -406,7 +459,30 @@
 /* Process Section */
 .process {
     padding: 6rem 5%;
-    background: var(--cream);
+    background: linear-gradient(180deg, var(--cream) 0%, var(--white) 50%, var(--cream) 100%);
+    position: relative;
+}
+
+.process::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, var(--cream) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.process::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
+    pointer-events: none;
 }
 
 .process-list {
@@ -497,9 +573,21 @@
 
 /* CTA Banner */
 .cta-banner {
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 50%, var(--coral) 100%);
     padding: 4rem 5%;
     text-align: center;
+    position: relative;
+}
+
+.cta-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, var(--cream) 0%, transparent 100%);
+    pointer-events: none;
 }
 
 .cta-content {
