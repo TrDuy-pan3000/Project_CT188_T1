@@ -1,25 +1,44 @@
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+/* khai báo biến màu chung ở đây muốn đổi màu chỉ cần sửa 1 chỗ */
+:root {
+    --lemon-yellow:     #F5E642;
+    --bright-red:       #E8142A;
+    --coral-pink:       #FF6B6B;
+    --terracotta:       #C8603A;
+    --light-blue:       #A8D8EA;
+    --muted-red-orange: #C94F3A;
 }
 
+
+/* animation float - cái icon nảy lên xuống nhẹ nhẹ */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-20px); }
+}
+
+
+/* container bọc toàn bộ nội dung, giới hạn width để không bị dãn quá rộng
+   margin: 0 auto để tự căn giữa trang */
 .container {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
+
+/* phần header trên cùng - nền gradient nâu đất
+   overflow: hidden để mấy cái icon trang trí ::before ::after không tràn ra ngoài */
 .cart-header {
     text-align: center;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #ff0000, #ff6b00);
+    background: linear-gradient(135deg, var(--bright-red), var(--terracotta));
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
-    position: relative;
+    box-shadow: 0 8px 25px rgba(207, 7, 27, 0.3);
+    position: relative;   /* cần cái này để ::before ::after dùng position absolute bên trong */
     overflow: hidden;
 }
 
+/* icon emoji bên trái header, dùng pseudo-element cho nó không cần thêm html
+   top 50% + translateY(-50%) là cách căn giữa dọc cơ bản */
 .cart-header::before {
     position: absolute;
     left: 20px;
@@ -28,6 +47,7 @@
     font-size: 3em;
 }
 
+/* icon bên phải, tương tự cái trên nhưng dính vào cạnh phải */
 .cart-header::after {
     position: absolute;
     right: 20px;
@@ -36,45 +56,63 @@
     font-size: 3em;
 }
 
+
+/* tiêu đề h1 trong header, màu vàng để nổi trên nền đỏ
+   text-shadow thêm vào cho chữ có chiều sâu hơn */
 h1 {
-    color: #ffd700;
+    color: var(--lemon-yellow);
     font-size: 2em;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     font-weight: 700;
 }
 
+
+/* dòng mô tả nhỏ dưới tiêu đề, dùng màu xanh nhạt để không lấn át chữ h1
+   font-weight 400 thì chữ mỏng bình thường, không in đậm */
 .subtitle {
-    color: white;
+    color: var(--light-blue);
     font-size: 1em;
     margin-top: 10px;
     font-weight: 400;
 }
 
+
+/* chia layout thành 2 cột bằng grid
+   1fr 1fr: 2 cột bằng nhau, gap 25px là khoảng cách giữa 2 cột */
 .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-/* Khu vực TRÁI - Danh sách Tết */
+
+/* cột trái chứa danh sách giỏ hàng
+   nền trắng, viền nâu đất 3px, box-shadow để nó nổi lên khỏi nền trang */
 .left-section {
     background: white;
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
-    border: 3px solid #ff6b00;
+    box-shadow: 0 10px 30px rgba(200, 96, 58, 0.2);
+    border: 3px solid var(--terracotta);
 }
 
+
+/* tiêu đề của từng section, dùng chung cho cả trái lẫn phải
+   khi nằm trong .right-section thì màu bị override ở dưới */
 .section-title {
     font-size: 1.5em;
-    color: #ff0000;
+    color: var(--bright-red);
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 3px solid #ffd700;
+    border-bottom: 3px solid var(--lemon-yellow);  /* gạch chân màu vàng */
     text-align: center;
     font-weight: 700;
 }
 
+
+/* mỗi dòng sản phẩm trong giỏ hàng
+   flex để ảnh + thông tin + nút nằm hàng ngang
+   nền vàng kem cho cái cảm giác Tết ấm áp */
 .cart-item {
     display: flex;
     align-items: center;
@@ -83,28 +121,34 @@ h1 {
     margin-bottom: 15px;
     background: #fff9e6;
     border-radius: 12px;
-    border: 2px solid #ffd700;
-    transition: all 0.3s;
+    border: 2px solid var(--lemon-yellow);
+    transition: all 0.3s;  /* transition để hiệu ứng hover mượt */
     position: relative;
 }
 
+/* hover thì trượt sang phải 5px + đổ bóng cam nhẹ */
 .cart-item:hover {
     transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(201, 79, 58, 0.3);
 }
 
+
+/* ảnh sản phẩm cố định 70x70, object-fit cover để ảnh không bị méo dù tỉ lệ khác nhau */
 .item-image {
     width: 70px;
     height: 70px;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid #ff6b00;
+    border: 2px solid var(--terracotta);
 }
 
+
+/* phần info giữa (tên + giá), flex:1 để nó kéo dãn chiếm hết chỗ còn lại */
 .item-info {
     flex: 1;
 }
 
+/* tên sản phẩm màu tối, không dùng đen 100% mà dùng #333 cho mắt dễ đọc hơn */
 .item-name {
     font-size: 1em;
     font-weight: 600;
@@ -112,14 +156,18 @@ h1 {
     margin-bottom: 5px;
 }
 
+/* giá tiền màu đỏ + to hơn tí để người dùng nhìn thấy */
 .item-price {
     font-size: 1.1em;
-    color: #ff0000;
+    color: var(--bright-red);
     font-weight: 700;
 }
 
+
+/* nút xóa sản phẩm, nền đỏ cam trầm
+   hover đỏ tươi + phóng to 5% để biết đang hover */
 .remove-btn {
-    background: #ff0000;
+    background: var(--muted-red-orange);
     color: white;
     border: none;
     padding: 8px 15px;
@@ -130,18 +178,22 @@ h1 {
 }
 
 .remove-btn:hover {
-    background: #cc0000;
+    background: var(--bright-red);
     transform: scale(1.05);
 }
 
+
+/* khung tổng tiền nằm cuối cột trái
+   gradient cam trầm, chữ trắng */
 .total-section {
     margin-top: 25px;
     padding: 20px;
-    background: linear-gradient(135deg, #ff6b00, #ff0000);
+    background: linear-gradient(135deg, var(--terracotta), var(--muted-red-orange));
     border-radius: 15px;
     color: white;
 }
 
+/* hàng hiển thị tổng tiền - dùng space-between để nhãn trái, số phải */
 .total-row {
     display: flex;
     justify-content: space-between;
@@ -149,16 +201,21 @@ h1 {
     font-weight: 700;
 }
 
-/* Khu vực PHẢI - Thanh toán */
+
+/* cột phải chứa form thanh toán
+   gradient hồng san hô, viền vàng chanh 3px
+   position relative để cái icon phong bì bên dưới position được */
 .right-section {
-    background: linear-gradient(135deg, #ff0000, #ff6b00);
+    background: linear-gradient(135deg, var(--bright-red), var(--coral-pink));
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
-    border: 3px solid #ffd700;
+    box-shadow: 0 10px 30px rgba(232, 20, 42, 0.3);
+    border: 3px solid var(--lemon-yellow);
     position: relative;
 }
 
+/* icon phong bì nằm nhô lên trên cạnh trên của right-section
+   top: -15px để nó lấn lên, translateX(-50%) để căn giữa ngang */
 .envelope-decoration {
     position: absolute;
     top: -15px;
@@ -167,16 +224,21 @@ h1 {
     font-size: 3em;
 }
 
+/* override màu tiêu đề khi nó nằm trong right-section
+   phải dùng màu vàng vì nền đỏ nên chữ đỏ sẽ không thấy được */
 .right-section .section-title {
-    color: #ffd700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    border-bottom-color: #ffd700;
+    color: var(--lemon-yellow);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-bottom-color: var(--lemon-yellow);
 }
 
+
+/* wrapper bọc label + input, margin-bottom để mấy cái field cách nhau ra */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* label trên mỗi field, display block để nó xuống hàng trước input */
 .form-group label {
     display: block;
     color: white;
@@ -184,7 +246,10 @@ h1 {
     margin-bottom: 8px;
     font-size: 1em;
 }
-
+/* input và textarea dùng cho địa chỉ giao hàng, tên người nhận, số điện thoại
+   style chung ở dưới, riêng textarea cho phép kéo dọc để nhập nhiều dòng */
+/* style chung cho input và textarea trong form
+   nền trắng, viền vàng chanh, transition 0.3s cho focus mượt */
 .form-group input,
 .form-group textarea {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -192,25 +257,31 @@ h1 {
     line-height: 1.5;
     width: 100%;
     padding: 12px;
-    border: 2px solid #ffd700;
+    border: 2px solid var(--lemon-yellow);
     border-radius: 10px;
     font-size: 1em;
     background: white;
     transition: all 0.3s;
 }
 
+/* khi click vào input thì đổi viền sang xanh nhạt + glow nhẹ
+   outline none để bỏ cái viền xanh mặc định của trình duyệt */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #fff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-color: var(--light-blue);
+    box-shadow: 0 0 10px rgba(168, 216, 234, 0.6);
 }
 
+/* textarea chỉ cho kéo dọc, kéo ngang sẽ làm vỡ layout */
 .form-group textarea {
     resize: vertical;
     min-height: 80px;
 }
 
+
+/* khung chọn phương thức thanh toán
+   nền trắng mờ 20% để thấy được màu gradient đỏ phía sau */
 .payment-methods {
     background: rgba(255, 255, 255, 0.2);
     padding: 15px;
@@ -218,6 +289,7 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* mỗi option thanh toán dùng flex để radio button và chữ nằm cùng hàng */
 .payment-option {
     display: flex;
     align-items: center;
@@ -226,6 +298,7 @@ h1 {
     font-weight: 600;
 }
 
+/* radio button to hơn mặc định cho dễ click, nhất là trên mobile */
 .payment-option input[type="radio"] {
     width: 20px;
     height: 20px;
@@ -233,71 +306,90 @@ h1 {
     cursor: pointer;
 }
 
+
+/* nút đặt hàng chính, nền gradient vàng chanh, chữ đỏ in hoa
+   box-shadow vàng để nó có cảm giác nổi
+   ::before ::after thêm emoji 2 bên  */
 .checkout-btn {
     width: 100%;
     padding: 18px;
-    background: linear-gradient(135deg, #ffd700, #ffed4e);
-    color: #ff0000;
+    background: linear-gradient(135deg, var(--lemon-yellow), #fff176);
+    color: var(--bright-red);
     border: none;
     border-radius: 15px;
     font-size: 1.3em;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(245, 230, 66, 0.5);
     text-transform: uppercase;
     position: relative;
 }
 
+/* hover thì nổi lên 3px + bóng sáng hơn */
 .checkout-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.8);
-    background: linear-gradient(135deg, #ffed4e, #ffd700);
+    box-shadow: 0 8px 30px rgba(245, 230, 66, 0.8);
+    background: linear-gradient(135deg, #fff176, var(--lemon-yellow));
 }
 
+/* khi nhấn xuống thì trả về vị trí cũ, không nổi nữa */
 .checkout-btn:active {
     transform: translateY(0);
 }
 
+/* emoji bên trái nút */
 .checkout-btn::before {
     content: '🧧 ';
 }
 
+/* emoji bên phải nút */
 .checkout-btn::after {
     content: ' 🧧';
 }
 
+
+/* hiển thị khi giỏ hàng trống
+   padding lớn để nó có khoảng thở, trông không bị gò bó */
 .empty-cart {
     text-align: center;
     padding: 60px 20px;
 }
 
+/* icon to cho dễ thấy */
 .empty-icon {
     font-size: 5em;
     margin-bottom: 20px;
 }
 
+/* text thông báo giỏ rỗng, màu xám nhạt */
 .empty-message {
     font-size: 1.1em;
     color: #666;
     font-weight: 400;
 }
 
+
+/* toast notification hiện ở góc phải trên màn hình
+   position fixed để nó luôn ở đó dù scroll trang
+   z-index 1000 để không bị mấy phần tử khác che
+   display none vì mặc định phải ẩn, js sẽ bật lên khi cần */
 .notification {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: #ff0000;
+    background: var(--muted-red-orange);
     color: white;
     padding: 15px 25px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     animation: slideIn 0.3s ease;
     display: none;
-    border: 2px solid #ffd700;
+    border: 2px solid var(--lemon-yellow);
 }
 
+/* trượt từ bên phải vào + fade in, trông mượt hơn kiểu pop thẳng ra */
 @keyframes slideIn {
     from {
         transform: translateX(400px);
@@ -309,6 +401,9 @@ h1 {
     }
 }
 
+
+/* responsive cho tablet (dưới 968px)
+   grid 2 cột về còn 1 cột, 2 section xếp dọc */
 @media (max-width: 968px) {
     .main-content {
         grid-template-columns: 1fr;
@@ -322,21 +417,27 @@ h1 {
     header::after {
         font-size: 2em;
     }
-    
+
     .section-title {
         font-size: 1.3em;
     }
 }
 
+
+/* responsive cho điện thoại (dưới 600px)
+   giảm font-size gốc xuống 14px để mọi thứ tự thu nhỏ theo
+   vì em/rem đều tính từ font-size của body */
 @media (max-width: 600px) {
     body {
         font-size: 14px;
     }
 
+    /* cho phép wrap xuống hàng khi màn hình không đủ rộng */
     .cart-item {
         flex-wrap: wrap;
     }
 
+    /* ảnh nhỏ lại tí cho vừa màn hình hẹp */
     .item-image {
         width: 60px;
         height: 60px;
@@ -357,7 +458,7 @@ h1 {
     .checkout-btn {
         font-size: 1.1em;
     }
-    
+
     .total-row {
         font-size: 1.2em;
     }
