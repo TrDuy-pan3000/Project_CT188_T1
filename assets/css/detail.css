@@ -1,24 +1,22 @@
-main {
+.product-container,
+.more-info {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 2% 5%;
+  max-width: 1280px;
 }
-
 .product-container {
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 40px;
-  max-width: 1280px;
-  margin: auto;
-  padding: 1.5rem;
 }
 .product-imgs {
-  flex: 1;
+  flex: 1.2;
+  max-width: 500px;
 }
 #main-img {
   width: 100%;
   object-fit: cover;
-  flex-shrink: 0;
   height: 400px;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-clay);
@@ -52,8 +50,10 @@ main {
   border: 3px solid var(--red-tet);
 }
 
+/*  */
+
 .product-info {
-  flex: 1.2;
+  flex: 1;
   text-align: left;
 }
 
@@ -79,6 +79,7 @@ main {
 .product-info p {
   color: var(--brown-dark);
   line-height: 1.8;
+  text-align: justify;
 }
 
 .product-info > p {
@@ -127,7 +128,8 @@ main {
 }
 
 .flavor-option:hover,
-.flavor-option:focus {
+.flavor-option:focus,
+#quanlity:hover {
   border-color: var(--red-tet);
 }
 
@@ -169,13 +171,14 @@ main {
   box-shadow: var(--shadow-clay-hover);
 }
 
-.more-info {
-  background: var(--cream);
-  padding: 1.5rem;
-  border-radius: var(--radius-lg);
-}
+/*  */
 
-.more-info h4 {
+.line{
+  height:2px;
+  background:var(--red-tet);
+}
+.more-info h3,
+h4 {
   font-family: "Baloo 2", cursive;
   font-weight: 700;
   color: var(--brown-dark);
@@ -189,6 +192,7 @@ main {
 
 .more-info p {
   font-size: 0.95rem;
+  text-align: justify;
   color: var(--brown-light);
 }
 
@@ -200,10 +204,6 @@ main {
   .product-imgs {
     width: 100%;
   }
-  /* .product-imgs img {
-    height: 250px;
-    max-width: 100%;
-  } */
   #main-img {
     height: 250px;
     max-width: 100%;
