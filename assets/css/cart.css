@@ -602,3 +602,15 @@ h1 {
     .checkout-btn  { font-size: 1.1em; }
     .total-row     { font-size: 1.2em; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .cart-header,
+    .cart-header::after,
+    .right-section:hover .envelope-decoration,
+    .checkout-btn,
+    .checkout-btn:hover,
+    .notification {
+        animation: none !important;
+        transition: none !important;
+    }
+}
