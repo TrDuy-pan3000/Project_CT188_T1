@@ -9,7 +9,7 @@
     margin: 0 auto;
 }
 
-header {
+.cart-header {
     text-align: center;
     margin-bottom: 30px;
     background: linear-gradient(135deg, #ff0000, #ff6b00);
@@ -20,7 +20,7 @@ header {
     overflow: hidden;
 }
 
-header::before {
+.cart-header::before {
     position: absolute;
     left: 20px;
     top: 50%;
@@ -28,7 +28,7 @@ header::before {
     font-size: 3em;
 }
 
-header::after {
+.cart-header::after {
     position: absolute;
     right: 20px;
     top: 50%;

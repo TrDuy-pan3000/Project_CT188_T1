@@ -45,24 +45,23 @@
     </header>
 
     <main class="cart-wrapper">
-        <!-- Main Content -->
-        <div class="container">
-            <header>
-                <div class="subtitle">✨ Chúc Mừng Năm Mới - Vạn Sự Như Ý ✨</div>
-            </header>
+    <!-- Main Content -->
+     <div class="container">
+        <header class="cart-header">
+            <div class="subtitle">✨ Chúc Mừng Năm Mới - Vạn Sự Như Ý ✨</div>
+        </header>
 
-            <div class="main-content">
-                <!-- KHU VỰC TRÁI - Danh sách Tết -->
-                <div class="left-section">
-                    <h2 class="section-title">🏮 Danh Sách sắm Tết 🏮</h2>
-                    <div id="cartItems">
-                        <!-- Sản phẩm sẽ được thêm vào đây -->
-                    </div>
-                    <div class="total-section">
-                        <div class="total-row">
-                            <span>💰 Tổng Tiền:</span>
-                            <span id="totalAmount">0đ</span>
-                        </div>
+        <div class="main-content">
+            <!-- KHU VỰC TRÁI - Danh sách Tết -->
+            <div class="left-section">
+                <h2 class="section-title">🏮 Danh Sách sắm Tết 🏮</h2>
+                <div id="cartItems">
+                    <!-- Sản phẩm sẽ được thêm vào đây -->
+                </div>
+                <div class="total-section">
+                    <div class="total-row">
+                        <span>💰 Tổng Tiền:</span>
+                        <span id="totalAmount">0đ</span>
                     </div>
                 </div>
 
@@ -77,17 +76,15 @@
                             <input type="text" id="customerName" placeholder="Nhập họ tên của bạn" required>
                         </div>
 
-                        <div class="form-group">
-                            <label>📱 Số Điện Thoại:</label>
-                            <input type="tel" id="customerPhone" placeholder="Nhập số điện thoại" required>
-                        </div>
+                    <div class="form-group">
+                        <label>🏠 Địa Chỉ Nhận Hàng:</label>
+                        <textarea id="customerAddress" placeholder="Nhập địa chỉ chi tiết (số nhà, đường, phường, quận/huyện, tỉnh/thành phố)" required></textarea>
+                    </div>
 
-                        <div class="form-group">
-                            <label>🏠 Địa Chỉ Nhận Hàng:</label>
-                            <textarea type="text" id="customerAddress"
-                                placeholder="Nhập địa chỉ chi tiết (số nhà, đường, phường, quận/huyện, tỉnh/thành phố)"
-                                required></textarea>
-                        </div>
+                    <div class="form-group">
+                        <label>📝 Ghi Chú (Nếu có):</label>
+                        <textarea id="customerNote" placeholder="Ghi chú thêm về đơn hàng"></textarea>
+                    </div>
 
                         <div class="form-group">
                             <label>📝 Ghi Chú (Nếu có):</label>
