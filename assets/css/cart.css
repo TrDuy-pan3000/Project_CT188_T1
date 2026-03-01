@@ -1,118 +1,240 @@
-/* khai báo biến màu chung ở đây muốn đổi màu chỉ cần sửa 1 chỗ */
-:root {
-    --lemon-yellow:     #F5E642;
-    --bright-red:       #E8142A;
-    --coral-pink:       #FF6B6B;
-    --terracotta:       #C8603A;
-    --light-blue:       #A8D8EA;
-    --muted-red-orange: #C94F3A;
-}
-
-
-/* animation float - cái icon nảy lên xuống nhẹ nhẹ */
+/* float - Icon nảy lên xuống nhẹ nhàng liên tục */
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
+    0%, 100% { transform: translateY(0px);  }
     50%       { transform: translateY(-20px); }
 }
 
+/* floatHeader - Khung cart-header nhấp nhô nhẹ, tạo cảm giác rung rinh 
+ * Biên độ -8px nhỏ hơn float */
+@keyframes floatHeader {
+    0%, 100% { transform: translateY(0);    }
+    50%       { transform: translateY(-8px); }
+}
 
-/* container bọc toàn bộ nội dung, giới hạn width để không bị dãn quá rộng
-   margin: 0 auto để tự căn giữa trang */
+/* shineHeader - Dải lụa sáng trắng quét qua khung header
+ * Dừng lâu từ 20% đến 100% để dải sáng không chạy liên tục */
+@keyframes shineHeader {
+    0%   { left: -100%; }
+    20%  { left: 150%;  }
+    100% { left: 150%;  }
+}
+
+/* luckyshake - Bao lì xì 🧧 rung rinh khi hover vào cột phải
+ * Phải giữ translateX(-50%) trong mỗi bước để icon không bị lệch khỏi vị trí căn giữa */
+@keyframes luckyshake {
+    0%   { transform: translateX(-50%) rotate(0deg);   }
+    25%  { transform: translateX(-50%) rotate(15deg);  }
+    50%  { transform: translateX(-50%) rotate(-15deg); }
+    75%  { transform: translateX(-50%) rotate(10deg);  }
+    100% { transform: translateX(-50%) rotate(0deg);   }
+}
+
+/* shineBtn - Ánh kim loại chạy qua nút "Chốt Đơn"
+ * Kết hợp với background-size: 200% để gradient "chạy" liên tục qua bề mặt nút */
+@keyframes shineBtn {
+    to { background-position: 200% center; }
+}
+
+/* pulseBtn dùng cho nút đặt hàng, tạo hiệu ứng "thở" phồng xẹp nhẹ như đang đập tim
+ * Scale 1 → 1.03 → 1, lặp mỗi 2 giây */
+@keyframes pulseBtn {
+    0%   { transform: scale(1);    }
+    50%  { transform: scale(1.03); }
+    100% { transform: scale(1);    }
+}
+
+/* jello-horizontal dùng cho nút đặt hàng khi hover, tạo hiệu ứng đàn hồi Jello
+ * Scale3d thay vì scale để tạo hiệu ứng co giãn theo chiều ngang rõ hơn */
+@keyframes jello-horizontal {
+    0%   { transform: scale3d(1,    1,    1); }
+    30%  { transform: scale3d(1.25, 0.75, 1); }
+    40%  { transform: scale3d(0.75, 1.25, 1); }
+    50%  { transform: scale3d(1.15, 0.85, 1); }
+    65%  { transform: scale3d(0.95, 1.05, 1); }
+    75%  { transform: scale3d(1.05, 0.95, 1); }
+    100% { transform: scale3d(1,    1,    1); }
+}
+
+/* slideIn dùng cho toast notification khi xuất hiện
+ - Toast notification trượt vào từ bên phải
+ * Kết hợp translateX (trượt) và opacity (mờ dần) để trông mượt hơn
+ */
+@keyframes slideIn {
+    from { transform: translateX(400px); opacity: 0; }
+    to   { transform: translateX(0);     opacity: 1; }
+}
+
+
+/*.container - Giới hạn chiều rộng tối đa và căn giữa nội dung trang
+ * max-width: 1100px phù hợp với thiết kế, không quá rộng trên màn hình
+ * margin: 0 auto → căn giữa theo chiều ngang tự động
+ */
 .container {
     max-width: 1100px;
     margin: 0 auto;
 }
 
+/*.cart-wrapper - Vùng bọc toàn bộ nội dung trang giỏ hàng
+ * padding-top: 100px → đẩy nội dung xuống dưới header đang fixed
+ * margin-bottom: 50px → khoảng thở trước khi chạm footer
+ */
+.cart-wrapper {
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
 
-/* phần header trên cùng - nền gradient nâu đất
-   overflow: hidden để mấy cái icon trang trí ::before ::after không tràn ra ngoài */
+
+/* Khung đỏ nổi bật ở đầu trang giỏ hàng
+ * overflow: hidden → bắt buộc để dải sáng ::after không tràn ra ngoài bo góc
+ * box-shadow 3 lớp:
+ *   - 0 10px 20px đen: bóng sát thân tạo độ nổi khối cơ bản
+ *   - 0 25px 50px đỏ: bóng xa ăn nhập tông màu tổng thể
+ *   - inset vàng: ánh sáng vàng hắt ngược từ bên trong ra mép khung
+ * Viền double:
+ *   - border: 3px gold → viền vàng chính
+ *   - outline: 2px + offset 5px → tạo viền vàng thứ 2 bên ngoài, cách 5px
+ * animation floatHeader → khung nhấp nhô nhẹ liên tục
+ */
 .cart-header {
     text-align: center;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, var(--bright-red), var(--terracotta));
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(207, 7, 27, 0.3);
-    position: relative;   /* cần cái này để ::before ::after dùng position absolute bên trong */
+    background: linear-gradient(135deg, var(--red-dark), var(--red-tet));
+    padding: 35px 25px;
+    border-radius: 25px;
+    position: relative;
     overflow: hidden;
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        0 25px 50px rgba(198, 40, 40, 0.3),
+        inset 0 0 15px rgba(255, 215, 0, 0.2);
+    border: 3px solid var(--gold);
+    outline: 2px solid rgba(255, 215, 0, 0.1);
+    outline-offset: 5px;
+    animation: floatHeader 4s infinite ease-in-out;
+    transition: all 0.4s ease;
 }
 
-/* icon emoji bên trái header, dùng pseudo-element cho nó không cần thêm html
-   top 50% + translateY(-50%) là cách căn giữa dọc cơ bản */
+/* ::before - Icon ngựa 🐴 trang trí góc trái khung
+ * opacity: 0.15 → mờ để không tranh chú ý với tiêu đề chính
+ * top: 50% + translateY(-50%) → căn giữa dọc so với chiều cao khung */
 .cart-header::before {
+    content: '🐴';
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 3em;
+    font-size: 3.5em;
+    opacity: 0.15;
 }
 
-/* icon bên phải, tương tự cái trên nhưng dính vào cạnh phải */
+/* cart-header::after - Dải lụa sáng trắng mờ quét qua khung header
+ * width 50%, height 200% → đủ lớn để che hết chiều cao kể cả khi nghiêng
+ * rotate(30deg) → nghiêng cho dải sáng
+ * animation shineHeader 6s → chạy từ trái qua phải rồi dừng lâu trước khi lặp */
 .cart-header::after {
+    content: '';
     position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3em;
+    top: -50%;
+    left: -100%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: rotate(30deg);
+    animation: shineHeader 6s infinite;
 }
 
-
-/* tiêu đề h1 trong header, màu vàng để nổi trên nền đỏ
-   text-shadow thêm vào cho chữ có chiều sâu hơn */
+/* h1 - Tiêu đề chính Ngựa Phi Thần Tốc - Giao Tết Tận Nơi
+ * Màu vàng gold nổi bật trên nền đỏ
+ * text-shadow tạo chiều sâu, tránh chữ bị chìm vào gradient đỏ phía sau*/
 h1 {
-    color: var(--lemon-yellow);
+    color: var(--gold);
     font-size: 2em;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-
-/* dòng mô tả nhỏ dưới tiêu đề, dùng màu xanh nhạt để không lấn át chữ h1
-   font-weight 400 thì chữ mỏng bình thường, không in đậm */
+/*subtitle - Câu chúc Tết bên dưới tiêu đề, màu mint nhạt
+ * font-size 1em → nhỏ hơn tiêu đề chính, nhưng vẫn rõ ràng
+ * margin-top: 10px → khoảng cách hợp lý với tiêu đề, không quá gần
+ * font-weight: 400 → nhẹ nhàng, không cạnh tranh với tiêu đề chính */
 .subtitle {
-    color: var(--light-blue);
+    color: var(--mint-light);
     font-size: 1em;
     margin-top: 10px;
     font-weight: 400;
 }
+/* cart header subtitle - Thêm hiệu ứng cho câu chúc Tết
+ * font-style: italic → chữ nghiêng */
+.cart-header .subtitle {
+    font-style: italic;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
 
 
-/* chia layout thành 2 cột bằng grid
-   1fr 1fr: 2 cột bằng nhau, gap 25px là khoảng cách giữa 2 cột */
+/* MAIN CONTENT - CHIA 2 CỘT TRÁI PHẢI
+ * Sử dụng CSS Grid để chia 2 cột đều nhau
+ * gap: 25px → khoảng cách giữa 2 cột 
+ * Thu về 1 cột trên tablet (xem phần responsive) */
 .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-
-/* cột trái chứa danh sách giỏ hàng
-   nền trắng, viền nâu đất 3px, box-shadow để nó nổi lên khỏi nền trang */
-.left-section {
-    background: white;
+/* CỘT TRÁI & PHẢI - KHUNG CHÍNH CHỨA SẢN PHẨM VÀ FORM NHẬN HÀNG
+ * .left-section & .right-section - Style chung cho cả 2 cột
+ * box-shadow 2 lớp: bóng đen thường + bóng đỏ mờ theo tông Tết
+ * border vàng mờ 30% opacity → viền nhẹ hơn border đậm
+ * transition cubic-bezier(0.175, 0.885, 0.32, 1.275): Đường cong easing tạo hiệu ứng nảy nhẹ (bounce) khi hover kết thúc*/
+.left-section,
+.right-section {
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(200, 96, 58, 0.2);
-    border: 3px solid var(--terracotta);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        0 5px 15px rgba(198, 40, 40, 0.05);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* Hover 2 cột - Khi di chuột vào .left-section hoặc .right-section
+ * Nhấc cột lên 10px khi di chuột vào
+ * box-shadow tăng lan rộng */
+.left-section:hover,
+.right-section:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.15),
+        0 10px 20px rgba(198, 40, 40, 0.1);
+}
 
-/* tiêu đề của từng section, dùng chung cho cả trái lẫn phải
-   khi nằm trong .right-section thì màu bị override ở dưới */
+/* .left-section - Cột trái: Danh sách sản phẩm trong giỏ hàng
+ * Nền trắng sạch để ảnh và tên sản phẩm hiện lên rõ ràng
+ */
+.left-section {
+    background: white;
+}
+
+/* .section-title - Tiêu đề mỗi cột, dùng gạch chân vàng thay thẻ <hr>
+ * Bị override trong .right-section để đổi màu phù hợp nền đỏ
+ */
 .section-title {
     font-size: 1.5em;
-    color: var(--bright-red);
+    font-weight: 700;
+    color: var(--red-tet);
+    text-align: center;
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 3px solid var(--lemon-yellow);  /* gạch chân màu vàng */
-    text-align: center;
-    font-weight: 700;
+    border-bottom: 3px solid var(--gold);
 }
 
 
-/* mỗi dòng sản phẩm trong giỏ hàng
-   flex để ảnh + thông tin + nút nằm hàng ngang
-   nền vàng kem cho cái cảm giác Tết ấm áp */
+/* DANH SÁCH SẢN PHẨM TRONG GIỎ HÀNG
+ * .cart-item - Mỗi dòng sản phẩm: ảnh + tên/giá + nút xóa nằm ngang (flex)
+ * background: nền kem vàng nhạt
+ * border vàng 2px → viền rõ hơn các cột chính, làm nổi từng sản phẩm
+ */
 .cart-item {
     display: flex;
     align-items: center;
@@ -121,53 +243,66 @@ h1 {
     margin-bottom: 15px;
     background: #fff9e6;
     border-radius: 12px;
-    border: 2px solid var(--lemon-yellow);
-    transition: all 0.3s;  /* transition để hiệu ứng hover mượt */
+    border: 2px solid var(--gold);
+    transition: all 0.3s;
     position: relative;
 }
 
-/* hover thì trượt sang phải 5px + đổ bóng cam nhẹ */
+/* Hover cart-item - Trượt ngang phải 5px + đổ bóng cam nhẹ
+ * Chọn trượt ngang thay vì nổi lên để phân biệt với hover 2 cột chính */
 .cart-item:hover {
     transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(201, 79, 58, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
 }
 
-
-/* ảnh sản phẩm cố định 70x70, object-fit cover để ảnh không bị méo dù tỉ lệ khác nhau */
+/*.item-image - Ảnh sản phẩm cố định 70x70px
+ * object-fit: cover → cắt ảnh vừa khung, không bị méo dù tỉ lệ gốc khác nhau
+ * border nâu nhạt → phân tách ảnh với nền kem bên ngoài */
 .item-image {
     width: 70px;
     height: 70px;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid var(--terracotta);
+    border: 2px solid var(--brown-light);
 }
 
-
-/* phần info giữa (tên + giá), flex:1 để nó kéo dãn chiếm hết chỗ còn lại */
+/* .item-info - Vùng chứa tên và giá, flex:1 để chiếm hết chỗ còn lại
+ * giữa ảnh bên trái và nút xóa bên phải */
 .item-info {
     flex: 1;
 }
 
-/* tên sản phẩm màu tối, không dùng đen 100% mà dùng #333 cho mắt dễ đọc hơn */
+/* Tên sản phẩm - nâu đậm dễ đọc trên nền kem vàng */
 .item-name {
     font-size: 1em;
     font-weight: 600;
-    color: #333;
+    color: var(--brown-dark);
     margin-bottom: 5px;
 }
 
-/* giá tiền màu đỏ + to hơn tí để người dùng nhìn thấy */
+/*.item-price - Giá tiền màu đỏ Tết nổi bật
+ * font-size 1.1em + font-weight 700 → nhấn mạnh giá tiền hơn tên sản phẩm */
 .item-price {
     font-size: 1.1em;
-    color: var(--bright-red);
     font-weight: 700;
+    color: var(--red-tet);
 }
 
+/* ::after thêm dòng "Đặc Sản mùa Tết" nhỏ bên dưới mỗi giá
+ * display: block → xuống hàng mới, font-size 0.7rem → rõ là thông tin phụ */
+.item-price::after {
+    content: ' • Đặc Sản mùa Tết';
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--brown-light);
+    display: block;
+}
 
-/* nút xóa sản phẩm, nền đỏ cam trầm
-   hover đỏ tươi + phóng to 5% để biết đang hover */
+/* .remove-btn - Nút xóa sản phẩm, màu cam
+ * border-radius 8px → bo góc vừa phải, không quá tròn
+ * transition: all 0.3s → hiệu ứng mượt khi hover */
 .remove-btn {
-    background: var(--muted-red-orange);
+    background: var(--coral);
     color: white;
     border: none;
     padding: 8px 15px;
@@ -178,22 +313,24 @@ h1 {
 }
 
 .remove-btn:hover {
-    background: var(--bright-red);
+    background: var(--red-dark);
     transform: scale(1.05);
 }
 
 
-/* khung tổng tiền nằm cuối cột trái
-   gradient cam trầm, chữ trắng */
+/* KHUNG TỔNG TIỀN 
+ * .total-section - Khung tổng tiền cuối cột trái
+ * Gradient nâu, cam → phân biệt rõ với vùng trắng với sản phẩm */
 .total-section {
     margin-top: 25px;
     padding: 20px;
-    background: linear-gradient(135deg, var(--terracotta), var(--muted-red-orange));
+    background: linear-gradient(135deg, var(--brown-light), var(--coral));
     border-radius: 15px;
     color: white;
 }
 
-/* hàng hiển thị tổng tiền - dùng space-between để nhãn trái, số phải */
+/*.total-row - Hàng "Tổng Tiền: xxxđ"
+ * justify-content: space-between → nhãn bên trái, số tiền bên phải */
 .total-row {
     display: flex;
     justify-content: space-between;
@@ -202,43 +339,64 @@ h1 {
 }
 
 
-/* cột phải chứa form thanh toán
-   gradient hồng san hô, viền vàng chanh 3px
-   position relative để cái icon phong bì bên dưới position được */
+
+/* CỘT PHẢI - FORM THÔNG TIN & THANH TOÁN */
+ 
+/* .right-section - Cột phải chứa form nhận hàng
+ * Gradient đỏ Tết → tạo chiều sâu hơn màu đỏ phẳng
+ * position: relative → để .envelope-decoration (absolute) định vị đúng bên trong */
 .right-section {
-    background: linear-gradient(135deg, var(--bright-red), var(--coral-pink));
+    background: linear-gradient(135deg, var(--red-dark), var(--red-tet));
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(232, 20, 42, 0.3);
-    border: 3px solid var(--lemon-yellow);
+    box-shadow: 0 10px 30px rgba(198, 40, 40, 0.3);
+    border: 3px solid var(--gold);
     position: relative;
 }
 
-/* icon phong bì nằm nhô lên trên cạnh trên của right-section
-   top: -15px để nó lấn lên, translateX(-50%) để căn giữa ngang */
+/*.envelope-decoration - Icon bao lì xì 🧧 nhô lên trên cạnh trên cột phải
+ * top: -15px → nhô ra khỏi khung 15px về phía trên
+ * left: 50% + translateX(-50%) → căn giữa theo chiều ngang */
 .envelope-decoration {
     position: absolute;
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 3em;
+    font-size: 2em;
+    line-height: 1;
+}
+/* Hover vào cột phải → bao lì xì rung rinh + glow vàng
+ * animation luckyshake → bao lì xì rung rinh liên tục
+ * filter drop-shadow vàng → tạo vầng sáng vàng xung quanh khi hover
+ * cursor: default → giữ nguyên con trỏ mặc định*/
+.right-section:hover .envelope-decoration {
+    animation: luckyshake 0.5s infinite ease-in-out;
+    filter: drop-shadow(0 0 10px var(--gold));
+    cursor: default;
 }
 
-/* override màu tiêu đề khi nó nằm trong right-section
-   phải dùng màu vàng vì nền đỏ nên chữ đỏ sẽ không thấy được */
+/* right-section .section-title - Tiêu đề "Thông Tin Nhận Hàng" trong cột phải
+ *Override .section-title trong cột phải → đổi sang vàng gold
+ * vì mặc định màu đỏ sẽ bị chìm trên nền đỏ của cột phải
+ * margin-top: 20px → tránh bị icon phong bì che mất phần đầu tiêu đề */
 .right-section .section-title {
-    color: var(--lemon-yellow);
+    color: var(--gold);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    border-bottom-color: var(--lemon-yellow);
+    border-bottom-color: var(--gold);
+    margin-top: 20px;
 }
 
 
-/* wrapper bọc label + input, margin-bottom để mấy cái field cách nhau ra */
+/* FORM NHẬP THÔNG TIN KHÁCH HÀNG
+ * .form-group - Wrapper bọc từng cặp label + input/textarea
+ * margin-bottom: 20px → khoảng cách đều giữa các trường nhập liệu */
 .form-group {
     margin-bottom: 20px;
 }
 
-/* label trên mỗi field, display block để nó xuống hàng trước input */
+/* form group label - Nhãn cho mỗi trường nhập liệu
+ * label - Màu trắng, display block để xuống hàng trước input
+ * (mặc định label là inline, không tự xuống hàng)*/
 .form-group label {
     display: block;
     color: white;
@@ -246,42 +404,46 @@ h1 {
     margin-bottom: 8px;
     font-size: 1em;
 }
-/* input và textarea dùng cho địa chỉ giao hàng, tên người nhận, số điện thoại
-   style chung ở dưới, riêng textarea cho phép kéo dọc để nhập nhiều dòng */
-/* style chung cho input và textarea trong form
-   nền trắng, viền vàng chanh, transition 0.3s cho focus mượt */
+
+/* form-group input, textarea - Style chung cho tất cả trường nhập liệu
+ * input và textarea - Viền vàng gold, nền trắng sạch
+ * font-family Nunito → đồng bộ với font body, tránh trình duyệt tự chọn font khác
+ * transition: all 0.3s → hiệu ứng mượt khi chuyển sang trạng thái focus*/
 .form-group input,
 .form-group textarea {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 400;
     line-height: 1.5;
     width: 100%;
     padding: 12px;
-    border: 2px solid var(--lemon-yellow);
+    border: 2px solid var(--gold);
     border-radius: 10px;
     font-size: 1em;
     background: white;
     transition: all 0.3s;
+    color: var(--brown-dark);
 }
 
-/* khi click vào input thì đổi viền sang xanh nhạt + glow nhẹ
-   outline none để bỏ cái viền xanh mặc định của trình duyệt */
+/* focus input và textarea - Khi người dùng click vào trường nhập liệu
+ * Focus - Viền sang mint + glow xanh nhạt
+ * outline: none → xóa viền xanh mặc định của Chrome*/
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--light-blue);
-    box-shadow: 0 0 10px rgba(168, 216, 234, 0.6);
+    border-color: var(--mint);
+    box-shadow: 0 0 10px rgba(184, 224, 210, 0.6);
 }
 
-/* textarea chỉ cho kéo dọc, kéo ngang sẽ làm vỡ layout */
+/* textarea - Chỉ cho kéo theo chiều dọc (resize: vertical)
+ * Nếu resize: both, người dùng kéo ngang sẽ làm vỡ layout 2 cột */
 .form-group textarea {
     resize: vertical;
     min-height: 80px;
 }
 
 
-/* khung chọn phương thức thanh toán
-   nền trắng mờ 20% để thấy được màu gradient đỏ phía sau */
+/* .payment-methods - Khung chọn hình thức thanh toán
+ * background rgba trắng 20% → lớp kính mờ (Glassmorphism nhẹ) trên nền đỏ */
 .payment-methods {
     background: rgba(255, 255, 255, 0.2);
     padding: 15px;
@@ -289,7 +451,8 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* mỗi option thanh toán dùng flex để radio button và chữ nằm cùng hàng */
+/* .payment-option - Mỗi lựa chọn thanh toán (COD / Chuyển khoản)
+ * flex + margin-right → radio button và chữ nằm ngang, cách đều nhau*/
 .payment-option {
     display: flex;
     align-items: center;
@@ -298,7 +461,8 @@ h1 {
     font-weight: 600;
 }
 
-/* radio button to hơn mặc định cho dễ click, nhất là trên mobile */
+/* pay option input[type="radio"] - Style cho radio button chọn hình thức thanh toán
+ * Phóng to lên 20x20px (mặc định ~13px) Dễ bấm hơn trên màn hình cảm ứng điện thoại*/
 .payment-option input[type="radio"] {
     width: 20px;
     height: 20px;
@@ -306,160 +470,128 @@ h1 {
     cursor: pointer;
 }
 
-
-/* nút đặt hàng chính, nền gradient vàng chanh, chữ đỏ in hoa
-   box-shadow vàng để nó có cảm giác nổi
-   ::before ::after thêm emoji 2 bên  */
+ /* .checkout-btn - Nút đặt hàng
+ * Gradient vàng 3 lớp + background-size: 200%
+ *   → Kết hợp animation shineBtn tạo ánh kim loại chạy liên tục qua nút
+ * border-radius: 50px → bo tròn hoàn toàn kiểu "pill shape"
+ *   Khác biệt rõ với border-radius nhỏ hơn của các thành phần khác
+ * box-shadow 2 lớp:
+ *   - Bóng đen: nút nổi khối, không bị phẳng
+ *   - Hào quang vàng mờ (0 0 0 5px): vầng sáng viền xung quanh nút
+ * 2 animation chạy đồng thời:
+ *   - shineBtn (3s linear): ánh sáng kim loại chạy qua
+ *   - pulseBtn (2s): nút phồng xẹp như tim đập*/
 .checkout-btn {
     width: 100%;
-    padding: 18px;
-    background: linear-gradient(135deg, var(--lemon-yellow), #fff176);
-    color: var(--bright-red);
+    padding: 20px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+    background-size: 200% auto;
+    color: #8B0000;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.5rem;
+    font-weight: 800;
     border: none;
-    border-radius: 15px;
-    font-size: 1.3em;
-    font-weight: 700;
+    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 5px 20px rgba(245, 230, 66, 0.5);
     text-transform: uppercase;
+    letter-spacing: 1px;
     position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.2),
+        0 0 0 5px rgba(255, 215, 0, 0.2);
+    animation: shineBtn 3s linear infinite, pulseBtn 2s infinite;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* hover thì nổi lên 3px + bóng sáng hơn */
+/* Hover nút - Phóng to + nổi lên + đổi gradient trắng-vàng-trắng
+ * animation jello-horizontal → hiệu ứng đàn hồi Jello khi hover vào nút
+ * Chữ đổi sang đỏ tươi (#FF0000) tương phản với gradient sáng
+ */
 .checkout-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(245, 230, 66, 0.8);
-    background: linear-gradient(135deg, #fff176, var(--lemon-yellow));
+    transform: scale(1.05) translateY(-5px);
+    background: linear-gradient(135deg, #FFF, #FFD700, #FFF);
+    color: #FF0000;
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.5);
+    animation: jello-horizontal 0.9s both infinite;
 }
 
-/* khi nhấn xuống thì trả về vị trí cũ, không nổi nữa */
+/* Active (đang nhấn giữ) - Thu nhỏ 0.95 tạo cảm giác hư đang nhấn xuống */
 .checkout-btn:active {
     transform: translateY(0);
 }
 
-/* emoji bên trái nút */
-.checkout-btn::before {
-    content: '🧧 ';
-}
 
-/* emoji bên phải nút */
-.checkout-btn::after {
-    content: ' 🧧';
-}
-
-
-/* hiển thị khi giỏ hàng trống
-   padding lớn để nó có khoảng thở, trông không bị gò bó */
+/* .empty-cart - Hiển thị khi chưa có sản phẩm trong giỏ
+ * padding lớn để vùng trống không trông như bị lỗi layout */
 .empty-cart {
     text-align: center;
     padding: 60px 20px;
 }
 
-/* icon to cho dễ thấy */
-.empty-icon {
-    font-size: 5em;
-    margin-bottom: 20px;
-}
-
-/* text thông báo giỏ rỗng, màu xám nhạt */
+/* .empty-message - Thông báo giỏ rỗng, màu nâu nhạt*/
 .empty-message {
     font-size: 1.1em;
-    color: #666;
+    color: var(--brown-light);
     font-weight: 400;
 }
 
 
-/* toast notification hiện ở góc phải trên màn hình
-   position fixed để nó luôn ở đó dù scroll trang
-   z-index 1000 để không bị mấy phần tử khác che
-   display none vì mặc định phải ẩn, js sẽ bật lên khi cần */
+/*.notification - Hộp thông báo pop-up góc trên phải màn hình
+ * position: fixed → luôn hiển thị dù người dùng cuộn trang
+ * z-index: 1000 → nằm trên tất cả thành phần khác
+ * display: none → ẩn mặc định, JS đổi thành block khi cần thông báo
+ * animation slideIn → trượt vào từ bên phải khi xuất hiện
+ */
 .notification {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: var(--muted-red-orange);
+    background: var(--coral);
     color: white;
     padding: 15px 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    animation: slideIn 0.3s ease;
     display: none;
-    border: 2px solid var(--lemon-yellow);
-}
-
-/* trượt từ bên phải vào + fade in, trông mượt hơn kiểu pop thẳng ra */
-@keyframes slideIn {
-    from {
-        transform: translateX(400px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    border: 2px solid var(--gold);
+    animation: slideIn 0.3s ease;
 }
 
 
-/* responsive cho tablet (dưới 968px)
-   grid 2 cột về còn 1 cột, 2 section xếp dọc */
+/*Tablet (≤ 968px) - Thu layout về 1 cột, giảm font tiêu đề
+ * grid-template-columns: 1fr → 2 cột gộp thành 1 cột dọc */
 @media (max-width: 968px) {
     .main-content {
         grid-template-columns: 1fr;
     }
 
-    h1 {
-        font-size: 1.8em;
-    }
+    h1 { font-size: 1.8em; }
 
-    header::before,
-    header::after {
-        font-size: 2em;
-    }
+    .cart-header::before,
+    .cart-header::after { font-size: 2em; }
 
-    .section-title {
-        font-size: 1.3em;
-    }
+    .section-title { font-size: 1.3em; }
 }
 
-
-/* responsive cho điện thoại (dưới 600px)
-   giảm font-size gốc xuống 14px để mọi thứ tự thu nhỏ theo
-   vì em/rem đều tính từ font-size của body */
+/* Điện thoại (≤ 600px) - Thu nhỏ font gốc body xuống 14px
+ * Mọi đơn vị em/rem tự scale theo → không cần override từng thứ riêng lẻ */
 @media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
+    body { font-size: 14px; }
 
-    /* cho phép wrap xuống hàng khi màn hình không đủ rộng */
-    .cart-item {
-        flex-wrap: wrap;
-    }
+    /* Cho phép các phần tử trong dòng xuống hàng khi màn hình quá hẹp */
+    .cart-item { flex-wrap: wrap; }
 
-    /* ảnh nhỏ lại tí cho vừa màn hình hẹp */
+    /* Thu nhỏ ảnh để tiết kiệm không gian */
     .item-image {
         width: 60px;
         height: 60px;
     }
 
-    h1 {
-        font-size: 1.5em;
-    }
-
-    .subtitle {
-        font-size: 0.9em;
-    }
-
-    .section-title {
-        font-size: 1.2em;
-    }
-
-    .checkout-btn {
-        font-size: 1.1em;
-    }
-
-    .total-row {
-        font-size: 1.2em;
-    }
+    h1       { font-size: 1.5em; }
+    .subtitle { font-size: 0.9em; }
+    .section-title { font-size: 1.2em; }
+    .checkout-btn  { font-size: 1.1em; }
+    .total-row     { font-size: 1.2em; }
 }

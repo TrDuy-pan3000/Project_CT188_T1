@@ -47,9 +47,10 @@
     <main class="cart-wrapper">
     <!-- Main Content -->
      <div class="container">
-        <header class="cart-header">
-            <div class="subtitle">✨ Chúc Mừng Năm Mới - Vạn Sự Như Ý ✨</div>
-        </header>
+        <div class="cart-header">
+            <h1>🐴 Ngựa Phi Thần Tốc - Giao Tết Tận Nơi</h1>
+            <div class="subtitle">✨ Để Bếp Nhà Ngọ lo toan, bạn chỉ việc đón Xuân an nhàn ✨</div>
+        </div>
 
         <div class="main-content">
             <!-- KHU VỰC TRÁI - Danh sách Tết -->
@@ -64,17 +65,17 @@
                         <span id="totalAmount">0đ</span>
                     </div>
                 </div>
-
+            </div>
                 <!-- KHU VỰC PHẢI - Thanh toán -->
-                <div class="right-section">
-                    <div class="envelope-decoration">🧧</div>
-                    <h2 class="section-title"> Thông Tin Nhận Hàng </h2>
+            <div class="right-section">
+                <div class="envelope-decoration">🧧</div>
+                <h2 class="section-title"> Thông Tin Nhận Hàng </h2>
 
-                    <form id="checkoutForm">
-                        <div class="form-group">
-                            <label>👤 Họ và Tên:</label>
-                            <input type="text" id="customerName" placeholder="Nhập họ tên của bạn" required>
-                        </div>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>👤 Họ và Tên:</label>
+                        <input type="text" id="customerName" placeholder="Nhập họ tên của bạn" required>
+                    </div>
 
                     <div class="form-group">
                         <label>🏠 Địa Chỉ Nhận Hàng:</label>
@@ -82,38 +83,37 @@
                     </div>
 
                     <div class="form-group">
+                        <label>📞 Số Điện Thoại:</label>
+                        <input type="text" id="customerPhone" placeholder="Nhập số điện thoại của bạn" required>
+                    </div>
+
+                    <div class="form-group">
                         <label>📝 Ghi Chú (Nếu có):</label>
                         <textarea id="customerNote" placeholder="Ghi chú thêm về đơn hàng"></textarea>
                     </div>
 
-                        <div class="form-group">
-                            <label>📝 Ghi Chú (Nếu có):</label>
-                            <textarea type="text" id="customerNote" placeholder="Ghi chú thêm về đơn hàng"></textarea>
-                        </div>
-
-                        <div class="payment-methods">
+                <div class="payment-methods">
                             <div class="form-group">
                                 <label> Hình Thức Thanh Toán:</label>
                                 <div class="payment-option">
                                     <input type="radio" id="cod" name="payment" value="cod" checked>
-                                    <label for="cod">💵 Thanh Toán Khi Nhận Hàng (COD)</label>
+                                    <label for="cod"> Thanh Toán Khi Nhận Hàng (COD)</label>
                                 </div>
                                 <div class="payment-option">
                                     <input type="radio" id="transfer" name="payment" value="transfer">
-                                    <label for="transfer">🏦 Chuyển Khoản Ngân Hàng</label>
+                                    <label for="transfer"> Chuyển Khoản Ngân Hàng</label>
                                 </div>
                             </div>
                         </div>
-
                         <button type="button" class="checkout-btn" onclick="checkout()">
-                            Chốt Đơn - Rước Lộc
+                            MÃ ĐÁO THÀNH CÔNG 
                         </button>
                     </form>
-                </div>
             </div>
         </div>
+    </div>
 
-        <div class="notification" id="notification"></div>
+    <div class="notification" id="notification"></div>
     </main>
 
     <footer class="footer">
