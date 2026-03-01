@@ -1,773 +1,1107 @@
-.hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 8rem 5% 4rem;
-    background: linear-gradient(135deg, var(--pink-light) 0%, var(--cream) 50%, var(--mint-light) 100%);
-    overflow: visible;
-}
+/* ========================================================
+   INDEX.CSS - CSS RIÊNG CHO TRANG CHỦ (index.html)
+   Ghi đè một số style từ style.css cho phù hợp trang chủ
+   ======================================================== */
 
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
-    pointer-events: none;
-    z-index: 1;
-}
+/* Nhập style chung (dự phòng nếu chưa link trong HTML) */
+@import url('style.css');
 
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('../images/hero_background_1769935111482.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.6;
-    pointer-events: none;
-}
+/* ================== CÁC NÚT BẤM TRÊNG TRANG CHỦ ================== */
 
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-    padding-right: 2rem;
-    position: relative;
-    z-index: 3;
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-full);
-    box-shadow: var(--shadow-clay);
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem;
-    color: var(--brown-dark);
-}
-
-.hero-badge span {
+/* Nút chính - nền vàng chữ đỏ, dùng ở hero và CTA */
+.btn-primary {
     display: inline-block;
-}
-
-
-.hero-title {
-    font-family: 'Baloo 2', cursive;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    color: var(--brown-dark);
-}
-
-.hero-title .brand {
-    display: block;
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero-slogan {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--coral);
-    margin-bottom: 1.5rem;
-}
-
-.hero-desc {
-    font-size: 1.15rem;
-    color: var(--brown-light);
-    margin-bottom: 2rem;
-    line-height: 1.8;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.hero-mascot {
-    position: relative;
-    flex: 0 0 auto;
-    z-index: 10;
-}
-
-.hero-mascot img {
-    width: 550px;
-    height: auto;
-    margin-top: -150px;
-    filter: drop-shadow(0 25px 50px rgba(74, 59, 50, 0.25));
-    transition: transform 0.3s ease;
-}
-
-.hero-mascot img:hover {
-    transform: scale(1.02);
-}
-
-
-.hero-decorations {
-    display: none;
-}
-
-
-.products {
-    padding: 6rem 5%;
-    background: var(--cream);
-    position: relative;
-}
-
-.products::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: 0;
-    right: 0;
-    height: 200px;
-    background: linear-gradient(180deg, transparent 0%, var(--cream) 60%, var(--cream) 100%);
-    pointer-events: none;
-    z-index: -1;
-}
-
-
-
-.products .product-list {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.products .section-foot {
+    padding: 0.8rem 2rem;
+    background: var(--gold);
+    color: var(--red-tet);
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
     text-align: center;
-    margin-top: 3rem;
-    padding-bottom: 2rem;
-    position: relative;
-    z-index: 2;
 }
 
-.features {
-    padding: 6rem 5%;
-    background: linear-gradient(180deg, var(--white) 0%, var(--cream) 30%, var(--cream) 70%, var(--pink-light) 100%);
-    position: relative;
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 247, 0, 0.4);
 }
 
-.features::before {
-    content: '';
-    position: absolute;
+/* Nút phụ - viền vàng trong suốt, dùng ở hero */
+.btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 247, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Nút mua hàng - nền đỏ, chiếm hết chiều ngang card */
+.btn-buy {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: var(--red-tet);
+    color: var(--white);
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-buy:hover {
+    background: var(--red-dark);
+    transform: translateY(-2px);
+}
+
+/* Nút viền đỏ - dùng cho "Xem tất cả món" */
+.btn-outline {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    color: var(--red-tet);
+    border: 2px solid var(--red-tet);
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--red-tet);
+    color: var(--white);
+}
+
+/* ================== CÁC PHẦN TRANG CHỦ ================== */
+
+/* 1. HEADER - Ghi đè style header cho trang chủ 
+   Cao 100px cố định, nền đỏ đậm */
+.header {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 100;
     height: 100px;
-    background: linear-gradient(to bottom, var(--white) 0%, transparent 100%);
-    pointer-events: none;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--red-dark);
+    border-bottom: 2px solid rgba(255, 247, 0, 0.15);
 }
 
-.features::after {
-    content: '';
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Logo lớn hơn: 85px */
+.logo img {
+    height: 85px;
+}
+
+.logo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--gold);
+}
+
+/* Thanh điều hướng - các link nằm ngang */
+.nav-links ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--radius);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active {
+    background: var(--gold);
+    color: var(--red-tet);
+}
+
+/* Cụm nút giỏ hàng, tìm kiếm, tài khoản */
+.cart-button {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Nút icon tròn trong header */
+.icon-btn {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.icon-btn.cart {
+    position: relative;
+}
+
+/* Badge số lượng giỏ hàng - hình tròn vàng góc trên icon */
+.cart-badge {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(to bottom, transparent 0%, var(--pink-light) 100%);
-    pointer-events: none;
+    top: -5px;
+    right: -5px;
+    background: var(--gold);
+    color: var(--red-tet);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
-.feature-list {
+/* 2. HERO - Phần giới thiệu lớn đầu trang
+   Nền đỏ đậm với hình mây trang trí, chia 2 cột: text + hình mascot */
+.hero-section {
+    position: relative;
+    padding: 12rem 5% 6rem;
+    background: linear-gradient(rgba(138, 16, 18, 0.85), rgba(138, 16, 18, 0.85)), url('../images/random_outline_clouds.png') repeat center center;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Nội dung text bên trái hero - giới hạn 600px */
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+    z-index: 2;
+}
+
+/* Nhãn nhỏ "Năm Giáp Ngọ 2026" - viền vàng */
+.hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 247, 0, 0.15);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: var(--radius-full);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* Tiêu đề hero - font sang trọng, chữ vàng to */
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+/* Slogan - chữ trắng to bên dưới tiêu đề */
+.hero-slogan {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+/* Mô tả ngắn - chữ trắng mờ, dãn dòng thoáng */
+.hero-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+/* 2 nút CTA nằm ngang - gap 1rem */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Hình mascot bên phải - có bóng đổ và bay lên xuống */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+    animation: float 6s ease-in-out infinite; /* Bay lên xuống vô hạn */
+}
+
+/* Hiệu ứng bay lên xuống cho mascot */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 3. USP STRIP - Dải điểm nổi bật
+   4 cam kết nằm ngang, ngăn cách bởi đường kẻ dọc */
+.usp-strip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--red-dark);
+    padding: 1.5rem 5%;
+}
+
+/* Mỗi cam kết: icon + chữ nằm ngang */
+.usp-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    padding: 0 2rem;
+}
+
+/* Icon cam kết - màu vàng */
+.usp-item i {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+/* Đường kẻ dọc ngăn cách giữa các cam kết */
+.usp-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 3.5 KHUYẾN MÃI ĐẶC BIỆT
+   Banner nền vàng, box trắng có bóng râm kiểu retro */
+.special-offer {
+    padding: 3rem 5%;
+    background: var(--gold);
+    display: flex;
+    justify-content: center;
+}
+
+/* Box khuyến mãi - nền trắng, viền đen, bóng retro (8px 8px) */
+.offer-content {
+    background: var(--white);
+    border: 2px solid var(--brown-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    border-radius: var(--radius);
+    max-width: 1000px;
+    width: 100%;
+    gap: 2rem;
+    box-shadow: 8px 8px 0px var(--brown-dark); /* Bóng kiểu retro */
+}
+
+/* Emoji to bên trái */
+.offer-icon {
+    font-size: 3rem;
+}
+
+/* Phần text giữa (co dãn) */
+.offer-text {
+    flex: 1;
+}
+
+/* Tiêu đề khuyến mãi - font sang trọng, đỏ đậm */
+.offer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--red-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* Mô tả khuyến mãi */
+.offer-desc {
+    font-size: 1.1rem;
+    color: var(--brown-light);
+}
+
+/* Nút khuyến mãi - không xuống dòng */
+.offer-btn {
+    white-space: nowrap;
+}
+
+
+/* 4. SẢN PHẨM NỔI BẬT
+   Lưới 4 card sản phẩm, mỗi card có: ảnh, tag, tên, mô tả, giá, nút thêm */
+.featured-products {
+    padding: 6rem 5%;
+    background: var(--cream);
+}
+
+/* Tiêu đề căn giữa */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Dòng phụ đề nhỏ - chữ đỏ in hoa, cách ký tự rộng */
+.section-subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--red-tet);
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Tiêu đề chính - font sang trọng Cormorant Garamond */
+.section-header .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: var(--brown-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Mô tả bên dưới tiêu đề */
+.section-header .section-desc {
+    font-size: 1.1rem;
+    color: var(--brown-light);
+}
+
+/* Lưới sản phẩm - tự động căn đều, tối thiểu 250px mỗi cột */
+.product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+/* Thẻ sản phẩm - nền trắng, bóng nhẹ, hover nổi lên */
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-clay);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-clay-hover);
+}
+
+/* Khung ảnh vuông (aspect-ratio: 1) */
+.card-img {
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1;
+}
+
+/* Ảnh lấp đầy khung, cắt nếu cần (object-fit: cover) */
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover card: ảnh zoom nhẹ 1.05 lần */
+.card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+/* Phần body: chữa tag, tên, mô tả, giá, nút */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;                     /* Co dãn lấp đầy card */
+    text-align: left;
+    padding: 1.5rem;
+}
+
+/* Nhãn tag góc trên (đỏ = bán chạy, cam = đặc sản, hồng = mới) */
+.card-tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+    width: fit-content;
+}
+
+/* Tag đỏ: "Bán chạy" và "Truyền thống" */
+.card-tag.hot,
+.card-tag.trad {
+    background: var(--coral);
+}
+
+/* Tag cam: "Đặc sản miền Nam" */
+.card-tag.special {
+    background: var(--mint);
+}
+
+/* Tag hồng: "Mới" */
+.card-tag.new {
+    background: var(--pink-peach);
+}
+
+/* Tên sản phẩm - font sang trọng */
+.card-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--brown-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+/* Mô tả ngắn - flex:1 để đẩy giá + nút xuống dưới */
+.card-desc {
+    font-size: 0.85rem;
+    color: var(--brown-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+/* Hàng cuối card: giá bên trái, nút bên phải */
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;            /* Luôn dính dưới cùng card */
+}
+
+/* Giá tiền - chữ đỏ to, đậm */
+.card-body .price {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--red-tet);
+    margin: 0;
+}
+
+/* Nút "Thêm" vào giỏ hàng - nhỏ gọn trên mỗi card */
+.btn-add {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 1.2rem;
+    background: var(--red-tet);
+    color: var(--white);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover: đỏ đậm hơn, bay lên 2px */
+.btn-add:hover {
+    background: var(--red-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Container căn giữa cho nút "Xem tất cả món" */
+.view-all-btn-container {
+    text-align: center;
+}
+
+
+
+/* 6. ĐÁNH GIÁ KHÁCH HÀNG
+   Lưới 3 thẻ, mỗi thẻ gồm: nội dung, avatar, tên, sao */
+.testimonials-section {
+    padding: 6rem 5%;
+    background: var(--white);
+    background-image: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+}
+
+/* Lưới tự co giãn - tối thiểu 320px/thẻ */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.feature {
-    background: var(--white);
-    padding: 2.5rem 2rem;
-    border-radius: var(--radius-xl);
-    text-align: center;
-    box-shadow: var(--shadow-clay);
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.feature::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, var(--red-tet), var(--coral), var(--gold));
-}
-
-.feature:nth-child(1) {
-    transform: rotate(-1deg);
-}
-
-.feature:nth-child(2) {
-    transform: rotate(0.5deg);
-}
-
-.feature:nth-child(3) {
-    transform: rotate(-0.5deg);
-}
-
-.feature:hover {
-    transform: rotate(0deg) translateY(-10px);
-    box-shadow: var(--shadow-clay-hover);
-}
-
-.feature-icon {
-    width: 5rem;
-    height: 5rem;
-    margin: 0 auto 1.5rem;
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--white);
-    box-shadow: var(--shadow-clay);
-    transition: all 0.4s ease;
-}
-
-.feature:hover .feature-icon {
-    transform: scale(1.1) rotate(8deg);
-}
-
-.feature-title,
-.feature h3 {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--brown-dark);
-}
-
-.feature-quote,
-.feature .quote {
-    font-family: 'Baloo 2', cursive;
-    font-size: 0.95rem;
-    color: var(--coral);
-    font-style: italic;
-    margin-bottom: 0.8rem;
-}
-
-.feature-desc,
-.feature>p:last-child {
-    color: var(--brown-light);
-    line-height: 1.7;
-    font-size: 0.95rem;
-}
-
-.testimonials {
-    padding: 6rem 5%;
-    background: linear-gradient(135deg, var(--pink-light) 0%, var(--mint-light) 50%, var(--cream) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.testimonials::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 120px;
-    background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
-    pointer-events: none;
-}
-
-.testimonials::before {
-    content: '⭐';
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3rem;
-    opacity: 0.3;
-}
-
-.testimonials-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
+/* Thẻ đánh giá - nền trắng, bo tròn lớn, viền đỏ nhạt */
 .testimonial-card {
     background: var(--white);
     padding: 2.5rem;
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-clay);
-    text-align: center;
+    box-shadow: var(--shadow-soft);
     position: relative;
-    transform: rotate(-0.5deg);
+    border: 1px solid rgba(204, 39, 41, 0.1);
 }
 
-.testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: 1rem;
-    left: 2rem;
-    font-family: 'Baloo 2', cursive;
-    font-size: 5rem;
-    color: var(--pink-peach);
-    opacity: 0.5;
-    line-height: 1;
-}
-
-.testimonial-text,
-.testimonial-card .text {
-    font-size: 1.3rem;
+/* Nội dung đánh giá - chữ nghiêng, dãn dòng thoáng */
+.test-text {
+    font-size: 1.1rem;
     font-style: italic;
     color: var(--brown-dark);
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 2rem;
     line-height: 1.8;
 }
 
-.testimonial-author,
-.testimonial-card .author {
+/* Hàng tác giả: avatar + tên nằm ngang */
+.test-author {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.testimonial-avatar,
-.testimonial-card .avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: var(--radius-full);
-    background: linear-gradient(135deg, var(--pink-peach), var(--mint));
+/* Avatar tròn 50px - nền hồng nhạt, căn emoji giữa */
+.test-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--pink-light);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
 }
 
-.testimonial-info h4,
-.testimonial-card .info h4 {
-    font-family: 'Baloo 2', cursive;
-    font-weight: 700;
-    color: var(--brown-dark);
+/* Tên khách hàng - chữ đỏ */
+.test-info h4 {
+    font-family: 'Inter', sans-serif;
+    color: var(--red-tet);
+    font-size: 1.1rem;
 }
 
-.testimonial-info p,
-.testimonial-card .info p {
+/* Mô tả khách (VD: "Khách quen") */
+.test-info p {
     font-size: 0.9rem;
     color: var(--brown-light);
 }
 
-.testimonial-stars,
-.testimonial-card .stars {
-    margin-top: 1rem;
-    color: var(--gold);
+/* Sao đánh giá - vàng đậm, cách đều 2px */
+.test-stars {
+    color: var(--gold-dark);
     font-size: 1.2rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 2px;
 }
 
+/* 7. KÊU GỌI HÀNH ĐỘNG (CTA)
+   Nền đỏ gradient, chữ vàng, nút đặt hàng nổi bật */
+.final-cta {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, var(--red-tet) 0%, var(--red-dark) 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+/* Tiêu đề CTA - chữ vàng siêu to, font sang trọng */
+.ctatitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+/* Mô tả CTA - chữ trắng mờ, giới hạn 600px căn giữa */
+.ctadesc {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Khoảng cách dưới nút CTA */
+.ctabtns {
+    margin-bottom: 2rem;
+}
+
+/* Dòng cam kết nhỏ (VD: "Miễn phí giao hàng...") */
+.ctatrust {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 247, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+/* 8. CÁC BƯỚC ĐẶT HÀNG
+   4 bước nằm ngang: Chọn món → Thêm giỏ → Thanh toán → Nhận hàng */
+.order-steps-section {
+    padding: 6rem 5%;
+    background: var(--cream);
+}
+
+/* Hàng 4 bước nằm ngang, giãn đều, tối đa 1000px */
+.steps-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Mỗi bước: số thứ tự tròn + icon to + tiêu đề + mô tả */
+.step {
+    text-align: center;
+    width: 200px;
+    position: relative;
+}
+
+/* Số bước - hình tròn vàng góc trên, đè lên icon */
+.step-number {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    background: var(--gold);
+    color: var(--red-tet);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+/* Ô icon tròn 80px - nền trắng, bóng nhẹ, viền đỏ nhạt */
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: var(--shadow-soft);
+    border: 2px solid rgba(204, 39, 41, 0.1);
+}
+
+/* Tên bước - chữ đỏ, font Inter */
+.step h3 {
+    font-family: 'Inter', sans-serif;
+    color: var(--red-tet);
+    margin-bottom: 0.5rem;
+}
+
+/* Mô tả bước - chữ nhỏ xám */
+.step p {
+    font-size: 0.9rem;
+    color: var(--brown-light);
+}
+
+/* Mũi tên → giữa các bước - đỏ nhạt */
+.step-arrow {
+    font-size: 2rem;
+    color: rgba(204, 39, 41, 0.3);
+}
+
+/* 9. MENU & GALLERY - Phần đen sang trọng
+   Nền tối, chữ vàng, icon thực đơn tròn + lưới 3 ảnh */
+.menu-and-gallery {
+    padding: 5rem 5%;
+    background: linear-gradient(180deg, #1A0A00 0%, #0D0500 100%);
+    text-align: center;
+    position: relative;
+    color: var(--gold);
+}
+
+/* Đường viền vàng trang trí: --- ◆ --- */
+.gold-edge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+/* Đường kẻ vàng mờ dần 2 đầu (gradient → transparent) */
+.mg-line {
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* Hình thoi nhỏ ◆ giữa 2 đường kẻ */
+.mg-diamond {
+    font-size: 0.8rem;
+}
+
+/* Hoa văn góc trên (VD: ✦ ✦ ✦) - mờ 60% */
+.corner-tl {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    opacity: 0.6;
+    margin-bottom: 2rem;
+}
+
+/* Tiêu đề lớn phần gallery - font sang trọng */
+.mg-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Phụ đề - chữ trắng mờ 60% */
+.mg-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3rem;
+}
+
+/* Hàng icon thực đơn - 3 hình tròn nằm ngang, gap 4rem */
+.mg-icons {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Mỗi mục icon: ảnh tròn + tên bên dưới */
+.mg-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Khung ảnh tròn 100px - viền vàng nhạt */
+.mg-icon-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 247, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover: viền vàng rõ, phóng nhẹ 1.05 */
+.mg-icon-img:hover {
+    border-color: var(--gold);
+    transform: scale(1.05);
+}
+
+/* Ảnh trong khung tròn - lấp đầy, cắt nếu cần */
+.mg-icon-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tên danh mục bên dưới icon */
+.mg-icon-item span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+/* Dải phân cách giữa icon và gallery (✦ ✦ ✦) */
+.mid-divider {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    opacity: 0.5;
+    margin: 4rem 0;
+}
+
+/* Lưới 3 ảnh vuông - hover zoom nhẹ, có lớp phủ tối ở đáy */
+.mg-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Mỗi ô ảnh vuông - viền vàng nhạt, bo tròn */
+.mg-gallery-img {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 1;
+    position: relative;
+    border: 1px solid rgba(255, 247, 0, 0.2);
+}
+
+/* Lớp phủ tối gradient từ giữa xuống đáy (50% → 100%) */
+.mg-gallery-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* Ảnh lấp đầy ô, chuyển động zoom mượt 0.5s */
+.mg-gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover: zoom ảnh 1.1 lần */
+.mg-gallery-img:hover img {
+    transform: scale(1.1);
+}
+
+/* 10. FOOTER TRANG CHỦ - Ghi đè layout footer
+   3 cột: 2fr (thông tin) + 1fr (link) + 1.5fr (liên hệ) */
+.footer {
+    background: #0A0400;
+    color: var(--white);
+    position: relative;
+}
+
+/* Đường gradient 6px trên cùng footer */
+.footer-deco {
+    height: 6px;
+    background: linear-gradient(90deg, var(--gold), var(--red-tet), var(--pink-peach), var(--coral), var(--gold));
+}
+
+/* Lưới 3 cột không đều: cột 1 rộng nhất, cột 2 hẹp nhất */
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 4rem;
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo + tên thương hiệu nằm ngang */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Logo 40px chiều cao */
+.footer-brand img {
+    height: 40px;
+}
+
+/* Tên "Bếp Nhà Ngọ" - chữ vàng đậm */
+.footer-brand-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--gold);
+}
+
+/* Mô tả footer - trắng mờ 70% */
+.footer-text {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+/* Slogan vàng đậm - nổi bật hơn text thường */
+.footer-slogan {
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Icon mạng xã hội - tròn 40px, hover đổ + bay lên */
+.social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    transition: all 0.3s ease;
+}
+
+.social a:hover {
+    background: var(--red-tet);
+    transform: translateY(-3px);
+}
+
+/* Tiêu đề cột footer - chữ vàng */
+.footer-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+/* Danh sách link và thông tin liên hệ - hover chuyển vàng */
+.footer-links li,
+.contact li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+/* Icon liên hệ màu vàng */
+.contact i {
+    color: var(--gold);
+    margin-top: 5px;
+}
+
+/* Dòng bản quyền cuối cùng - nền tối hơn */
+.footerbottom {
+    text-align: center;
+    padding: 1.5rem;
+    background: #050200;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+/* ================== RESPONSIVE - GIAO DIỆN TRÊEN MÀN HÌNH NHỎ ================== */
+
+/* Tablet: hero xuống dòng, ẩn mũi tên bước, gallery wrap */
 @media (max-width: 968px) {
-    .hero {
-        padding-top: 6rem;
-        min-height: auto;
-    }
-
-    .hero-container {
-        flex-direction: column-reverse;
+    .hero-section {
+        flex-direction: column;
         text-align: center;
-    }
-
-    .hero-content {
-        padding-right: 0;
-        max-width: 100%;
-    }
-
-    .hero-mascot img {
-        width: 280px;
-        margin-top: 0;
-        margin-bottom: -40px;
+        padding-top: 8rem;
     }
 
     .hero-actions {
         justify-content: center;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .hero-image {
+        margin-top: 3rem;
     }
 
-    .hero-slogan {
-        font-size: 1.4rem;
-    }
-}
-
-/* Stats Section */
-.stats {
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    padding: 3rem 5%;
-}
-
-.stats-container {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.stat-item {
-    text-align: center;
-    color: var(--white);
-}
-
-.stat-number {
-    display: block;
-    font-family: 'Baloo 2', cursive;
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 0.3rem;
-}
-
-.stat-label {
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
-
-/* Process Section */
-.process {
-    padding: 6rem 5%;
-    background: linear-gradient(180deg, var(--cream) 0%, var(--white) 50%, var(--cream) 100%);
-    position: relative;
-}
-
-.process::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: linear-gradient(to bottom, var(--cream) 0%, transparent 100%);
-    pointer-events: none;
-}
-
-.process::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
-    pointer-events: none;
-}
-
-.process-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.process-step,
-.step {
-    background: var(--white);
-    padding: 2rem 1.5rem;
-    border-radius: var(--radius-xl);
-    text-align: center;
-    box-shadow: var(--shadow-clay);
-    width: 200px;
-    position: relative;
-}
-
-.step-number {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35px;
-    height: 35px;
-    background: var(--gold);
-    color: var(--brown-dark);
-    font-family: 'Baloo 2', cursive;
-    font-weight: 800;
-    font-size: 1.1rem;
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.step-icon {
-    width: 4rem;
-    height: 4rem;
-    background: linear-gradient(135deg, var(--pink-peach), var(--pink-light));
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-    font-size: 1.5rem;
-    color: var(--red-tet);
-}
-
-.step-title,
-.step h3 {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--brown-dark);
-    margin-bottom: 0.3rem;
-}
-
-.step-desc,
-.step>p {
-    font-size: 0.85rem;
-    color: var(--brown-light);
-}
-
-.process-arrow,
-.arrow {
-    color: var(--coral);
-    font-size: 1.5rem;
-}
-
-/* Testimonials Grid */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.testimonials-grid .testimonial-card {
-    transform: none;
-}
-
-/* CTA Banner */
-.cta-banner {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 50%, var(--coral) 100%);
-    padding: 4rem 5%;
-    text-align: center;
-    position: relative;
-}
-
-.cta-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(to bottom, var(--cream) 0%, transparent 100%);
-    pointer-events: none;
-}
-
-.cta-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.cta-title {
-    font-family: 'Baloo 2', cursive;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--brown-dark);
-    margin-bottom: 0.8rem;
-}
-
-.cta-desc {
-    font-size: 1.1rem;
-    color: var(--brown-dark);
-    margin-bottom: 1.5rem;
-    opacity: 0.85;
-}
-
-@media (max-width: 768px) {
-
-    .products,
-    .features,
-    .testimonials,
-    .process {
-        padding: 4rem 4%;
-    }
-
-    .feature-list {
-        grid-template-columns: 1fr;
-    }
-
-    .feature:nth-child(1),
-    .feature:nth-child(2),
-    .feature:nth-child(3) {
-        transform: rotate(0);
-    }
-
-    .testimonial-card {
-        padding: 2rem 1.5rem;
-        transform: rotate(0);
-    }
-
-    .testimonial-text {
-        font-size: 1.1rem;
-    }
-
-    .stats-container {
+    .steps-row {
+        flex-wrap: wrap;
         gap: 2rem;
+        justify-content: center;
     }
 
-    .stat-number {
-        font-size: 2.2rem;
-    }
-
-    .process-arrow,
-    .arrow {
+    .step-arrow {
         display: none;
     }
 
-    .process-list {
+    .mg-icons {
+        flex-wrap: wrap;
         gap: 2rem;
     }
 
-    .cta-title {
-        font-size: 1.6rem;
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 480px) {
-    .hero-mascot img {
-        width: 250px;
+/* Mobile: ẩn nav, USP 2 cột, gallery 1 cột */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .usp-strip {
+        flex-wrap: wrap;
+    }
+
+    .usp-divider {
+        display: none;
+    }
+
+    .usp-item {
+        width: 45%;
+        margin-bottom: 1rem;
+        justify-content: center;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
-    .hero-slogan {
-        font-size: 1.2rem;
+    .mg-gallery {
+        grid-template-columns: 1fr;
     }
 
-    .hero-desc {
-        font-size: 1rem;
+    .offer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
     }
 
-    .stat-item {
-        width: 45%;
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-}
-
-/* ==================== */
-/* Simplified Classes   */
-/* ==================== */
-
-/* Card styles for homepage */
-.card .price {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--red-tet);
-    margin-bottom: 0.8rem;
-}
-
-.card h3 {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--brown-dark);
-    margin-bottom: 0.5rem;
-}
-
-/* Button styles */
-.btn-buy {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    color: var(--white);
-    border-radius: var(--radius-full);
-    font-family: 'Baloo 2', cursive;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-buy:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    color: var(--white);
-    border-radius: var(--radius-full);
-    font-family: 'Baloo 2', cursive;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
-}
-
-.btn-secondary {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: var(--white);
-    color: var(--brown-dark);
-    border-radius: var(--radius-full);
-    font-family: 'Baloo 2', cursive;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: var(--shadow-clay);
-    transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-clay-hover);
-}
-
-/* CTA styles */
-.cta-banner h2 {
-    font-family: 'Baloo 2', cursive;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--brown-dark);
-    margin-bottom: 0.8rem;
-}
-
-.cta-banner p {
-    font-size: 1.1rem;
-    color: var(--brown-dark);
-    margin-bottom: 1.5rem;
-    opacity: 0.85;
 }
