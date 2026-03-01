@@ -15,7 +15,7 @@
     background: var(--gold);
     color: var(--red-tet);
     border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -38,7 +38,7 @@
     color: var(--gold);
     border: 2px solid var(--gold);
     border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -59,7 +59,7 @@
     background: var(--red-tet);
     color: var(--white);
     border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 600;
     transition: all 0.3s ease;
     text-align: center;
@@ -79,7 +79,7 @@
     color: var(--red-tet);
     border: 2px solid var(--red-tet);
     border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
     transition: all 0.3s ease;
@@ -121,7 +121,7 @@
 }
 
 .logo-text {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--gold);
@@ -134,7 +134,7 @@
 }
 
 .nav-link {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 600;
     font-size: 1.1rem;
     padding: 0.6rem 1.4rem;
@@ -228,14 +228,14 @@
     color: var(--gold);
     border: 1px solid var(--gold);
     border-radius: var(--radius-full);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
 
 /* Tiêu đề hero - font sang trọng, chữ vàng to */
 .hero-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 4rem;
     font-weight: 700;
     line-height: 1.1;
@@ -245,7 +245,7 @@
 
 /* Slogan - chữ trắng to bên dưới tiêu đề */
 .hero-slogan {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.8rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1.5rem;
@@ -309,7 +309,7 @@
     align-items: center;
     gap: 0.8rem;
     color: var(--white);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 500;
     padding: 0 2rem;
 }
@@ -363,7 +363,7 @@
 
 /* Tiêu đề khuyến mãi - font sang trọng, đỏ đậm */
 .offer-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
     font-weight: 700;
     color: var(--red-dark);
@@ -405,9 +405,9 @@
     text-transform: uppercase;
 }
 
-/* Tiêu đề chính - font sang trọng Cormorant Garamond */
+/* Tiêu đề chính - font sang trọng Playfair Display */
 .section-header .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
     color: var(--brown-dark);
     margin-bottom: 1rem;
@@ -466,7 +466,7 @@
     transform: scale(1.05);
 }
 
-/* Phần body: chữa tag, tên, mô tả, giá, nút */
+/* Phần body: chứa tag, tên, mô tả, giá, nút */
 .card-body {
     display: flex;
     flex-direction: column;
@@ -505,7 +505,7 @@
 
 /* Tên sản phẩm - font sang trọng */
 .card-body h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.35rem;
     font-weight: 700;
     color: var(--brown-dark);
@@ -532,7 +532,7 @@
 
 /* Giá tiền - chữ đỏ to, đậm */
 .card-body .price {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--red-tet);
@@ -627,7 +627,7 @@
 
 /* Tên khách hàng - chữ đỏ */
 .test-info h4 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     color: var(--red-tet);
     font-size: 1.1rem;
 }
@@ -656,7 +656,7 @@
 
 /* Tiêu đề CTA - chữ vàng siêu to, font sang trọng */
 .ctatitle {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     color: var(--gold);
     margin-bottom: 1rem;
@@ -679,7 +679,7 @@
 
 /* Dòng cam kết nhỏ (VD: "Miễn phí giao hàng...") */
 .ctatrust {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 0.9rem;
     color: rgba(255, 247, 0, 0.8);
     letter-spacing: 1px;
@@ -722,7 +722,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 800;
 }
 
@@ -741,9 +741,9 @@
     border: 2px solid rgba(204, 39, 41, 0.1);
 }
 
-/* Tên bước - chữ đỏ, font Inter */
+/* Tên bước - chữ đỏ, font Be Vietnam Pro */
 .step h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     color: var(--red-tet);
     margin-bottom: 0.5rem;
 }
@@ -801,14 +801,14 @@
 
 /* Tiêu đề lớn phần gallery - font sang trọng */
 .mg-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
 }
 
 /* Phụ đề - chữ trắng mờ 60% */
 .mg-subtitle {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 3rem;
 }
@@ -854,7 +854,7 @@
 
 /* Tên danh mục bên dưới icon */
 .mg-icon-item span {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 500;
 }
 
@@ -944,7 +944,7 @@
 
 /* Tên "Bếp Nhà Ngọ" - chữ vàng đậm */
 .footer-brand-text {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--gold);
@@ -988,7 +988,7 @@
 
 /* Tiêu đề cột footer - chữ vàng */
 .footer-title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.3rem;
     color: var(--gold);
     margin-bottom: 1.5rem;

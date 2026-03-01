@@ -51,8 +51,11 @@
     --radius-sm: 2px;
 }
 
-/* --- Font chữ dự phòng (phòng khi link trong HTML chưa load) --- */
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+/* --- Font chữ dự phòng (phòng khi link trong HTML chưa load) ---
+   Playfair Display: font serif trang trọng (tiêu đề lớn)
+   Be Vietnam Pro: font sans-serif năng động, hỗ trợ tiếng Việt (nội dung, UI)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
 
 /* --- Thiết lập chung cho body ---
    flex-direction: column để footer luôn dính dưới cùng
@@ -62,7 +65,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     color: var(--brown-dark);
     line-height: 1.7;
     background: var(--cream);
@@ -127,6 +130,7 @@ main {
     gap: 0.6rem;
 }
 
+/* Ảnh logo - chiều cao cố định, bo góc nhẹ */
 .logo img {
     height: 4.5rem;
     border-radius: var(--radius);
@@ -134,7 +138,7 @@ main {
 
 /* Tên thương hiệu - chữ vàng nổi bật trên nền đỏ */
 .logo-text {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--gold);
@@ -147,6 +151,7 @@ main {
     justify-content: center;
 }
 
+/* Danh sách link điều hướng - xếp ngang, cách đều */
 .nav-list {
     display: flex;
     gap: 0.5rem;
@@ -154,7 +159,7 @@ main {
 
 /* Mỗi link điều hướng - bo góc tròn, hover lên trên 2px */
 .nav-link {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 600;
     font-size: 1rem;
     padding: 0.6rem 1.4rem;
@@ -165,6 +170,7 @@ main {
     position: relative;
 }
 
+/* Hover: nền trắng mờ, bay lên 2px */
 .nav-link:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-2px);
@@ -197,6 +203,7 @@ main {
     font-size: 1rem;
 }
 
+/* Hover: nền sáng hơn, bay lên 3px */
 .icon-btn:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-3px);
@@ -235,7 +242,7 @@ main {
 
 /* Tiêu đề lớn - có 2 emoji trang trí 2 bên (tuỳ chọn) */
 .section-title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--brown-dark);
@@ -275,13 +282,13 @@ main {
    NÚT BẤM (Buttons)
    .btn-primary  = nút chính (đỏ, nổi bật nhất)
    .btn-secondary = nút phụ (viền đỏ, nền trắng)
-   .btn-cart = nút thêm giỏ hàng (xanh mint)
+   .btn-cart = nút thêm giỏ hàng (nâu cam gradient)
    ========================================== */
 .btn {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     border-radius: var(--radius-full);
     transition: all 0.3s ease;
@@ -334,7 +341,7 @@ main {
 }
 
 /* ==========================================
-   DANH SÁCH SẢN PHẨM & THᮾ SẢN PHẨM (Cards)
+   DANH SÁCH SẢN PHẨM & THẺ SẢN PHẨM (Cards)
    Lưới responsive: tự động xuống dòng khi màn hình nhỏ
    ========================================== */
 .product-list {
@@ -383,7 +390,7 @@ main {
     top: 0.8rem;
     left: 0.8rem;
     padding: 0.35rem 0.9rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--white);
@@ -391,11 +398,13 @@ main {
     box-shadow: var(--shadow-soft);
 }
 
+/* Tag "Bán chạy" - nền đỏ Tết, chữ vàng */
 .tag.hot {
     background: var(--red-tet);
     color: var(--gold);
 }
 
+/* Tag "Mới" - nền hồng đào */
 .tag.new {
     background: var(--pink-peach);
     color: var(--white);
@@ -413,7 +422,7 @@ main {
 
 /* Tên sản phẩm - đậm, nâu tối */
 .card-title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
     margin-bottom: 0.4rem;
@@ -422,7 +431,7 @@ main {
 
 /* Giá sản phẩm - chữ đỏ to, đậm nhất card */
 .card-price {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.3rem;
     font-weight: 800;
     color: var(--red-tet);
@@ -497,7 +506,7 @@ main {
 
 /* Tên thương hiệu - chữ vàng to */
 .footer-brand-text {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--gold);
@@ -505,7 +514,7 @@ main {
 
 /* Tiêu đề cột footer - chữ vàng, có gạch gradient bên dưới */
 .footer-title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
@@ -536,7 +545,7 @@ main {
 
 /* Slogan - chữ nghiêng hồng đào */
 .footer-slogan {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-style: italic;
     color: var(--pink-peach);
     font-size: 1rem;
@@ -630,6 +639,10 @@ main {
     color: var(--red-tet);
 }
 
+/* ==========================================
+   RESPONSIVE: Tablet (≤768px)
+   Ẩn nav, thu gọn header & footer 1 cột
+   ========================================== */
 @media (max-width: 768px) {
     .header {
         padding: 0.8rem 4%;
@@ -676,6 +689,10 @@ main {
     }
 }
 
+/* ==========================================
+   RESPONSIVE: Mobile nhỏ (≤480px)
+   Icon nhỏ hơn, sản phẩm 1 cột
+   ========================================== */
 @media (max-width: 480px) {
     .icon-btn {
         width: 2.4rem;
@@ -709,7 +726,7 @@ main {
 
 /* Tiêu đề - màu san hô, to */
 .about__heading {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     color: var(--coral);
     margin-bottom: 10px;
