@@ -26,24 +26,24 @@
     50%       { transform: translateY(-20px); }
 }
 
-/* floatHeader - Khung cart-header nhấp nhô nhẹ, tạo cảm giác rung rinh 
+/* float-header - Khung cart-header nhấp nhô nhẹ, tạo cảm giác rung rinh 
  * Biên độ -8px nhỏ hơn float */
-@keyframes floatHeader {
+@keyframes float-header {
     0%, 100% { transform: translateY(0);    }
     50%       { transform: translateY(-8px); }
 }
 
-/* shineHeader - Dải lụa sáng trắng quét qua khung header
+/* shine-header - Dải lụa sáng trắng quét qua khung header
  * Dừng lâu từ 20% đến 100% để dải sáng không chạy liên tục */
-@keyframes shineHeader {
+@keyframes shine-header {
     0%   { left: -100%; }
     20%  { left: 150%;  }
     100% { left: 150%;  }
 }
 
-/* luckyshake - Bao lì xì 🧧 rung rinh khi hover vào cột phải
+/* lucky-shake - Bao lì xì 🧧 rung rinh khi hover vào cột phải
  * Phải giữ translateX(-50%) trong mỗi bước để icon không bị lệch khỏi vị trí căn giữa */
-@keyframes luckyshake {
+@keyframes lucky-shake {
     0%   { transform: translateX(-50%) rotate(0deg);   }
     25%  { transform: translateX(-50%) rotate(15deg);  }
     50%  { transform: translateX(-50%) rotate(-15deg); }
@@ -51,15 +51,15 @@
     100% { transform: translateX(-50%) rotate(0deg);   }
 }
 
-/* shineBtn - Ánh kim loại chạy qua nút "Chốt Đơn"
+/* shine-btn - Ánh kim loại chạy qua nút "Chốt Đơn"
  * Kết hợp với background-size: 200% để gradient "chạy" liên tục qua bề mặt nút */
-@keyframes shineBtn {
+@keyframes shine-btn {
     to { background-position: 200% center; }
 }
 
-/* pulseBtn dùng cho nút đặt hàng, tạo hiệu ứng "thở" phồng xẹp nhẹ như đang đập tim
+/* pulse-btn dùng cho nút đặt hàng, tạo hiệu ứng "thở" phồng xẹp nhẹ như đang đập tim
  * Scale 1 → 1.03 → 1, lặp mỗi 2 giây */
-@keyframes pulseBtn {
+@keyframes pulse-btn {
     0%   { transform: scale(1);    }
     50%  { transform: scale(1.03); }
     100% { transform: scale(1);    }
@@ -77,17 +77,17 @@
     100% { transform: scale3d(1,    1,    1); }
 }
 
-/* slideIn dùng cho toast notification khi xuất hiện
+/* slide-in dùng cho toast notification khi xuất hiện
  - Toast notification trượt vào từ bên phải
  * Kết hợp translateX (trượt) và opacity (mờ dần) để trông mượt hơn
  */
-@keyframes slideIn {
+@keyframes slide-in {
     from { transform: translateX(400px); opacity: 0; }
     to   { transform: translateX(0);     opacity: 1; }
 }
 
 
-/*.container - Giới hạn chiều rộng tối đa và căn giữa nội dung trang
+/* .container - Giới hạn chiều rộng tối đa và căn giữa nội dung trang
  * max-width: 1100px phù hợp với thiết kế, không quá rộng trên màn hình
  * margin: 0 auto → căn giữa theo chiều ngang tự động
  */
@@ -98,10 +98,14 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* .cart-wrapper - Vùng bọc toàn bộ nội dung trang giỏ hàng
  * padding-top: 100px → đẩy nội dung xuống dưới header đang fixed */
 =======
 /*.cart-wrapper - Vùng bọc toàn bộ nội dung trang giỏ hàng
+=======
+/* .cart-wrapper - Vùng bọc toàn bộ nội dung trang giỏ hàng
+>>>>>>> b3f3887 ([update] add comment css file)
  * padding-top: 100px → đẩy nội dung xuống dưới header đang fixed
  * margin-bottom: 50px → khoảng thở trước khi chạm footer
  */
@@ -128,7 +132,7 @@
  * Viền double:
  *   - border: 3px gold → viền vàng chính
  *   - outline: 2px + offset 5px → tạo viền vàng thứ 2 bên ngoài, cách 5px
- * animation floatHeader → khung nhấp nhô nhẹ liên tục
+ * animation float-header → khung nhấp nhô nhẹ liên tục
  */
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
 .cart-header {
@@ -158,7 +162,7 @@
     border: 3px solid var(--gold);
     outline: 2px solid rgba(255, 215, 0, 0.1);
     outline-offset: 5px;
-    animation: floatHeader 4s infinite ease-in-out;
+    animation: float-header 4s infinite ease-in-out;
     transition: all 0.4s ease;
 }
 
@@ -186,8 +190,12 @@
 /* cart-header::after - Dải lụa sáng trắng mờ quét qua khung header
  * width 50%, height 200% → đủ lớn để che hết chiều cao kể cả khi nghiêng
  * rotate(30deg) → nghiêng cho dải sáng
+<<<<<<< HEAD
  * animation shineHeader 6s → chạy từ trái qua phải rồi dừng lâu trước khi lặp */
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+ * animation shine-header 6s → chạy từ trái qua phải rồi dừng lâu trước khi lặp */
+>>>>>>> b3f3887 ([update] add comment css file)
 .cart-header::after {
     content: '';
     position: absolute;
@@ -207,13 +215,18 @@
     height: 200%;
     background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
     transform: rotate(30deg);
-    animation: shineHeader 6s infinite;
+    animation: shine-header 6s infinite;
 }
 
 /* h1 - Tiêu đề chính Ngựa Phi Thần Tốc - Giao Tết Tận Nơi
  * Màu vàng gold nổi bật trên nền đỏ
+<<<<<<< HEAD
  * text-shadow tạo chiều sâu, tránh chữ bị chìm vào gradient đỏ phía sau*/
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+ * text-shadow tạo chiều sâu, tránh chữ bị chìm vào gradient đỏ phía sau
+ */
+>>>>>>> b3f3887 ([update] add comment css file)
 h1 {
     color: var(--gold);
     font-size: 2em;
@@ -228,7 +241,7 @@ h1 {
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-/*subtitle - Câu chúc Tết bên dưới tiêu đề, màu mint nhạt
+/* .subtitle - Câu chúc Tết bên dưới tiêu đề, màu mint nhạt
  * font-size 1em → nhỏ hơn tiêu đề chính, nhưng vẫn rõ ràng
  * margin-top: 10px → khoảng cách hợp lý với tiêu đề, không quá gần
  * font-weight: 400 → nhẹ nhàng, không cạnh tranh với tiêu đề chính */
@@ -275,8 +288,13 @@ h1 {
  * .left-section & .right-section - Style chung cho cả 2 cột
  * box-shadow 2 lớp: bóng đen thường + bóng đỏ mờ theo tông Tết
  * border vàng mờ 30% opacity → viền nhẹ hơn border đậm
+<<<<<<< HEAD
  * transition cubic-bezier(0.175, 0.885, 0.32, 1.275): Đường cong easing tạo hiệu ứng nảy nhẹ (bounce) khi hover kết thúc*/
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+ * transition cubic-bezier(0.175, 0.885, 0.32, 1.275): Đường cong easing tạo hiệu ứng nảy nhẹ (bounce) khi hover kết thúc
+ */
+>>>>>>> b3f3887 ([update] add comment css file)
 .left-section,
 .right-section {
     border-radius: 20px;
@@ -387,7 +405,7 @@ h1 {
     box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
 }
 
-/*.item-image - Ảnh sản phẩm cố định 70x70px
+/* .item-image - Ảnh sản phẩm cố định 70x70px
  * object-fit: cover → cắt ảnh vừa khung, không bị méo dù tỉ lệ gốc khác nhau
  * border nâu nhạt → phân tách ảnh với nền kem bên ngoài */
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
@@ -436,7 +454,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-/*.item-price - Giá tiền màu đỏ Tết nổi bật
+/* .item-price - Giá tiền màu đỏ Tết nổi bật
  * font-size 1.1em + font-weight 700 → nhấn mạnh giá tiền hơn tên sản phẩm */
 .item-price {
     font-size: 1.1em;
@@ -578,8 +596,12 @@ h1 {
     color: white;
 }
 
+<<<<<<< HEAD
 /*.total-row - Hàng "Tổng Tiền: xxxđ"
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+/* .total-row - Hàng "Tổng Tiền: xxxđ"
+>>>>>>> b3f3887 ([update] add comment css file)
  * justify-content: space-between → nhãn bên trái, số tiền bên phải */
 .total-row {
     display: flex;
@@ -616,10 +638,14 @@ h1 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* .envelope-decoration - Icon bao lì xì 🧧 nhô lên trên cạnh trên cột phải
  * top: -15px → nhô ra khỏi khung, left: 50% + translateX(-50%) → căn giữa */
 =======
 /*.envelope-decoration - Icon bao lì xì 🧧 nhô lên trên cạnh trên cột phải
+=======
+/* .envelope-decoration - Icon bao lì xì 🧧 nhô lên trên cạnh trên cột phải
+>>>>>>> b3f3887 ([update] add comment css file)
  * top: -15px → nhô ra khỏi khung 15px về phía trên
  * left: 50% + translateX(-50%) → căn giữa theo chiều ngang */
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
@@ -649,17 +675,17 @@ h1 {
 =======
 }
 /* Hover vào cột phải → bao lì xì rung rinh + glow vàng
- * animation luckyshake → bao lì xì rung rinh liên tục
+ * animation lucky-shake → bao lì xì rung rinh liên tục
  * filter drop-shadow vàng → tạo vầng sáng vàng xung quanh khi hover
- * cursor: default → giữ nguyên con trỏ mặc định*/
+ * cursor: default → giữ nguyên con trỏ mặc định */
 .right-section:hover .envelope-decoration {
-    animation: luckyshake 0.5s infinite ease-in-out;
+    animation: lucky-shake 0.5s infinite ease-in-out;
     filter: drop-shadow(0 0 10px var(--gold));
     cursor: default;
 }
 
 /* right-section .section-title - Tiêu đề "Thông Tin Nhận Hàng" trong cột phải
- *Override .section-title trong cột phải → đổi sang vàng gold
+ * Override .section-title trong cột phải → đổi sang vàng gold
  * vì mặc định màu đỏ sẽ bị chìm trên nền đỏ của cột phải
  * margin-top: 20px → tránh bị icon phong bì che mất phần đầu tiêu đề */
 .right-section .section-title {
@@ -689,8 +715,12 @@ h1 {
 =======
 /* form group label - Nhãn cho mỗi trường nhập liệu
  * label - Màu trắng, display block để xuống hàng trước input
+<<<<<<< HEAD
  * (mặc định label là inline, không tự xuống hàng)*/
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+ * (mặc định label là inline, không tự xuống hàng) */
+>>>>>>> b3f3887 ([update] add comment css file)
 .form-group label {
     display: block;
     color: white;
@@ -708,11 +738,15 @@ h1 {
 /* form-group input, textarea - Style chung cho tất cả trường nhập liệu
  * input và textarea - Viền vàng gold, nền trắng sạch
  * font-family Nunito → đồng bộ với font body, tránh trình duyệt tự chọn font khác
- * transition: all 0.3s → hiệu ứng mượt khi chuyển sang trạng thái focus*/
+ * transition: all 0.3s → hiệu ứng mượt khi chuyển sang trạng thái focus */
 .form-group input,
 .form-group textarea {
+<<<<<<< HEAD
     font-family: 'Nunito', sans-serif;
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+    font-family: Nunito, sans-serif;
+>>>>>>> b3f3887 ([update] add comment css file)
     font-weight: 400;
     line-height: 1.5;
     width: 100%;
@@ -736,8 +770,13 @@ h1 {
 
 /* focus input và textarea - Khi người dùng click vào trường nhập liệu
  * Focus - Viền sang mint + glow xanh nhạt
+<<<<<<< HEAD
  * outline: none → xóa viền xanh mặc định của Chrome*/
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+ * outline: none → xóa viền xanh mặc định của Chrome
+ */
+>>>>>>> b3f3887 ([update] add comment css file)
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
@@ -780,8 +819,13 @@ h1 {
 /* .payment-option - Mỗi lựa chọn thanh toán nằm ngang */
 =======
 /* .payment-option - Mỗi lựa chọn thanh toán (COD / Chuyển khoản)
+<<<<<<< HEAD
  * flex + margin-right → radio button và chữ nằm ngang, cách đều nhau*/
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+ * flex + margin-right → radio button và chữ nằm ngang, cách đều nhau
+ */
+>>>>>>> b3f3887 ([update] add comment css file)
 .payment-option {
     display: flex;
     align-items: center;
@@ -795,8 +839,13 @@ h1 {
 /* Radio button - Phóng to 20x20px, màu vàng khi chọn */
 =======
 /* pay option input[type="radio"] - Style cho radio button chọn hình thức thanh toán
+<<<<<<< HEAD
  * Phóng to lên 20x20px (mặc định ~13px) Dễ bấm hơn trên màn hình cảm ứng điện thoại*/
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+ * Phóng to lên 20x20px (mặc định ~13px) Dễ bấm hơn trên màn hình cảm ứng điện thoại
+ */
+>>>>>>> b3f3887 ([update] add comment css file)
 .payment-option input[type="radio"] {
     width: 20px;
     height: 20px;
@@ -823,15 +872,16 @@ h1 {
 =======
  /* .checkout-btn - Nút đặt hàng
  * Gradient vàng 3 lớp + background-size: 200%
- *   → Kết hợp animation shineBtn tạo ánh kim loại chạy liên tục qua nút
+ *   → Kết hợp animation shine-btn tạo ánh kim loại chạy liên tục qua nút
  * border-radius: 50px → bo tròn hoàn toàn kiểu "pill shape"
  *   Khác biệt rõ với border-radius nhỏ hơn của các thành phần khác
  * box-shadow 2 lớp:
  *   - Bóng đen: nút nổi khối, không bị phẳng
  *   - Hào quang vàng mờ (0 0 0 5px): vầng sáng viền xung quanh nút
  * 2 animation chạy đồng thời:
- *   - shineBtn (3s linear): ánh sáng kim loại chạy qua
- *   - pulseBtn (2s): nút phồng xẹp như tim đập*/
+ *   - shine-btn (3s linear): ánh sáng kim loại chạy qua
+ *   - pulse-btn (2s): nút phồng xẹp như tim đập
+ */
 .checkout-btn {
     width: 100%;
     padding: 20px;
@@ -895,7 +945,7 @@ h1 {
     box-shadow:
         0 10px 20px rgba(0, 0, 0, 0.2),
         0 0 0 5px rgba(255, 215, 0, 0.2);
-    animation: shineBtn 3s linear infinite, pulseBtn 2s infinite;
+    animation: shine-btn 3s linear infinite, pulse-btn 2s infinite;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -926,6 +976,7 @@ h1 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* .empty-icon - Emoji lớn làm điểm nhấn trực quan cho trạng thái rỗng */
 .empty-icon {
     font-size: 4em;
@@ -936,6 +987,10 @@ h1 {
 =======
 /* .empty-message - Thông báo giỏ rỗng, màu nâu nhạt*/
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
+=======
+/* .empty-message - Thông báo giỏ rỗng, màu nâu nhạt
+*/
+>>>>>>> b3f3887 ([update] add comment css file)
 .empty-message {
     font-size: 1.1em;
     color: var(--brown-light);
@@ -944,6 +999,7 @@ h1 {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* TOAST NOTIFICATION */
 
 /* .notification - Hộp thông báo pop-up góc trên phải màn hình
@@ -951,10 +1007,13 @@ h1 {
  * animation slide-in → trượt mượt vào từ bên phải */
 =======
 /*.notification - Hộp thông báo pop-up góc trên phải màn hình
+=======
+/* .notification - Hộp thông báo pop-up góc trên phải màn hình
+>>>>>>> b3f3887 ([update] add comment css file)
  * position: fixed → luôn hiển thị dù người dùng cuộn trang
  * z-index: 1000 → nằm trên tất cả thành phần khác
  * display: none → ẩn mặc định, JS đổi thành block khi cần thông báo
- * animation slideIn → trượt vào từ bên phải khi xuất hiện
+ * animation slide-in → trượt vào từ bên phải khi xuất hiện
  */
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
 .notification {
@@ -970,6 +1029,7 @@ h1 {
     display: none;
     border: 2px solid var(--gold);
 <<<<<<< HEAD
+<<<<<<< HEAD
     animation: slide-in 0.3s ease;
     font-weight: 500;
     max-width: 300px;
@@ -981,10 +1041,13 @@ h1 {
 /* Tablet (≤ 968px) - Thu layout về 1 cột dọc */
 =======
     animation: slideIn 0.3s ease;
+=======
+    animation: slide-in 0.3s ease;
+>>>>>>> b3f3887 ([update] add comment css file)
 }
 
 
-/*Tablet (≤ 968px) - Thu layout về 1 cột, giảm font tiêu đề
+/* Tablet (≤ 968px) - Thu layout về 1 cột, giảm font tiêu đề
  * grid-template-columns: 1fr → 2 cột gộp thành 1 cột dọc */
 >>>>>>> a3be4ca (update assets/css/cart.css and cart.html)
 @media (max-width: 968px) {
