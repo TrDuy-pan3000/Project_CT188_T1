@@ -4,16 +4,19 @@
   padding: 2% 5%;
   max-width: 1280px;
 }
+/* tạo ô chứa flex cho phẩn ảnh và thông tin sản phẩm */
 .product-container {
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 40px;
 }
+/* thiết lập tỉ lệ phần ảnh bên trái với max-width=500px*/
 .product-imgs {
   flex: 1.2;
   max-width: 500px;
 }
+/* ảnh chính lớn phía trên height cố định = 400px */
 #main-img {
   width: 100%;
   object-fit: cover;
@@ -21,7 +24,7 @@
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-clay);
 }
-
+/* tạo ô chứa flex cho các ảnh phụ nhỏ hơn phía dưới */
 .sub-img {
   width: 100%;
   display: flex;
@@ -30,7 +33,7 @@
   margin-top: 15px;
   gap: 12px;
 }
-
+/* các ảnh phụ nhỏ phía dưới */
 .small-img {
   height: 80px;
   width: 23%;
@@ -50,8 +53,8 @@
   border: 3px solid var(--red-tet);
 }
 
-/*  */
-
+/* Thông tin sản phẩm trong phần product-container */
+/* thiết lập tỉ lệ cho phần nội dung */
 .product-info {
   flex: 1;
   text-align: left;
@@ -112,7 +115,7 @@
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-
+/* thiết lập phần tùy chọn: dài-rộng, màu sắc, font chữ,... */
 .flavor-option {
   width: 200px;
   height: 40px;
@@ -132,7 +135,7 @@
 #quanlity:hover {
   border-color: var(--red-tet);
 }
-
+/* thiết lập phần add-to-cart: input, button */
 .add-to-cart {
   display: flex;
   gap: 10px;
@@ -171,7 +174,7 @@
   box-shadow: var(--shadow-clay-hover);
 }
 
-/*  */
+/* phần ngăn cách sản phẩm và thông tin chi tiết */
 
 .line {
   height: 2px;
@@ -195,8 +198,9 @@ h4 {
   text-align: justify;
   color: var(--brown-light);
 }
-
+/* thay đổi áp dụng với màn hình nhỏ hơn */
 @media screen and (max-width: 768px) {
+  /* ảnh và thông tin theo chiều dọc */
   .product-container {
     flex-direction: column;
     align-items: center;
@@ -236,11 +240,8 @@ h4 {
   .add-to-cart {
     flex-direction: column;
   }
-
-  .add-to-cart input {
-    width: 100%;
-  }
-
+  .flavor-option,
+  .add-to-cart input,
   .add-to-cart button {
     width: 100%;
   }
