@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 
 <head>
@@ -17,145 +17,234 @@
   <link rel="stylesheet" href="assets/css/detail.css">
 </head>
 
-<body>
-  <header class="header">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ Logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <span class="logo-text">Bếp Nhà Ngọ</span>
-      </a>
-    </div>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="index.html" class="nav-link">Trang chủ</a></li>
-        <li><a href="menu.html" class="nav-link">Thực đơn</a></li>
-        <li><a href="story.html" class="nav-link">Câu chuyện</a></li>
-      </ul>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-btn" aria-label="Tìm kiếm"><i class="fas fa-search"></i></button>
-      <button class="icon-btn" aria-label="Tài khoản"><i class="fas fa-user"></i></button>
-      <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-badge">0</span>
-      </a>
-    </div>
-  </header>
-
-  <main style="padding-top: 5rem;">
-    <h1 style="font-family: 'Baloo 2', cursive; text-align: center; padding: 2rem; color: var(--brown-dark);">🍜 Chi
-      Tiết Món</h1>
-    <section class="product-container">
-      <div class="product-imgs">
-        <img src="./assets/images/banh-tet-nhan-dau-2.jpg" alt="Bánh Tét Nhân Đậu" id="main-img" />
-        <div class="sub-img">
-          <img src="./assets/images/banh-tet-nhan-chuoi-1.jpg" alt="Bánh Tét Nhân Chuối" class="small-img" />
-          <img src="./assets/images/banh-tet-nhan-chuoi-2.jpg" alt="Bánh Tét Nhân Chuối" class="small-img" />
-          <img src="./assets/images/banh-tet-nhan-dau-1.jpg" alt="Bánh Tét Nhân Đậu" class="small-img" />
-          <img src="./assets/images/banh-tet-nhan-dau-2.jpg" alt="Bánh Tét Nhân Đậu" class="small-img" />
-        </div>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="assets/images/logo.png"
+            alt="Bếp Nhà Ngọ Logo"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
+          />
+          <span class="logo-text">Bếp Nhà Ngọ</span>
+        </a>
       </div>
-      <div class="product-info">
-        <h2>BÁNH TÉT</h2>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="menu.html" class="nav-link">Thực đơn</a></li>
+          <li><a href="story.html" class="nav-link">Câu chuyện</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Tìm kiếm">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn" aria-label="Tài khoản">
+          <i class="fas fa-user"></i>
+        </button>
+        <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main style="padding-top: 5rem">
+      <h1
+        style="
+          font-family: &quot;Baloo 2&quot;, cursive;
+          text-align: center;
+          padding: 2rem;
+          color: var(--brown-dark);
+        "
+      >
+        🍜 Chi Tiết Món
+      </h1>
+      <section class="product-container">
+        <!-- hình ảnh của sản phẩm bên trái -->
+        <div class="product-imgs">
+          <img
+            src="./assets/images/banh-tet-nhan-dau-2.jpg"
+            alt="Bánh Tét Nhân Đậu"
+            id="main-img"
+          />
+          <div class="sub-img">
+            <img
+              src="./assets/images/banh-tet-nhan-chuoi-1.jpg"
+              alt="Bánh Tét Nhân Chuối"
+              class="small-img"
+            />
+            <img
+              src="./assets/images/banh-tet-nhan-chuoi-2.jpg"
+              alt="Bánh Tét Nhân Chuối"
+              class="small-img"
+            />
+            <img
+              src="./assets/images/banh-tet-nhan-dau-1.jpg"
+              alt="Bánh Tét Nhân Đậu"
+              class="small-img"
+            />
+            <img
+              src="./assets/images/banh-tet-nhan-dau-2.jpg"
+              alt="Bánh Tét Nhân Đậu"
+              class="small-img"
+            />
+          </div>
+        </div>
+        <!-- thông tin, giá, nút mua hàng,.. bên phải -->
+        <div class="product-info">
+          <h2>BÁNH TÉT</h2>
+          <p>
+            Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của
+            cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung
+            Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên
+            liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói
+            thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp
+            Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác
+            bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được
+            làm hay là bán quanh năm.
+            <a href="#">Xem thêm</a>
+          </p>
+          <div class="price">
+            <h3>
+              <strong>Giá: 35.000 VNĐ<del>50.000 VNĐ</del></strong>
+            </h3>
+          </div>
+          <div class="options">
+            <p>Loại:</p>
+            <select class="flavor-option">
+              <option value="banana">Nhân chuối</option>
+              <option value="bean">Nhân đậu</option>
+            </select>
+          </div>
+          <div class="add-to-cart">
+            <input id="quanlity" type="number" value="1" min="1" />
+            <button class="add-to-cart-button" type="submit">BỎ VÀO MÂM</button>
+          </div>
+        </div>
+      </section>
+      <!-- thông tin chi tiết sản phẩm -->
+      <section class="more-info">
+        <div class="line"></div>
+        <h3>Thông Tin Chi Tiết Sản Phẩm</h3>
+        <h4>Trọng lượng:</h4>
+        <p>800g - 1kg / đòn.</p>
+        <h4>Thành phần chính:</h4>
         <p>
-          Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của
-          cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung
-          Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên
-          liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói
-          thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp
-          Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác
-          bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được
-          làm hay là bán quanh năm.
-          <a href="#">Xem thêm</a>
+          - Bánh tét nhân đậu (Ngọt/Mặn): Gạo nếp sáp thượng hạng dẻo thơm, đậu
+          xanh tách vỏ sên kỹ giữ được độ bùi, nước cốt dừa béo ngậy, gia vị cơ
+          bản (muối, tiêu, đường) và lá chuối tươi. (Nếu bán kèm nhân thịt mỡ,
+          bạn có thể bổ sung thêm: thịt ba rọi ướp vị đậm đà).<br />
+          - Bánh tét nhân chuối (Ngọt): Gạo nếp sáp trộn đều với nước cốt dừa
+          thơm béo, nhân chuối xiêm (chuối sứ) chín rục được ướp đường
+          phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên, mang lại
+          vị ngọt thanh, dẻo mềm và bọc ngoài bằng lá chuối tươi.
         </p>
-        <div class="price">
-          <h3>
-            <strong>Giá: 35.000 VNĐ<del>50.000 VNĐ</del></strong>
-          </h3>
-        </div>
-        <div class="options">
-          <p>Loại:</p>
-          <select class="flavor-option">
-            <option value="banana">Nhân chuối</option>
-            <option value="bean">Nhân đậu</option>
-          </select>
-        </div>
-        <div class="add-to-cart">
-          <input id="quanlity" type="number" value="1" min="1" />
-          <button class="add-to-cart-button" type="submit">
-            BỎ VÀO MÂM
-          </button>
-        </div>
-        <div class="more-info">
-          <h4>Mô tả sản phẩm</h4>
-          <p>
-            - Bánh mới cùng ngày sản xuất, ăn ngon nhất khi để tủ lạnh từ 3-5h
-            và sau đó có thể dùng ngay<br />- Bánh để tủ đá nên hấp lại trước
-            khi ăn ở nhiệt độ sôi từ 5-7 phút<br />- Sản phẩm xuất xứ: Việt
-            Nam
-          </p>
-          <h4>Thành phần</h4>
-          <p>
-            -Gạo nếp nương, nước cốt lá riềng, thịt 15% (áp dụng với bánh xanh
-            thịt), đỗ, tiêu, muối.
-          </p>
-          <h4>Bảo quản</h4>
-          <p>
-            - 15 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />-
-            30 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ
-            lạnh)<br />- 06 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp
-            đông)<br />- Thông tin cảnh báo: Không nên để bánh ở nhiệt độ
-            thường quá 15 ngày; Không sử dụng bánh khi có dấu hiệu nấm mốc, có
-            mùi chua
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <h4>Quy cách đóng gói:</h4>
+        <p>
+          Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm và kéo
+          dài thời gian bảo quản.
+        </p>
+        <h4>Hạn sử dụng:</h4>
+        <p>
+          - 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15
+          ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />-
+          03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông)
+        </p>
+        <h4>Cách dùng:</h4>
+        <p>
+          - Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn.
+          <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên bản.<br />
+          - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai mặt, ăn
+          kèm với dưa món, củ kiệu hoặc tương ớt.
+        </p>
+        <h4>Bảo quản:</h4>
+        <p>
+          - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br />
+          - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực phẩm và
+          bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng hoặc chiên
+          lại.
+        </p>
+      </section>
+    </main>
 
-  <footer class="footer">
-    <div class="footer-deco"></div>
-    <div class="footer-content">
-      <div class="footer-col">
-        <div class="footer-brand">
-          <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ">
-          <span class="footer-brand-text">Bếp Nhà Ngọ</span>
+    <footer class="footer">
+      <div class="footer-deco"></div>
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ" />
+            <span class="footer-brand-text">Bếp Nhà Ngọ</span>
+          </div>
+          <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà.</p>
+          <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
         </div>
-        <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà.</p>
-        <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
-        <div class="social">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <div class="footer-col">
+          <h4 class="footer-title">Liên Kết Nhanh</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="index.html"
+                ><i class="fas fa-chevron-right"></i> Trang chủ</a
+              >
+            </li>
+            <li>
+              <a href="menu.html"
+                ><i class="fas fa-chevron-right"></i> Thực đơn</a
+              >
+            </li>
+            <li>
+              <a href="story.html"
+                ><i class="fas fa-chevron-right"></i> Câu chuyện</a
+              >
+            </li>
+            <li>
+              <a href="cart.html"
+                ><i class="fas fa-chevron-right"></i> Giỏ hàng</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Liên Hệ Ngựa</h4>
+          <ul class="contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i
+              ><span>123 Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</span>
+            </li>
+            <li><i class="fas fa-phone"></i><span>0909 123 456</span></li>
+            <li>
+              <i class="fas fa-envelope"></i
+              ><span>xin.chao@bepnhangngo.vn</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i
+              ><span>7:00 - 22:00 (Giao cả Tết!)</span>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-title">Liên Kết Nhanh</h4>
-        <ul class="footer-links">
-          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
-          <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Thực đơn</a></li>
-          <li><a href="story.html"><i class="fas fa-chevron-right"></i> Câu chuyện</a></li>
-          <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Giỏ hàng</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1
+          | Năm Giáp Ngọ 🐴
+        </p>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-title">Liên Hệ Ngựa</h4>
-        <ul class="contact">
-          <li><i class="fas fa-map-marker-alt"></i><span>123 Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</span></li>
-          <li><i class="fas fa-phone"></i><span>0909 123 456</span></li>
-          <li><i class="fas fa-envelope"></i><span>xin.chao@bepnhangngo.vn</span></li>
-          <li><i class="fas fa-clock"></i><span>7:00 - 22:00 (Giao cả Tết!)</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1 | Năm Giáp Ngọ 🐴</p>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/detail.js"></script>
-</body>
-
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/detail.js"></script>
+  </body>
 </html>
