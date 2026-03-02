@@ -1,178 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Thực đơn Bếp Nhà Ngọ - Bánh tét, bánh chưng, đồ nhậu Tết và nhiều món ngon khác. Đặt hàng ngay!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thực đơn Bếp Nhà Ngọ - Bánh tét, bánh chưng, đồ nhậu Tết và nhiều món ngon khác. Đặt hàng ngay!"
+    />
     <title>Thực đơn - Bếp Nhà Ngọ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/menu.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ Logo"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <span class="logo-text">Bếp Nhà Ngọ</span>
-            </a>
-        </div>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Trang chủ</a></li>
-                <li><a href="menu.html" class="nav-link active">Thực đơn</a></li>
-                <li><a href="about.html" class="nav-link">Câu chuyện</a></li>
-            </ul>
-        </nav>
-        <div class="header-actions">
-            <button class="icon-btn" aria-label="Tìm kiếm"><i class="fas fa-search"></i></button>
-            <button class="icon-btn" aria-label="Tài khoản"><i class="fas fa-user"></i></button>
-            <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-badge">0</span>
-            </a>
-        </div>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="assets/images/logo.png"
+            alt="Bếp Nhà Ngọ Logo"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
+          />
+          <span class="logo-text">Bếp Nhà Ngọ</span>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+          <li><a href="menu.html" class="nav-link active">Thực đơn</a></li>
+          <li><a href="story.html" class="nav-link">Câu chuyện</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Tìm kiếm">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn" aria-label="Tài khoản">
+          <i class="fas fa-user"></i>
+        </button>
+        <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
     </header>
 
-    <main style="padding-top: 5rem;">
-        <h1 style="font-family: 'Baloo 2', cursive; text-align: center; padding: 2rem; color: var(--brown-dark);">🍜
-            Thực Đơn Nhà Ngọ</h1>
+    <main style="padding-top: 5rem">
+      <h1
+        style="
+          font-family: &quot;Baloo 2&quot;, cursive;
+          text-align: center;
+          padding: 2rem;
+          color: var(--brown-dark);
+        "
+      >
+        🍜 Thực Đơn Nhà Ngọ
+      </h1>
 
-        <div class="top-actions">
-            <button id="filterBtn">Bộ lọc</button>
-            <div class="search-box">
-                <span class="search-icon">🔍</span>
-                <input type="search" id="searchInput" placeholder="Tìm món ngon..." />
-            </div>
+      <div class="top-actions">
+        <button id="filterBtn">Bộ lọc</button>
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="search" id="searchInput" placeholder="Tìm món ngon..." />
         </div>
+      </div>
 
-        <div class="overlay" id="overlay"></div>
+      <div class="overlay" id="overlay"></div>
 
-        <div class="filter-modal" id="filterModal">
-            <h3>Chọn danh mục</h3>
-            <div class="category-list">
-                <button class="category-btn" data-value="all">Tất cả</button>
-                <button class="category-btn" data-value="banh-tet">Bánh Tết</button>
-                <button class="category-btn" data-value="tet-nham-nhi">Tết Nhâm Nhi</button>
-                <button class="category-btn" data-value="do-uong">Đồ Uống</button>
-            </div>
-            <div class="actions">
-                <button id="closeFilter">Hủy</button>
-                <button id="applyFilter" disabled>Áp dụng</button>
-            </div>
+      <div class="filter-modal" id="filterModal">
+        <h3>Chọn danh mục</h3>
+        <div class="category-list">
+          <button class="category-btn" data-value="all">Tất cả</button>
+          <button class="category-btn" data-value="banh-tet">Bánh Tết</button>
+          <button class="category-btn" data-value="tet-nham-nhi">
+            Tết Nhâm Nhi
+          </button>
+          <button class="category-btn" data-value="do-uong">Đồ Uống</button>
         </div>
-
-        <div class="menu-grid">
-            <div class="menu-card" data-category="banh-tet">
-                <div class="image-wrapper">
-                    <img src="assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg"
-                        alt="Bánh Tết">
-                    <span class="badge new">Mới</span>
-                </div>
-                <h3 class="food-name">Bánh Tét</h3>
-                <span class="price">45.000₫</span>
-                <button onclick="location.href='detail.html'" class="buy-btn">Xem chi tiết</button>
-            </div>
-            <div class="menu-card" data-category="do-uong">
-                <div class="image-wrapper">
-                    <img src="assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg" alt="bia">
-                    <span class="badge new">Mới</span>
-                </div>
-                <h3 class="food-name">Bia</h3>
-                <span class="price">345.000₫</span>
-                <button onclick="location.href='detail.html'" class="buy-btn">Xem chi tiết</button>
-            </div>
-            <div class="menu-card" data-category="tet-nham-nhi">
-                <div class="image-wrapper">
-                    <img src="assets/images/recipe31982-cook-step5-636650963278909741.jpg" alt="Đồ nhậu">
-                    <span class="badge new">Mới</span>
-                </div>
-                <h3 class="food-name">Đồ nhậu</h3>
-                <span class="price">45.000₫</span>
-                <button onclick="location.href='detail.html'" class="buy-btn">Xem chi tiết</button>
-            </div>
-            <div class="menu-card" data-category="banh-tet">
-                <div class="image-wrapper">
-                    <img src="assets/images/banh-tet-nhan-chuoi-1.jpg" alt="Bánh Tét Chuối">
-                    <span class="badge new">Best Seller</span>
-                </div>
-                <h3 class="food-name">Bánh Tét Chuối</h3>
-                <span class="price">150.000₫</span>
-                <button onclick="location.href='detail.html'" class="buy-btn">Xem chi tiết</button>
-            </div>
-            <div class="menu-card" data-category="banh-tet">
-                <div class="image-wrapper">
-                    <img src="assets/images/banh-tet-nhan-dau-1.jpg" alt="Bánh Tét Đậu">
-                    <span class="badge new">Mới</span>
-                </div>
-                <h3 class="food-name">Bánh Tét Đậu</h3>
-                <span class="price">120.000₫</span>
-                <button onclick="location.href='detail.html'" class="buy-btn">Xem chi tiết</button>
-            </div>
-            <div class="menu-card" data-category="tet-nham-nhi">
-                <div class="image-wrapper">
-                    <img src="assets/images/recipe31982-cook-step5-636650963278909741.jpg" alt="Combo Nhậu">
-                    <span class="badge new">Hot</span>
-                </div>
-                <h3 class="food-name">Combo Nhậu Tết</h3>
-                <span class="price">250.000₫</span>
-                <button onclick="location.href='detail.html'" class="buy-btn">Xem chi tiết</button>
-            </div>
+        <div class="actions">
+          <button id="closeFilter">Hủy</button>
+          <button id="applyFilter" disabled>Áp dụng</button>
         </div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card" data-category="banh-tet">
+          <div class="image-wrapper">
+            <img
+              src="assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg"
+              alt="Bánh Tết"
+            />
+            <span class="badge new">Mới</span>
+          </div>
+          <h3 class="food-name">Bánh Tét</h3>
+          <span class="price">45.000₫</span>
+          <button onclick="location.href = 'detail.html'" class="buy-btn">
+            Xem chi tiết
+          </button>
+        </div>
+        <div class="menu-card" data-category="do-uong">
+          <div class="image-wrapper">
+            <img
+              src="assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg"
+              alt="bia"
+            />
+            <span class="badge new">Mới</span>
+          </div>
+          <h3 class="food-name">Bia</h3>
+          <span class="price">345.000₫</span>
+          <button onclick="location.href = 'detail.html'" class="buy-btn">
+            Xem chi tiết
+          </button>
+        </div>
+        <div class="menu-card" data-category="tet-nham-nhi">
+          <div class="image-wrapper">
+            <img
+              src="assets/images/recipe31982-cook-step5-636650963278909741.jpg"
+              alt="Đồ nhậu"
+            />
+            <span class="badge new">Mới</span>
+          </div>
+          <h3 class="food-name">Đồ nhậu</h3>
+          <span class="price">45.000₫</span>
+          <button onclick="location.href = 'detail.html'" class="buy-btn">
+            Xem chi tiết
+          </button>
+        </div>
+        <div class="menu-card" data-category="banh-tet">
+          <div class="image-wrapper">
+            <img
+              src="assets/images/banh-tet-nhan-chuoi-1.jpg"
+              alt="Bánh Tét Chuối"
+            />
+            <span class="badge new">Best Seller</span>
+          </div>
+          <h3 class="food-name">Bánh Tét Chuối</h3>
+          <span class="price">150.000₫</span>
+          <button onclick="location.href = 'detail.html'" class="buy-btn">
+            Xem chi tiết
+          </button>
+        </div>
+        <div class="menu-card" data-category="banh-tet">
+          <div class="image-wrapper">
+            <img
+              src="assets/images/banh-tet-nhan-dau-1.jpg"
+              alt="Bánh Tét Đậu"
+            />
+            <span class="badge new">Mới</span>
+          </div>
+          <h3 class="food-name">Bánh Tét Đậu</h3>
+          <span class="price">120.000₫</span>
+          <button onclick="location.href = 'detail.html'" class="buy-btn">
+            Xem chi tiết
+          </button>
+        </div>
+        <div class="menu-card" data-category="tet-nham-nhi">
+          <div class="image-wrapper">
+            <img
+              src="assets/images/recipe31982-cook-step5-636650963278909741.jpg"
+              alt="Combo Nhậu"
+            />
+            <span class="badge new">Hot</span>
+          </div>
+          <h3 class="food-name">Combo Nhậu Tết</h3>
+          <span class="price">250.000₫</span>
+          <button onclick="location.href = 'detail.html'" class="buy-btn">
+            Xem chi tiết
+          </button>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
-        <div class="footer-deco"></div>
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="footer-brand">
-                    <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ">
-                    <span class="footer-brand-text">Bếp Nhà Ngọ</span>
-                </div>
-                <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà.</p>
-                <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
-                <div class="social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4 class="footer-title">Liên Kết Nhanh</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
-                    <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Thực đơn</a></li>
-                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> Câu chuyện</a></li>
-                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Giỏ hàng</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 class="footer-title">Liên Hệ Ngựa</h4>
-                <ul class="contact">
-                    <li><i class="fas fa-map-marker-alt"></i><span>123 Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</span></li>
-                    <li><i class="fas fa-phone"></i><span>0909 123 456</span></li>
-                    <li><i class="fas fa-envelope"></i><span>xin.chao@bepnhangngo.vn</span></li>
-                    <li><i class="fas fa-clock"></i><span>7:00 - 22:00 (Giao cả Tết!)</span></li>
-                </ul>
-            </div>
+      <div class="footer-deco"></div>
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ" />
+            <span class="footer-brand-text">Bếp Nhà Ngọ</span>
+          </div>
+          <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà.</p>
+          <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1 | Năm Giáp Ngọ 🐴</p>
+        <div class="footer-col">
+          <h4 class="footer-title">Liên Kết Nhanh</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="index.html"
+                ><i class="fas fa-chevron-right"></i> Trang chủ</a
+              >
+            </li>
+            <li>
+              <a href="menu.html"
+                ><i class="fas fa-chevron-right"></i> Thực đơn</a
+              >
+            </li>
+            <li>
+              <a href="about.html"
+                ><i class="fas fa-chevron-right"></i> Câu chuyện</a
+              >
+            </li>
+            <li>
+              <a href="cart.html"
+                ><i class="fas fa-chevron-right"></i> Giỏ hàng</a
+              >
+            </li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Liên Hệ Ngựa</h4>
+          <ul class="contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i
+              ><span>123 Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</span>
+            </li>
+            <li><i class="fas fa-phone"></i><span>0909 123 456</span></li>
+            <li>
+              <i class="fas fa-envelope"></i
+              ><span>xin.chao@bepnhangngo.vn</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i
+              ><span>7:00 - 22:00 (Giao cả Tết!)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1
+          | Năm Giáp Ngọ 🐴
+        </p>
+      </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/menu.js"></script>
-</body>
-
+  </body>
 </html>
