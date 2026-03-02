@@ -55,6 +55,7 @@ const products = [
     }
 ];
 let selectedCategory = 'all';
+let cartData = [...products];
 function formatMoney(amount) {
             return amount.toLocaleString('vi-VN') + 'đ';
         }
@@ -169,5 +170,4 @@ function formatMoney(amount) {
             }, 3000);
         }
 
-        // Khởi tạo khi tải trang
         renderCart();
