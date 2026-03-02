@@ -1,0 +1,68 @@
+main {
+  margin-top: 10%;
+}
+article {
+  display: center;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 30px;
+}
+
+.banhchung {
+  display: flex;
+ background-color: rgb(205, 185, 185); 
+}
+.banhchung img {
+  min-width: 400px;
+  height: 400px;
+}
+.content {
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 20px;
+}
+.content p {
+  color: #df3918;
+}
+
+.taoquan_reverse {
+ display: flex;
+ background-color: rgb(244, 197, 197);
+}
+
+.taoquan_reverse .anh{
+ min-width: 400px;
+  height: 400px;
+  justify-content: end;
+  margin-top: 35px;
+}
+
+.taoquan_reverse .noidung{
+  justify-content: start;
+  margin-top: 80px;
+}
+.noidung p{
+  color: #df3918;
+}
+
+.lixi{
+  display: flex;
+  background-color: rgb(244, 219, 186);
+}
+
+.lixi .cauchuyen{
+  justify-content: start;
+  margin: 30px;
+ 
+}
+.lixi img{
+   min-width: 400px;
+  height: 400px;
+  justify-content: end;
+   margin-bottom: 30px;
+}
+
+.cauchuyen p{
+  color: #df3918;
+}
