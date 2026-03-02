@@ -11,7 +11,7 @@
   align-items: start;
   gap: 40px;
 }
-/* thiết lập tỉ lệ phần ảnh bên trái với max-width=500px*/
+/* thiết lập tỉ lệ phần ảnh bên trái với max-width=500px */
 .product-imgs {
   flex: 1.2;
   max-width: 500px;
