@@ -2,7 +2,7 @@ main {
   margin-top: 10%;
 }
 article {
-  display: center;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
   margin: 30px;
@@ -65,4 +65,64 @@ article {
 
 .cauchuyen p{
   color: #df3918;
+}
+
+@media (max-width: 768px){
+
+  main{
+    margin-top: 20%;
+  }
+
+  article{
+    margin: 15px;
+  }
+
+  .banhchung{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banhchung img{
+    min-width: 100%;
+    height: auto;
+  }
+
+  .content{
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .taoquan_reverse{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .taoquan_reverse .anh{
+    min-width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .taoquan_reverse .noidung{
+    margin-top: 20px;
+    text-align: center;
+  }
+
+
+  /* Lì xì */
+  .lixi{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lixi img{
+    min-width: 100%;
+    height: auto;
+  }
+
+  .lixi .cauchuyen{
+    text-align: center;
+    margin: 20px;
+  }
+
 }
