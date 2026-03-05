@@ -126,3 +126,10 @@ article {
   }
 
 }
+
+.banhchung img,
+.taoquan_reverse .anh img,
+.lixi img{
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
