@@ -1,135 +1,77 @@
-main {
-  margin-top: 10%;
-}
-article {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 30px;
+/* ===== SMARTPHONE ===== */
+
+.story > div{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+  padding:20px;
+  border-radius:12px;
 }
 
-.banhchung {
-  display: flex;
- background-color: rgb(205, 185, 185); 
-}
-.banhchung img {
-  min-width: 400px;
-  height: 400px;
-}
-.content {
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  margin-left: 20px;
-}
-.content p {
-  color: #df3918;
+.story img{
+  width:100%;
+  max-width:400px;
+  height:auto;
+  margin:auto;
+  border-radius:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
 
-.taoquan_reverse {
- display: flex;
- background-color: rgb(244, 197, 197);
+.story p{
+  text-align:center;
+  line-height:1.6;
+  color:#df3918;
 }
 
-.taoquan_reverse .anh{
- min-width: 400px;
-  height: 400px;
-  justify-content: end;
-  margin-top: 35px;
+/* ===== TABLET ===== */
+
+@media (min-width:768px){
+
+.story > div{
+  grid-template-columns:1fr 1fr;
+  align-items:center;
 }
 
-.taoquan_reverse .noidung{
-  justify-content: start;
-  margin-top: 80px;
+/* zigzag section */
+
+.taoquan_reverse{
+  grid-template-columns:1fr 1fr;
 }
-.noidung p{
-  color: #df3918;
+
+.story p{
+  text-align:left;
+}
+
+}
+
+/* ===== DESKTOP ===== */
+
+@media (min-width:1024px){
+
+.story{
+  max-width:1100px;
+  margin:40px auto;
+}
+
+.story > div{
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.story img{
+  max-width:420px;
+}
+
+}
+
+.banhchung{
+  background:rgb(205,185,185);
+}
+
+.taoquan_reverse{
+  background:rgb(244,197,197);
 }
 
 .lixi{
-  display: flex;
-  background-color: rgb(244, 219, 186);
-}
-
-.lixi .cauchuyen{
-  justify-content: start;
-  margin: 30px;
- 
-}
-.lixi img{
-   min-width: 400px;
-  height: 400px;
-  justify-content: end;
-   margin-bottom: 30px;
-}
-
-.cauchuyen p{
-  color: #df3918;
-}
-
-@media (max-width: 768px){
-
-  main{
-    margin-top: 20%;
-  }
-
-  article{
-    margin: 15px;
-  }
-
-  .banhchung{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .banhchung img{
-    min-width: 100%;
-    height: auto;
-  }
-
-  .content{
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .taoquan_reverse{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .taoquan_reverse .anh{
-    min-width: 100%;
-    height: auto;
-    margin-top: 0;
-  }
-
-  .taoquan_reverse .noidung{
-    margin-top: 20px;
-    text-align: center;
-  }
-
-
-  /* Lì xì */
-  .lixi{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .lixi img{
-    min-width: 100%;
-    height: auto;
-  }
-
-  .lixi .cauchuyen{
-    text-align: center;
-    margin: 20px;
-  }
-
-}
-
-.banhchung img,
-.taoquan_reverse .anh img,
-.lixi img{
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background:rgb(244,219,186);
 }
