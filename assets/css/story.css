@@ -1,77 +1,81 @@
+article:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition: all 0.3s ease;
+}
+
 /* ===== SMARTPHONE ===== */
 
-.story > div{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:20px;
-  padding:20px;
-  border-radius:12px;
+.story > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 25px;
 }
 
-.story img{
-  width:100%;
-  max-width:400px;
-  height:auto;
-  margin:auto;
-  border-radius:20px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+
+.story img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.story p{
-  text-align:center;
-  line-height:1.6;
-  color:#df3918;
+.story p {
+  text-align: center;
+  line-height: 1.6;
+  color: #df3918;
 }
 
 /* ===== TABLET ===== */
 
-@media (min-width:768px){
+@media (min-width: 768px) {
+  .story > div {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 
-.story > div{
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-}
+  /* zigzag section */
 
-/* zigzag section */
+  .taoquan_reverse {
+    grid-template-columns: 1fr 1fr;
+  }
 
-.taoquan_reverse{
-  grid-template-columns:1fr 1fr;
-}
-
-.story p{
-  text-align:left;
-}
-
+  .story p {
+    text-align: left;
+  }
 }
 
 /* ===== DESKTOP ===== */
 
-@media (min-width:1024px){
+@media (min-width: 1024px) {
+  .story {
+    max-width: 1100px;
+    margin: 40px auto;
+  }
 
-.story{
-  max-width:1100px;
-  margin:40px auto;
+  .story > div {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .story img {
+    max-width: 420px;
+  }
 }
 
-.story > div{
-  grid-template-columns:1fr 1fr;
-  gap:40px;
+.banhchung {
+  background: rgb(205, 185, 185);
 }
 
-.story img{
-  max-width:420px;
+.taoquan_reverse {
+  background: rgb(244, 197, 197);
 }
 
-}
-
-.banhchung{
-  background:rgb(205,185,185);
-}
-
-.taoquan_reverse{
-  background:rgb(244,197,197);
-}
-
-.lixi{
-  background:rgb(244,219,186);
+.lixi {
+  background: rgb(244, 219, 186);
 }
