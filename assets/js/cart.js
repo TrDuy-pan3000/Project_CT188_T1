@@ -30,13 +30,18 @@ function renderCart() {
         updateTotal();
         return;
     }
-
+// Simple HTML escape helper
+function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
     cartContainer.innerHTML = cartData.map(item => `
         <div class="cart-item">
-            <img src="${item.image}" alt="${item.name}" class="item-image"
+            <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" class="item-image"
                  onerror="this.src='assets/images/logo.png'">
             <div class="item-info">
-                <div class="item-name">${item.name}</div>
+                <div class="item-name">${escapeHtml(item.name)}</div>
                 <div class="item-price">${formatMoney(item.price)}</div>
                 <div class="item-qty">
                     <button class="qty-btn" onclick="changeQuantity('${item.id}', -1)">−</button>
@@ -67,32 +72,18 @@ function changeQuantity(id, delta) {
 }
 
 // Xóa sản phẩm (modal xác nhận) 
-let pendingRemoveId = null;
-
 function confirmRemove(id) {
-    pendingRemoveId = id;
-    const modal = document.getElementById('myModal');
-    if (modal) modal.style.display = 'flex';
+    if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
+        cartData = cartData.filter(i => String(i.id) !== String(id));
+        saveCartToStorage(cartData);
+        renderCart();
+        showNotification('Đã xóa sản phẩm! 🗑️');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     renderCart();
 
-    document.getElementById('btnYes')?.addEventListener('click', () => {
-        if (pendingRemoveId !== null) {
-            cartData = cartData.filter(i => String(i.id) !== String(pendingRemoveId));
-            saveCartToStorage(cartData);
-            renderCart();
-            showNotification('Đã xóa sản phẩm! 🗑️');
-            pendingRemoveId = null;
-        }
-        document.getElementById('myModal').style.display = 'none';
-    });
-
-    document.getElementById('btnNo')?.addEventListener('click', () => {
-        pendingRemoveId = null;
-        document.getElementById('myModal').style.display = 'none';
-    });
 });
 
 // Tổng tiền 
@@ -110,10 +101,11 @@ function checkout() {
     }
     const name    = document.getElementById('customerName')?.value.trim();
     const address = document.getElementById('customerAddress')?.value.trim();
+    const phone   = document.getElementById('customerPhone')?.value.trim();
     const note    = document.getElementById('customerNote')?.value.trim();
     const payment = document.querySelector('input[name="payment"]:checked')?.value;
 
-    if (!name || !address) {
+    if (!name || !address || !phone) {
         showNotification('Vui lòng điền đầy đủ thông tin!');
         return;
     }
@@ -124,6 +116,7 @@ function checkout() {
     let orderDetails = `🎊 Chúc mừng năm mới - Vạn sự như ý! 🎊\n\n`;
     orderDetails += `👤 Khách hàng: ${name}\n`;
     orderDetails += `🏠 Địa chỉ: ${address}\n`;
+    orderDetails += `📞 Điện thoại: ${phone}\n`;
     orderDetails += `💳 Thanh toán: ${paymentText}\n\n`;
     orderDetails += `📦 DANH SÁCH SẢN PHẨM:\n`;
     cartData.forEach((item, i) => {
