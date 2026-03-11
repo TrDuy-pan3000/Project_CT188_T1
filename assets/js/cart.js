@@ -1,6 +1,11 @@
 // Load / Save localStorage 
 function loadCartFromStorage() {
-    return JSON.parse(localStorage.getItem('cart')) || [];
+    try {
+        const parsed = JSON.parse(localStorage.getItem('cart') ?? '[]');
+        return Array.isArray(parsed) ? parsed : [];
+       } catch {
+        return [];
+       }
 }
 
 function saveCartToStorage(cart) {
@@ -146,7 +151,7 @@ function showNotification(message) {
 // Sync khi detail page thêm hàng ở tab khác 
 window.addEventListener('storage', (e) => {
     if (e.key === 'cart') {
-        cartData = JSON.parse(e.newValue) || [];
+        cartData = loadCartFromStorage();
         renderCart();
     }
 });
