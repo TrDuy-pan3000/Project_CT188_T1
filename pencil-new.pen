@@ -3,4288 +3,744 @@
   "children": [
     {
       "type": "frame",
-      "id": "GPHaW",
-      "x": -915,
-      "y": 18,
-      "name": "Tết Nguyên Đán 2026 - Food Store",
+      "id": "5yzUO",
+      "x": 0,
+      "y": 0,
+      "name": "Gourmet Story Page",
       "width": 1440,
-      "fill": "#FFF8F0",
+      "fill": "#F2EBE1",
       "layout": "vertical",
       "children": [
         {
           "type": "frame",
-          "id": "wzqzN",
-          "name": "Header",
+          "id": "6hEyW",
+          "name": "Hero Combo",
+          "clip": true,
           "width": "fill_container",
-          "height": 80,
-          "fill": "#cc2729",
-          "padding": [
-            0,
-            80
-          ],
-          "justifyContent": "space_between",
-          "alignItems": "center",
+          "height": 800,
+          "layout": "none",
           "children": [
             {
               "type": "frame",
-              "id": "1a0yJ",
-              "name": "Logo",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "FfSRt",
-                  "name": "Logo Icon",
-                  "width": 44,
-                  "height": 44,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./assets/images/logo.png",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 22
-                },
-                {
-                  "type": "text",
-                  "id": "dlB08",
-                  "name": "logoText",
-                  "fill": "#fff700",
-                  "content": "ĐẶC SẢN TẾT",
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 26,
-                  "fontWeight": "700",
-                  "letterSpacing": 1
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "30h0c",
-              "name": "Nav Links",
-              "gap": 32,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "GqITc",
-                  "name": "nav1",
-                  "fill": "#fff700",
-                  "content": "Trang Chủ",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "rKehe",
-                  "name": "nav2",
-                  "fill": "#FFFFFF",
-                  "content": "Món Ăn",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "IMQD3",
-                  "name": "nav3",
-                  "fill": "#FFFFFF",
-                  "content": "Combo Tết",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "VPZaB",
-                  "name": "nav4",
-                  "fill": "#FFFFFF",
-                  "content": "Về Chúng Tôi",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "GPYWl",
-                  "name": "nav5",
-                  "fill": "#FFFFFF",
-                  "content": "Liên Hệ",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "3DYt4",
-              "name": "Cart Button",
-              "fill": "#fff700",
-              "cornerRadius": 8,
-              "gap": 8,
-              "padding": [
-                10,
-                24
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "2dtyN",
-                  "name": "cartIcon",
-                  "width": 20,
-                  "height": 20,
-                  "iconFontName": "shopping-cart",
-                  "iconFontFamily": "lucide",
-                  "fill": "#cc2729"
-                },
-                {
-                  "type": "text",
-                  "id": "9tuD7",
-                  "name": "cartText",
-                  "fill": "#cc2729",
-                  "content": "Giỏ hàng (0)",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "600"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "L3pgA",
-          "name": "Hero Section",
-          "width": "fill_container",
-          "height": 680,
-          "fill": "#cc2729",
-          "gap": 60,
-          "padding": [
-            0,
-            80
-          ],
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "r6993",
-              "name": "Hero Text",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 24,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "BAC6C",
-                  "name": "Badge",
-                  "fill": "#fff70033",
-                  "cornerRadius": 999,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#fff700"
-                  },
-                  "gap": 8,
-                  "padding": [
-                    8,
-                    20
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "L2HQM",
-                      "name": "badgeText",
-                      "fill": "#fff700",
-                      "content": "🐴 Tết Bính Ngọ 2026",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "Xcfa4",
-                  "name": "heroTitle",
-                  "fill": "#fff700",
-                  "content": "Hương Vị Tết\nViệt Nam",
-                  "lineHeight": 1.1,
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 72,
-                  "fontWeight": "700",
-                  "letterSpacing": -2
-                },
-                {
-                  "type": "text",
-                  "id": "wIFN9",
-                  "name": "heroDesc",
-                  "fill": "#FFFFFFCC",
-                  "textGrowth": "fixed-width",
-                  "width": 520,
-                  "content": "Khám phá bộ sưu tập đặc sản Tết Nguyên Đán 2026 với các món ăn truyền thống đậm đà bản sắc Việt. Bánh chưng, bánh tét, mứt Tết, giò chả — tất cả được giao tận nhà.",
-                  "lineHeight": 1.7,
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "otelO",
-                  "name": "CTA Group",
-                  "gap": 16,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "KK7Vy",
-                      "name": "Order CTA",
-                      "fill": "#fff700",
-                      "cornerRadius": 12,
-                      "gap": 8,
-                      "padding": [
-                        16,
-                        36
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "hqbua",
-                          "name": "ctaPrimaryText",
-                          "fill": "#cc2729",
-                          "content": "Đặt Hàng Ngay",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "9TauY",
-                      "name": "Menu CTA",
-                      "fill": "transparent",
-                      "cornerRadius": 12,
-                      "stroke": {
-                        "align": "inside",
-                        "thickness": 2,
-                        "fill": "#fff700"
-                      },
-                      "gap": 8,
-                      "padding": [
-                        16,
-                        36
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "e4DPd",
-                          "name": "ctaSecondaryText",
-                          "fill": "#fff700",
-                          "content": "Xem Thực Đơn",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "rOcvF",
-              "name": "Hero Image",
-              "width": 540,
-              "height": 540,
+              "id": "tWfUq",
+              "x": 0,
+              "y": 0,
+              "name": "heroImg",
+              "clip": true,
+              "width": 1440,
+              "height": 800,
               "fill": {
                 "type": "image",
                 "enabled": true,
-                "url": "./assets/images/hero_mascot_1769935089741.png",
+                "url": "./images/generated-1773196747792.png",
                 "mode": "fill"
-              },
-              "cornerRadius": 270,
-              "stroke": {
-                "align": "outside",
-                "thickness": 4,
-                "fill": "#fff70044"
               }
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "u172r",
-          "name": "USP Strip",
-          "width": "fill_container",
-          "height": 90,
-          "fill": "#8a1012",
-          "padding": [
-            0,
-            60
-          ],
-          "justifyContent": "space_around",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "xf6Gt",
-              "name": "usp1",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "Am54o",
-                  "name": "usp1Icon",
-                  "width": 28,
-                  "height": 28,
-                  "iconFontName": "truck",
-                  "iconFontFamily": "lucide",
-                  "fill": "#fff700"
-                },
-                {
-                  "type": "text",
-                  "id": "wxhq5",
-                  "name": "usp1Text",
-                  "fill": "#FFFFFF",
-                  "content": "Giao hàng toàn quốc",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
             },
             {
-              "type": "frame",
-              "id": "WVJuY",
-              "name": "div1",
-              "width": 1,
-              "height": 40,
-              "fill": "#FFFFFF33"
-            },
-            {
-              "type": "frame",
-              "id": "Kmvpa",
-              "name": "usp2",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "wxtlX",
-                  "name": "usp2Icon",
-                  "width": 28,
-                  "height": 28,
-                  "iconFontName": "shield-check",
-                  "iconFontFamily": "lucide",
-                  "fill": "#fff700"
-                },
-                {
-                  "type": "text",
-                  "id": "xwcPe",
-                  "name": "usp2Text",
-                  "fill": "#FFFFFF",
-                  "content": "Đảm bảo chất lượng",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "ZlWO7",
-              "name": "div2",
-              "width": 1,
-              "height": 40,
-              "fill": "#FFFFFF33"
-            },
-            {
-              "type": "frame",
-              "id": "AFgTU",
-              "name": "usp3",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "pYlsl",
-                  "name": "usp3Icon",
-                  "width": 28,
-                  "height": 28,
-                  "iconFontName": "timer",
-                  "iconFontFamily": "lucide",
-                  "fill": "#fff700"
-                },
-                {
-                  "type": "text",
-                  "id": "cmN4g",
-                  "name": "usp3Text",
-                  "fill": "#FFFFFF",
-                  "content": "Đặt trước 48h",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "caUub",
-              "name": "div3",
-              "width": 1,
-              "height": 40,
-              "fill": "#FFFFFF33"
-            },
-            {
-              "type": "frame",
-              "id": "20iVs",
-              "name": "usp4",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "U4Pi1",
-                  "name": "usp4Icon",
-                  "width": 28,
-                  "height": 28,
-                  "iconFontName": "gift",
-                  "iconFontFamily": "lucide",
-                  "fill": "#fff700"
-                },
-                {
-                  "type": "text",
-                  "id": "DofDQ",
-                  "name": "usp4Text",
-                  "fill": "#FFFFFF",
-                  "content": "Gói quà miễn phí",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "ij8Wq",
-          "name": "Featured Products",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 48,
-          "padding": 80,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "om0Ib",
-              "name": "Section Header",
-              "layout": "vertical",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "TxcPy",
-                  "name": "sectionTag",
-                  "fill": "#cc2729",
-                  "content": "— MÓN ĂN ĐẶC TRƯNG —",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "600",
-                  "letterSpacing": 3
-                },
-                {
-                  "type": "text",
-                  "id": "yRMHd",
-                  "name": "sectionTitle",
-                  "fill": "#1A0A00",
-                  "content": "Tinh Hoa Ẩm Thực Ngày Tết",
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 48,
-                  "fontWeight": "700",
-                  "letterSpacing": -1
-                },
-                {
-                  "type": "text",
-                  "id": "xLuhi",
-                  "name": "sectionDesc",
-                  "fill": "#666666",
-                  "content": "Những món ăn không thể thiếu trong mâm cỗ Tết cổ truyền Việt Nam",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "ynugK",
-              "name": "Product Grid",
-              "width": "fill_container",
-              "gap": 24,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "KQUze",
-                  "name": "Bánh Chưng Card",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "color": "#0000000D",
-                    "offset": {
-                      "x": 0,
-                      "y": 4
-                    },
-                    "blur": 20
-                  },
-                  "layout": "vertical",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "eljK5",
-                      "name": "Card Image",
-                      "clip": true,
-                      "width": "fill_container",
-                      "height": 240,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/banh-tet-nhan-chuoi-1.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": [
-                        16,
-                        16,
-                        0,
-                        0
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "s5bcc",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "lcnb9",
-                          "name": "card1Badge",
-                          "fill": "#cc2729",
-                          "cornerRadius": 4,
-                          "padding": [
-                            4,
-                            12
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "zf5e0",
-                              "name": "card1BadgeT",
-                              "fill": "#fff700",
-                              "content": "Bán chạy",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "b73oH",
-                          "name": "card1Name",
-                          "fill": "#1A0A00",
-                          "content": "Bánh Tét Truyền Thống",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 22,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "text",
-                          "id": "ZQzVl",
-                          "name": "card1Desc",
-                          "fill": "#666666",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "Bánh chưng vuông, gạo nếp cái hoa vàng, nhân đậu xanh thịt heo",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "kvdkA",
-                          "name": "card1Price",
-                          "width": "fill_container",
-                          "justifyContent": "space_between",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "4NBx7",
-                              "name": "card1PriceT",
-                              "fill": "#cc2729",
-                              "content": "250.000₫",
-                              "fontFamily": "Inter",
-                              "fontSize": 22,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "frame",
-                              "id": "GkHpv",
-                              "name": "card1Btn",
-                              "fill": "#cc2729",
-                              "cornerRadius": 8,
-                              "gap": 6,
-                              "padding": [
-                                10,
-                                20
-                              ],
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon_font",
-                                  "id": "kssgY",
-                                  "name": "card1BtnIcon",
-                                  "width": 16,
-                                  "height": 16,
-                                  "iconFontName": "shopping-cart",
-                                  "iconFontFamily": "lucide",
-                                  "fill": "#fff700"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "UUFJI",
-                                  "name": "card1BtnT",
-                                  "fill": "#FFFFFF",
-                                  "content": "Thêm",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 13,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "NN23R",
-                  "name": "Bánh Tét Card",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "color": "#0000000D",
-                    "offset": {
-                      "x": 0,
-                      "y": 4
-                    },
-                    "blur": 20
-                  },
-                  "layout": "vertical",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "EDjSW",
-                      "name": "Card Image",
-                      "clip": true,
-                      "width": "fill_container",
-                      "height": 240,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/banh-tet-nhan-dau-1.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": [
-                        16,
-                        16,
-                        0,
-                        0
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "FOGva",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "nGaW6",
-                          "name": "card2Badge",
-                          "fill": "#d37c54",
-                          "cornerRadius": 4,
-                          "padding": [
-                            4,
-                            12
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "uwgVt",
-                              "name": "card2BadgeT",
-                              "fill": "#FFFFFF",
-                              "content": "Đặc sản miền Nam",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "91J75",
-                          "name": "card2Name",
-                          "fill": "#1A0A00",
-                          "content": "Bánh Tét Lá Cẩm",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 22,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "text",
-                          "id": "1Vpbm",
-                          "name": "card2Desc",
-                          "fill": "#666666",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ, hương vị đặc trưng miền Tây",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "ChaoU",
-                          "name": "card2PriceRow",
-                          "width": "fill_container",
-                          "justifyContent": "space_between",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "cjRln",
-                              "name": "card2PriceT",
-                              "fill": "#cc2729",
-                              "content": "180.000₫",
-                              "fontFamily": "Inter",
-                              "fontSize": 22,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "frame",
-                              "id": "Wb0Kf",
-                              "name": "card2Btn",
-                              "fill": "#cc2729",
-                              "cornerRadius": 8,
-                              "gap": 6,
-                              "padding": [
-                                10,
-                                20
-                              ],
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon_font",
-                                  "id": "S9gLo",
-                                  "name": "card2BtnIcon",
-                                  "width": 16,
-                                  "height": 16,
-                                  "iconFontName": "shopping-cart",
-                                  "iconFontFamily": "lucide",
-                                  "fill": "#fff700"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "8iMkN",
-                                  "name": "card2BtnT",
-                                  "fill": "#FFFFFF",
-                                  "content": "Thêm",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 13,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "hZOqI",
-                  "name": "Giò Chả Card",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "color": "#0000000D",
-                    "offset": {
-                      "x": 0,
-                      "y": 4
-                    },
-                    "blur": 20
-                  },
-                  "layout": "vertical",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "KhF9p",
-                      "name": "Card Image",
-                      "clip": true,
-                      "width": "fill_container",
-                      "height": 240,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/recipe31982-cook-step5-636650963278909741.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": [
-                        16,
-                        16,
-                        0,
-                        0
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "ueQST",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "OrAiT",
-                          "name": "card3Badge",
-                          "fill": "#c45542",
-                          "cornerRadius": 4,
-                          "padding": [
-                            4,
-                            12
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "S0etf",
-                              "name": "card3BadgeT",
-                              "fill": "#FFFFFF",
-                              "content": "Truyền thống",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "a4Xt4",
-                          "name": "card3Name",
-                          "fill": "#1A0A00",
-                          "content": "Gỏi Cuốn Thượng Hạng",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 22,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "text",
-                          "id": "BVdtA",
-                          "name": "card3Desc",
-                          "fill": "#666666",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "Giò lụa, chả quế, chả chiên — nguyên liệu tươi, chế biến thủ công",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "SNFvC",
-                          "name": "card3PriceRow",
-                          "width": "fill_container",
-                          "justifyContent": "space_between",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "oAqb9",
-                              "name": "card3PriceT",
-                              "fill": "#cc2729",
-                              "content": "320.000₫",
-                              "fontFamily": "Inter",
-                              "fontSize": 22,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "frame",
-                              "id": "HZTiN",
-                              "name": "card3Btn",
-                              "fill": "#cc2729",
-                              "cornerRadius": 8,
-                              "gap": 6,
-                              "padding": [
-                                10,
-                                20
-                              ],
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon_font",
-                                  "id": "warUy",
-                                  "name": "card3BtnIcon",
-                                  "width": 16,
-                                  "height": 16,
-                                  "iconFontName": "shopping-cart",
-                                  "iconFontFamily": "lucide",
-                                  "fill": "#fff700"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "uMznd",
-                                  "name": "card3BtnT",
-                                  "fill": "#FFFFFF",
-                                  "content": "Thêm",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 13,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "rNVZk",
-                  "name": "Mứt Tết Card",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "color": "#0000000D",
-                    "offset": {
-                      "x": 0,
-                      "y": 4
-                    },
-                    "blur": 20
-                  },
-                  "layout": "vertical",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "vsnI0",
-                      "name": "Card Image",
-                      "clip": true,
-                      "width": "fill_container",
-                      "height": 240,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": [
-                        16,
-                        16,
-                        0,
-                        0
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "Px9e8",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "3Dpv6",
-                          "name": "card4Badge",
-                          "fill": "#de6b7c",
-                          "cornerRadius": 4,
-                          "padding": [
-                            4,
-                            12
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "42ASh",
-                              "name": "card4BadgeT",
-                              "fill": "#fff700",
-                              "content": "Mới",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "5CYO3",
-                          "name": "card4Name",
-                          "fill": "#1A0A00",
-                          "content": "Hộp Mứt Tết Đặc Biệt",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 22,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "text",
-                          "id": "J7fCz",
-                          "name": "card4Desc",
-                          "fill": "#666666",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "Mứt gừng, mứt dừa, mứt bí, mứt quất — hộp 6 vị thượng hạng",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "ZOyOa",
-                          "name": "card4PriceRow",
-                          "width": "fill_container",
-                          "justifyContent": "space_between",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "In6R9",
-                              "name": "card4PriceT",
-                              "fill": "#cc2729",
-                              "content": "350.000₫",
-                              "fontFamily": "Inter",
-                              "fontSize": 22,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "frame",
-                              "id": "ZulpE",
-                              "name": "card4Btn",
-                              "fill": "#cc2729",
-                              "cornerRadius": 8,
-                              "gap": 6,
-                              "padding": [
-                                10,
-                                20
-                              ],
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon_font",
-                                  "id": "Ep6BD",
-                                  "name": "card4BtnIcon",
-                                  "width": 16,
-                                  "height": 16,
-                                  "iconFontName": "shopping-cart",
-                                  "iconFontFamily": "lucide",
-                                  "fill": "#fff700"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "TKj2T",
-                                  "name": "card4BtnT",
-                                  "fill": "#FFFFFF",
-                                  "content": "Thêm",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 13,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "GvEJt",
-          "name": "Special Menu Section",
-          "width": "fill_container",
-          "fill": "#0c0b09",
-          "layout": "vertical",
-          "gap": 40,
-          "padding": 80,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "K0pjL",
-              "name": "Special Menu Title",
-              "fill": "#ffffff",
-              "content": "Special Menu",
-              "fontFamily": "Dancing Script",
-              "fontSize": 64,
-              "fontWeight": "700"
-            },
-            {
-              "type": "frame",
-              "id": "VadpQ",
-              "name": "Image Cluster",
-              "width": 600,
-              "height": 440,
-              "layout": "none",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "XSRYq",
-                  "x": 140,
-                  "y": 0,
-                  "name": "Main Dish",
-                  "width": 320,
-                  "height": 320,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 160
-                },
-                {
-                  "type": "frame",
-                  "id": "rPaoX",
-                  "x": 40,
-                  "y": 200,
-                  "name": "Dish 1",
-                  "width": 120,
-                  "height": 120,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./assets/images/banh-tet-nhan-chuoi-2.jpg",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 60,
-                  "stroke": {
-                    "align": "outside",
-                    "thickness": 3,
-                    "fill": "#cc2729"
-                  }
-                },
-                {
-                  "type": "frame",
-                  "id": "xa8n0",
-                  "x": 160,
-                  "y": 300,
-                  "name": "Dish 2",
-                  "width": 120,
-                  "height": 120,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./assets/images/banh-tet-nhan-dau-2.jpg",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 60,
-                  "stroke": {
-                    "align": "outside",
-                    "thickness": 3,
-                    "fill": "#fff700"
-                  }
-                },
-                {
-                  "type": "frame",
-                  "id": "AovWE",
-                  "x": 320,
-                  "y": 300,
-                  "name": "Dish 3",
-                  "width": 120,
-                  "height": 120,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./assets/images/recipe31982-cook-step5-636650963278909741.jpg",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 60,
-                  "stroke": {
-                    "align": "outside",
-                    "thickness": 3,
-                    "fill": "#de6b7c"
-                  }
-                },
-                {
-                  "type": "frame",
-                  "id": "q3wWQ",
-                  "x": 440,
-                  "y": 200,
-                  "name": "Dish 4",
-                  "width": 120,
-                  "height": 120,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 60,
-                  "stroke": {
-                    "align": "outside",
-                    "thickness": 3,
-                    "fill": "#d37c54"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "tGRD5",
-          "name": "Testimonials Section",
-          "width": 1458,
-          "height": 230,
-          "fill": "#FFF8F0",
-          "layout": "vertical",
-          "gap": 48,
-          "padding": 80,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "fJlgO",
-              "name": "testHeader",
-              "layout": "vertical",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "Gqrf6",
-                  "name": "testTag",
-                  "fill": "#cc2729",
-                  "content": "— KHÁCH HÀNG NÓI GÌ —",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "600",
-                  "letterSpacing": 3
-                },
-                {
-                  "type": "text",
-                  "id": "SVDpI",
-                  "name": "testTitle",
-                  "fill": "#1A0A00",
-                  "content": "Hàng Ngàn Gia Đình Tin Tưởng",
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 48,
-                  "fontWeight": "700",
-                  "letterSpacing": -1
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "xaCPX",
-              "name": "Testimonial Grid",
-              "width": "fill_container",
-              "gap": 24,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "FfqkD",
-                  "name": "t1",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#cc272922"
-                  },
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": 28,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "3Cagv",
-                      "name": "t1Stars",
-                      "fill": "#fff700",
-                      "content": "★★★★★",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "CeEIL",
-                      "name": "t1Quote",
-                      "fill": "#333333",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "\"Bánh chưng rất ngon, nếp dẻo, nhân đậm đà. Gia đình tôi đã đặt 3 năm liên tiếp, năm nào cũng hài lòng!\"",
-                      "lineHeight": 1.7,
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "7VMUm",
-                      "name": "t1Author",
-                      "fill": "#cc2729",
-                      "content": "— Chị Nguyễn Thị Lan, Hà Nội",
-                      "fontFamily": "Inter",
-                      "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "KPDHI",
-                  "name": "t2",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#cc272922"
-                  },
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": 28,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "n1VYM",
-                      "name": "t2Stars",
-                      "fill": "#fff700",
-                      "content": "★★★★★",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "9zVU0",
-                      "name": "t2Quote",
-                      "fill": "#333333",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "\"Gói quà Tết rất đẹp và sang trọng. Tôi đã tặng cho đối tác và nhận được nhiều lời khen. Chất lượng tuyệt vời!\"",
-                      "lineHeight": 1.7,
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "CF75P",
-                      "name": "t2Author",
-                      "fill": "#cc2729",
-                      "content": "— Anh Trần Văn Minh, TP.HCM",
-                      "fontFamily": "Inter",
-                      "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "KR9gv",
-                  "name": "t3",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#cc272922"
-                  },
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": 28,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "cDNGF",
-                      "name": "t3Stars",
-                      "fill": "#fff700",
-                      "content": "★★★★★",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "3gNkT",
-                      "name": "t3Quote",
-                      "fill": "#333333",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "\"Giò chả thơm ngon, giao hàng nhanh chóng và cẩn thận. Mứt Tết cũng rất đa dạng, con cháu ai cũng thích!\"",
-                      "lineHeight": 1.7,
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "BxMAR",
-                      "name": "t3Author",
-                      "fill": "#cc2729",
-                      "content": "— Cô Phạm Thu Hương, Đà Nẵng",
-                      "fontFamily": "Inter",
-                      "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "iMioe",
-          "name": "Final CTA",
-          "width": "fill_container",
-          "height": 400,
-          "fill": {
-            "type": "gradient",
-            "gradientType": "linear",
-            "enabled": true,
-            "rotation": 180,
-            "size": {
-              "height": 1
-            },
-            "colors": [
-              {
-                "color": "#cc2729",
-                "position": 0
-              },
-              {
-                "color": "#8a1012",
-                "position": 1
-              }
-            ]
-          },
-          "layout": "vertical",
-          "gap": 24,
-          "padding": [
-            0,
-            80
-          ],
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "9kSgU",
-              "name": "ctaTitle",
-              "fill": "#fff700",
-              "content": "Đặt Mâm Cỗ Tết Ngay Hôm Nay",
-              "textAlign": "center",
-              "fontFamily": "Cormorant Garamond",
-              "fontSize": 52,
-              "fontWeight": "700",
-              "letterSpacing": -1
-            },
-            {
-              "type": "text",
-              "id": "CZeMA",
-              "name": "ctaDesc",
-              "fill": "#FFFFFFCC",
-              "textGrowth": "fixed-width",
-              "width": 600,
-              "content": "Đừng để Tết đến gần mới lo — đặt trước để nhận ưu đãi tốt nhất và giao hàng đúng hẹn",
-              "lineHeight": 1.6,
-              "textAlign": "center",
-              "fontFamily": "Inter",
-              "fontSize": 18,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "snkqL",
-              "name": "ctaBtns",
-              "gap": 16,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "uL6nv",
-                  "name": "ctaBtn1",
-                  "fill": "#fff700",
-                  "cornerRadius": 12,
-                  "gap": 8,
-                  "padding": [
-                    18,
-                    44
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "hdk5q",
-                      "name": "ctaBtn1Icon",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "phone",
-                      "iconFontFamily": "lucide",
-                      "fill": "#cc2729"
-                    },
-                    {
-                      "type": "text",
-                      "id": "Fw0pO",
-                      "name": "ctaBtn1Text",
-                      "fill": "#cc2729",
-                      "content": "Gọi Đặt Hàng",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "K2Ggl",
-                  "name": "ctaBtn2",
-                  "fill": "transparent",
-                  "cornerRadius": 12,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 2,
-                    "fill": "#fff700"
-                  },
-                  "gap": 8,
-                  "padding": [
-                    18,
-                    44
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "BvKQz",
-                      "name": "ctaBtn2Text",
-                      "fill": "#fff700",
-                      "content": "Chat Tư Vấn",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "600"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "n8hBB",
-              "name": "ctaTrust",
-              "fill": "#FFFFFF88",
-              "content": "✓ Miễn phí giao hàng cho đơn từ 500.000₫  •  ✓ Đổi trả trong 24h  •  ✓ Hotline 24/7",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "OeY3Y",
-          "name": "Order Steps Section",
-          "width": "fill_container",
-          "fill": "#FFF8F0",
-          "layout": "vertical",
-          "gap": 48,
-          "padding": 80,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "8PigX",
-              "name": "Order Header",
-              "layout": "vertical",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "KQoas",
-                  "name": "Order Title",
-                  "fill": "#cc2729",
-                  "content": "Đặt hàng dễ như ăn bánh!",
-                  "textAlign": "center",
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 48,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "Eywnc",
-                  "name": "Order Subtitle",
-                  "fill": "#666666",
-                  "content": "Chỉ 4 bước đơn giản để có mâm cỗ Tết hoàn hảo tại nhà",
-                  "textAlign": "center",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "ZLHuU",
-              "name": "Steps Row",
-              "width": "fill_container",
-              "gap": 32,
-              "justifyContent": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "4iSaG",
-                  "name": "Step 1",
-                  "width": 280,
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": [
-                    32,
-                    24
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "1tvy9",
-                      "name": "Num 1",
-                      "width": 60,
-                      "height": 60,
-                      "fill": "#cc2729",
-                      "cornerRadius": 30,
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "U6v6b",
-                          "name": "numText1",
-                          "fill": "#FFFFFF",
-                          "content": "1",
-                          "fontFamily": "Inter",
-                          "fontSize": 28,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "8uven",
-                      "name": "title1",
-                      "fill": "#1A0A00",
-                      "content": "Chọn Món",
-                      "textAlign": "center",
-                      "fontFamily": "Cormorant Garamond",
-                      "fontSize": 22,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "NUjqz",
-                      "name": "desc1",
-                      "fill": "#888888",
-                      "textGrowth": "fixed-width",
-                      "width": 220,
-                      "content": "Duyệt qua thực đơn đa dạng và chọn những món yêu thích",
-                      "lineHeight": 1.6,
-                      "textAlign": "center",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "HuqIe",
-                  "name": "Step 2",
-                  "width": 280,
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": [
-                    32,
-                    24
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "TsrTY",
-                      "name": "Num 2",
-                      "width": 60,
-                      "height": 60,
-                      "fill": "#d37c54",
-                      "cornerRadius": 30,
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "81G7X",
-                          "name": "numText2",
-                          "fill": "#FFFFFF",
-                          "content": "2",
-                          "fontFamily": "Inter",
-                          "fontSize": 28,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "S1o52",
-                      "name": "title2",
-                      "fill": "#1A0A00",
-                      "content": "Thêm Vào Giỏ",
-                      "textAlign": "center",
-                      "fontFamily": "Cormorant Garamond",
-                      "fontSize": 22,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "4MgUN",
-                      "name": "desc2",
-                      "fill": "#888888",
-                      "textGrowth": "fixed-width",
-                      "width": 220,
-                      "content": "Bỏ vào giỏ hàng, chọn số lượng và tùy chỉnh theo ý muốn",
-                      "lineHeight": 1.6,
-                      "textAlign": "center",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "tmRji",
-                  "name": "Step 3",
-                  "width": 280,
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": [
-                    32,
-                    24
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "ezhuQ",
-                      "name": "Num 3",
-                      "width": 60,
-                      "height": 60,
-                      "fill": "#fff700",
-                      "cornerRadius": 30,
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "tBMBt",
-                          "name": "numText3",
-                          "fill": "#1A0A00",
-                          "content": "3",
-                          "fontFamily": "Inter",
-                          "fontSize": 28,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "A3OKI",
-                      "name": "title3",
-                      "fill": "#1A0A00",
-                      "content": "Thanh Toán",
-                      "textAlign": "center",
-                      "fontFamily": "Cormorant Garamond",
-                      "fontSize": 22,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "1QUcw",
-                      "name": "desc3",
-                      "fill": "#888888",
-                      "textGrowth": "fixed-width",
-                      "width": 220,
-                      "content": "Chọn phương thức thanh toán tiện lợi và hoàn tất đơn hàng",
-                      "lineHeight": 1.6,
-                      "textAlign": "center",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "6vtb7",
-                  "name": "Step 4",
-                  "width": 280,
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": [
-                    32,
-                    24
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "52Q4L",
-                      "name": "Num 4",
-                      "width": 60,
-                      "height": 60,
-                      "fill": "#c45542",
-                      "cornerRadius": 30,
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "Ft8hT",
-                          "name": "numText4",
-                          "fill": "#FFFFFF",
-                          "content": "4",
-                          "fontFamily": "Inter",
-                          "fontSize": 28,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "uxmzh",
-                      "name": "title4",
-                      "fill": "#1A0A00",
-                      "content": "Nhận Hàng",
-                      "textAlign": "center",
-                      "fontFamily": "Cormorant Garamond",
-                      "fontSize": 22,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "Pk5Z6",
-                      "name": "desc4",
-                      "fill": "#888888",
-                      "textGrowth": "fixed-width",
-                      "width": 220,
-                      "content": "Giao hàng tận nơi đúng hẹn, tươi ngon và đầy đủ như cam kết",
-                      "lineHeight": 1.6,
-                      "textAlign": "center",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "PPBPs",
-          "name": "Menu and Gallery",
-          "width": "fill_container",
-          "fill": {
-            "type": "gradient",
-            "gradientType": "radial",
-            "enabled": true,
-            "rotation": 0,
-            "size": {
-              "width": 1,
-              "height": 1
-            },
-            "colors": [
-              {
-                "color": "#2A1508",
-                "position": 0
-              },
-              {
-                "color": "#1A0A00",
-                "position": 0.6
-              },
-              {
-                "color": "#0D0500",
-                "position": 1
-              }
-            ]
-          },
-          "stroke": {
-            "align": "inside",
-            "thickness": 1,
-            "fill": "#FFD70022"
-          },
-          "layout": "vertical",
-          "gap": 80,
-          "padding": [
-            100,
-            80
-          ],
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "bHzcj",
-              "name": "Gold Edge",
-              "width": "fill_container",
-              "height": 2,
+              "type": "rectangle",
+              "id": "4MaIX",
+              "x": 0,
+              "y": 0,
+              "name": "heroOverlay",
               "fill": {
                 "type": "gradient",
                 "gradientType": "linear",
                 "enabled": true,
-                "rotation": 90,
+                "rotation": -45,
                 "size": {
                   "height": 1
                 },
                 "colors": [
                   {
-                    "color": "#FFD70000",
+                    "color": "#000000B3",
                     "position": 0
                   },
                   {
-                    "color": "#FFD700",
-                    "position": 0.5
-                  },
-                  {
-                    "color": "#FFD70000",
+                    "color": "#00000066",
                     "position": 1
                   }
                 ]
-              }
-            },
-            {
-              "type": "text",
-              "id": "ywqox",
-              "name": "Corner TL",
-              "fill": "#fff70044",
-              "content": "✦  ❖  ✦",
-              "textAlign": "center",
-              "fontFamily": "Inter",
-              "fontSize": 48,
-              "fontWeight": "normal"
+              },
+              "width": 1440,
+              "height": 800
             },
             {
               "type": "frame",
-              "id": "vwaCg",
-              "name": "Menu Block",
-              "width": "fill_container",
+              "id": "x2qtU",
+              "x": 320,
+              "y": 250,
+              "name": "heroTextBox",
+              "width": 800,
+              "height": 300,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5C158"
+              },
               "layout": "vertical",
-              "gap": 40,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "3nMxM",
-                  "name": "Divider Top",
-                  "gap": 20,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "70vBw",
-                      "name": "Line L",
-                      "width": 200,
-                      "height": 1,
-                      "fill": "#fff70055"
-                    },
-                    {
-                      "type": "text",
-                      "id": "R0wtC",
-                      "name": "dia1",
-                      "fill": "#fff700",
-                      "content": "◆",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "ZEoJ5",
-                      "name": "Line R",
-                      "width": 200,
-                      "height": 1,
-                      "fill": "#fff70055"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "xBOgL",
-                  "name": "menuTitle",
-                  "fill": "#fff700",
-                  "content": "Main Menu",
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 52,
-                  "fontWeight": "700",
-                  "letterSpacing": 2
-                },
-                {
-                  "type": "text",
-                  "id": "GLKzy",
-                  "name": "Menu Subtitle",
-                  "fill": "#ffffffbb",
-                  "content": "Khám phá hương vị truyền thống Tết Việt",
-                  "textAlign": "center",
-                  "fontFamily": "Inter",
-                  "fontSize": 16,
-                  "fontWeight": "normal",
-                  "letterSpacing": 1
-                },
-                {
-                  "type": "frame",
-                  "id": "P8fk2",
-                  "name": "Icons Row",
-                  "width": "fill_container",
-                  "gap": 60,
-                  "justifyContent": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "jR5lv",
-                      "name": "Item 1",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "fFy62",
-                          "name": "icon1",
-                          "width": 140,
-                          "height": 140,
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "./assets/images/banh-tet-nhan-chuoi-1.jpg",
-                            "mode": "fill"
-                          },
-                          "cornerRadius": 70,
-                          "stroke": {
-                            "align": "outside",
-                            "thickness": 3,
-                            "fill": "#fff70066"
-                          }
-                        },
-                        {
-                          "type": "text",
-                          "id": "DYvrm",
-                          "name": "lbl1",
-                          "fill": "#fff700",
-                          "content": "Bánh Chưng",
-                          "textAlign": "center",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 16,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "AsPG7",
-                      "name": "Item 2",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "gXt1b",
-                          "name": "icon2",
-                          "width": 140,
-                          "height": 140,
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "./assets/images/recipe31982-cook-step5-636650963278909741.jpg",
-                            "mode": "fill"
-                          },
-                          "cornerRadius": 70,
-                          "stroke": {
-                            "align": "outside",
-                            "thickness": 3,
-                            "fill": "#fff70066"
-                          }
-                        },
-                        {
-                          "type": "text",
-                          "id": "Ez731",
-                          "name": "lbl2",
-                          "fill": "#fff700",
-                          "content": "Canh & Phở",
-                          "textAlign": "center",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 16,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "kRgIH",
-                      "name": "Item 3",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "kipj2",
-                          "name": "icon3",
-                          "width": 140,
-                          "height": 140,
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "./assets/images/banh-tet-nhan-dau-2.jpg",
-                            "mode": "fill"
-                          },
-                          "cornerRadius": 70,
-                          "stroke": {
-                            "align": "outside",
-                            "thickness": 3,
-                            "fill": "#fff70066"
-                          }
-                        },
-                        {
-                          "type": "text",
-                          "id": "llR4j",
-                          "name": "lbl3",
-                          "fill": "#fff700",
-                          "content": "Nem & Cuốn",
-                          "textAlign": "center",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 16,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "h3XBT",
-                      "name": "Item 4",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "TsaRC",
-                          "name": "icon4",
-                          "width": 140,
-                          "height": 140,
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "./assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg",
-                            "mode": "fill"
-                          },
-                          "cornerRadius": 70,
-                          "stroke": {
-                            "align": "outside",
-                            "thickness": 3,
-                            "fill": "#fff70066"
-                          }
-                        },
-                        {
-                          "type": "text",
-                          "id": "hZciD",
-                          "name": "lbl4",
-                          "fill": "#fff700",
-                          "content": "Trà & Đồ Uống",
-                          "textAlign": "center",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 16,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "3AssC",
-              "name": "Gallery Block",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 40,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "gKKee",
-                  "name": "Gallery Divider",
-                  "gap": 20,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "hwL3T",
-                      "name": "Line L2",
-                      "width": 200,
-                      "height": 1,
-                      "fill": "#fff70055"
-                    },
-                    {
-                      "type": "text",
-                      "id": "imjvB",
-                      "name": "diaG",
-                      "fill": "#fff700",
-                      "content": "◆",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "dxphl",
-                      "name": "Line R2",
-                      "width": 200,
-                      "height": 1,
-                      "fill": "#fff70055"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "cSq92",
-                  "name": "galleryTitle",
-                  "fill": "#fff700",
-                  "content": "Gallery",
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 52,
-                  "fontWeight": "700",
-                  "letterSpacing": 2
-                },
-                {
-                  "type": "text",
-                  "id": "XbGuj",
-                  "name": "Gallery Subtitle",
-                  "fill": "#ffffffbb",
-                  "content": "Khoảnh khắc đoàn viên bên mâm cỗ Tết",
-                  "textAlign": "center",
-                  "fontFamily": "Inter",
-                  "fontSize": 16,
-                  "fontWeight": "normal",
-                  "letterSpacing": 1
-                },
-                {
-                  "type": "frame",
-                  "id": "fAB9w",
-                  "name": "Gallery Row",
-                  "width": "fill_container",
-                  "gap": 28,
-                  "justifyContent": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "83ugX",
-                      "name": "img1",
-                      "width": 380,
-                      "height": 420,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/banh-tet-nhan-chuoi-2.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "align": "outside",
-                        "thickness": 2,
-                        "fill": "#FFD70044"
-                      }
-                    },
-                    {
-                      "type": "frame",
-                      "id": "tTbQA",
-                      "name": "img2",
-                      "width": 380,
-                      "height": 420,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/hero_background_1769935111482.png",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "align": "outside",
-                        "thickness": 2,
-                        "fill": "#FFD70044"
-                      }
-                    },
-                    {
-                      "type": "frame",
-                      "id": "EDDPh",
-                      "name": "img3",
-                      "width": 380,
-                      "height": 420,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/banh-tet-nhan-dau-1.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": 8,
-                      "stroke": {
-                        "align": "outside",
-                        "thickness": 2,
-                        "fill": "#FFD70044"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "A5I4F",
-              "name": "Bottom Divider",
-              "gap": 20,
+              "gap": 24,
+              "padding": 40,
               "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
-                  "type": "frame",
-                  "id": "KL69u",
-                  "name": "Bot Line L",
-                  "width": 300,
-                  "height": 1,
-                  "fill": "#fff70044"
-                },
-                {
                   "type": "text",
-                  "id": "DnQFG",
-                  "name": "bDia",
-                  "fill": "#fff70066",
-                  "content": "✦  ◆  ✦",
+                  "id": "buVf6",
+                  "name": "heroSub",
+                  "fill": "#E5C158",
+                  "content": "CÂU CHUYỆN BẾP NHÀ NGỌ",
                   "fontFamily": "Inter",
                   "fontSize": 14,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "yzmoT",
-                  "name": "Bot Line R",
-                  "width": 300,
-                  "height": 1,
-                  "fill": "#fff70044"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "ROCxh",
-          "name": "Footer",
-          "width": "fill_container",
-          "fill": "#1A0A00",
-          "layout": "vertical",
-          "gap": 48,
-          "padding": [
-            60,
-            80
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "h9yRG",
-              "name": "footerTop",
-              "width": "fill_container",
-              "justifyContent": "space_between",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "A82mR",
-                  "name": "footerBrand",
-                  "width": 320,
-                  "layout": "vertical",
-                  "gap": 16,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "Mp9n4",
-                      "name": "footerLogo",
-                      "fill": "#fff700",
-                      "content": "ĐẶC SẢN TẾT",
-                      "fontFamily": "Cormorant Garamond",
-                      "fontSize": 28,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "text",
-                      "id": "RVrA8",
-                      "name": "footerBrandDesc",
-                      "fill": "#FFFFFF88",
-                      "textGrowth": "fixed-width",
-                      "width": 300,
-                      "content": "Mang hương vị Tết truyền thống đến mọi gia đình Việt Nam. Cam kết chất lượng, giao hàng tận nhà.",
-                      "lineHeight": 1.7,
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "p1T4S",
-                  "name": "footerCol1",
-                  "layout": "vertical",
-                  "gap": 16,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "4necy",
-                      "name": "footerCol1Title",
-                      "fill": "#fff700",
-                      "content": "Sản Phẩm",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "700",
-                      "letterSpacing": 1
-                    },
-                    {
-                      "type": "text",
-                      "id": "R1TJ4",
-                      "name": "fc1l1",
-                      "fill": "#FFFFFF99",
-                      "content": "Bánh Chưng",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "aGaDO",
-                      "name": "fc1l2",
-                      "fill": "#FFFFFF99",
-                      "content": "Bánh Tét",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "ULFhs",
-                      "name": "fc1l3",
-                      "fill": "#FFFFFF99",
-                      "content": "Giò Chả",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "V8WfP",
-                      "name": "fc1l4",
-                      "fill": "#FFFFFF99",
-                      "content": "Mứt Tết",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "UEeev",
-                      "name": "fc1l5",
-                      "fill": "#FFFFFF99",
-                      "content": "Combo Tết",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "KKBh9",
-                  "name": "footerCol2",
-                  "layout": "vertical",
-                  "gap": 16,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "YPWWS",
-                      "name": "footerCol2Title",
-                      "fill": "#fff700",
-                      "content": "Hỗ Trợ",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "700",
-                      "letterSpacing": 1
-                    },
-                    {
-                      "type": "text",
-                      "id": "peG0g",
-                      "name": "fc2l1",
-                      "fill": "#FFFFFF99",
-                      "content": "Hướng dẫn đặt hàng",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "IDqsT",
-                      "name": "fc2l2",
-                      "fill": "#FFFFFF99",
-                      "content": "Chính sách giao hàng",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "iGqaS",
-                      "name": "fc2l3",
-                      "fill": "#FFFFFF99",
-                      "content": "Đổi trả / Hoàn tiền",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "py5t5",
-                      "name": "fc2l4",
-                      "fill": "#FFFFFF99",
-                      "content": "Câu hỏi thường gặp",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "kCxD6",
-                  "name": "footerCol3",
-                  "layout": "vertical",
-                  "gap": 16,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "zhRmB",
-                      "name": "footerCol3Title",
-                      "fill": "#fff700",
-                      "content": "Liên Hệ",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "700",
-                      "letterSpacing": 1
-                    },
-                    {
-                      "type": "text",
-                      "id": "5HqPp",
-                      "name": "fc3l1",
-                      "fill": "#FFFFFF99",
-                      "content": "📞 0901 234 567",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "6tHmR",
-                      "name": "fc3l2",
-                      "fill": "#FFFFFF99",
-                      "content": "📧 info@dacsantet.vn",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "3uPYL",
-                      "name": "fc3l3",
-                      "fill": "#FFFFFF99",
-                      "content": "📍 123 Lê Lợi, Q.1, TP.HCM",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "clSBw",
-                      "name": "fc3l4",
-                      "fill": "#FFFFFF99",
-                      "content": "⏰ 8:00 - 21:00 hàng ngày",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "7RRov",
-              "name": "footerDivider",
-              "width": "fill_container",
-              "height": 1,
-              "fill": "#FFFFFF1A"
-            },
-            {
-              "type": "frame",
-              "id": "Mzuq4",
-              "name": "footerBottom",
-              "width": "fill_container",
-              "justifyContent": "space_between",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "lwNDg",
-                  "name": "copyright",
-                  "fill": "#FFFFFF66",
-                  "content": "© 2026 Đặc Sản Tết. Tất cả quyền được bảo lưu.",
-                  "fontFamily": "Inter",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "qkuAf",
-                  "name": "socialLinks",
-                  "gap": 16,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "R1iK9",
-                      "name": "socialFb",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "facebook",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FFFFFF66"
-                    },
-                    {
-                      "type": "icon_font",
-                      "id": "O225f",
-                      "name": "socialIg",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "instagram",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FFFFFF66"
-                    },
-                    {
-                      "type": "icon_font",
-                      "id": "yL8jJ",
-                      "name": "socialYt",
-                      "width": 20,
-                      "height": 20,
-                      "iconFontName": "youtube",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FFFFFF66"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "VHP70",
-      "x": -915,
-      "y": 18,
-      "name": "Tết Nguyên Đán 2026 - Food Store",
-      "width": 1440,
-      "fill": "#FFF8F0",
-      "layout": "vertical",
-      "children": [
-        {
-          "type": "frame",
-          "id": "SU8WW",
-          "name": "Header",
-          "width": "fill_container",
-          "height": 80,
-          "fill": "#cc2729",
-          "padding": [
-            0,
-            80
-          ],
-          "justifyContent": "space_between",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "JxxsC",
-              "name": "Logo",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "i0Yeb",
-                  "name": "Logo Icon",
-                  "width": 44,
-                  "height": 44,
-                  "fill": {
-                    "type": "image",
-                    "enabled": true,
-                    "url": "./assets/images/logo.png",
-                    "mode": "fill"
-                  },
-                  "cornerRadius": 22
+                  "fontWeight": "500",
+                  "letterSpacing": 6
                 },
                 {
                   "type": "text",
-                  "id": "jwMUv",
-                  "name": "logoText",
-                  "fill": "#fff700",
-                  "content": "ĐẶC SẢN TẾT",
+                  "id": "UN3XW",
+                  "name": "heroTitle",
+                  "fill": "#FFFFFF",
+                  "content": "Tinh Hoa Ẩm Thực Ngày Tết",
                   "fontFamily": "Cormorant Garamond",
-                  "fontSize": 26,
-                  "fontWeight": "700",
+                  "fontSize": 64,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "HdsC0",
+                  "name": "heroDivider",
+                  "fill": "#E5C158",
+                  "width": 60,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "apgSH",
+                  "name": "heroDesc",
+                  "fill": "#F2E8D8",
+                  "content": "Mỗi món ăn mang lên mâm cỗ Tết là một câu chuyện thấm đẫm ân tình quê hương.",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "300",
                   "letterSpacing": 1
                 }
               ]
-            },
-            {
-              "type": "frame",
-              "id": "PeChD",
-              "name": "Nav Links",
-              "gap": 32,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "169He",
-                  "name": "nav1",
-                  "fill": "#fff700",
-                  "content": "Trang Chủ",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "EbxKg",
-                  "name": "nav2",
-                  "fill": "#FFFFFF",
-                  "content": "Món Ăn",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "ch6vt",
-                  "name": "nav3",
-                  "fill": "#FFFFFF",
-                  "content": "Combo Tết",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "PW864",
-                  "name": "nav4",
-                  "fill": "#FFFFFF",
-                  "content": "Về Chúng Tôi",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "z0K4D",
-                  "name": "nav5",
-                  "fill": "#FFFFFF",
-                  "content": "Liên Hệ",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "3yjBL",
-              "name": "Cart Button",
-              "fill": "#fff700",
-              "cornerRadius": 8,
-              "gap": 8,
-              "padding": [
-                10,
-                24
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "NpIp7",
-                  "name": "cartIcon",
-                  "width": 20,
-                  "height": 20,
-                  "iconFontName": "shopping-cart",
-                  "iconFontFamily": "lucide",
-                  "fill": "#cc2729"
-                },
-                {
-                  "type": "text",
-                  "id": "QeHKw",
-                  "name": "cartText",
-                  "fill": "#cc2729",
-                  "content": "Giỏ hàng (0)",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "600"
-                }
-              ]
             }
           ]
         },
         {
           "type": "frame",
-          "id": "SNHCS",
-          "name": "Hero Section",
-          "width": "fill_container",
-          "height": 680,
-          "fill": "#cc2729",
-          "gap": 60,
+          "id": "CVqkL",
+          "name": "s1",
+          "width": 1440,
+          "gap": 100,
           "padding": [
-            0,
-            80
+            140,
+            160
           ],
           "alignItems": "center",
           "children": [
             {
               "type": "frame",
-              "id": "W3WJJ",
-              "name": "Hero Text",
-              "width": "fill_container",
+              "id": "UCYFP",
+              "name": "s1ImgWrapper",
+              "width": 440,
+              "height": 580,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "8yoDZ",
+                  "x": 40,
+                  "y": 40,
+                  "name": "s1BgDecor",
+                  "fill": "#E0D7C9",
+                  "width": 400,
+                  "height": 540
+                },
+                {
+                  "type": "frame",
+                  "id": "hfBxm",
+                  "x": 0,
+                  "y": 0,
+                  "name": "s1Img",
+                  "clip": true,
+                  "width": 400,
+                  "height": 540,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1773197028716.png",
+                    "mode": "fill"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AIxxi",
+              "name": "s1TextCol",
+              "width": 580,
               "layout": "vertical",
-              "gap": 24,
+              "gap": 32,
+              "justifyContent": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "MT0eD",
-                  "name": "Badge",
-                  "fill": "#fff70033",
-                  "cornerRadius": 999,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#fff700"
-                  },
-                  "gap": 8,
-                  "padding": [
-                    8,
-                    20
-                  ],
-                  "alignItems": "center",
+                  "id": "vhQ38",
+                  "name": "s1Header",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
                   "children": [
                     {
                       "type": "text",
-                      "id": "D2lr9",
-                      "name": "badgeText",
-                      "fill": "#fff700",
-                      "content": "🐴 Tết Bính Ngọ 2026",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
+                      "id": "yEDIo",
+                      "name": "s1Num",
+                      "fill": "#8a1012",
+                      "content": "01.",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 24,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yqvTS",
+                      "name": "s1Title",
+                      "fill": "#1A0A00",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Nếp Nương Gói Trọn Ân Tình Đất Trời",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 44,
                       "fontWeight": "600"
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "id": "GM6kE",
-                  "name": "heroTitle",
-                  "fill": "#fff700",
-                  "content": "Hương Vị Tết\nViệt Nam",
-                  "lineHeight": 1.1,
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 72,
-                  "fontWeight": "700",
-                  "letterSpacing": -2
-                },
-                {
-                  "type": "text",
-                  "id": "w9KM9",
-                  "name": "heroDesc",
-                  "fill": "#FFFFFFCC",
-                  "textGrowth": "fixed-width",
-                  "width": 520,
-                  "content": "Khám phá bộ sưu tập đặc sản Tết Nguyên Đán 2026 với các món ăn truyền thống đậm đà bản sắc Việt. Bánh chưng, bánh tét, mứt Tết, giò chả — tất cả được giao tận nhà.",
-                  "lineHeight": 1.7,
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal"
-                },
-                {
                   "type": "frame",
-                  "id": "LEa8p",
-                  "name": "CTA Group",
-                  "gap": 16,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "WTy9J",
-                      "name": "Order CTA",
-                      "fill": "#fff700",
-                      "cornerRadius": 12,
-                      "gap": 8,
-                      "padding": [
-                        16,
-                        36
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "LKXfP",
-                          "name": "ctaPrimaryText",
-                          "fill": "#cc2729",
-                          "content": "Đặt Hàng Ngay",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "sFIzS",
-                      "name": "Menu CTA",
-                      "fill": "transparent",
-                      "cornerRadius": 12,
-                      "stroke": {
-                        "align": "inside",
-                        "thickness": 2,
-                        "fill": "#fff700"
-                      },
-                      "gap": 8,
-                      "padding": [
-                        16,
-                        36
-                      ],
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "AYcB1",
-                          "name": "ctaSecondaryText",
-                          "fill": "#fff700",
-                          "content": "Xem Thực Đơn",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "600"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "MGj3d",
-              "name": "Hero Image",
-              "width": 540,
-              "height": 540,
-              "fill": {
-                "type": "image",
-                "enabled": true,
-                "url": "./assets/images/hero_mascot_1769935089741.png",
-                "mode": "fill"
-              },
-              "cornerRadius": 270,
-              "stroke": {
-                "align": "outside",
-                "thickness": 4,
-                "fill": "#fff70044"
-              }
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "xzzWD",
-          "name": "USP Strip",
-          "width": "fill_container",
-          "height": 90,
-          "fill": "#8a1012",
-          "padding": [
-            0,
-            60
-          ],
-          "justifyContent": "space_around",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "cuTai",
-              "name": "usp1",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "OhXvL",
-                  "name": "usp1Icon",
-                  "width": 28,
-                  "height": 28,
-                  "iconFontName": "truck",
-                  "iconFontFamily": "lucide",
-                  "fill": "#fff700"
-                },
-                {
-                  "type": "text",
-                  "id": "yz7bG",
-                  "name": "usp1Text",
-                  "fill": "#FFFFFF",
-                  "content": "Giao hàng toàn quốc",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "EiXYi",
-              "name": "div1",
-              "width": 1,
-              "height": 40,
-              "fill": "#FFFFFF33"
-            },
-            {
-              "type": "frame",
-              "id": "tFmbJ",
-              "name": "usp2",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "DVTbQ",
-                  "name": "usp2Icon",
-                  "width": 28,
-                  "height": 28,
-                  "iconFontName": "shield-check",
-                  "iconFontFamily": "lucide",
-                  "fill": "#fff700"
-                },
-                {
-                  "type": "text",
-                  "id": "6GHk2",
-                  "name": "usp2Text",
-                  "fill": "#FFFFFF",
-                  "content": "Đảm bảo chất lượng",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "sCsIN",
-              "name": "div2",
-              "width": 1,
-              "height": 40,
-              "fill": "#FFFFFF33"
-            },
-            {
-              "type": "frame",
-              "id": "uMXkz",
-              "name": "usp3",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "F4oCv",
-                  "name": "usp3Icon",
-                  "width": 28,
-                  "height": 28,
-                  "iconFontName": "timer",
-                  "iconFontFamily": "lucide",
-                  "fill": "#fff700"
-                },
-                {
-                  "type": "text",
-                  "id": "1J4bP",
-                  "name": "usp3Text",
-                  "fill": "#FFFFFF",
-                  "content": "Đặt trước 48h",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "9odLT",
-              "name": "div3",
-              "width": 1,
-              "height": 40,
-              "fill": "#FFFFFF33"
-            },
-            {
-              "type": "frame",
-              "id": "MfLKb",
-              "name": "usp4",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon_font",
-                  "id": "26YYt",
-                  "name": "usp4Icon",
-                  "width": 28,
-                  "height": 28,
-                  "iconFontName": "gift",
-                  "iconFontFamily": "lucide",
-                  "fill": "#fff700"
-                },
-                {
-                  "type": "text",
-                  "id": "d14eS",
-                  "name": "usp4Text",
-                  "fill": "#FFFFFF",
-                  "content": "Gói quà miễn phí",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "500"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "MkLLM",
-          "name": "Featured Products",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 48,
-          "padding": 80,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "ZDDS6",
-              "name": "Section Header",
-              "layout": "vertical",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "m3xoM",
-                  "name": "sectionTag",
-                  "fill": "#cc2729",
-                  "content": "— MÓN ĂN ĐẶC TRƯNG —",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "600",
-                  "letterSpacing": 3
-                },
-                {
-                  "type": "text",
-                  "id": "wqg8J",
-                  "name": "sectionTitle",
-                  "fill": "#1A0A00",
-                  "content": "Tinh Hoa Ẩm Thực Ngày Tết",
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 48,
-                  "fontWeight": "700",
-                  "letterSpacing": -1
-                },
-                {
-                  "type": "text",
-                  "id": "L4qKD",
-                  "name": "sectionDesc",
-                  "fill": "#666666",
-                  "content": "Những món ăn không thể thiếu trong mâm cỗ Tết cổ truyền Việt Nam",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "3mbFN",
-              "name": "Product Grid",
-              "width": "fill_container",
-              "gap": 24,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "BsOoc",
-                  "name": "Bánh Chưng Card",
+                  "id": "gApVe",
+                  "name": "s1QuoteFrame",
                   "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "color": "#0000000D",
-                    "offset": {
-                      "x": 0,
-                      "y": 4
-                    },
-                    "blur": 20
-                  },
-                  "layout": "vertical",
+                  "gap": 24,
                   "children": [
                     {
-                      "type": "frame",
-                      "id": "N3tSk",
-                      "name": "Card Image",
-                      "clip": true,
-                      "width": "fill_container",
-                      "height": 240,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/banh-tet-nhan-chuoi-1.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": [
-                        16,
-                        16,
-                        0,
-                        0
-                      ]
+                      "type": "rectangle",
+                      "id": "JV9xv",
+                      "name": "s1QuoteLine",
+                      "fill": "#8a1012",
+                      "width": 4,
+                      "height": "fill_container"
                     },
-                    {
-                      "type": "frame",
-                      "id": "S4jHA",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "NVz9A",
-                          "name": "card1Badge",
-                          "fill": "#cc2729",
-                          "cornerRadius": 4,
-                          "padding": [
-                            4,
-                            12
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "9e8ZQ",
-                              "name": "card1BadgeT",
-                              "fill": "#fff700",
-                              "content": "Bán chạy",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "NrJGS",
-                          "name": "card1Name",
-                          "fill": "#1A0A00",
-                          "content": "Bánh Chưng Truyền Thống",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 22,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "text",
-                          "id": "Apju3",
-                          "name": "card1Desc",
-                          "fill": "#666666",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "Bánh chưng vuông, gạo nếp cái hoa vàng, nhân đậu xanh thịt heo",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "jDvyl",
-                          "name": "card1Price",
-                          "width": "fill_container",
-                          "justifyContent": "space_between",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "k4BlH",
-                              "name": "card1PriceT",
-                              "fill": "#cc2729",
-                              "content": "250.000₫",
-                              "fontFamily": "Inter",
-                              "fontSize": 22,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "frame",
-                              "id": "HITT3",
-                              "name": "card1Btn",
-                              "fill": "#cc2729",
-                              "cornerRadius": 8,
-                              "gap": 6,
-                              "padding": [
-                                10,
-                                20
-                              ],
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon_font",
-                                  "id": "pch9m",
-                                  "name": "card1BtnIcon",
-                                  "width": 16,
-                                  "height": 16,
-                                  "iconFontName": "shopping-cart",
-                                  "iconFontFamily": "lucide",
-                                  "fill": "#fff700"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "3TDT7",
-                                  "name": "card1BtnT",
-                                  "fill": "#FFFFFF",
-                                  "content": "Thêm",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 13,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "66WMf",
-                  "name": "Bánh Tét Card",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "color": "#0000000D",
-                    "offset": {
-                      "x": 0,
-                      "y": 4
-                    },
-                    "blur": 20
-                  },
-                  "layout": "vertical",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "4vxKb",
-                      "name": "Card Image",
-                      "clip": true,
-                      "width": "fill_container",
-                      "height": 240,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/banh-tet-nhan-dau-1.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": [
-                        16,
-                        16,
-                        0,
-                        0
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "nPEqd",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "Hzw43",
-                          "name": "card2Badge",
-                          "fill": "#d37c54",
-                          "cornerRadius": 4,
-                          "padding": [
-                            4,
-                            12
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "Px0JM",
-                              "name": "card2BadgeT",
-                              "fill": "#FFFFFF",
-                              "content": "Đặc sản miền Nam",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "39FaO",
-                          "name": "card2Name",
-                          "fill": "#1A0A00",
-                          "content": "Bánh Tét Lá Cẩm",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 22,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "text",
-                          "id": "FZDGJ",
-                          "name": "card2Desc",
-                          "fill": "#666666",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ, hương vị đặc trưng miền Tây",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "w6E1z",
-                          "name": "card2PriceRow",
-                          "width": "fill_container",
-                          "justifyContent": "space_between",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "1FOE5",
-                              "name": "card2PriceT",
-                              "fill": "#cc2729",
-                              "content": "180.000₫",
-                              "fontFamily": "Inter",
-                              "fontSize": 22,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "frame",
-                              "id": "ExobJ",
-                              "name": "card2Btn",
-                              "fill": "#cc2729",
-                              "cornerRadius": 8,
-                              "gap": 6,
-                              "padding": [
-                                10,
-                                20
-                              ],
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon_font",
-                                  "id": "pPXu1",
-                                  "name": "card2BtnIcon",
-                                  "width": 16,
-                                  "height": 16,
-                                  "iconFontName": "shopping-cart",
-                                  "iconFontFamily": "lucide",
-                                  "fill": "#fff700"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "YCMPc",
-                                  "name": "card2BtnT",
-                                  "fill": "#FFFFFF",
-                                  "content": "Thêm",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 13,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "z4yay",
-                  "name": "Giò Chả Card",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "color": "#0000000D",
-                    "offset": {
-                      "x": 0,
-                      "y": 4
-                    },
-                    "blur": 20
-                  },
-                  "layout": "vertical",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "dvqBV",
-                      "name": "Card Image",
-                      "clip": true,
-                      "width": "fill_container",
-                      "height": 240,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/recipe31982-cook-step5-636650963278909741.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": [
-                        16,
-                        16,
-                        0,
-                        0
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "NPb8I",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "WA5Ju",
-                          "name": "card3Badge",
-                          "fill": "#c45542",
-                          "cornerRadius": 4,
-                          "padding": [
-                            4,
-                            12
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "FMO1v",
-                              "name": "card3BadgeT",
-                              "fill": "#FFFFFF",
-                              "content": "Truyền thống",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "7O89j",
-                          "name": "card3Name",
-                          "fill": "#1A0A00",
-                          "content": "Giò Chả Thượng Hạng",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 22,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "text",
-                          "id": "5LX0g",
-                          "name": "card3Desc",
-                          "fill": "#666666",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "Giò lụa, chả quế, chả chiên — nguyên liệu tươi, chế biến thủ công",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "KGiAM",
-                          "name": "card3PriceRow",
-                          "width": "fill_container",
-                          "justifyContent": "space_between",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "yZFeF",
-                              "name": "card3PriceT",
-                              "fill": "#cc2729",
-                              "content": "320.000₫",
-                              "fontFamily": "Inter",
-                              "fontSize": 22,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "frame",
-                              "id": "6ORNQ",
-                              "name": "card3Btn",
-                              "fill": "#cc2729",
-                              "cornerRadius": 8,
-                              "gap": 6,
-                              "padding": [
-                                10,
-                                20
-                              ],
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon_font",
-                                  "id": "EY89Q",
-                                  "name": "card3BtnIcon",
-                                  "width": 16,
-                                  "height": 16,
-                                  "iconFontName": "shopping-cart",
-                                  "iconFontFamily": "lucide",
-                                  "fill": "#fff700"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "8LS51",
-                                  "name": "card3BtnT",
-                                  "fill": "#FFFFFF",
-                                  "content": "Thêm",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 13,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "91fwm",
-                  "name": "Mứt Tết Card",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "effect": {
-                    "type": "shadow",
-                    "shadowType": "outer",
-                    "color": "#0000000D",
-                    "offset": {
-                      "x": 0,
-                      "y": 4
-                    },
-                    "blur": 20
-                  },
-                  "layout": "vertical",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "XuKlA",
-                      "name": "Card Image",
-                      "clip": true,
-                      "width": "fill_container",
-                      "height": 240,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "./assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg",
-                        "mode": "fill"
-                      },
-                      "cornerRadius": [
-                        16,
-                        16,
-                        0,
-                        0
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "hII1Q",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "children": [
-                        {
-                          "type": "frame",
-                          "id": "kfm8A",
-                          "name": "card4Badge",
-                          "fill": "#de6b7c",
-                          "cornerRadius": 4,
-                          "padding": [
-                            4,
-                            12
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "f0C7c",
-                              "name": "card4BadgeT",
-                              "fill": "#fff700",
-                              "content": "Mới",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "BcTsT",
-                          "name": "card4Name",
-                          "fill": "#1A0A00",
-                          "content": "Hộp Mứt Tết Đặc Biệt",
-                          "fontFamily": "Cormorant Garamond",
-                          "fontSize": 22,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "text",
-                          "id": "766ik",
-                          "name": "card4Desc",
-                          "fill": "#666666",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "Mứt gừng, mứt dừa, mứt bí, mứt quất — hộp 6 vị thượng hạng",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "8RWH6",
-                          "name": "card4PriceRow",
-                          "width": "fill_container",
-                          "justifyContent": "space_between",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "oS5Jo",
-                              "name": "card4PriceT",
-                              "fill": "#cc2729",
-                              "content": "350.000₫",
-                              "fontFamily": "Inter",
-                              "fontSize": 22,
-                              "fontWeight": "700"
-                            },
-                            {
-                              "type": "frame",
-                              "id": "BEZ5O",
-                              "name": "card4Btn",
-                              "fill": "#cc2729",
-                              "cornerRadius": 8,
-                              "gap": 6,
-                              "padding": [
-                                10,
-                                20
-                              ],
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "icon_font",
-                                  "id": "U2420",
-                                  "name": "card4BtnIcon",
-                                  "width": 16,
-                                  "height": 16,
-                                  "iconFontName": "shopping-cart",
-                                  "iconFontFamily": "lucide",
-                                  "fill": "#fff700"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "xqopA",
-                                  "name": "card4BtnT",
-                                  "fill": "#FFFFFF",
-                                  "content": "Thêm",
-                                  "fontFamily": "Inter",
-                                  "fontSize": 13,
-                                  "fontWeight": "600"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "jElZg",
-          "name": "Combo Tết Banner",
-          "width": "fill_container",
-          "height": 420,
-          "fill": {
-            "type": "gradient",
-            "gradientType": "linear",
-            "enabled": true,
-            "rotation": 135,
-            "size": {
-              "height": 1
-            },
-            "colors": [
-              {
-                "color": "#cc2729",
-                "position": 0
-              },
-              {
-                "color": "#8a1012",
-                "position": 0.5
-              },
-              {
-                "color": "#4A0000",
-                "position": 1
-              }
-            ]
-          },
-          "gap": 60,
-          "padding": [
-            0,
-            80
-          ],
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "iFNuL",
-              "name": "Promo Text",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 20,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "7RnvW",
-                  "name": "promoTag",
-                  "fill": "#fff70022",
-                  "cornerRadius": 999,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#fff700"
-                  },
-                  "padding": [
-                    6,
-                    16
-                  ],
-                  "children": [
                     {
                       "type": "text",
-                      "id": "Cd6Yu",
-                      "name": "promoTagText",
-                      "fill": "#fff700",
-                      "content": "🎁 ƯU ĐÃI ĐẶC BIỆT",
-                      "fontFamily": "Inter",
-                      "fontSize": 13,
-                      "fontWeight": "700",
-                      "letterSpacing": 2
+                      "id": "rdVBE",
+                      "name": "s1Quote",
+                      "fill": "#8a1012",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"Gói bánh chưng xanh, buộc lạt ân tình\nNếp cẩm điểm tô, sắc xuân tươi rạng...\"",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 20,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "6BP7F",
-                  "name": "promoTitle",
-                  "fill": "#fff700",
-                  "content": "Combo Tết\nTrọn Vẹn",
-                  "lineHeight": 1.1,
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 56,
-                  "fontWeight": "700",
-                  "letterSpacing": -1
-                },
-                {
-                  "type": "text",
-                  "id": "ovRiY",
-                  "name": "promoDesc",
-                  "fill": "#FFFFFFBB",
+                  "id": "lE7Fd",
+                  "name": "s1Desc",
+                  "fill": "#4A3B32",
                   "textGrowth": "fixed-width",
-                  "width": 480,
-                  "content": "Tiết kiệm đến 30% khi đặt trọn bộ mâm cỗ Tết bao gồm Bánh chưng, Giò chả, Mứt Tết và các loại đồ ngọt truyền thống. Giao tận nhà trước Tết 3 ngày.",
-                  "lineHeight": 1.7,
+                  "width": "fill_container",
+                  "content": "Tại Bếp Nhà Ngọ, từng đòn Bánh Tét Lá Cẩm hay chiếc Bánh Chưng xanh đều được nâng niu tỉ mỉ từ khâu chọn nếp cái hoa vàng hạt đều tăm tắp, đến thịt mỡ và đậu xanh bùi béo. Sự hòa quyện giữa vị mặn của thịt, vị bùi của đậu và hương thơm lừng của nếp mới không đơn thuần là một món ăn, mà là bản giao hưởng gọi Tết về, gói ghém trọn vẹn lời chúc năm mới an khang, sum vầy và thịnh vượng.",
+                  "lineHeight": 1.8,
                   "fontFamily": "Inter",
                   "fontSize": 16,
                   "fontWeight": "normal"
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Y4NUm",
+          "name": "s2",
+          "width": 1440,
+          "fill": "#EAE0D0",
+          "gap": 100,
+          "padding": [
+            140,
+            160
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "khpWV",
+              "name": "s2TextCol",
+              "width": 580,
+              "layout": "vertical",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
                 {
                   "type": "frame",
-                  "id": "5YoGx",
-                  "name": "promoPrice",
-                  "gap": 16,
-                  "alignItems": "center",
+                  "id": "HiJ2L",
+                  "name": "s2Header",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
                   "children": [
                     {
                       "type": "text",
-                      "id": "AYO13",
-                      "name": "promoPriceOld",
-                      "fill": "#FFFFFF66",
-                      "content": "1.500.000₫",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "500"
+                      "id": "txWj0",
+                      "name": "s2Num",
+                      "fill": "#8a1012",
+                      "content": "02.",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 24,
+                      "fontWeight": "600"
                     },
                     {
                       "type": "text",
-                      "id": "cczQA",
-                      "name": "promoPriceNew",
-                      "fill": "#fff700",
-                      "content": "999.000₫",
-                      "fontFamily": "Inter",
-                      "fontSize": 32,
-                      "fontWeight": "800"
+                      "id": "s6F2E",
+                      "name": "s2Title",
+                      "fill": "#1A0A00",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Giò Lụa Chả Quế Thượng Hạng",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 44,
+                      "fontWeight": "600"
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "4gs6g",
-                  "name": "promoBtn",
-                  "fill": "#fff700",
-                  "cornerRadius": 12,
-                  "gap": 8,
+                  "id": "mDTng",
+                  "name": "s2QuoteFrame",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "hFtcK",
+                      "name": "s2QuoteLine",
+                      "fill": "#8a1012",
+                      "width": 4,
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Hp6C9",
+                      "name": "s2Quote",
+                      "fill": "#8a1012",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"Mâm cao cỗ đầy không gì sánh bằng tấm lòng.\nGiò chả thơm lừng, đậm tình nồng nàn góc bếp.\"",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 20,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "JF96d",
+                  "name": "s2Desc",
+                  "fill": "#4A3B32",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Giò Chả là phần tinh túy nhất trong mâm cỗ truyền thống. Để miếng giò lụa được trắng dòn sần sật, thịt phải là phần mông nạc vừa mới mổ, vẫn còn hơi ấm, đem giã đều tay ngay tức khắc.\nMiếng chả quế thì lại đòi hỏi sự khéo léo để nướng cho lớp vỏ ngoài ánh vàng như mật ong, cắn vào mềm ẩm, đượm quế tinh khiết. Chúng tôi gìn giữ công thức gia truyền trăm năm, hoàn toàn không chất bảo quản, chỉ gói ghém hương vị mộc mạc và chân thành nhất để trao đến vị giác của bạn.",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tsewP",
+              "name": "s2ImgWrapper",
+              "width": 440,
+              "height": 580,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "JrCmA",
+                  "x": 0,
+                  "y": 40,
+                  "name": "s2BgDecor",
+                  "fill": "#D5C8B4",
+                  "width": 400,
+                  "height": 540
+                },
+                {
+                  "type": "frame",
+                  "id": "vrPjw",
+                  "x": 40,
+                  "y": 0,
+                  "name": "s2Img",
+                  "clip": true,
+                  "width": 400,
+                  "height": 540,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1773197058037.png",
+                    "mode": "fill"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oxkGz",
+          "name": "s3",
+          "width": 1440,
+          "gap": 100,
+          "padding": [
+            140,
+            160
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "8xmfb",
+              "name": "s3ImgWrapper",
+              "width": 440,
+              "height": 580,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "tYE8Z",
+                  "x": 40,
+                  "y": 40,
+                  "name": "s3BgDecor",
+                  "fill": "#E0D7C9",
+                  "width": 400,
+                  "height": 540
+                },
+                {
+                  "type": "frame",
+                  "id": "bbgtr",
+                  "x": 0,
+                  "y": 0,
+                  "name": "s3Img",
+                  "clip": true,
+                  "width": 400,
+                  "height": 540,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1773197095943.png",
+                    "mode": "fill"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oxqHd",
+              "name": "s3TextCol",
+              "width": 580,
+              "layout": "vertical",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wazYO",
+                  "name": "s3Header",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hfnRE",
+                      "name": "s3Num",
+                      "fill": "#8a1012",
+                      "content": "03.",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 24,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "M9Yhb",
+                      "name": "s3Title",
+                      "fill": "#1A0A00",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Ngọt Ngào Dư Vị Khay Mứt Tết",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 44,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "d6Fdn",
+                  "name": "s3QuoteFrame",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "ORuut",
+                      "name": "s3QuoteLine",
+                      "fill": "#8a1012",
+                      "width": 4,
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QkqLG",
+                      "name": "s3Quote",
+                      "fill": "#8a1012",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"Trà đắng đố kị mứt thơm ngọt\nNhư đời nhân thế nếm đắng cay...\"",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 20,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "bHN0a",
+                  "name": "s3Desc",
+                  "fill": "#4A3B32",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Khay mứt Tết không chỉ là niềm vui trẻ nhỏ mà còn là những lời rôm rả mở đầu câu chuyện đầu năm của người lớn. Mứt dừa trắng muốt ngọt bùi, mứt gừng vàng ánh cay nồng ấm bụng, mứt sen trần thanh nhã như tà áo cô gái Hà Thành...\nChúng tôi sên tay từng mẻ mứt mộc bằng đường phèn, không nhuộm màu giả, để vị ngọt tự nhiên bừng lên dịu êm. Cùng một ấm chà xanh nóng hổi, ngày Xuân dường như chậm lại, để ta thưởng thực vị thanh tao và đón những bình yên chậm rãi.",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "AiDS0",
+          "name": "s4",
+          "width": 1440,
+          "fill": "#EAE0D0",
+          "gap": 100,
+          "padding": [
+            140,
+            160
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "wGsSw",
+              "name": "s4TextCol",
+              "width": 580,
+              "layout": "vertical",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "4SvsQ",
+                  "name": "s4Header",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bMuFl",
+                      "name": "s4Num",
+                      "fill": "#8a1012",
+                      "content": "04.",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 24,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZGL1v",
+                      "name": "s4Title",
+                      "fill": "#1A0A00",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Dư Vị Lai Rai Nồng Đượm",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 44,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MyPKR",
+                  "name": "s4QuoteFrame",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "EtD3D",
+                      "name": "s4QuoteLine",
+                      "fill": "#8a1012",
+                      "width": 4,
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "text",
+                      "id": "P8x2r",
+                      "name": "s4Quote",
+                      "fill": "#8a1012",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "\"Khách đến dâng chén sương lam\nKèm thêm chút mồi thắm đượm thâm giao\"",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 20,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "uKBMM",
+                  "name": "s4Desc",
+                  "fill": "#4A3B32",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ngày Xuân sao có thể thiếu những chầu hàn huyên rôm rả, vài chén rượu nâng cạn cùng nhâm nhi miếng Khô Bò, Khô Gà đậm vị. Thay vì ngợp trong cỗ ngọt béo ngậy, chính vị mặn mặn, cay cay kích thích vị giác trở thành điểm nhấn thăng hoa cho bàn tiệc.\n\nTừng thớ thịt tẩm ướp tiêu hạt, mắc khén rừng và sấy củi gai làm bùng nổ hương sắc. Những cái chạm ly len lỏi giữa mùi thơm thớ khô, là dư vị khó tả của tình bằng hữu, chốn đoàn viên thiêng liêng rộn rã cười nói.",
+                  "lineHeight": 1.8,
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B8X4l",
+              "name": "s4ImgWrapper",
+              "width": 440,
+              "height": 580,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "DBag9",
+                  "x": 0,
+                  "y": 40,
+                  "name": "s4BgDecor",
+                  "fill": "#D5C8B4",
+                  "width": 400,
+                  "height": 540
+                },
+                {
+                  "type": "frame",
+                  "id": "rWcC5",
+                  "x": 40,
+                  "y": 0,
+                  "name": "s4Img",
+                  "clip": true,
+                  "width": 400,
+                  "height": 540,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1773197126895.png",
+                    "mode": "fill"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Nlpxx",
+          "name": "cta",
+          "width": "fill_container",
+          "height": 400,
+          "fill": "#8a1012",
+          "layout": "vertical",
+          "gap": 40,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "80EoG",
+              "name": "ctaInner",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5C158"
+              },
+              "layout": "vertical",
+              "gap": 32,
+              "padding": 60,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SISLr",
+                  "name": "ctaDesc",
+                  "fill": "#E5C158",
+                  "content": "Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ.",
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 22,
+                  "fontWeight": "600",
+                  "fontStyle": "italic"
+                },
+                {
+                  "type": "frame",
+                  "id": "6r17a",
+                  "name": "ctaBtn",
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E5C158"
+                  },
                   "padding": [
                     16,
                     40
                   ],
+                  "justifyContent": "center",
                   "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
-                      "id": "wD7cm",
-                      "name": "promoBtnText",
-                      "fill": "#cc2729",
-                      "content": "Đặt Combo Ngay",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "700"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "37Ny6",
-              "name": "Promo Image",
-              "width": 420,
-              "height": 340,
-              "fill": {
-                "type": "image",
-                "enabled": true,
-                "url": "./assets/images/hero_background_1769935111482.png",
-                "mode": "fill"
-              },
-              "cornerRadius": 20
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "VblI7",
-          "name": "Testimonials Section",
-          "width": "fill_container",
-          "fill": "#FFF8F0",
-          "layout": "vertical",
-          "gap": 48,
-          "padding": 80,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "0xrAv",
-              "name": "testHeader",
-              "layout": "vertical",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "yuCyQ",
-                  "name": "testTag",
-                  "fill": "#cc2729",
-                  "content": "— KHÁCH HÀNG NÓI GÌ —",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "600",
-                  "letterSpacing": 3
-                },
-                {
-                  "type": "text",
-                  "id": "xkFsz",
-                  "name": "testTitle",
-                  "fill": "#1A0A00",
-                  "content": "Hàng Ngàn Gia Đình Tin Tưởng",
-                  "fontFamily": "Cormorant Garamond",
-                  "fontSize": 48,
-                  "fontWeight": "700",
-                  "letterSpacing": -1
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "7vC6N",
-              "name": "Testimonial Grid",
-              "width": "fill_container",
-              "gap": 24,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "FBxhf",
-                  "name": "t1",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#cc272922"
-                  },
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": 28,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "8tfJr",
-                      "name": "t1Stars",
-                      "fill": "#fff700",
-                      "content": "★★★★★",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "zlXsi",
-                      "name": "t1Quote",
-                      "fill": "#333333",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "\"Bánh chưng rất ngon, nếp dẻo, nhân đậm đà. Gia đình tôi đã đặt 3 năm liên tiếp, năm nào cũng hài lòng!\"",
-                      "lineHeight": 1.7,
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "lMQ3G",
-                      "name": "t1Author",
-                      "fill": "#cc2729",
-                      "content": "— Chị Nguyễn Thị Lan, Hà Nội",
+                      "id": "vdfRm",
+                      "name": "ctaBtnText",
+                      "fill": "#E5C158",
+                      "content": "KHÁM PHÁ THỰC ĐƠN",
                       "fontFamily": "Inter",
                       "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "f9eDq",
-                  "name": "t2",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#cc272922"
-                  },
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": 28,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "fzQPR",
-                      "name": "t2Stars",
-                      "fill": "#fff700",
-                      "content": "★★★★★",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "ssqY7",
-                      "name": "t2Quote",
-                      "fill": "#333333",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "\"Gói quà Tết rất đẹp và sang trọng. Tôi đã tặng cho đối tác và nhận được nhiều lời khen. Chất lượng tuyệt vời!\"",
-                      "lineHeight": 1.7,
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "QNLCy",
-                      "name": "t2Author",
-                      "fill": "#cc2729",
-                      "content": "— Anh Trần Văn Minh, TP.HCM",
-                      "fontFamily": "Inter",
-                      "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "TMIBX",
-                  "name": "t3",
-                  "width": "fill_container",
-                  "fill": "#FFFFFF",
-                  "cornerRadius": 16,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1,
-                    "fill": "#cc272922"
-                  },
-                  "layout": "vertical",
-                  "gap": 16,
-                  "padding": 28,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "LUyZR",
-                      "name": "t3Stars",
-                      "fill": "#fff700",
-                      "content": "★★★★★",
-                      "fontFamily": "Inter",
-                      "fontSize": 20,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "4KKM6",
-                      "name": "t3Quote",
-                      "fill": "#333333",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "\"Giò chả thơm ngon, giao hàng nhanh chóng và cẩn thận. Mứt Tết cũng rất đa dạng, con cháu ai cũng thích!\"",
-                      "lineHeight": 1.7,
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "KtJdz",
-                      "name": "t3Author",
-                      "fill": "#cc2729",
-                      "content": "— Cô Phạm Thu Hương, Đà Nẵng",
-                      "fontFamily": "Inter",
-                      "fontSize": 13,
-                      "fontWeight": "600"
+                      "fontWeight": "500",
+                      "letterSpacing": 3
                     }
                   ]
                 }
@@ -4293,17 +749,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "text",
-      "id": "5tCtf",
-      "x": 0,
-      "y": 0,
-      "fill": "#000000",
-      "content": "201520",
-      "fontFamily": "Inter",
-      "fontSize": 12,
-      "fontWeight": "normal"
     }
   ]
 }

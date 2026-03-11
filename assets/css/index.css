@@ -93,14 +93,14 @@
 /* ================== CÁC PHẦN TRANG CHỦ ================== */
 
 /* 1. HEADER - Ghi đè style header cho trang chủ 
-   Cao 100px cố định, nền đỏ đậm */
+   Cao 80px cố định, nền đỏ đậm */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    height: 100px;
+    height: 80px;
     padding: 0 5%;
     display: flex;
     justify-content: space-between;
@@ -115,9 +115,9 @@
     gap: 1rem;
 }
 
-/* Logo lớn hơn: 85px */
+/* Logo lớn hơn: 65px */
 .logo img {
-    height: 85px;
+    height: 65px;
 }
 
 .logo-text {
@@ -205,7 +205,7 @@
 .hero-section {
     position: relative;
     padding: 12rem 5% 6rem;
-    background: linear-gradient(rgba(138, 16, 18, 0.85), rgba(138, 16, 18, 0.85)), url('../images/random_outline_clouds.png') repeat center center;
+    background: linear-gradient(rgba(138, 16, 18, 0.85), rgba(138, 16, 18, 0.85)), url('../images/pattern-clouds-outline.png') repeat center center;
     background-size: auto;
     display: flex;
     align-items: center;
