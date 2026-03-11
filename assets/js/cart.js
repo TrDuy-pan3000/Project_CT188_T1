@@ -44,14 +44,14 @@ function escapeHtml(str) {
                 <div class="item-name">${escapeHtml(item.name)}</div>
                 <div class="item-price">${formatMoney(item.price)}</div>
                 <div class="item-qty">
-                    <button class="qty-btn" onclick="changeQuantity('${item.id}', -1)">−</button>
+                    <button class="qty-btn" onclick="changeQuantity('${escapeHtml(String(item.id))}', -1)">−</button>
                     <span class="qty-value">${item.quantity || 1}</span>
-                    <button class="qty-btn" onclick="changeQuantity('${item.id}', 1)">+</button>
+                    <button class="qty-btn" onclick="changeQuantity('${escapeHtml(String(item.id))}', 1)">+</button>
                 </div>
             </div>
             <div class="item-right">
                 <div class="item-subtotal">${formatMoney(item.price * (item.quantity || 1))}</div>
-                <button class="remove-btn" onclick="confirmRemove('${item.id}')">🗑️ Xóa</button>
+                <button class="remove-btn" onclick="confirmRemove('${escapeHtml(String(item.id))}')">🗑️ Xóa</button>
             </div>
         </div>
     `).join('');
