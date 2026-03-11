@@ -85,7 +85,7 @@ function changeQuantity(id, delta) {
     renderCart();
 }
 
-// Xóa sản phẩm (modal xác nhận) 
+// Xóa sản phẩm 
 function confirmRemove(id) {
     if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
         cartData = cartData.filter(i => String(i.id) !== String(id));
@@ -95,14 +95,11 @@ function confirmRemove(id) {
     }
 }
 
-
-
 function updateTotal() {
     const total = cartData.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
     const el = document.getElementById('totalAmount');
     if (el) el.textContent = formatMoney(total);
 }
-
 
 function checkout() {
     if (cartData.length === 0) {

@@ -97,13 +97,13 @@ h1 {
 /* .main-content - Chia 2 cột đều nhau bằng CSS Grid */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;   
     gap: 25px;
 }
 
 /* .left-section, .right-section - Style chung cho cả 2 cột
  * border-radius + box-shadow + border vàng → khung nổi bật, sang trọng
- * transition → hiệu ứng hover mượt mà  */
+ * transition → hiệu ứng hover mượt mà */
 .left-section,
 .right-section {
     border-radius: 20px;
@@ -125,7 +125,10 @@ h1 {
     background: white;
 }
 
-/* .section-title - Tiêu đề mỗi cột, gạch chân vàng thay thẻ <hr> */
+/* .section-title - Tiêu đề mỗi cột, gạch chân vàng thay thẻ <hr>
+ * Border-bottom `3px solid` → gạch chân dày, màu vàng gold nổi bật
+ * padding-bottom: 15px → tạo khoảng cách giữa chữ và gạch chân để nhìn thoáng hơn
+ * margin-bottom: 25px → tạo khoảng cách giữa tiêu đề và nội dung bên dưới */
 .section-title {
     font-size: 1.5em;
     font-weight: 700;
