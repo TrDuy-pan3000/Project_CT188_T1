@@ -13,6 +13,14 @@ function saveCartToStorage(cart) {
     if (typeof updateCartBadge === 'function') updateCartBadge();
 }
 
+
+function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = String(str);
+    return div.innerHTML;
+}
+
+// Trạng thái giỏ hàng 
 let cartData = loadCartFromStorage();
 
 // Format tiền
@@ -35,31 +43,31 @@ function renderCart() {
         updateTotal();
         return;
     }
-// Simple HTML escape helper
-function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-}
-    cartContainer.innerHTML = cartData.map(item => `
+
+    cartContainer.innerHTML = cartData.map(item => {
+        const qty = item.quantity || 1;
+        const safeId = escapeHtml(String(item.id));
+        return `
         <div class="cart-item">
-            <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" class="item-image"
-                 onerror="this.src='assets/images/logo.png'">
+            <img
+                src="${escapeHtml(item.image)}"
+                alt="${escapeHtml(item.name)}"
+                class="item-image"
+                onerror="this.src='assets/images/logo.png'"
+            >
             <div class="item-info">
                 <div class="item-name">${escapeHtml(item.name)}</div>
                 <div class="item-price">${formatMoney(item.price)}</div>
-                <div class="item-qty">
-                    <button class="qty-btn" onclick="changeQuantity('${escapeHtml(String(item.id))}', -1)">−</button>
-                    <span class="qty-value">${item.quantity || 1}</span>
-                    <button class="qty-btn" onclick="changeQuantity('${escapeHtml(String(item.id))}', 1)">+</button>
-                </div>
             </div>
-            <div class="item-right">
-                <div class="item-subtotal">${formatMoney(item.price * (item.quantity || 1))}</div>
-                <button class="remove-btn" onclick="confirmRemove('${escapeHtml(String(item.id))}')">🗑️ Xóa</button>
+            <div class="item-qty">
+                <button class="qty-btn" onclick="changeQuantity('${safeId}', -1)">−</button>
+                <span class="qty-value">${qty}</span>
+                <button class="qty-btn" onclick="changeQuantity('${safeId}', 1)">+</button>
             </div>
-        </div>
-    `).join('');
+            <div class="item-subtotal">${formatMoney(item.price * qty)}</div>
+            <button class="remove-btn" onclick="confirmRemove('${safeId}')" title="Xóa sản phẩm">🗑️</button>
+        </div>`;
+    }).join('');
 
     updateTotal();
 }
@@ -71,6 +79,7 @@ function changeQuantity(id, delta) {
     item.quantity = (item.quantity || 1) + delta;
     if (item.quantity <= 0) {
         cartData = cartData.filter(i => String(i.id) !== String(id));
+        showNotification('Đã xóa sản phẩm khỏi giỏ hàng');
     }
     saveCartToStorage(cartData);
     renderCart();
@@ -86,19 +95,15 @@ function confirmRemove(id) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    renderCart();
 
-});
 
-// Tổng tiền 
 function updateTotal() {
     const total = cartData.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
     const el = document.getElementById('totalAmount');
     if (el) el.textContent = formatMoney(total);
 }
 
-// Thanh toán 
+
 function checkout() {
     if (cartData.length === 0) {
         showNotification('Vui lòng chọn sản phẩm trước khi chốt đơn!');
@@ -116,7 +121,7 @@ function checkout() {
     }
 
     const paymentText = payment === 'cod' ? 'Thanh toán khi nhận hàng (COD)' : 'Chuyển khoản ngân hàng';
-    const total = document.getElementById('totalAmount')?.textContent;
+    const total = cartData.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
 
     let orderDetails = `🎊 Chúc mừng năm mới - Vạn sự như ý! 🎊\n\n`;
     orderDetails += `👤 Khách hàng: ${name}\n`;
@@ -124,10 +129,12 @@ function checkout() {
     orderDetails += `📞 Điện thoại: ${phone}\n`;
     orderDetails += `💳 Thanh toán: ${paymentText}\n\n`;
     orderDetails += `📦 DANH SÁCH SẢN PHẨM:\n`;
+
     cartData.forEach((item, i) => {
         const qty = item.quantity || 1;
         orderDetails += `${i + 1}. ${item.name} x${qty} - ${formatMoney(item.price * qty)}\n`;
     });
+
     orderDetails += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━\n💰 TỔNG TIỀN: ${total}\n━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
     orderDetails += `\n\n📝 Ghi chú: ${note || 'Không có'}\n\n✨ Cảm ơn quý khách!\n🎁 Chúc năm mới an khang thịnh vượng!`;
 
@@ -138,7 +145,7 @@ function checkout() {
     showNotification('🧧 Chốt đơn thành công! Chúc mừng năm mới! 🎊');
 }
 
-// Notification 
+
 function showNotification(message) {
     const el = document.getElementById('notification');
     if (!el) return;
@@ -147,6 +154,10 @@ function showNotification(message) {
     clearTimeout(showNotification._t);
     showNotification._t = setTimeout(() => { el.style.display = 'none'; }, 3000);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCart();
+});
 
 // Sync khi detail page thêm hàng ở tab khác 
 window.addEventListener('storage', (e) => {
