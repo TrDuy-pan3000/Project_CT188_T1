@@ -4,7 +4,7 @@ const products = [
         name: "Bánh Tét",
         price: 45000,
         category: "banh-tet",
-        image: "assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg",
+        image: "assets/images/product-combo-tet.jpg",
         badge: "new",
         description: "Bánh tét truyền thống Nam Bộ"
     },
@@ -13,7 +13,7 @@ const products = [
         name: "Bia",
         price: 345000,
         category: "do-uong",
-        image: "assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg",
+        image: "assets/images/product-bia-cao-cap.jpg",
         badge: "new",
         description: "Bia cao cấp quốc tế"
     },
@@ -22,7 +22,7 @@ const products = [
         name: "Đồ nhậu",
         price: 45000,
         category: "tet-nham-nhi",
-        image: "assets/images/recipe31982-cook-step5-636650963278909741.jpg",
+        image: "assets/images/product-combo-nhau.jpg",
         badge: "new",
         description: "Đồ nhậu thơm ngon"
     },
@@ -31,7 +31,7 @@ const products = [
         name: "Bánh Tét Chuối",
         price: 150000,
         category: "banh-tet",
-        image: "assets/images/banh-tet-nhan-chuoi-1.jpg",
+        image: "assets/images/product-banh-tet-chuoi-1.jpg",
         badge: "bestseller",
         description: "Bánh tét nhân chuối đặc biệt"
     },
@@ -40,7 +40,7 @@ const products = [
         name: "Bánh Tét Đậu",
         price: 120000,
         category: "banh-tet",
-        image: "assets/images/banh-tet-nhan-dau-1.jpg",
+        image: "assets/images/product-banh-tet-dau-1.jpg",
         badge: "new",
         description: "Bánh tét nhân đậu xanh"
     },
@@ -49,7 +49,7 @@ const products = [
         name: "Combo Nhậu Tết",
         price: 250000,
         category: "tet-nham-nhi",
-        image: "assets/images/recipe31982-cook-step5-636650963278909741.jpg",
+        image: "assets/images/product-combo-nhau.jpg",
         badge: "hot",
         description: "Combo nhậu ngày Tết"
     }
