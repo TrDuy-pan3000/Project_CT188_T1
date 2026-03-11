@@ -19,7 +19,9 @@
 </head>
 
 <body>
+    <!-- ======================== HEADER - Thanh điều hướng cố định trên cùng ======================== -->
     <header class="header">
+        <!-- Logo - bấm vào sẽ về trang chủ. Nếu ảnh lỗi thì hiển chữ thay thế (onerror) -->
         <div class="logo">
             <a href="index.html">
                 <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ Logo"
@@ -27,14 +29,18 @@
                 <span class="logo-text">Bếp Nhà Ngọ</span>
             </a>
         </div>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Trang chủ</a></li>
-                <li><a href="menu.html" class="nav-link active">Thực đơn</a></li>
+
+        <!-- Thanh điều hướng - class "active" đánh dấu trang đang xem -->
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" class="nav-link active">Trang chủ</a></li>
+                <li><a href="menu.html" class="nav-link">Thực đơn</a></li>
                 <li><a href="story.html" class="nav-link">Câu chuyện</a></li>
             </ul>
         </nav>
-        <div class="header-actions">
+
+        <!-- Các nút: tìm kiếm, tài khoản, giỏ hàng (có badge đếm số lượng) -->
+        <div class="cart-button">
             <button class="icon-btn" aria-label="Tìm kiếm"><i class="fas fa-search"></i></button>
             <button class="icon-btn" aria-label="Tài khoản"><i class="fas fa-user"></i></button>
             <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
@@ -132,14 +138,14 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-deco"></div>
-        <div class="footer-content">
+        <div class="footerdivider footer-deco"></div>
+        <div class="footertop footer-content">
             <div class="footer-col">
                 <div class="footer-brand">
                     <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ">
                     <span class="footer-brand-text">Bếp Nhà Ngọ</span>
                 </div>
-                <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà.</p>
+                <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà. Chúng tôi tự hào là địa chỉ tin cậy cho những món ăn ngày Tết!</p>
                 <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
                 <div class="social">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -166,7 +172,7 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footerbottom">
             <p>© 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1 | Năm Giáp Ngọ 🐴</p>
         </div>
     </footer>
