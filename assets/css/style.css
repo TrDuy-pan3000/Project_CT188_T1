@@ -1,69 +1,90 @@
+/* ========================================================
+   STYLE.CSS - CSS DÙNG CHUNG CHO TOÀN BỘ WEBSITE
+   Dùng cho tất cả các trang: trang chủ, thực đơn, giỏ hàng, ...
+   ======================================================== */
+
+/* --- Reset mặc định: xóa margin, padding, dùng border-box cho dễ tính kích thước --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --- Biến màu sắc & hiệu ứng dùng chung --- 
+   Đổi màu ở đây sẽ thay đổi toàn bộ website!
+   Ví dụ: đổi --red-tet thì header, nút, footer... đều thay đổi theo
+*/
 :root {
-    --pink-peach: #FFB5A7;
-    --pink-light: #FFDDD6;
-    --mint: #B8E0D2;
-    --mint-light: #D8F3EC;
-    --red-tet: #E63946;
-    --red-dark: #C62828;
-    --gold: #FFD700;
-    --gold-dark: #E6C200;
-    --cream: #FFF9F0;
-    --brown-dark: #4A3B32;
-    --brown-light: #6D5D4B;
-    --coral: #FF6B35;
-    --navy: #1a1a2e;
+    /* Màu chủ đạo */
+    --pink-peach: #de6b7c;       /* Hồng đào - dùng cho tag, nhấn */
+    --pink-light: #f5d5d8;       /* Hồng nhạt - nền mọng */
+    --mint: #d37c54;             /* Nâu cam - tag đặc sản */
+    --mint-light: #f0e8d8;       /* Be nhạt */
+    --red-tet: #cc2729;          /* Đỏ Tết - màu chủ đạo nhất! */
+    --red-dark: #8a1012;         /* Đỏ đậm - header, nền tối */
+    --gold: #fff700;             /* Vàng - chữ nổi bật, logo */
+    --gold-dark: #e6d100;        /* Vàng đậm - sao đánh giá */
+    --cream: #FFF8F0;            /* Kem - nền trang chính */
+    --brown-dark: #1A0A00;       /* Nâu đậm - chữ chính */
+    --brown-light: #4A3B32;      /* Nâu nhạt - chữ phụ */
+    --coral: #c45542;            /* San hô - nhấn mạnh */
+    --navy: #1A0A00;             /* Tối - footer */
     --white: #FFFFFF;
 
+    /* Hiệu ứng bóng - tạo cảm giác nổi 3D (claymorphism) */
     --shadow-clay:
-        8px 8px 16px rgba(255, 107, 53, 0.12),
-        -4px -4px 12px rgba(255, 255, 255, 0.8),
-        inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+        0 4px 16px rgba(204, 39, 41, 0.08),
+        0 1px 4px rgba(0, 0, 0, 0.06);
 
     --shadow-clay-hover:
-        12px 12px 24px rgba(255, 107, 53, 0.2),
-        -6px -6px 16px rgba(255, 255, 255, 0.9),
-        inset 1px 1px 3px rgba(255, 255, 255, 0.4);
+        0 8px 30px rgba(204, 39, 41, 0.15),
+        0 2px 8px rgba(0, 0, 0, 0.08);
 
     --shadow-soft:
-        0 4px 20px rgba(74, 59, 50, 0.1);
+        0 4px 20px rgba(26, 10, 0, 0.1);
 
-    --radius: 1rem;
-    --radius-lg: 1.5rem;
-    --radius-xl: 2rem;
-    --radius-full: 50rem;
+    /* Bo góc - từ nhỏ đến tròn hoàn toàn */
+    --radius: 4px;
+    --radius-lg: 6px;
+    --radius-xl: 8px;
+    --radius-full: 50rem;        /* Bo tròn hoàn toàn (dùng cho nút, badge) */
+    --radius-sm: 2px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap');
+/* --- Font chữ dự phòng (phòng khi link trong HTML chưa load) ---
+   Playfair Display: font serif trang trọng (tiêu đề lớn)
+   Be Vietnam Pro: font sans-serif năng động, hỗ trợ tiếng Việt (nội dung, UI)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
 
+/* --- Thiết lập chung cho body ---
+   flex-direction: column để footer luôn dính dưới cùng
+   dù nội dung ngắn hơn màn hình
+*/
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     color: var(--brown-dark);
     line-height: 1.7;
     background: var(--cream);
 }
 
+/* --- Reset các thẻ HTML cơ bản --- */
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none;       /* Bỏ gạch chân link */
+    color: inherit;              /* Kế thừa màu chữ từ cha */
     transition: all 0.3s ease;
 }
 
 img {
-    max-width: 100%;
+    max-width: 100%;             /* Ảnh không bị tràn ra ngoài */
     display: block;
 }
 
 ul {
-    list-style: none;
+    list-style: none;            /* Bỏ dấu chấm đầu dòng */
 }
 
 button {
@@ -72,116 +93,127 @@ button {
     border: none;
 }
 
+/* main lấy hết khoảng trống còn lại — đẩy footer xuống dưới */
 main {
     flex: 1;
 }
 
+/* ==========================================
+   HEADER - Thanh điều hướng cố định
+   Luôn nằm trên cùng (position: fixed, z-index: 100)
+   ========================================== */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    padding: 1rem 5%;
+    padding: 0.1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 249, 240, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 181, 167, 0.3);
+    background: var(--red-tet);
+    border-bottom: 2px solid rgba(255, 247, 0, 0.15);
     transition: all 0.3s ease;
 }
 
+/* Header khi cuộn xuống — thêm bóng đổ cho rõ hơn */
 .header.scrolled {
-    background: rgba(255, 249, 240, 0.95);
-    box-shadow: var(--shadow-soft);
+    background: var(--red-tet);
+    box-shadow: 0 4px 20px rgba(204, 39, 41, 0.3);
 }
 
+/* --- Logo: ảnh + tên thương hiệu cạnh nhau --- */
 .logo a {
     display: flex;
     align-items: center;
     gap: 0.6rem;
 }
 
+/* Ảnh logo - chiều cao cố định, bo góc nhẹ */
 .logo img {
     height: 4.5rem;
     border-radius: var(--radius);
 }
 
+/* Tên thương hiệu - chữ vàng nổi bật trên nền đỏ */
 .logo-text {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--gold);
 }
 
+/* --- Thanh điều hướng - nằm giữa header --- */
 .nav {
-    flex: 1;
+    flex: 1;                     /* Chiếm hết khoảng trống giữa logo và icon */
     display: flex;
     justify-content: center;
 }
 
+/* Danh sách link điều hướng - xếp ngang, cách đều */
 .nav-list {
     display: flex;
     gap: 0.5rem;
 }
 
+/* Mỗi link điều hướng - bo góc tròn, hover lên trên 2px */
 .nav-link {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 600;
     font-size: 1rem;
     padding: 0.6rem 1.4rem;
     border-radius: var(--radius-full);
     background: transparent;
-    color: var(--brown-dark);
+    color: var(--white);
     transition: all 0.3s ease;
     position: relative;
 }
 
+/* Hover: nền trắng mờ, bay lên 2px */
 .nav-link:hover {
-    background: var(--pink-light);
+    background: rgba(255, 255, 255, 0.15);
     transform: translateY(-2px);
 }
 
+/* Trang đang xem — nền vàng, chữ đỏ nổi bật */
 .nav-link.active {
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    color: var(--white);
-    box-shadow: var(--shadow-clay);
+    background: var(--gold);
+    color: var(--red-tet);
+    font-weight: 700;
 }
 
+/* --- Cụm icon bên phải header (tìm, user, giỏ hàng) --- */
 .header-actions {
     display: flex;
     gap: 0.6rem;
 }
 
+/* Nút icon tròn - nền mờ, hover bay lên nhẹ */
 .icon-btn {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: var(--radius-full);
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--brown-dark);
-    box-shadow: var(--shadow-clay);
+    color: var(--white);
     transition: all 0.3s ease;
     font-size: 1rem;
 }
 
+/* Hover: nền sáng hơn, bay lên 3px */
 .icon-btn:hover {
-    background: var(--pink-peach);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-clay-hover);
 }
 
 .icon-btn.cart {
-    position: relative;
+    position: relative;          /* Để badge nằm góc phải trên */
 }
 
+/* Badge số lượng giỏ hàng — hình tròn nhỏ góc trên icon */
 .cart-badge {
     position: absolute;
     top: -0.3rem;
@@ -199,13 +231,18 @@ main {
     border: 2px solid var(--cream);
 }
 
+/* ==========================================
+   TIÊU ĐỀ PHẦN (Section Title)
+   Dùng chung cho các phần: sản phẩm, đánh giá...
+   ========================================== */
 .section-head {
     text-align: center;
     margin-bottom: 3.5rem;
 }
 
+/* Tiêu đề lớn - có 2 emoji trang trí 2 bên (tuỳ chọn) */
 .section-title {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--brown-dark);
@@ -214,6 +251,7 @@ main {
     display: inline-block;
 }
 
+/* Emoji trang trí 2 bên tiêu đề (đặt vị trí tuyệt đối) */
 .section-title .emoji-left,
 .section-title .emoji-right {
     position: absolute;
@@ -222,14 +260,17 @@ main {
     font-size: 2rem;
 }
 
+/* Emoji bên trái */
 .section-title .emoji-left {
     left: -3.5rem;
 }
 
+/* Emoji bên phải */
 .section-title .emoji-right {
     right: -3.5rem;
 }
 
+/* Mô tả ngắn bên dưới tiêu đề - nâu nhạt, căn giữa */
 .section-desc {
     color: var(--brown-light);
     font-size: 1.1rem;
@@ -237,11 +278,17 @@ main {
     margin: 0 auto;
 }
 
+/* ==========================================
+   NÚT BẤM (Buttons)
+   .btn-primary  = nút chính (đỏ, nổi bật nhất)
+   .btn-secondary = nút phụ (viền đỏ, nền trắng)
+   .btn-cart = nút thêm giỏ hàng (nâu cam gradient)
+   ========================================== */
 .btn {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     border-radius: var(--radius-full);
     transition: all 0.3s ease;
@@ -293,6 +340,10 @@ main {
     box-shadow: var(--shadow-clay-hover);
 }
 
+/* ==========================================
+   DANH SÁCH SẢN PHẨM & THẺ SẢN PHẨM (Cards)
+   Lưới responsive: tự động xuống dòng khi màn hình nhỏ
+   ========================================== */
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
@@ -300,6 +351,7 @@ main {
     padding: 0 5%;
 }
 
+/* Thẻ sản phẩm - hover thì nổi lên + phóng to nhẹ */
 .card {
     background: var(--white);
     border-radius: var(--radius-xl);
@@ -309,27 +361,12 @@ main {
     transform-origin: center bottom;
 }
 
-.card:nth-child(odd) {
-    transform: rotate(-1.5deg);
-}
-
-.card:nth-child(even) {
-    transform: rotate(1deg);
-}
-
-.card:nth-child(4n+1) {
-    margin-top: 1rem;
-}
-
-.card:nth-child(4n+3) {
-    margin-top: 0.5rem;
-}
-
 .card:hover {
-    transform: rotate(0deg) translateY(-10px) scale(1.02);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: var(--shadow-clay-hover);
 }
 
+/* Ảnh sản phẩm - hover thì zoom nhẹ 1.1 lần */
 .card-img {
     position: relative;
     height: 14rem;
@@ -347,12 +384,13 @@ main {
     transform: scale(1.1);
 }
 
+/* Nhãn góc ảnh (Bán chạy, Mới, Sale...) */
 .tag {
     position: absolute;
     top: 0.8rem;
     left: 0.8rem;
     padding: 0.35rem 0.9rem;
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--white);
@@ -360,60 +398,71 @@ main {
     box-shadow: var(--shadow-soft);
 }
 
+/* Tag "Bán chạy" - nền đỏ Tết, chữ vàng */
 .tag.hot {
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    color: var(--brown-dark);
+    background: var(--red-tet);
+    color: var(--gold);
 }
 
+/* Tag "Mới" - nền hồng đào */
 .tag.new {
-    background: linear-gradient(135deg, var(--mint), #7BC9B7);
-    color: var(--brown-dark);
+    background: var(--pink-peach);
+    color: var(--white);
 }
 
+/* Tag "Sale" - gradient đỏ sang san hô, nổi bật hơn */
 .tag.sale {
     background: linear-gradient(135deg, var(--red-tet), var(--coral));
 }
 
+/* Phần nội dung bên dưới ảnh (tên, giá, nút) */
 .card-body {
     padding: 1.3rem;
 }
 
+/* Tên sản phẩm - đậm, nâu tối */
 .card-title {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
     margin-bottom: 0.4rem;
     color: var(--brown-dark);
 }
 
+/* Giá sản phẩm - chữ đỏ to, đậm nhất card */
 .card-price {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.3rem;
     font-weight: 800;
     color: var(--red-tet);
     margin-bottom: 0.8rem;
 }
 
+/* ==========================================
+   FOOTER - Chân trang
+   Nền tối gradient, 3 cột thông tin
+   ========================================== */
 .footer {
-    background: linear-gradient(180deg, var(--navy), #0f0f1a);
+    background: linear-gradient(180deg, #1A0A00, #0D0500);
     color: var(--white);
     margin-top: auto;
     position: relative;
     overflow: hidden;
 }
 
+/* Thanh gradient trang trí trên cùng footer */
 .footer-deco {
-    height: 6px;
+    height: 4px;
     background: linear-gradient(90deg,
+            var(--gold),
+            var(--red-tet),
             var(--pink-peach),
             var(--coral),
-            var(--red-tet),
-            var(--gold),
-            var(--mint),
-            var(--pink-peach));
+            var(--gold));
 }
 
 
+/* Sóng trang trí nền kem trên cùng footer */
 .footer-wave {
     position: absolute;
     top: 0;
@@ -424,6 +473,7 @@ main {
     clip-path: ellipse(60% 100% at 50% 0%);
 }
 
+/* Lưới 3 cột footer - tự động xuống 1 cột trên mobile */
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -433,11 +483,13 @@ main {
     z-index: 1;
 }
 
+/* Mỗi cột trong footer */
 .footer-col {
     display: flex;
     flex-direction: column;
 }
 
+/* Logo thương hiệu trong footer (ảnh + tên) */
 .footer-brand {
     display: flex;
     align-items: center;
@@ -445,21 +497,24 @@ main {
     margin-bottom: 1rem;
 }
 
+/* Ảnh logo nhỏ 50x50 vuông */
 .footer-brand img {
     width: 50px;
     height: 50px;
     border-radius: var(--radius);
 }
 
+/* Tên thương hiệu - chữ vàng to */
 .footer-brand-text {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--gold);
 }
 
+/* Tiêu đề cột footer - chữ vàng, có gạch gradient bên dưới */
 .footer-title {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
@@ -468,6 +523,7 @@ main {
     padding-bottom: 0.6rem;
 }
 
+/* Gạch ngang gradient nhỏ bên dưới tiêu đề (::after = phần tử giả) */
 .footer-title::after {
     content: '';
     position: absolute;
@@ -475,10 +531,11 @@ main {
     left: 0;
     width: 3rem;
     height: 3px;
-    background: linear-gradient(90deg, var(--red-tet), var(--coral));
+    background: linear-gradient(90deg, var(--red-tet), var(--gold));
     border-radius: var(--radius-full);
 }
 
+/* Đoạn mô tả ngắn về cửa hàng */
 .footer-text {
     color: rgba(255, 255, 255, 0.75);
     line-height: 1.8;
@@ -486,13 +543,15 @@ main {
     font-size: 0.95rem;
 }
 
+/* Slogan - chữ nghiêng hồng đào */
 .footer-slogan {
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-style: italic;
     color: var(--pink-peach);
     font-size: 1rem;
 }
 
+/* Icon mạng xã hội - hình tròn, hover bay lên + xoay nhẹ */
 .social {
     display: flex;
     gap: 0.8rem;
@@ -516,10 +575,12 @@ main {
     transform: translateY(-3px) rotate(5deg);
 }
 
+/* Liên kết nhanh - hover thì chữ chuyển sang vàng + dịch phải */
 .footer-links li {
     margin-bottom: 0.7rem;
 }
 
+/* Link có icon mũi tên nhỏ + hover dịch phải 0.5rem */
 .footer-links a {
     color: rgba(255, 255, 255, 0.75);
     display: flex;
@@ -529,16 +590,19 @@ main {
     transition: all 0.3s ease;
 }
 
+/* Hover: chữ chuyển vàng, lùi vào 0.5rem */
 .footer-links a:hover {
     color: var(--gold);
     padding-left: 0.5rem;
 }
 
+/* Mũi tên nhỏ trước mỗi link - màu san hô */
 .footer-links i {
     font-size: 0.6rem;
     color: var(--coral);
 }
 
+/* Danh sách thông tin liên hệ - icon vàng + text trắng mờ */
 .contact li {
     display: flex;
     gap: 1rem;
@@ -547,6 +611,7 @@ main {
     font-size: 0.95rem;
 }
 
+/* Icon liên hệ (bản đồ, điện thoại, email, đồng hồ) - màu vàng, căn đều chiều rộng */
 .contact i {
     color: var(--gold);
     width: 1.2rem;
@@ -554,6 +619,7 @@ main {
     margin-top: 0.2rem;
 }
 
+/* Dòng bản quyền cuối cùng */
 .footer-bottom {
     text-align: center;
     padding: 1.5rem 5%;
@@ -562,15 +628,21 @@ main {
     z-index: 1;
 }
 
+/* Chữ bản quyền nhỏ, trắng mờ */
 .footer-bottom p {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* Icon trái tim màu đỏ - "Made with ❤ by Group 1" */
 .footer-bottom i.fa-heart {
     color: var(--red-tet);
 }
 
+/* ==========================================
+   RESPONSIVE: Tablet (≤768px)
+   Ẩn nav, thu gọn header & footer 1 cột
+   ========================================== */
 @media (max-width: 768px) {
     .header {
         padding: 0.8rem 4%;
@@ -598,12 +670,6 @@ main {
         gap: 1rem;
     }
 
-    .card:nth-child(odd),
-    .card:nth-child(even) {
-        transform: rotate(0);
-        margin-top: 0;
-    }
-
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -623,18 +689,83 @@ main {
     }
 }
 
+/* ==========================================
+   RESPONSIVE: Mobile nhỏ (≤480px)
+   Icon nhỏ hơn, sản phẩm 1 cột
+   ========================================== */
 @media (max-width: 480px) {
     .icon-btn {
         width: 2.4rem;
         height: 2.4rem;
     }
 
+    /* Sản phẩm: 1 cột duy nhất */
     .product-list {
         grid-template-columns: 1fr;
     }
 
+    /* Nút chính: nhỏ hơn cho vừa màn hình */
     .btn-primary {
         padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   ABOUT - Trang Giới thiệu Bếp Nhà Ngọ
+   (dùng cho about.html / story.html)
+   ========================================== */
+
+/* Container: nền gradient kem → trắng, căn giữa */
+.about {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+    text-align: center;
+    position: relative;
+}
+
+/* Tiêu đề - màu san hô, to */
+.about__heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--coral);
+    margin-bottom: 10px;
+}
+
+/* Gạch ngang vàng ngắn dưới tiêu đề */
+.about__line {
+    width: 60px;
+    height: 4px;
+    background: var(--gold);
+    margin: 0 auto 30px;
+    border-radius: 2px;
+}
+
+/* Nội dung giới thiệu - giới hạn 800px, giãn dòng 2 */
+.about__text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--brown-dark);
+    line-height: 2;
+}
+
+/* Chữ in đậm trong đoạn văn - tô đỏ nhấn mạnh */
+.about__text strong {
+    color: var(--red-tet);
+}
+
+/* About responsive: nhỏ hơn trên mobile */
+@media (max-width: 768px) {
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about__heading {
+        font-size: 1.8rem;
+    }
+
+    .about__text {
         font-size: 1rem;
     }
 }

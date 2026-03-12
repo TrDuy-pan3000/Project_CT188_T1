@@ -1,0 +1,404 @@
+/* ========================================================
+   STORY.CSS - GIAO DIỆN TRANG CÂU CHUYỆN (story.html)
+   Kế thừa màu sắc từ style.css, định nghĩa thêm layout sách/tạp chí
+   ======================================================== */
+
+/* Khai báo một số màu đặc thù cho khối trang trí, 
+   còn lại dùng màu của style.css (--cream, --red-dark, --gold, v.v.) */
+:root {
+  --story-decor-cream: #E0D7C9; /* Màu nền hình khối nhạt */
+  --story-decor-beige: #D5C8B4; /* Màu nền hình khối đậm */
+}
+
+/* Đặt nền tổng thể của toàn bộ trang câu chuyện là màu kem từ style.css */
+body {
+    background-color: var(--cream);
+}
+
+/* Khối bao ngoài trang câu chuyện, đẩy lùi xuống 80px để không bị đè bởi Header */
+.gourmet-story {
+    width: 100%;
+    margin-top: 80px; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================== PHẦN 1: HERO SECTION (Banner trên cùng) ================== */
+.story-hero {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Lớp chứa ảnh nền Hero */
+.story-hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+}
+
+/* Ảnh nền phủ kín khối */
+.story-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lớp phủ màn đen gradient dốc chéo để text nổi bật hơn */
+.story-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(-45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+/* Khối văn bản ở giữa Hero, nằm đè lên trên lớp phủ (z-index 2) */
+.story-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 800px;
+    max-width: 90%;
+    height: 300px;
+    padding: 40px;
+    border: 1px solid var(--gold); /* Viền màu vàng */
+    text-align: center;
+}
+
+/* Phân đề mục (Subtitle) chữ mảnh, cách thưa */
+.story-hero-sub {
+    color: var(--gold);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* Tiêu đề chính to, font serif sang trọng */
+.story-hero-title {
+    color: var(--white);
+    font-family: 'Playfair Display', serif; /* Đồng bộ font Serif của web */
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Đường kẻ gạch ngang trang trí mỏng manh dưới tiêu đề */
+.story-hero-divider {
+    width: 60px;
+    height: 1px;
+    background-color: var(--gold);
+}
+
+/* Dòng mô tả ngắn gọn */
+.story-hero-desc {
+    color: var(--mint-light);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* ================== PHẦN 2: THÂN TRANG (Các câu chuyện) ================== */
+
+/* Khối bọc từng phần câu chuyện, chừa khoảng cách thở lớn cho giống tạp chí */
+.story-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 140px 160px;
+    background-color: var(--cream); /* Nền sáng */
+}
+
+/* Tạo hiệu ứng sọc vằn (Zebra stripe) - Câu chuyện số 2 & 4 mang nền tối hơn xíu */
+.story-section.s2 {
+    background-color: var(--mint-light); 
+}
+
+/* Thùng chứa giới hạn độ rộng max, để hình & chữ cân đối hai bên */
+.story-container {
+    max-width: 1120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 100px; /* Cách xa hình và mảng chữ */
+}
+
+/* Lật ngược vị trí Hình <-> Chữ cho nhịp điệu thêm sinh động */
+.story-container.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* === BỘ PHẬN HÌNH ẢNH === */
+
+/* Khối bao trọn khu vực ảnh và mảng màu lót phía sau */
+.story-img-wrapper {
+    position: relative;
+    width: 440px;
+    min-width: 440px;
+    height: 580px;
+}
+
+/* Mảng màu lót trượt xuống dưới (hình chữ nhật cách điệu) */
+.story-img-decor {
+    position: absolute;
+    top: 40px;
+    width: 400px;
+    height: 540px;
+    background-color: var(--story-decor-cream);
+    z-index: 1;
+}
+
+/* Bố trí lệch sang trái cho layout 1 & 3 */
+.story-section.s1 .story-img-decor,
+.story-section.s3 .story-img-decor {
+    left: 40px;
+}
+
+/* Bố trí mảng lót lòi sang phải thay vì trái (màu cũng tối hơn) ở layout 2 & 4 */
+.story-section.s2 .story-img-decor {
+    left: 0;
+    background-color: var(--story-decor-beige);
+}
+
+.story-section.s2 .story-img-wrapper .story-img,
+.story-section.s2 .story-img {
+    left: 40px;
+}
+
+/* Hình ảnh chính hiện đè lên trên phần trang trí */
+.story-img {
+    position: absolute;
+    top: 0;
+    width: 400px;
+    height: 540px;
+    object-fit: cover;
+    z-index: 2;
+}
+
+/* === BỘ PHẬN CHỮ === */
+
+/* Cột chữ thẳng đứng chứa Số, Tieude, Quote, Mota... */
+.story-text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 580px; /* Chữ không bị thênh thang quá dòng */
+}
+
+/* Header cho tên câu chuyện */
+.story-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Số thự tự màu đỏ chót */
+.story-num {
+    color: var(--red-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Tên món ăn hoặc câu chuyện nổi bật, bự, đen nhám */
+.story-title {
+    color: var(--brown-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Khối trích dẫn (quote) thụt vào trong với 1 đường đỏ mớm bên đầu mút */
+.story-quote-frame {
+    display: flex;
+    gap: 24px;
+}
+
+/* Đường vạch đỏ nằm dọc ở quote */
+.story-quote-line {
+    width: 4px;
+    min-width: 4px;
+    background-color: var(--red-tet); /* Nhấn đỏ lựu */
+}
+
+/* Nội dung câu quote thơ mộng */
+.story-quote {
+    color: var(--red-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic; /* In nghiêng để khác bietj */
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Phần chữ dài mô tả sâu lắng */
+.story-desc {
+    color: var(--brown-light);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ================== PHẦN 3: LỜI KÊU GỌI (Call To Action) ================== */
+
+/* Khối nền đỏ lớn nhất dưới cùng */
+.story-cta {
+    width: 100%;
+    height: 400px;
+    background-color: var(--red-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+/* Khung vàng nhạt bọc text */
+.story-cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 60px;
+    border: 1px solid var(--gold);
+    text-align: center;
+}
+
+/* Dòng cảm thán dặn dò */
+.story-cta-desc {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Nút CTA khám phá */
+.story-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng trỏ chuột vào nút CTA đỏm dáng */
+.story-cta-btn:hover {
+    background-color: var(--gold);
+    color: var(--red-dark); /* Đổi màu chữ */
+    box-shadow: 0 0 15px rgba(255, 247, 0, 0.4); /* Glow nhẹ */
+}
+
+
+/* ================== PHẦN 4: RESPONSIVE DÀNH CHO MOBILE/TABLET ================== */
+
+/* Desktop nhỏ, Tablet ngang */
+@media (max-width: 1200px) {
+    .story-container {
+        gap: 60px;
+    }
+    .story-img-wrapper {
+        min-width: 380px;
+        width: 380px;
+        height: 500px;
+    }
+    .story-img-decor, .story-img {
+        width: 340px;
+        height: 460px;
+    }
+    .story-section {
+        padding: 100px 80px;
+    }
+}
+
+/* Tablet dọc (iPad)  */
+@media (max-width: 900px) {
+    .story-container {
+        flex-direction: column !important; /* Dồn thành 1 cột */
+        gap: 60px;
+        align-items: flex-start;
+    }
+    .story-img-wrapper {
+        align-self: center; /* Kéo ảnh vô giữa */
+        margin: 0 !important;
+    }
+    .story-section {
+        padding: 80px 40px;
+    }
+    .story-hero-title {
+        font-size: 48px;
+    }
+    
+    .story-section.s2 .story-img {
+        left: 0;
+    }
+}
+
+/* Mobile nhỏ (Điện thoại) */
+@media (max-width: 600px) {
+    .story-section {
+        padding: 60px 20px;
+    }
+    .story-img-wrapper {
+        min-width: 100%;
+        width: 100%;
+        height: auto;
+        padding-top: 120%; /* Mẹo cho aspect ratio */
+    }
+    .story-img-decor {
+        top: 20px;
+        width: calc(100% - 20px) !important;
+        height: calc(100% - 20px) !important;
+    }
+    .story-section.s1 .story-img-decor,
+    .story-section.s3 .story-img-decor {
+        left: 20px !important;
+    }
+    .story-section.s2 .story-img-decor {
+        left: 0 !important;
+    }
+    .story-img {
+        top: 0;
+        width: calc(100% - 20px) !important;
+        height: calc(100% - 20px) !important;
+    }
+    .story-section.s1 .story-img,
+    .story-section.s3 .story-img {
+        left: 0 !important;
+    }
+    .story-section.s2 .story-img {
+        left: 20px !important;
+    }
+    .story-hero-content {
+        padding: 20px;
+    }
+    .story-hero-title {
+        font-size: 36px;
+    }
+}
