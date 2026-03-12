@@ -185,8 +185,8 @@ main {
   position: absolute;
   top: -0.3rem;
   right: -0.3rem;
-  background: var(--red-tet);
-  color: var(--white);
+  background: ;
+  color: var(--white);var(--red-tet)
   font-size: 0.7rem;
   font-weight: 700;
   min-width: 1.3rem;
