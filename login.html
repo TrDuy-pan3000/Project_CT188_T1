@@ -61,51 +61,97 @@
 <!-- MAIN -->
 
 <main class="auth-wrapper">
-
 <div class="auth-card">
+<h2 class="auth-title">Tài khoản</h2>
 
-<h2 class="auth-title">
+<!-- lựa chọn -->
+
+<div id="choiceBox" class="auth-choice">
+
+<button id="showLogin" class="auth-btn">
 Đăng nhập
-</h2>
+</button>
 
-<form class="auth-form" id="loginForm">
+<button id="showRegister" class="auth-btn outline">
+Đăng ký
+</button>
 
+</div>
+<!-- LOGIN -->
+
+<form id="loginForm" class="auth-form hidden">
+<button type="button" class="backBtn">← Quay lại</button>
 <input
 type="email"
-id="email"
+id="loginEmail"
+placeholder="Email"
 class="auth-input"
-placeholder="Nhập email"
 required
 >
+
+<div class="password-box">
 
 <input
 type="password"
-id="password"
+id="loginPassword"
+placeholder="Mật khẩu"
 class="auth-input"
-placeholder="Nhập mật khẩu"
 required
 >
 
-<p class="auth-error" id="error"></p>
+<i class="fa-solid fa-eye togglePassword"></i>
 
-<button
-type="submit"
-class="btn btn-primary auth-btn">
+</div>
 
+<button class="auth-btn">
 Đăng nhập
-
 </button>
 
 </form>
 
-<p class="auth-switch">
 
-Chưa có tài khoản?
-<a href="#">
-Liên hệ admin để đăng ký
-</a>
 
-</p>
+<!-- REGISTER -->
+
+<form id="registerForm" class="auth-form hidden">
+
+<button type="button" class="backBtn">← Quay lại</button>
+
+<input
+type="text"
+id="name"
+placeholder="Tên"
+class="auth-input"
+required
+>
+
+<input
+type="email"
+id="registerEmail"
+placeholder="Email"
+class="auth-input"
+required
+>
+
+<div class="password-box">
+
+<input
+type="password"
+id="registerPassword"
+placeholder="Mật khẩu"
+class="auth-input"
+required
+>
+
+<i class="fa-solid fa-eye togglePassword"></i>
+
+</div>
+
+<button class="auth-btn">
+Đăng ký
+</button>
+
+</form>
 
 </div>
 
