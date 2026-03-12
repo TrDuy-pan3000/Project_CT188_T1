@@ -1,0 +1,122 @@
+/* ================= AUTH PAGE ================= */
+
+.auth-wrapper{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:7rem 5% 4rem;
+}
+
+/* card đăng nhập */
+
+.auth-card{
+  width:100%;
+  max-width:420px;
+  background:var(--white);
+  padding:2.5rem 2.2rem;
+  border-radius:var(--radius-xl);
+  box-shadow:var(--shadow-clay);
+  text-align:center;
+  transition:all 0.3s ease;
+}
+
+.auth-card:hover{
+  box-shadow:var(--shadow-clay-hover);
+  transform:translateY(-3px);
+}
+
+/* tiêu đề */
+
+.auth-title{
+  font-family:"Baloo 2", cursive;
+  font-size:2rem;
+  font-weight:800;
+  color:var(--brown-dark);
+  margin-bottom:1.5rem;
+}
+
+/* form */
+
+.auth-form{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+/* input */
+
+.auth-input{
+  width:100%;
+  padding:0.9rem 1rem;
+  border-radius:var(--radius);
+  border:1px solid var(--pink-light);
+  font-family:"Nunito", sans-serif;
+  font-size:0.95rem;
+  background:var(--white);
+  transition:all 0.3s ease;
+}
+
+.auth-input:focus{
+  border-color:var(--coral);
+  outline:none;
+  box-shadow:0 0 0 3px rgba(255,107,53,0.15);
+}
+
+/* button */
+
+.auth-btn{
+  margin-top:0.4rem;
+  width:100%;
+}
+
+/* error */
+
+.auth-error{
+  font-size:0.85rem;
+  color:var(--red-tet);
+  min-height:1rem;
+}
+
+/* switch register */
+
+.auth-switch{
+  margin-top:1.3rem;
+  font-size:0.9rem;
+  color:var(--brown-light);
+}
+
+.auth-switch a{
+  color:var(--coral);
+  font-weight:600;
+}
+
+.auth-switch a:hover{
+  color:var(--red-tet);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .auth-wrapper{
+    padding:6rem 5% 3rem;
+  }
+
+  .auth-card{
+    max-width:360px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .auth-card{
+    padding:2rem 1.5rem;
+  }
+
+  .auth-title{
+    font-size:1.6rem;
+  }
+
+}

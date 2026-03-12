@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ.">
+    <title>Câu Chuyện Bếp Nhà Ngọ</title>
+
+    <!-- Nạp các font chữ cao cấp từ Google Fonts (Cormorant Garamond, Inter, Be Vietnam Pro) cho thiết kế tạp chí -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link Icon Favicon và FontAwesome cho các icon mxh, giỏ hàng -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Link CSS dùng chung và CSS cho trang thiết kế tạp chí (story.css) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/story.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+   <!-- ======================== HEADER - Thanh điều hướng cố định trên cùng ======================== -->
+    <header class="header">
+        <!-- Logo - bấm vào sẽ về trang chủ -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ Logo"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="logo-text">Bếp Nhà Ngọ</span>
+            </a>
+        </div>
+        
+        <!-- Thanh điều hướng trung tâm menu -->
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+                <li><a href="menu.html" class="nav-link">Thực đơn</a></li>
+                <li><a href="story.html" class="nav-link active">Câu chuyện</a></li> <!-- Giữ active trang câu chuyện -->
+            </ul>
+        </nav>
+        
+        <!-- Các nút tìm kiếm, tài khoản, giỏ hàng -->
+        <div class="cart-button">
+            <button class="icon-btn" aria-label="Tìm kiếm"><i class="fas fa-search"></i></button>
+            <button class="icon-btn" aria-label="Tài khoản"><i class="fas fa-user"></i></button>
+            <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge">0</span>
+            </a>
+        </div>
+    </header>
+
+<!-- MAIN -->
+
+<main class="auth-wrapper">
+
+<div class="auth-card">
+
+<h2 class="auth-title">
+Đăng nhập
+</h2>
+
+<form class="auth-form" id="loginForm">
+
+<input
+type="email"
+id="email"
+class="auth-input"
+placeholder="Nhập email"
+required
+>
+
+<input
+type="password"
+id="password"
+class="auth-input"
+placeholder="Nhập mật khẩu"
+required
+>
+
+<p class="auth-error" id="error"></p>
+
+<button
+type="submit"
+class="btn btn-primary auth-btn">
+
+Đăng nhập
+
+</button>
+
+</form>
+
+<p class="auth-switch">
+
+Chưa có tài khoản?
+<a href="#">
+Liên hệ admin để đăng ký
+</a>
+
+</p>
+
+</div>
+
+</main>
+
+<!-- ======================== FOOTER CHUẨN (Kéo từ Trang Chủ) ======================== -->
+    <footer class="footer">
+        <!-- Vòng cung sóng lượn viền đuôi -->
+        <div class="footerdivider footer-deco"></div>
+        <div class="footertop footer-content">
+            <!-- Cột thông tin công ty -->
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ">
+                    <span class="footer-brand-text">Bếp Nhà Ngọ</span>
+                </div>
+                <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà. Chúng tôi tự hào là địa chỉ tin cậy cho những món ăn ngày Tết!</p>
+                <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
+                <div class="social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Cột liên kết menu -->
+            <div class="footer-col">
+                <h4 class="footer-title">Liên Kết Nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
+                    <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Thực đơn</a></li>
+                    <li><a href="story.html"><i class="fas fa-chevron-right"></i> Câu chuyện</a></li>
+                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Giỏ hàng</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột thông tin sdt & địa chỉ -->
+            <div class="footer-col">
+                <h4 class="footer-title">Liên Hệ Ngựa</h4>
+                <ul class="contact">
+                    <li><i class="fas fa-map-marker-alt"></i><span>123 Đường 3/2, Q. Ninh Kiều, Cần Thơ</span></li>
+                    <li><i class="fas fa-phone"></i><span>0909 123 456</span></li>
+                    <li><i class="fas fa-envelope"></i><span>xin.chao@bepnhangngo.vn</span></li>
+                    <li><i class="fas fa-clock"></i><span>7:00 - 22:00 (Giao cả Tết!)</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Bản Đăng Ký Bản Quyền -->
+        <div class="footerbottom">
+            <p>© 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1 | Năm Giáp Ngọ 🐴</p>
+        </div>
+    </footer>
+    
+    <!-- Link file chức năng chung -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
