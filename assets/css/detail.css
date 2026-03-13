@@ -4,7 +4,7 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 section {
   flex: 1;
@@ -19,6 +19,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  max-width: 1280px;
 }
 /* =================== Phần ảnh và thông tin sản phẩm ==================== */
 .single-product {
@@ -44,7 +45,9 @@ section {
   background-color: var(--white);
   box-shadow: var(--shadow-soft);
 }
+
 /* Phần nội dung sản phẩm bên phải */
+
 .content-right {
   flex: 1;
   display: flex;
@@ -70,6 +73,14 @@ section {
   color: var(--brown-dark);
   text-align: justify;
 }
+.product-description > a {
+  color: var(--coral);
+  font-weight: 600;
+}
+
+.product-description > a {
+  text-decoration: underline;
+}
 .product-price {
   font-family: "Be Vietnam Pro", sans-serif;
   color: var(--red-tet);
@@ -88,19 +99,22 @@ section {
 .buying-wrap > input {
   width: 20%;
   background-color: inherit;
-  color: var(--red-dark);
+  color: var(--red-tet);
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 20px;
+  font-weight: 600;
   text-align: center;
-  border: 2px solid var(--red-dark);
+  border: 2px solid var(--red-tet);
   border-radius: 5px;
 }
 .buying-wrap > button {
   width: 70%;
-  background-color: var(--red-dark);
+  background-color: var(--red-tet);
   color: var(--cream);
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 20px;
   text-align: center;
-  border: 2px solid var(--red-dark);
+  border: 2px solid var(--red-tet);
   border-radius: 5px;
   transition: all 0.3s ease;
 }
@@ -122,7 +136,7 @@ section {
 .tab-nav {
   width: 100%;
   height: 5rem;
-  background-image: url("../images");
+  background-image: url("../images/pattern-clouds-outline.png");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +150,7 @@ section {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
-  background-color: var(--red-dark);
+  background-color: var(--red-tet);
   color: var(--gold);
   border: 3px solid var(--gold);
 }
@@ -161,9 +175,11 @@ section {
 .tab-content > h4 {
   font-weight: 900;
   font-size: 1rem;
+  color: var(--coral);
   font-family: "Playfair Display", serif;
 }
 .tab-content > p {
+  font-size: 0.7rem;
   font-family: "Be Vietnam Pro", sans-serif;
 }
 /* ==================== Định dạng phần ảnh sản phẩm: width, heiht,...======= */
@@ -194,16 +210,12 @@ section {
   display: block;
 }
 /* ======================= Phần các sản phẩm liên quan ================== */
-
-.view-all {
-  width: 20%;
-  height: 50px;
-  background-color: inherit;
-  color: var(--red-dark);
-  font-size: 20px;
-  text-align: center;
-  border: 2px solid var(--red-dark);
-  border-radius: 5px;
+.related-products > .grid {
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.view-all-btn-container {
+  margin-top: 2rem;
 }
 /* ================== RESPONSIVE - GIAO DIỆN TRÊEN MÀN HÌNH NHỎ ================== */
 

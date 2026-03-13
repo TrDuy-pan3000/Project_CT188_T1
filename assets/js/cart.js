@@ -1,173 +1,165 @@
-const products = [
-    {
-        id: 1,
-        name: "Bánh Tét",
-        price: 45000,
-        category: "banh-tet",
-        image: "assets/images/1489-post-cach-goi-banh-tet-truyen-thong-nam-bo-dep-don-gian-1.jpg",
-        badge: "new",
-        description: "Bánh tét truyền thống Nam Bộ"
-    },
-    {
-        id: 2,
-        name: "Bia",
-        price: 345000,
-        category: "do-uong",
-        image: "assets/images/bia-cao-cap-quoc-te-cua-chau-a.jpg",
-        badge: "new",
-        description: "Bia cao cấp quốc tế"
-    },
-    {
-        id: 3,
-        name: "Đồ nhậu",
-        price: 45000,
-        category: "tet-nham-nhi",
-        image: "assets/images/recipe31982-cook-step5-636650963278909741.jpg",
-        badge: "new",
-        description: "Đồ nhậu thơm ngon"
-    },
-    {
-        id: 4,
-        name: "Bánh Tét Chuối",
-        price: 150000,
-        category: "banh-tet",
-        image: "assets/images/banh-tet-nhan-chuoi-1.jpg",
-        badge: "bestseller",
-        description: "Bánh tét nhân chuối đặc biệt"
-    },
-    {
-        id: 5,
-        name: "Bánh Tét Đậu",
-        price: 120000,
-        category: "banh-tet",
-        image: "assets/images/banh-tet-nhan-dau-1.jpg",
-        badge: "new",
-        description: "Bánh tét nhân đậu xanh"
-    },
-    {
-        id: 6,
-        name: "Combo Nhậu Tết",
-        price: 250000,
-        category: "tet-nham-nhi",
-        image: "assets/images/recipe31982-cook-step5-636650963278909741.jpg",
-        badge: "hot",
-        description: "Combo nhậu ngày Tết"
-    }
-];
-let selectedCategory = 'all';
-let cartData = [...products];
+// Load / Save localStorage 
+function loadCartFromStorage() {
+    try {
+        const parsed = JSON.parse(localStorage.getItem('cart') ?? '[]');
+        return Array.isArray(parsed) ? parsed : [];
+       } catch {
+        return [];
+       }
+}
+
+function saveCartToStorage(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    if (typeof updateCartBadge === 'function') updateCartBadge();
+}
+
+
+function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = String(str);
+    return div.innerHTML;
+}
+
+// Trạng thái giỏ hàng 
+let cartData = loadCartFromStorage();
+
+// Format tiền
 function formatMoney(amount) {
-            return amount.toLocaleString('vi-VN') + 'đ';
-        }
+    return amount.toLocaleString('vi-VN') + 'đ';
+}
 
-        // Render giỏ hàng
-        function renderCart() {
-            const cartContainer = document.getElementById('cartItems');
-            
-            if (cartData.length === 0) {
-                cartContainer.innerHTML = `
-                    <div class="empty-cart">
-                        <div class="empty-icon">🎊</div>
-                        <div class="empty-message">Chưa có sản phẩm nào trong danh sách Tết</div>
-                    </div>
-                `;
-                updateTotal();
-                return;
-            }
+// Render giỏ hàng 
+function renderCart() {
+    cartData = loadCartFromStorage();
+    const cartContainer = document.getElementById('cartItems');
+    if (!cartContainer) return;
 
-            cartContainer.innerHTML = cartData.map(item => `
-                <div class="cart-item">
-                    <img src="${item.image}" alt="${item.name}" class="item-image">
-                    <div class="item-info">
-                        <div class="item-name">${item.name}</div>
-                        <div class="item-price">${formatMoney(item.price)}</div>
-                    </div>
-                    <button class="remove-btn" onclick="removeItem(${item.id})">
-                        🗑️ Xóa
-                    </button>
-                </div>
-            `).join('');
+    if (cartData.length === 0) {
+        cartContainer.innerHTML = `
+            <div class="empty-cart">
+                <div class="empty-icon">🎊</div>
+                <div class="empty-message">Chưa có sản phẩm nào trong danh sách Tết</div>
+            </div>`;
+        updateTotal();
+        return;
+    }
 
-            updateTotal();
-        }
+    cartContainer.innerHTML = cartData.map(item => {
+        const qty = item.quantity || 1;
+        const safeId = escapeHtml(String(item.id));
+        return `
+        <div class="cart-item">
+            <img
+                src="${escapeHtml(item.image)}"
+                alt="${escapeHtml(item.name)}"
+                class="item-image"
+                onerror="this.src='assets/images/logo.png'"
+            >
+            <div class="item-info">
+                <div class="item-name">${escapeHtml(item.name)}</div>
+                <div class="item-price">${formatMoney(item.price)}</div>
+            </div>
+            <div class="item-qty">
+                <button class="qty-btn" onclick="changeQuantity('${safeId}', -1)">−</button>
+                <span class="qty-value">${qty}</span>
+                <button class="qty-btn" onclick="changeQuantity('${safeId}', 1)">+</button>
+            </div>
+            <div class="item-subtotal">${formatMoney(item.price * qty)}</div>
+            <button class="remove-btn" onclick="confirmRemove('${safeId}')" title="Xóa sản phẩm">🗑️</button>
+        </div>`;
+    }).join('');
 
-        // Xóa sản phẩm
-        function removeItem(id) {
-            if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
-                cartData = cartData.filter(item => item.id !== id);
-                renderCart();
-                showNotification('Đã xóa sản phẩm!');
-            }
-        }
+    updateTotal();
+}
 
-        // Cập nhật tổng tiền
-        function updateTotal() {
-            const total = cartData.reduce((sum, item) => sum + item.price, 0);
-            document.getElementById('totalAmount').textContent = formatMoney(total);
-        }
+// Thay đổi số lượng
+function changeQuantity(id, delta) {
+    const item = cartData.find(i => String(i.id) === String(id));
+    if (!item) return;
+    item.quantity = (item.quantity || 1) + delta;
+    if (item.quantity <= 0) {
+        cartData = cartData.filter(i => String(i.id) !== String(id));
+        showNotification('Đã xóa sản phẩm khỏi giỏ hàng');
+    }
+    saveCartToStorage(cartData);
+    renderCart();
+}
 
-        // Thanh toán
-        function checkout() {
-            if (cartData.length === 0) {
-                showNotification('Vui lòng chọn sản phẩm trước khi chốt đơn!');
-                return;
-            }
-
-            const name = document.getElementById('customerName').value.trim();
-            const phone = document.getElementById('customerPhone').value.trim();
-            const address = document.getElementById('customerAddress').value.trim();
-            const note = document.getElementById('customerNote').value.trim();
-            const payment = document.querySelector('input[name="payment"]:checked').value;
-
-            if (!name || !phone || !address) {
-                showNotification('Vui lòng điền đầy đủ thông tin!');
-                return;
-            }
-
-            const paymentText = payment === 'cod' ? 'Thanh toán khi nhận hàng (COD)' : 'Chuyển khoản ngân hàng';
-            const total = document.getElementById('totalAmount').textContent;
-
-            let orderDetails = `
-            🎊 Chúc mừng năm mới - Vạn sự như ý! 🎊
-
-👤 Khách hàng: ${name}
-📱 Số điện thoại: ${phone}
-🏠 Địa chỉ: ${address}
-💳 Thanh toán: ${paymentText}
-
-📦 DANH SÁCH SẢN PHẨM:
-`;
-
-            cartData.forEach((item, index) => {
-                orderDetails += `${index + 1}. ${item.name} - ${formatMoney(item.price)}\n`;
-            });
-
-            orderDetails += `
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-💰 TỔNG TIỀN: ${total}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📝 Ghi chú: ${note || 'Không có'}
-
-✨ Cảm ơn quý khách!
-🎁 Chúc quý khách năm mới an khang thịnh vượng!
-            `;
-
-            alert(orderDetails);
-            
-            showNotification('🧧 Chốt đơn thành công! Chúc mừng năm mới! 🎊');
-            
-        }
-
-        // Hiển thị thông báo
-        function showNotification(message) {
-            const notification = document.getElementById('notification');
-            notification.textContent = message;
-            notification.style.display = 'block';
-            
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 3000);
-        }
-
+// Xóa sản phẩm 
+function confirmRemove(id) {
+    if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
+        cartData = cartData.filter(i => String(i.id) !== String(id));
+        saveCartToStorage(cartData);
         renderCart();
+        showNotification('Đã xóa sản phẩm! 🗑️');
+    }
+}
+
+function updateTotal() {
+    const total = cartData.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
+    const el = document.getElementById('totalAmount');
+    if (el) el.textContent = formatMoney(total);
+}
+
+function checkout() {
+    if (cartData.length === 0) {
+        showNotification('Vui lòng chọn sản phẩm trước khi chốt đơn!');
+        return;
+    }
+    const name    = document.getElementById('customerName')?.value.trim();
+    const address = document.getElementById('customerAddress')?.value.trim();
+    const phone   = document.getElementById('customerPhone')?.value.trim();
+    const note    = document.getElementById('customerNote')?.value.trim();
+    const payment = document.querySelector('input[name="payment"]:checked')?.value;
+
+    if (!name || !address || !phone) {
+        showNotification('Vui lòng điền đầy đủ thông tin!');
+        return;
+    }
+
+    const paymentText = payment === 'cod' ? 'Thanh toán khi nhận hàng (COD)' : 'Chuyển khoản ngân hàng';
+    const total = cartData.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
+
+    let orderDetails = `🎊 Chúc mừng năm mới - Vạn sự như ý! 🎊\n\n`;
+    orderDetails += `👤 Khách hàng: ${name}\n`;
+    orderDetails += `🏠 Địa chỉ: ${address}\n`;
+    orderDetails += `📞 Điện thoại: ${phone}\n`;
+    orderDetails += `💳 Thanh toán: ${paymentText}\n\n`;
+    orderDetails += `📦 DANH SÁCH SẢN PHẨM:\n`;
+
+    cartData.forEach((item, i) => {
+        const qty = item.quantity || 1;
+        orderDetails += `${i + 1}. ${item.name} x${qty} - ${formatMoney(item.price * qty)}\n`;
+    });
+
+    orderDetails += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━\n💰 TỔNG TIỀN: ${total}\n━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+    orderDetails += `\n\n📝 Ghi chú: ${note || 'Không có'}\n\n✨ Cảm ơn quý khách!\n🎁 Chúc năm mới an khang thịnh vượng!`;
+
+    alert(orderDetails);
+    cartData = [];
+    saveCartToStorage(cartData);
+    renderCart();
+    showNotification('🧧 Chốt đơn thành công! Chúc mừng năm mới! 🎊');
+}
+
+
+function showNotification(message) {
+    const el = document.getElementById('notification');
+    if (!el) return;
+    el.textContent = message;
+    el.style.display = 'block';
+    clearTimeout(showNotification._t);
+    showNotification._t = setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCart();
+});
+
+// Sync khi detail page thêm hàng ở tab khác 
+window.addEventListener('storage', (e) => {
+    if (e.key === 'cart') {
+        cartData = loadCartFromStorage();
+        renderCart();
+    }
+});
