@@ -14,18 +14,22 @@ const passwordIcons = document.querySelectorAll(".togglePassword")
 
 // ===== SHOW FORM =====
 
+if(showLogin){
 showLogin.onclick = () => {
 
 choiceBox.classList.add("hidden")
 loginForm.classList.remove("hidden")
 
 }
+}
 
+if(showRegister){
 showRegister.onclick = () => {
 
 choiceBox.classList.add("hidden")
 registerForm.classList.remove("hidden")
 
+}
 }
 
 // ===== BACK BUTTON =====
@@ -67,6 +71,8 @@ icon.classList.replace("fa-eye-slash","fa-eye")
 })
 
 // ===== LOGIN VALIDATE =====
+
+if(loginForm){
 
 loginForm.addEventListener("submit",function(e){
 
@@ -111,8 +117,11 @@ alert("Sai tài khoản hoặc mật khẩu")
 }
 
 })
+}
 
 // ===== REGISTER VALIDATE =====
+
+if(registerForm){
 
 registerForm.addEventListener("submit",function(e){
 
@@ -144,3 +153,18 @@ choiceBox.classList.remove("hidden")
 registerForm.classList.add("hidden")
 
 })
+}
+
+// ===== HIỂN THỊ USER TRÊN HEADER =====
+
+const user = localStorage.getItem("user")
+
+if(user){
+
+const userBtn = document.querySelector(".icon-btn[aria-label='Tài khoản']")
+
+if(userBtn){
+userBtn.innerHTML = user
+}
+
+}
