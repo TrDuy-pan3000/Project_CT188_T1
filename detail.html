@@ -1,24 +1,44 @@
 <!doctype html>
 <html lang="vi">
+  <head>
+    <!-- Khai báo bộ ký tự tiếng Việt và thiết lập giao diện responsive -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chi tiết sản phẩm - Bếp Nhà Ngọ. Xem thông tin và đặt mua món ăn Tết truyền thống.">
-  <title>Chi tiết sản phẩm - Bếp Nhà Ngọ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/detail.css">
-</head>
+    <!-- Mô tả trang — hiển thị khi chia sẻ link hoặc tìm kiếm trên Google -->
+    <meta
+      name="description"
+      content="Bếp Nhà Ngọ - Ăn là Mê, Rước Lộc về! Món ăn Tết truyền thống, giao hàng tận nơi tại Cần Thơ. Bánh tét, bánh chưng, đồ nhậu Tết chất lượng."
+    />
+    <title>Bếp Nhà Ngọ - Ăn là Mê, Rước Lộc về!</title>
+
+    <!-- Google Fonts: Baloo 2 (tiêu đề vui), Nunito (nội dung), Cormorant Garamond (sang trọng), Inter (giao diện) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon - icon nhỏ hiển thị trên tab trình duyệt -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+    <!-- Font Awesome - thư viện icon (giỏ hàng, tìm kiếm, mạng xã hội...) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS: style.css (dùng chung) + index.css (riêng cho trang chủ) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/detail.css" />
+  </head>
 
   <body>
+    <!-- ======================== HEADER - Thanh điều hướng cố định trên cùng ======================== -->
     <header class="header">
+      <!-- Logo - bấm vào sẽ về trang chủ. Nếu ảnh lỗi thì hiển chữ thay thế (onerror) -->
       <div class="logo">
         <a href="index.html">
           <img
@@ -32,20 +52,24 @@
           <span class="logo-text">Bếp Nhà Ngọ</span>
         </a>
       </div>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+
+      <!-- Thanh điều hướng - class "active" đánh dấu trang đang xem -->
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Trang chủ</a></li>
           <li><a href="menu.html" class="nav-link">Thực đơn</a></li>
           <li><a href="story.html" class="nav-link">Câu chuyện</a></li>
         </ul>
       </nav>
-      <div class="header-actions">
+
+      <!-- Các nút: tìm kiếm, tài khoản, giỏ hàng (có badge đếm số lượng) -->
+      <div class="cart-button">
         <button class="icon-btn" aria-label="Tìm kiếm">
           <i class="fas fa-search"></i>
         </button>
-        <button class="icon-btn" aria-label="Tài khoản">
-          <i class="fas fa-user"></i>
-        </button>
+        <a href="login.html" class="icon-btn" aria-label="Tài khoản"
+          ><i class="fas fa-user"></i
+        ></a>
         <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
           <i class="fas fa-shopping-cart"></i>
           <span class="cart-badge">0</span>
@@ -54,133 +78,288 @@
     </header>
 
     <main style="padding-top: 5rem">
-      <h1
-        style="
-          font-family: &quot;Baloo 2&quot;, cursive;
-          text-align: center;
-          padding: 2rem;
-          color: var(--brown-dark);
-        "
-      >
-        🍜 Chi Tiết Món
-      </h1>
-      <section class="product-container">
-        <!-- hình ảnh của sản phẩm bên trái -->
-        <div class="product-imgs">
-          <img
-            src="./assets/images/banh-tet-nhan-dau-2.jpg"
-            alt="Bánh Tét Nhân Đậu"
-            id="main-img"
-          />
-          <div class="sub-img">
+      <section class="single-product">
+        <div class="container">
+          <div class="big-img-left">
             <img
-              src="./assets/images/banh-tet-nhan-chuoi-1.jpg"
-              alt="Bánh Tét Nhân Chuối"
-              class="small-img"
-            />
-            <img
-              src="./assets/images/banh-tet-nhan-chuoi-2.jpg"
-              alt="Bánh Tét Nhân Chuối"
-              class="small-img"
-            />
-            <img
-              src="./assets/images/banh-tet-nhan-dau-1.jpg"
-              alt="Bánh Tét Nhân Đậu"
-              class="small-img"
-            />
-            <img
-              src="./assets/images/banh-tet-nhan-dau-2.jpg"
-              alt="Bánh Tét Nhân Đậu"
-              class="small-img"
+              src="assets/images/story-banh-chung-new.png"
+              alt="Anh-1"
+              class="main-img"
             />
           </div>
-        </div>
-        <!-- thông tin, giá, nút mua hàng,.. bên phải -->
-        <div class="product-info">
-          <h2>BÁNH TÉT</h2>
-          <p>
-            Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của
-            cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung
-            Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên
-            liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói
-            thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp
-            Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác
-            bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được
-            làm hay là bán quanh năm.
-            <a href="#">Xem thêm</a>
-          </p>
-          <div class="price">
-            <h3>
-              <strong>Giá: 35.000 VNĐ<del>50.000 VNĐ</del></strong>
-            </h3>
-          </div>
-          <div class="options">
-            <p>Loại:</p>
-            <select class="flavor-option">
-              <option value="banana">Nhân chuối</option>
-              <option value="bean">Nhân đậu</option>
-            </select>
-          </div>
-          <div class="add-to-cart">
-            <input id="quanlity" type="number" value="1" min="1" />
-            <button class="add-to-cart-button" type="submit">BỎ VÀO MÂM</button>
+          <div class="content-right">
+            <h2 class="product-name">Bánh Tét Nhân Chuối</h2>
+            <span class="product-rating">⭐⭐⭐⭐⭐</span>
+            <p class="product-description">
+              Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực
+              của cả người Việt và một số dân tộc ít người ở miền Nam và miền
+              Trung Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về
+              nguyên liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối
+              để gói thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất
+              trong dịp Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai
+              trò không khác bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối
+              hay đậu đen được làm hay là bán quanh năm.
+              <a href="#">Xem thêm</a>
+            </p>
+            <strong class="product-price">180.000₫ <span> / Đòn</span></strong>
+            <div class="buying-wrap">
+              <input id="quantity" type="number" value="1" min="1" />
+              <button class="add-to-cart-button" id="add-cart">
+                BỎ VÀO MÂM
+              </button>
+            </div>
           </div>
         </div>
       </section>
-      <!-- thông tin chi tiết sản phẩm -->
+
       <section class="more-info">
-        <div class="line"></div>
-        <h3>Thông Tin Chi Tiết Sản Phẩm</h3>
-        <h4>Trọng lượng:</h4>
-        <p>800g - 1kg / đòn.</p>
-        <h4>Thành phần chính:</h4>
-        <p>
-          - Bánh tét nhân đậu (Ngọt/Mặn): Gạo nếp sáp thượng hạng dẻo thơm, đậu
-          xanh tách vỏ sên kỹ giữ được độ bùi, nước cốt dừa béo ngậy, gia vị cơ
-          bản (muối, tiêu, đường) và lá chuối tươi. (Nếu bán kèm nhân thịt mỡ,
-          bạn có thể bổ sung thêm: thịt ba rọi ướp vị đậm đà).<br />
-          - Bánh tét nhân chuối (Ngọt): Gạo nếp sáp trộn đều với nước cốt dừa
-          thơm béo, nhân chuối xiêm (chuối sứ) chín rục được ướp đường
-          phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên, mang lại
-          vị ngọt thanh, dẻo mềm và bọc ngoài bằng lá chuối tươi.
-        </p>
-        <h4>Quy cách đóng gói:</h4>
-        <p>
-          Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm và kéo
-          dài thời gian bảo quản.
-        </p>
-        <h4>Hạn sử dụng:</h4>
-        <p>
-          - 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15
-          ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />-
-          03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông)
-        </p>
-        <h4>Cách dùng:</h4>
-        <p>
-          - Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn.
-          <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên bản.<br />
-          - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai mặt, ăn
-          kèm với dưa món, củ kiệu hoặc tương ớt.
-        </p>
-        <h4>Bảo quản:</h4>
-        <p>
-          - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br />
-          - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực phẩm và
-          bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng hoặc chiên
-          lại.
-        </p>
+        <div class="container">
+          <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="more-details">
+              Chi Tiết
+            </button>
+            <button class="tab-btn" data-tab="gallery">Hình Ảnh</button>
+            <button class="tab-btn" data-tab="reviews">Đánh Giá</button>
+          </nav>
+          <div class="tab__content-box">
+            <div class="tab-content active" id="more-details">
+              <h4 id="weight">Trọng lượng:</h4>
+              <p>800g - 1kg / đòn.</p>
+              <h4 id="ingredient-list">Thành phần chính:</h4>
+              <p>
+                - Bánh tét nhân đậu (Ngọt/Mặn): Gạo nếp sáp thượng hạng dẻo
+                thơm, đậu xanh tách vỏ sên kỹ giữ được độ bùi, nước cốt dừa béo
+                ngậy, gia vị cơ bản (muối, tiêu, đường) và lá chuối tươi. (Nếu
+                bán kèm nhân thịt mỡ, bạn có thể bổ sung thêm: thịt ba rọi ướp
+                vị đậm đà).<br />
+                - Bánh tét nhân chuối (Ngọt): Gạo nếp sáp trộn đều với nước cốt
+                dừa thơm béo, nhân chuối xiêm (chuối sứ) chín rục được ướp đường
+                phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên,
+                mang lại vị ngọt thanh, dẻo mềm và bọc ngoài bằng lá chuối tươi.
+              </p>
+              <h4 id="Packing specification">Quy cách đóng gói:</h4>
+              <p>
+                Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm
+                và kéo dài thời gian bảo quản.
+              </p>
+              <h4 id="exp">Hạn sử dụng:</h4>
+              <p>
+                - 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />-
+                15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ
+                lạnh)<br />- 03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC
+                (cấp đông)
+              </p>
+              <h4 id="uses">Cách dùng:</h4>
+              <p>
+                - Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh
+                tròn.
+                <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên
+                bản.<br />
+                - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai
+                mặt, ăn kèm với dưa món, củ kiệu hoặc tương ớt.
+              </p>
+              <h4 id="Preserve">Bảo quản:</h4>
+              <p>
+                - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br />
+                - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực
+                phẩm và bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng
+                hoặc chiên lại.
+              </p>
+            </div>
+            <div class="tab-content" id="gallery">
+              <div class="gallery-container grid">
+                <img
+                  src="./assets/images/product-banh-tet-chuoi-1.jpg"
+                  alt=""
+                  class="pic"
+                />
+                <img
+                  src="./assets/images/product-banh-tet-chuoi-2.jpg"
+                  alt=""
+                  class="pic"
+                />
+                <img
+                  src="./assets/images/product-banh-tet-dau-1.jpg"
+                  alt=""
+                  class="pic"
+                />
+                <img src="./assets/images/hero-mascot.png" alt="" class="pic" />
+              </div>
+            </div>
+            <div class="tab-content" id="reviews">
+              <div class="reviews-container">
+                <div class="review-card">
+                  <div class="test-author">
+                    <span class="test-avatar">👩</span>
+                    <div class="test-info">
+                      <h4>Chị Hương</h4>
+                      <p>Quận 1, TP.HCM</p>
+
+                      <div class="test-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                  </div>
+                  <p class="test-text">
+                    Bánh tét ngon quá trời luôn á! Vị y như bánh bà ngoại gói,
+                    ăn mà nhớ quê quá chừng. Năm sau chắc chắn đặt tiếp nha Bếp
+                    Nhà Ngọ!
+                  </p>
+                </div>
+                <div class="review-card">
+                  <div class="test-author">
+                    <span class="test-avatar">👩</span>
+                    <div class="test-info">
+                      <h4>Chị Hương</h4>
+                      <p>Quận 1, TP.HCM</p>
+
+                      <div class="test-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                  </div>
+                  <p class="test-text">
+                    Bánh tét ngon quá trời luôn á! Vị y như bánh bà ngoại gói,
+                    ăn mà nhớ quê quá chừng. Năm sau chắc chắn đặt tiếp nha Bếp
+                    Nhà Ngọ!
+                  </p>
+                </div>
+                <div class="review-card">
+                  <div class="test-author">
+                    <span class="test-avatar">👩</span>
+                    <div class="test-info">
+                      <h4>Chị Hương</h4>
+                      <p>Quận 1, TP.HCM</p>
+
+                      <div class="test-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                  </div>
+                  <p class="test-text">
+                    Bánh tét ngon quá trời luôn á! Vị y như bánh bà ngoại gói,
+                    ăn mà nhớ quê quá chừng. Năm sau chắc chắn đặt tiếp nha Bếp
+                    Nhà Ngọ!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="related-products">
+        <h2 class="section-title">Có thể bạn sẽ thích</h2>
+        <div class="grid">
+          <!-- Sản phẩm 1: Bánh Chưng -->
+          <article class="product-card card">
+            <div class="card-img">
+              <img
+                src="assets/images/product-banh-tet-chuoi-1.jpg"
+                alt="Bánh Chưng Truyền Thống"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag hot">Bán chạy</span>
+              <h3>Bánh Chưng Truyền Thống</h3>
+              <p class="card-desc">
+                Bánh chưng vuông, gạo nếp cái hoa vàng, nhân đậu xanh thịt heo
+              </p>
+              <div class="card-bottom">
+                <p class="price">250.000₫</p>
+                <a href="detail.html" class="btn-add"
+                  ><i class="fas fa-shopping-cart"></i> Thêm</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Sản phẩm 2: Bánh Tét -->
+          <article class="product-card card">
+            <div class="card-img">
+              <img
+                src="assets/images/product-banh-tet-dau-1.jpg"
+                alt="Bánh Tét Lá Cẩm"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag special">Đặc sản miền Nam</span>
+              <h3>Bánh Tét Lá Cẩm</h3>
+              <p class="card-desc">
+                Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ, hương vị đặc
+                trưng miền Tây
+              </p>
+              <div class="card-bottom">
+                <p class="price">180.000₫</p>
+                <a href="detail.html" class="btn-add"
+                  ><i class="fas fa-shopping-cart"></i> Thêm</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Sản phẩm 3: Giò Chả -->
+          <article class="product-card card">
+            <div class="card-img">
+              <img
+                src="assets/images/product-combo-nhau.jpg"
+                alt="Giò Chả Thượng Hạng"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag trad">Truyền thống</span>
+              <h3>Giò Chả Thượng Hạng</h3>
+              <p class="card-desc">
+                Giò lụa, chả quế, chả chiên — nguyên liệu tươi, chế biến thủ
+                công
+              </p>
+              <div class="card-bottom">
+                <p class="price">320.000₫</p>
+                <a href="detail.html" class="btn-add"
+                  ><i class="fas fa-shopping-cart"></i> Thêm</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Sản phẩm 4: Mứt Tết -->
+          <article class="product-card card">
+            <div class="card-img">
+              <img
+                src="assets/images/product-bia-cao-cap.jpg"
+                alt="Hộp Mứt Tết Đặc Biệt"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag new">Mới</span>
+              <h3>Hộp Mứt Tết Đặc Biệt</h3>
+              <p class="card-desc">
+                Mứt gừng, mứt dừa, mứt bí, mứt quất — hộp 6 vị thượng hạng
+              </p>
+              <div class="card-bottom">
+                <p class="price">350.000₫</p>
+                <a href="detail.html" class="btn-add"
+                  ><i class="fas fa-shopping-cart"></i> Thêm</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="view-all">Xem tất cả món →</button>
       </section>
     </main>
 
+    <!-- ======================== FOOTER - Chân trang ======================== -->
+    <!-- Gồm 3 cột: giới thiệu + mạng xã hội, liên kết nhanh, thông tin liên hệ -->
+    <!-- Footer -->
     <footer class="footer">
-      <div class="footer-deco"></div>
-      <div class="footer-content">
+      <!-- Đường kẻ trang trí gradient ở trên cùng footer -->
+      <div class="footerdivider footer-deco"></div>
+      <div class="footertop footer-content">
+        <!-- Cột 1: Logo, mô tả, slogan, liên kết mạng xã hội -->
         <div class="footer-col">
           <div class="footer-brand">
             <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ" />
             <span class="footer-brand-text">Bếp Nhà Ngọ</span>
           </div>
-          <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà.</p>
+          <p class="footer-text">
+            Mang hương vị Tết truyền thống đến mọi nhà. Chúng tôi tự hào là địa
+            chỉ tin cậy cho những món ăn ngày Tết!
+          </p>
           <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
           <div class="social">
             <a href="#" aria-label="Facebook"
@@ -192,6 +371,8 @@
             <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
+
+        <!-- Cột 2: Các trang liên kết -->
         <div class="footer-col">
           <h4 class="footer-title">Liên Kết Nhanh</h4>
           <ul class="footer-links">
@@ -217,12 +398,14 @@
             </li>
           </ul>
         </div>
+
+        <!-- Cột 3: Thông tin liên hệ (địa chỉ, sđt, email, giờ mở cửa) -->
         <div class="footer-col">
           <h4 class="footer-title">Liên Hệ Ngựa</h4>
           <ul class="contact">
             <li>
               <i class="fas fa-map-marker-alt"></i
-              ><span>123 Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</span>
+              ><span>123 Đường 3/2, Q. Ninh Kiều, Cần Thơ</span>
             </li>
             <li><i class="fas fa-phone"></i><span>0909 123 456</span></li>
             <li>
@@ -236,7 +419,8 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
+      <!-- Dòng bản quyền cuối cùng -->
+      <div class="footerbottom">
         <p>
           © 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1
           | Năm Giáp Ngọ 🐴
