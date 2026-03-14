@@ -144,19 +144,6 @@ main {
     color: var(--gold);
 }
 
-/* --- Thanh điều hướng - nằm giữa header --- */
-.nav {
-    flex: 1;                     /* Chiếm hết khoảng trống giữa logo và icon */
-    display: flex;
-    justify-content: center;
-}
-
-/* Danh sách link điều hướng - xếp ngang, cách đều */
-.nav-list {
-    display: flex;
-    gap: 0.5rem;
-}
-
 /* Mỗi link điều hướng - bo góc tròn, hover lên trên 2px */
 .nav-link {
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -181,12 +168,6 @@ main {
     background: var(--gold);
     color: var(--red-tet);
     font-weight: 700;
-}
-
-/* --- Cụm icon bên phải header (tìm, user, giỏ hàng) --- */
-.header-actions {
-    display: flex;
-    gap: 0.6rem;
 }
 
 /* Nút icon tròn - nền mờ, hover bay lên nhẹ */
@@ -231,15 +212,6 @@ main {
     border: 2px solid var(--cream);
 }
 
-/* ==========================================
-   TIÊU ĐỀ PHẦN (Section Title)
-   Dùng chung cho các phần: sản phẩm, đánh giá...
-   ========================================== */
-.section-head {
-    text-align: center;
-    margin-bottom: 3.5rem;
-}
-
 /* Tiêu đề lớn - có 2 emoji trang trí 2 bên (tuỳ chọn) */
 .section-title {
     font-family: 'Playfair Display', serif;
@@ -282,7 +254,6 @@ main {
    NÚT BẤM (Buttons)
    .btn-primary  = nút chính (đỏ, nổi bật nhất)
    .btn-secondary = nút phụ (viền đỏ, nền trắng)
-   .btn-cart = nút thêm giỏ hàng (nâu cam gradient)
    ========================================== */
 .btn {
     display: inline-flex;
@@ -324,33 +295,10 @@ main {
     transform: translateY(-3px);
 }
 
-.btn-cart {
-    width: 100%;
-    padding: 0.8rem;
-    background: linear-gradient(135deg, var(--mint), #7BC9B7);
-    color: var(--brown-dark);
-    justify-content: center;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-clay);
-    font-size: 0.95rem;
-}
-
-.btn-cart:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-clay-hover);
-}
-
 /* ==========================================
    DANH SÁCH SẢN PHẨM & THẺ SẢN PHẨM (Cards)
    Lưới responsive: tự động xuống dòng khi màn hình nhỏ
    ========================================== */
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-    gap: 2rem;
-    padding: 0 5%;
-}
-
 /* Thẻ sản phẩm - hover thì nổi lên + phóng to nhẹ */
 .card {
     background: var(--white);
@@ -385,57 +333,9 @@ main {
 }
 
 /* Nhãn góc ảnh (Bán chạy, Mới, Sale...) */
-.tag {
-    position: absolute;
-    top: 0.8rem;
-    left: 0.8rem;
-    padding: 0.35rem 0.9rem;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--white);
-    border-radius: var(--radius-full);
-    box-shadow: var(--shadow-soft);
-}
-
-/* Tag "Bán chạy" - nền đỏ Tết, chữ vàng */
-.tag.hot {
-    background: var(--red-tet);
-    color: var(--gold);
-}
-
-/* Tag "Mới" - nền hồng đào */
-.tag.new {
-    background: var(--pink-peach);
-    color: var(--white);
-}
-
-/* Tag "Sale" - gradient đỏ sang san hô, nổi bật hơn */
-.tag.sale {
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-}
-
 /* Phần nội dung bên dưới ảnh (tên, giá, nút) */
 .card-body {
     padding: 1.3rem;
-}
-
-/* Tên sản phẩm - đậm, nâu tối */
-.card-title {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 0.4rem;
-    color: var(--brown-dark);
-}
-
-/* Giá sản phẩm - chữ đỏ to, đậm nhất card */
-.card-price {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--red-tet);
-    margin-bottom: 0.8rem;
 }
 
 /* ==========================================
@@ -461,17 +361,6 @@ main {
             var(--gold));
 }
 
-
-/* Sóng trang trí nền kem trên cùng footer */
-.footer-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: var(--cream);
-    clip-path: ellipse(60% 100% at 50% 0%);
-}
 
 /* Lưới 3 cột footer - tự động xuống 1 cột trên mobile */
 .footer-content {
@@ -619,26 +508,6 @@ main {
     margin-top: 0.2rem;
 }
 
-/* Dòng bản quyền cuối cùng */
-.footer-bottom {
-    text-align: center;
-    padding: 1.5rem 5%;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    z-index: 1;
-}
-
-/* Chữ bản quyền nhỏ, trắng mờ */
-.footer-bottom p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* Icon trái tim màu đỏ - "Made with ❤ by Group 1" */
-.footer-bottom i.fa-heart {
-    color: var(--red-tet);
-}
-
 /* ==========================================
    RESPONSIVE: Tablet (≤768px)
    Ẩn nav, thu gọn header & footer 1 cột
@@ -663,11 +532,6 @@ main {
     .section-title .emoji-left,
     .section-title .emoji-right {
         display: none;
-    }
-
-    .product-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
     }
 
     .footer-content {
@@ -699,73 +563,9 @@ main {
         height: 2.4rem;
     }
 
-    /* Sản phẩm: 1 cột duy nhất */
-    .product-list {
-        grid-template-columns: 1fr;
-    }
-
     /* Nút chính: nhỏ hơn cho vừa màn hình */
     .btn-primary {
         padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-}
-
-/* ==========================================
-   ABOUT - Trang Giới thiệu Bếp Nhà Ngọ
-   (dùng cho about.html / story.html)
-   ========================================== */
-
-/* Container: nền gradient kem → trắng, căn giữa */
-.about {
-    padding: 80px 20px;
-    background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
-    text-align: center;
-    position: relative;
-}
-
-/* Tiêu đề - màu san hô, to */
-.about__heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--coral);
-    margin-bottom: 10px;
-}
-
-/* Gạch ngang vàng ngắn dưới tiêu đề */
-.about__line {
-    width: 60px;
-    height: 4px;
-    background: var(--gold);
-    margin: 0 auto 30px;
-    border-radius: 2px;
-}
-
-/* Nội dung giới thiệu - giới hạn 800px, giãn dòng 2 */
-.about__text {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    color: var(--brown-dark);
-    line-height: 2;
-}
-
-/* Chữ in đậm trong đoạn văn - tô đỏ nhấn mạnh */
-.about__text strong {
-    color: var(--red-tet);
-}
-
-/* About responsive: nhỏ hơn trên mobile */
-@media (max-width: 768px) {
-    .about {
-        padding: 50px 20px;
-    }
-
-    .about__heading {
-        font-size: 1.8rem;
-    }
-
-    .about__text {
         font-size: 1rem;
     }
 }

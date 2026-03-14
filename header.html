@@ -1,0 +1,41 @@
+<!-- Logo - bấm vào sẽ về trang chủ. Nếu ảnh lỗi thì hiển chữ thay thế (onerror) -->
+<div class="logo">
+  <a href="index.html">
+    <img
+      src="assets/images/logo.png"
+      alt="Bếp Nhà Ngọ Logo"
+      onerror="
+        this.style.display = 'none';
+        this.nextElementSibling.style.display = 'flex';
+      "
+    />
+    <span class="logo-text">Bếp Nhà Ngọ</span>
+  </a>
+</div>
+
+<!-- Thanh điều hướng - class "active" đánh dấu trang đang xem -->
+<nav class="nav-links">
+  <ul>
+    <li>
+      <a href="index.html" class="nav-link header__main">Trang chủ</a>
+    </li>
+    <li><a href="menu.html" class="nav-link header__menu">Thực đơn</a></li>
+    <li>
+      <a href="story.html" class="nav-link header__story">Câu chuyện</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Các nút: tìm kiếm, tài khoản, giỏ hàng (có badge đếm số lượng) -->
+<div class="cart-button">
+  <button class="icon-btn" aria-label="Tìm kiếm">
+    <i class="fas fa-search"></i>
+  </button>
+  <a href="login.html" class="icon-btn" aria-label="Tài khoản">
+    <i class="fa-regular fa-user"></i>
+    </a>
+  <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-badge">0</span>
+  </a>
+</div>

@@ -1,0 +1,152 @@
+/* ================= LOGIN PAGE ================= */
+
+main.auth-wrapper{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:70vh;
+padding:60px 20px;
+margin-top:120px;
+}
+
+/* ================= LOGIN CARD ================= */
+
+.auth-card{
+width:100%;
+max-width:420px;
+background:#ffffff;
+padding:35px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+/* ================= TITLE ================= */
+
+.auth-title{
+margin-bottom:22px;
+font-weight:600;
+}
+
+/* ================= CHOICE BUTTON ================= */
+
+.auth-choice{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+/* ================= BUTTON ================= */
+
+.auth-btn{
+padding:12px;
+border:none;
+background:#ffd43b;
+color:#b30000;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+transition:all .25s ease;
+}
+
+.auth-btn:hover{
+background:#ffcc00;
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* button đăng ký */
+
+.auth-btn.outline{
+background:#fff;
+color:#b30000;
+border:2px solid #b30000;
+}
+
+/* ================= FORM ================= */
+
+.auth-form{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:10px;
+}
+
+/* ================= INPUT ================= */
+
+.auth-input{
+width:100%;
+padding:11px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+}
+
+/* ================= PASSWORD ================= */
+
+.password-box{
+position:relative;
+}
+
+.togglePassword{
+position:absolute;
+right:12px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+color:#777;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.backBtn{
+background:none;
+border:none;
+color:#b30000;
+cursor:pointer;
+text-align:left;
+font-size:14px;
+}
+
+/* ================= HIDDEN ================= */
+
+.hidden{
+display:none;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:768px){
+
+.auth-card{
+padding:30px;
+}
+
+.auth-title{
+font-size:22px;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:480px){
+
+.auth-card{
+padding:24px;
+border-radius:10px;
+}
+
+.auth-title{
+font-size:20px;
+}
+
+.auth-btn{
+font-size:15px;
+}
+
+.auth-input{
+padding:12px;
+}
+
+}
