@@ -25,6 +25,7 @@ smallImgs.forEach((img, index) => {
 
 const singleProduct = document.querySelector(".single-product");
 const moreInfo = document.querySelector(".more-info");
+const relatedProducts = document.querySelector(".products")
 const getData = async () => {
   const path = new URLSearchParams(window.location.search);
 
@@ -116,5 +117,24 @@ const getData = async () => {
           </p>
         </div>
         `;
+  relatedProducts.innerHTML = ``
+  for (let i = 0; i <4; i++){
+    relatedProducts.innerHTML += `
+      <article class="related-product">
+              <img src="/assets/images/product-banh-tet-chuoi-1.jpg" alt="">
+              <div class="content-wrap">
+                <h3>Bánh Tét Lá Cẩm</h3>
+                <p>Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ, hương vị đặc
+                  trưng miền Tây</p>
+                <div class="card-bottom">
+                  <p class="price">180.000₫</p>
+                  <a href="detail.html?id=" class="btn-add"
+                    ><i class="fas fa-shopping-cart"></i> Thêm</a
+                  >
+                </div>
+              </div>
+            </article>
+    `
+  }
 };
 getData();
