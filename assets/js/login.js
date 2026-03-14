@@ -138,8 +138,4 @@ const user = localStorage.getItem("user");
 
 if (user) {
   const userBtn = document.querySelector(".icon-btn[aria-label='Tài khoản']");
-
-  if (userBtn) {
-    userBtn.innerHTML = user;
-  }
 }
