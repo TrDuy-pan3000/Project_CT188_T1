@@ -14,7 +14,7 @@ const getData = async () => {
     return;
   }
 
-  const respone = await fetch("/assets/js/product.json");
+  const respone = await fetch("./assets/js/product.json");
   const data = await respone.json();
   const findProductId = data.find(
     (item) => item.id.toString() === productId.toString(),
@@ -110,7 +110,7 @@ const getData = async () => {
     </div>
         `;
 
-  const reviewList = findProductId.reviews;
+  const reviewList = findProductId.reviews || [];
   productReviews.innerHTML = ``;
   reviewList.forEach((test) => {
     productReviews.innerHTML += `
