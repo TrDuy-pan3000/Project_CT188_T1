@@ -1,40 +1,21 @@
-const featuredImg = document.getElementById("main-img");
-const smallImgs = document.querySelectorAll(".small-img");
-
-smallImgs.forEach((img, index) => {
-  img.addEventListener("click", () => {
-    featuredImg.src = img.src;
-    smallImgs.forEach((i) => i.classList.remove("sm-card"));
-    img.classList.add("sm-card");
-  });
-});
-
-// const buttons = document.querySelectorAll(".tab-btn");
-// const contents = document.querySelectorAll(".tab-content");
-
-// buttons.forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     const target = btn.dataset.tab;
-//     buttons.forEach((b) => b.classList.remove("active"));
-//     contents.forEach((p) => p.classList.remove("active"));
-//     btn.classList.add("active");
-
-//     document.getElementById(target).classList.add("active");
-//   });
-// });
-
 const singleProduct = document.querySelector(".single-product");
 const moreInfo = document.querySelector(".more-info");
-const relatedProducts = document.querySelector(".products")
+const productReviews = document.querySelector(".reviews");
+const relatedProducts = document.querySelector(".products");
+
 const getData = async () => {
   const path = new URLSearchParams(window.location.search);
 
   const productId = path.get("id");
 
+  if (!productId) {
+    // trả về trang chủ khi thêm đủ nội dung các sản phẩm
+    window.location.href = "detail.html?id=1";
+    return;
+  }
+
   const respone = await fetch("/assets/js/product.json");
-
   const data = await respone.json();
-
   const findProductId = data.find(
     (item) => item.id.toString() === productId.toString(),
   );
@@ -88,11 +69,22 @@ const getData = async () => {
         </div>
   `;
 
+  const featuredImg = document.getElementById("main-img");
+  const smallImgs = document.querySelectorAll(".small-img");
+  smallImgs.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      featuredImg.src = img.src;
+      smallImgs.forEach((i) => i.classList.remove("sm-card"));
+      img.classList.add("sm-card");
+    });
+  });
+
   moreInfo.innerHTML = `
-  <div class="container" id="more-details">
-          <div class="title">
+    <div class="title">
             <h1>Chi Tiết Sản Phẩm</h1>
-          </div>
+    </div>
+    <div class="container" id="more-details">
+         
           <h4 id="weight">Trọng lượng:</h4>
           <p>${findProductId.weight}</p>
           <h4 id="ingredient-list">Thành phần chính:</h4>
@@ -115,26 +107,59 @@ const getData = async () => {
           <p>
             ${findProductId.preserve}
           </p>
-        </div>
+    </div>
         `;
-  relatedProducts.innerHTML = ``
-  for (let i = 0; i <4; i++){
+
+  const reviewList = findProductId.reviews;
+  productReviews.innerHTML = ``;
+  reviewList.forEach((test) => {
+    productReviews.innerHTML += `
+  <div class="review-card">
+            <div class="test-author">
+              <span class="test-avatar">${test.avatar}</span>
+              <div class="test-info">
+                <h4>${test.name}</h4>
+                <p>${test.address}</p>
+
+                <div class="test-stars">${test.stars}</div>
+              </div>
+            </div>
+            <p class="test-text">
+              ${test.text}
+            </p>
+          </div>
+  `;
+  });
+
+  const otherProducts = data.filter(
+    (item) => item.id.toString() !== productId.toString(),
+  );
+
+  const shuffledProducts = otherProducts.sort(() => 0.5 - Math.random());
+
+  const randomFourProducts = shuffledProducts.slice(0, 4);
+
+  relatedProducts.innerHTML = ``;
+
+  randomFourProducts.forEach((prod) => {
     relatedProducts.innerHTML += `
       <article class="related-product">
-              <img src="/assets/images/product-banh-tet-chuoi-1.jpg" alt="">
-              <div class="content-wrap">
-                <h3>Bánh Tét Lá Cẩm</h3>
-                <p>Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ, hương vị đặc
-                  trưng miền Tây</p>
-                <div class="card-bottom">
-                  <p class="price">180.000₫</p>
-                  <a href="detail.html?id=" class="btn-add"
-                    ><i class="fas fa-shopping-cart"></i> Thêm</a
-                  >
-                </div>
-              </div>
-            </article>
-    `
-  }
+        <img src="${prod.mainImg}" alt="${prod.name}">
+        <div class="content-wrap">
+          <h3>${prod.name}</h3>
+          
+          <p>${prod.description.substring(0, 60)}...</p>
+          
+          <div class="card-bottom">
+            <p class="price">${prod.price}₫</p>
+            
+            <a href="detail.html?id=${prod.id}" class="btn-add">
+              <i class="fas fa-shopping-cart"></i> Thêm
+            </a>
+          </div>
+        </div>
+      </article>
+    `;
+  });
 };
 getData();

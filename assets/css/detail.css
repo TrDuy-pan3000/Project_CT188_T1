@@ -23,26 +23,26 @@ section {
   max-width: 1280px;
   gap: 1rem;
 }
-
-/* =================== Phần ảnh và thông tin sản phẩm ==================== */
-.single-product {
-  background-color: var(--cream);
-}
-/* Tạo flex container cho ảnh và nội dung */
-.single-product >.container {
-  gap: 2rem;
-}
-.container .title {
+section .title {
   width: 100%;
+  max-width: 1280px;
   text-align: center;
 }
-.container .title h1 {
+section .title h1 {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   font-weight: 800;
   background-color: var(--red-dark);
   color: var(--gold);
   margin-bottom: 0.8rem;
+}
+/* =================== Phần ảnh và thông tin sản phẩm ==================== */
+.single-product {
+  background-color: var(--cream);
+}
+/* Tạo flex container cho ảnh và nội dung */
+.single-product > .container {
+  gap: 2rem;
 }
 /* Ảnh lớn bên trái, cao 500px, nền trắng + boxshadow tạo hiệu ứng khung ảnh */
 .big-img-left {
@@ -72,9 +72,10 @@ section {
   transition: all 0.3s ease;
   box-shadow: var(--shadow-soft);
 }
-.small-img:active {
+.small-img:active , .sm-card {
   transform: scale(1.05);
   transform: translateY(-3px);
+  box-shadow: var(--shadow-clay-hover);
 }
 /* Phần nội dung sản phẩm bên phải */
 
@@ -153,7 +154,7 @@ section {
   transform: translateY(-3px);
   box-shadow: var(--shadow-clay-hover);
 }
-.buying-wrap >button:active {
+.buying-wrap > button:active {
   background-color: var(--cream);
   color: var(--red-tet);
 }
@@ -183,10 +184,10 @@ section {
 .product-reviews > .container {
   flex-direction: column;
 }
-.overall-rating{
+.overall-rating {
   border: 2px solid gold;
 }
-.review-card{
+.review-card {
   background-color: var(--white);
   width: 100%;
   padding: 0 2%;
@@ -197,12 +198,11 @@ section {
 .related-products {
   background-color: var(--mint-light);
 }
-.related-products > .container{
+.related-products > .container {
   flex-direction: column;
-
 }
 .related-products > .container .grid {
-  width:100%;
+  width: 100%;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -213,33 +213,33 @@ section {
   border-radius: var(--radius);
   background-color: white;
 }
-.related-product img{
+.related-product img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-.content-wrap{
+.content-wrap {
   display: flex;
   flex-direction: column;
   height: 200px;
   padding: 5%;
 }
-.content-wrap h3{
+.content-wrap h3 {
   color: var(--red-dark);
   font-size: 1.5rem;
   font-family: "Playfair Display", serif;
 }
-.content-wrap >p{
+.content-wrap > p {
   font-family: "Be Vietnam Pro", sans-serif;
   color: var(--brown-dark);
   font-size: 1rem;
 }
-.card-bottom .price{
-  font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--red-tet);
-    margin: 0;
+.card-bottom .price {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--red-tet);
+  margin: 0;
 }
 .view-all-btn-container {
   margin-top: 2rem;
@@ -248,7 +248,7 @@ section {
 
 @media (max-width: 968px) {
   /* Đổi flex-direction phù hợp với màn hình dọc */
-  .container .title h1 {
+  section .title h1 {
     font-size: 1.5rem;
   }
 
