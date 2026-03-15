@@ -144,6 +144,11 @@ function checkout() {
 
 
 function showNotification(message) {
+    if (typeof showToast === 'function') {
+        showToast(message);
+        return;
+    }
+
     const el = document.getElementById('notification');
     if (!el) return;
     el.textContent = message;

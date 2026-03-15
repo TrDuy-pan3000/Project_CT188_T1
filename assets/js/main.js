@@ -2,6 +2,27 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCartBadge();
 });
 
+let toastTimer;
+
+function showToast(message) {
+    let toastEl = document.getElementById('appToast');
+    if (!toastEl) {
+        toastEl = document.createElement('div');
+        toastEl.id = 'appToast';
+        toastEl.className = 'app-toast';
+        document.body.appendChild(toastEl);
+    }
+
+    toastEl.textContent = message;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+        toastEl.classList.remove('show');
+    }, 2200);
+}
+
+window.showToast = showToast;
+
 function updateCartBadge() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
