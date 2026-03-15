@@ -161,7 +161,9 @@ const getData = async () => {
       </article>
     `;
   });
-});
+};
+
+getData();
 
 const addCartBtn = document.getElementById("add-cart");
 
@@ -170,24 +172,30 @@ function parsePrice(rawPrice) {
 }
 
 function makeProductId(name) {
-  return String(name)
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/đ/g, "d")
-    .replace(/Đ/g, "D")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "") || "san-pham";
+  return (
+    String(name)
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/đ/g, "d")
+      .replace(/Đ/g, "D")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "") || "san-pham"
+  );
 }
 
 if (addCartBtn) {
   addCartBtn.addEventListener("click", () => {
-    const name = document.querySelector(".product-name")?.textContent?.trim() || "Món ăn";
+    const name =
+      document.querySelector(".product-name")?.textContent?.trim() || "Món ăn";
     const quantityInput = document.getElementById("quantity");
     const quantity = Math.max(1, Number(quantityInput?.value) || 1);
-    const priceText = document.querySelector(".product-price")?.textContent || "0";
+    const priceText =
+      document.querySelector(".product-price")?.textContent || "0";
     const price = parsePrice(priceText);
-    const image = document.querySelector(".main-img")?.getAttribute("src") || "assets/images/logo.png";
+    const image =
+      document.querySelector(".main-img")?.getAttribute("src") ||
+      "assets/images/logo.png";
 
     if (typeof addToCart === "function") {
       addToCart({
@@ -195,7 +203,7 @@ if (addCartBtn) {
         name,
         price,
         image,
-        quantity
+        quantity,
       });
     }
 
