@@ -28,9 +28,22 @@
 
 <!-- Các nút: tìm kiếm, tài khoản, giỏ hàng (có badge đếm số lượng) -->
 <div class="cart-button">
-  <button class="icon-btn" aria-label="Tìm kiếm">
-    <i class="fas fa-search"></i>
-  </button>
+  <div class="header-search" id="headerSearch">
+    <button class="icon-btn" type="button" id="headerSearchToggle" aria-label="Mở tìm kiếm">
+      <i class="fas fa-search"></i>
+    </button>
+    <div class="header-search-panel" id="headerSearchPanel">
+      <input
+        type="search"
+        id="headerSearchInput"
+        class="header-search-input"
+        placeholder="Tìm món ngon..."
+        autocomplete="off"
+        aria-label="Tìm kiếm món ăn"
+      />
+      <div class="header-search-dropdown" id="headerSearchDropdown"></div>
+    </div>
+  </div>
   <a href="login.html" class="icon-btn" aria-label="Tài khoản">
     <i class="fa-regular fa-user"></i>
     </a>

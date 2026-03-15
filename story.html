@@ -37,18 +37,21 @@
     <main class="gourmet-story">
       <!-- ======================== HERO BANNER ======================== -->
       <!-- Khối Banner siêu to khổng lồ bắt mắt ở trên cùng -->
-      <section class="story-hero">
+      <section class="story-hero" id="storyHero">
         <!-- Ảnh nền -->
-        <div class="story-hero-bg">
+        <div class="story-hero-bg" id="storyHeroBg">
           <img src="assets/images/story-hero-bg.png" alt="Hero Image" />
           <!-- Overlay đen dốc để text hiện lên sắc nét -->
           <div class="story-hero-overlay"></div>
         </div>
 
         <!-- Nội dung trung tâm của Hero Banner -->
-        <div class="story-hero-content">
+        <div class="story-hero-content story-hero-enter" id="storyHeroContent">
           <div class="story-hero-sub">CÂU CHUYỆN BẾP NHÀ NGỌ</div>
-          <h1 class="story-hero-title">Tinh Hoa Ẩm Thực Ngày Tết</h1>
+          <h1 class="story-hero-title">
+            <span>Tinh Hoa Ẩm Thực</span>
+            <span>Ngày Tết</span>
+          </h1>
           <div class="story-hero-divider"></div>
           <p class="story-hero-desc">
             Mỗi món ăn mang lên mâm cỗ Tết là một câu chuyện thấm đẫm ân tình
@@ -58,10 +61,10 @@
       </section>
 
       <!-- ======================== CÂU CHUYỆN 1 - Hình Trái, Chữ Phải ======================== -->
-      <section class="story-section s1">
+      <section class="story-section s1 reveal-section" data-reveal-group>
         <div class="story-container">
           <!-- Khối bọc cụm ảnh bên trái -->
-          <div class="story-img-wrapper">
+          <div class="story-img-wrapper reveal-item reveal-left">
             <!-- Khối chữ nhật rỗng màu kem chườm ra ngoài như thiết kế tạp chí -->
             <div class="story-img-decor"></div>
             <!-- Ảnh món ăn -->
@@ -73,7 +76,7 @@
           </div>
 
           <!-- Cột nội dung văn bản bên phải -->
-          <div class="story-text-col">
+          <div class="story-text-col reveal-item reveal-up">
             <div class="story-header">
               <span class="story-num">01.</span>
               <h2 class="story-title">Nếp Nương Gói Trọn Ân Tình Đất Trời</h2>
@@ -101,10 +104,10 @@
 
       <!-- ======================== CÂU CHUYỆN 2 - Chữ Trái, Hình Phải (row-reverse) ======================== -->
       <!-- Background sẽ tự đổi thành be sậm xen kẽ theo CSS .s2 -->
-      <section class="story-section s2">
+      <section class="story-section s2 reveal-section" data-reveal-group>
         <div class="story-container row-reverse">
           <!-- Cột nội dung văn bản bên trái -->
-          <div class="story-text-col">
+          <div class="story-text-col reveal-item reveal-up">
             <div class="story-header">
               <span class="story-num">02.</span>
               <h2 class="story-title">Giò Lụa Chả Quế Thượng Hạng</h2>
@@ -129,7 +132,7 @@
           </div>
 
           <!-- Cụm ảnh nằm bên phải -->
-          <div class="story-img-wrapper">
+          <div class="story-img-wrapper reveal-item reveal-right">
             <!-- Tương tự decor hình dội ra phía sau cho s2 -->
             <div class="story-img-decor"></div>
             <img
@@ -142,9 +145,9 @@
       </section>
 
       <!-- ======================== CÂU CHUYỆN 3 - Hình Trái, Chữ Phải  ======================== -->
-      <section class="story-section s3">
+      <section class="story-section s3 reveal-section" data-reveal-group>
         <div class="story-container">
-          <div class="story-img-wrapper">
+          <div class="story-img-wrapper reveal-item reveal-left">
             <div class="story-img-decor"></div>
             <img
               class="story-img"
@@ -152,7 +155,7 @@
               alt="Khay Mứt Tết"
             />
           </div>
-          <div class="story-text-col">
+          <div class="story-text-col reveal-item reveal-up">
             <div class="story-header">
               <span class="story-num">03.</span>
               <h2 class="story-title">Ngọt Ngào Dư Vị Khay Mứt Tết</h2>
@@ -179,9 +182,9 @@
       </section>
 
       <!-- ======================== CÂU CHUYỆN 4 - Chữ Trái, Hình Phải (row-reverse) ======================== -->
-      <section class="story-section s2">
+      <section class="story-section s2 reveal-section" data-reveal-group>
         <div class="story-container row-reverse">
-          <div class="story-text-col">
+          <div class="story-text-col reveal-item reveal-up">
             <div class="story-header">
               <span class="story-num">04.</span>
               <h2 class="story-title">Dư Vị Lai Rai Nồng Đượm</h2>
@@ -204,7 +207,7 @@
               cười nói.
             </p>
           </div>
-          <div class="story-img-wrapper">
+          <div class="story-img-wrapper reveal-item reveal-right">
             <div class="story-img-decor"></div>
             <img
               class="story-img"
@@ -216,8 +219,8 @@
       </section>
 
       <!-- ======================== CALL TO ACTION (CTA) CTA Cuối Cùng Dưới Đáy Phễu ======================== -->
-      <section class="story-cta">
-        <div class="story-cta-inner">
+      <section class="story-cta reveal-section" data-reveal-group>
+        <div class="story-cta-inner reveal-item reveal-up">
           <h3 class="story-cta-desc">
             Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ.
           </h3>
@@ -232,5 +235,6 @@
     <!-- Link file chức năng chung -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/story.js"></script>
   </body>
 </html>
