@@ -53,11 +53,11 @@ passwordIcons.forEach((icon) => {
   };
 });
 
-// ===== EMAIL REGEX =====
+// ===== EMAIL REGEX ===== //
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// ===== REGISTER =====
+// ===== REGISTER =====  //
 
 if (registerForm) {
   registerForm.addEventListener("submit", function (e) {
@@ -67,7 +67,7 @@ if (registerForm) {
     const email = document.getElementById("registerEmail").value.trim();
     const password = document.getElementById("registerPassword").value.trim();
 
-    if (name === "" || email === "" || password === "") {
+    if (!name || !email || !password) {
       alert("Vui lòng nhập đầy đủ thông tin");
       return;
     }
@@ -77,18 +77,23 @@ if (registerForm) {
       return;
     }
 
-    // ===== LƯU USER =====
-    const user = {
-      name: name,
-      email: email,
-      password: password,
-    };
+    // LẤY DANH SÁCH USERS
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    localStorage.setItem("user", JSON.stringify(user));
+    //  CHECK TRÙNG EMAIL
+    const isExist = users.some((u) => u.email === email);
+    if (isExist) {
+      alert("Email đã tồn tại");
+      return;
+    }
+
+    const user = { name, email, password };
+
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
 
     alert("Đăng ký thành công");
 
-    // quay lại màn chọn
     registerForm.classList.add("hidden");
     choiceBox.classList.remove("hidden");
   });
@@ -103,7 +108,7 @@ if (loginForm) {
     const email = document.getElementById("loginEmail").value.trim();
     const password = document.getElementById("loginPassword").value.trim();
 
-    if (email === "" || password === "") {
+    if (!email || !password) {
       alert("Vui lòng nhập đầy đủ thông tin");
       return;
     }
@@ -113,40 +118,22 @@ if (loginForm) {
       return;
     }
 
-    // ===== LẤY USER ĐÃ LƯU =====
-    const savedUser = JSON.parse(localStorage.getItem("user"));
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    if (!savedUser) {
-      alert("Chưa có tài khoản, hãy đăng ký");
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (!user) {
+      alert("Sai tài khoản hoặc mật khẩu");
       return;
     }
 
-    if (
-      email === savedUser.email &&
-      password === savedUser.password
-    ) {
-      alert("Đăng nhập thành công");
+    alert("Đăng nhập thành công");
 
-      // lưu user đang đăng nhập
-      localStorage.setItem("currentUser", savedUser.email);
+    // LƯU OBJECT
+    localStorage.setItem("currentUser", JSON.stringify(user));
 
-      window.location.href = "index.html";
-    } else {
-      alert("Sai tài khoản hoặc mật khẩu");
-    }
+    window.location.href = "index.html";
   });
-}
-
-// ===== HIỂN THỊ USER TRÊN HEADER =====
-
-const currentUser = localStorage.getItem("currentUser");
-
-if (currentUser) {
-  const userBtn = document.querySelector(
-    ".icon-btn[aria-label='Tài khoản']"
-  );
-
-  if (userBtn) {
-    userBtn.innerHTML = currentUser;
-  }
 }
