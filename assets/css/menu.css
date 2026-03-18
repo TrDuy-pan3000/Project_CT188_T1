@@ -1,5 +1,4 @@
 /* MAIN */
-
 /* Nền kem, tối thiểu full màn hình */
 main {
     background: var(--cream);
@@ -13,13 +12,13 @@ main {
 /* Container hero: thu nhỏ vừa phải — không chiếm quá nhiều màn hình */
 .story-hero {
     position: relative;
-    height: 180px;                              /* Compact — chỉ đủ thấy tiêu đề */
+    height: 180px;      /* Compact — chỉ đủ thấy tiêu đề */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: default;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Hiệu ứng mở rộng khi hover */
+    cursor: default; /* Không đổi con trỏ, chỉ hover để mở rộng và xem mô tả thêm */
 }
 
 /* Hover: mở ra thêm 24px */
@@ -31,7 +30,7 @@ main {
 /* .menu-hero-bg: bọc ảnh + overlay, phủ toàn bộ hero */
 .menu-hero-bg {
     position: absolute;
-    inset: 0;                                   /* top/right/bottom/left = 0 */
+    inset: 0;    /* top/right/bottom/left = 0 */
     z-index: 0;
 }
 
@@ -75,7 +74,7 @@ main {
     border-radius: 50%;
     background: rgba(255, 247, 0, 0.07);        /* Vàng cực mờ */
     top: -80px; right: -80px;
-    z-index: 1;
+    z-index: 1;   /* Nằm trên ảnh nhưng dưới nội dung */
     pointer-events: none;
 }
 
@@ -98,7 +97,7 @@ main {
     z-index: 2;
     text-align: center;
     max-width: 680px;
-    padding: 0 2rem;
+    padding: 0 2rem; /* Padding ngang để nội dung không dính sát mép trên desktop */
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);   /* Lift nhẹ khi hover hero */
 }
 .story-hero:hover .menu-hero-content {
@@ -132,10 +131,10 @@ main {
     font-size: clamp(1.1rem, 2.5vw, 1.6rem);   /* Nhỏ gọn */
     font-weight: 800;
     color: var(--white);
-    line-height: 1.2;
-    margin: 0 0 0.35rem;
+    line-height: 1.2;  /* Dãn dòng */
+    margin: 0 0 0.35rem;   /* Khoảng cách dưới tiêu đề, không có khoảng cách trên */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  /* Cho phép tiêu đề có 2 dòng */
     gap: 0.02em;
 }
 
@@ -323,7 +322,7 @@ main {
     position: absolute;  /* Nằm trên cùng, phủ ngang hết modal */
     top: 0; left: 0; right: 0;   /* Đặt ở trên cùng, trải rộng toàn bộ chiều ngang */
     height: 4px;
-    background: linear-gradient(90deg, var(--gold), var(--red-tet), var(--gold));
+    background: linear-gradient(90deg, var(--gold), var(--red-tet), var(--gold)); 
     border-radius: 20px 20px 0 0;
     pointer-events: none;  /* Không nhận sự kiện chuột, tránh cản trở thao tác trên modal */
 }
@@ -384,16 +383,16 @@ main {
     display: flex;
     gap: 0.75rem;
 }
-#closeFilter, #applyFilter { /* Cùng style cơ bản: nền trắng, viền trong suốt, chữ đậm, bo tròn đầy đủ, padding rộng để dễ bấm */
+#closeFilter, #applyFilter { 
     flex: 1;
     padding: 0.85rem;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-full);  /* Bo góc đầy tạo cảm giác "nút bấm" rõ ràng */
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 0.95rem;
     font-weight: 700;
     cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+    border: 2px solid transparent;  /* Viền mặc định trong suốt, chỉ hiện khi hover */
+    transition: all 0.3s ease;  /* Hiệu ứng hover mượt cho cả hai nút */
 }
 /* Hủy: viền đỏ */
 #closeFilter {
@@ -411,22 +410,21 @@ main {
 }
 #applyFilter:not(:disabled):hover {  /* Hover chỉ khi không disabled: tối hơn + nổi lên */
     transform: translateY(-2px);
-    box-shadow: var(--shadow-clay-hover);
+    box-shadow: var(--shadow-clay-hover); /* Bóng đổ sâu hơn khi hover */
 }
 #applyFilter:disabled {
     background: var(--mint-light);
     color: var(--brown-light);
     box-shadow: none;
-    cursor: not-allowed;
-    opacity: 0.65;
+    cursor: not-allowed;  /* Con trỏ không được phép khi disabled */
+    opacity: 0.65;  /* Mờ hơn khi disabled */
 }
 
 
 /* MENU SECTION + GRID */
-
 /* Vùng bọc section menu */
 .menu {
-    padding: 0 5% 5rem;
+    padding: 0 5% 5rem;  /* Padding ngang, dưới rộng để tạo khoảng cách */
     max-width: 1240px;
     margin: 0 auto;
 }
@@ -434,9 +432,9 @@ main {
 /* Lưới sản phẩm: 4 cột lớn, tự xuống dòng */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));  /* Tự động tạo cột, mỗi cột tối thiểu 240px, nếu đủ chỗ sẽ trải đều */
     gap: 1.5rem;
-    align-items: stretch;                       /* Tất cả card cùng chiều cao */
+    align-items: stretch;  /* Tất cả card cùng chiều cao */
 }
 
 
@@ -486,13 +484,13 @@ main {
         0 6px  14px rgba(26,  10,  0,  0.1);
 }
 
-/* ── Vùng ảnh — .image-wrapper (là thẻ <a>) ── */
+/* ── Vùng ảnh — .image-wrapper <a> ── */
 .image-wrapper {
-    display: block;                             /* <a> cần display block */
+    display: block;   /* <a> cần display block */
     position: relative;
-    height: 14rem;                              /* Chiều cao cố định đồng đều */
+    height: 14rem;  /* Chiều cao cố định đồng đều */
     overflow: hidden;
-    background: var(--mint-light);              /* Màu chờ khi ảnh chưa load */
+    background: var(--mint-light);  /* Màu chờ khi ảnh chưa load */
     flex-shrink: 0;
     text-decoration: none;
 }
@@ -563,7 +561,7 @@ main {
     padding: 1.1rem 1.2rem 1.1rem;
     display: flex;
     flex-direction: column;
-    flex: 1;                                    /* Chiếm hết chiều cao còn lại */
+    flex: 1;  /* Chiếm hết chiều cao còn lại */
     gap: 0;
 }
 
@@ -601,14 +599,13 @@ main {
 
 /* ── Footer card: giá + nút — .card-bottom ── */
 .card-bottom {
-    margin-top: auto;                           /* Dính xuống đáy card */
+    margin-top: auto;   /* Dính xuống đáy card */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;   /* Giá bên trái, nút bên phải */
     gap: 0.6rem;
     padding-top: 0.85rem;
-    /* Đường kẻ phân cách nhẹ trên giá */
-    border-top: 1px solid rgba(204, 39, 41, 0.1);
+    border-top: 1px solid rgba(204, 39, 41, 0.1);  /* Đường kẻ nhẹ phân tách nội dung với giá + nút */
 }
 
 /* Giá tiền: đỏ, to, đậm */
@@ -619,7 +616,7 @@ main {
     color: var(--red-tet);
     white-space: nowrap;
     flex-shrink: 0;
-    margin: 0;                                  /* Reset margin của <p> */
+    margin: 0; /* Reset margin của <p> */
 }
 
 /* Nút "Thêm vào giỏ" — .btn-add */
@@ -632,7 +629,7 @@ main {
     background: linear-gradient(135deg, var(--red-tet), var(--coral));
     color: var(--white);
     border: none;
-    border-radius: var(--radius-sm);            /* Bo góc nhỏ như style chung */
+    border-radius: var(--radius-sm); /* Bo góc nhỏ hơn để tạo cảm giác "nút bấm" rõ ràng */
 
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 0.88rem;
@@ -656,15 +653,15 @@ main {
     top: 50%; left: -80%;
     width: 55%; height: 200%;
     background: rgba(255,255,255,0.22);
-    transform: translateY(-50%) skewX(-20deg);
-    transition: left 0.38s ease;
+    transform: translateY(-50%) skewX(-20deg); /* Tạo hiệu ứng ánh sáng nghiêng */
+    transition: left 0.38s ease; /* Di chuyển từ trái sang phải khi hover */
     pointer-events: none;
 }
-.btn-add:hover::before { left: 120%; }
+.btn-add:hover::before { left: 120%; } /* Khi hover, ánh sáng chạy qua nút từ trái sang phải */
 
 /* Hover nút */
 .btn-add:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px);  /* Nổi lên nhẹ */
     background: linear-gradient(135deg, var(--red-dark), var(--red-tet));
     box-shadow: 0 6px 18px rgba(204, 39, 41, 0.38);
     color: var(--white);
@@ -672,15 +669,11 @@ main {
 .btn-add:active { transform: translateY(0); }
 
 
-/* ==========================================
-   8. CARD ẨN — bị filter/search lọc ra
-   ========================================== */
+/* CARD ẨN — bị filter/search lọc ra */
 .menu-card.hidden { display: none; }
 
 
-/* ==========================================
-   9. ANIMATIONS
-   ========================================== */
+/* ANIMATIONS */
 
 /* Hero content rơi từ trên xuống */
 @keyframes heroFadeDown {
@@ -707,18 +700,14 @@ main {
 }
 
 
-/* ==========================================
-   10. RESPONSIVE — Tablet (≤ 992px)
-   ========================================== */
+/* RESPONSIVE — Tablet (≤ 992px) */
 @media (max-width: 992px) {
     .story-hero        { height: 155px; }
     .story-hero:hover  { height: 175px; }
 }
 
 
-/* ==========================================
-   11. RESPONSIVE — Tablet nhỏ (≤ 768px)
-   ========================================== */
+/* RESPONSIVE — Tablet nhỏ (≤ 768px) */
 @media (max-width: 768px) {
 
     .story-hero        { height: 140px; }
@@ -752,20 +741,18 @@ main {
 }
 
 
-/* ==========================================
-   12. RESPONSIVE — Mobile (≤ 480px)
-   ========================================== */
+/* RESPONSIVE — Mobile (≤ 480px) */
 @media (max-width: 480px) {
 
     .story-hero        { height: 120px; }
     .story-hero:hover  { height: 136px; }
     .menu-hero-desc    { display: none; }
 
-    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-    .menu { padding: 0 3% 2.5rem; }
-    .image-wrapper { height: 9rem; }
+    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; } /* Giữ 2 cột nhưng giảm gap */
+    .menu { padding: 0 3% 2.5rem; }   /* Giảm padding tổng thể */
+    .image-wrapper { height: 9rem; }  /* Ảnh thấp hơn để phù hợp với màn hình nhỏ hơn */
 
-    .content-wrapper { padding: 0.8rem 0.9rem; }
+    .content-wrapper { padding: 0.8rem 0.9rem; } /* Thu nhỏ padding nội dung card */
     .food-name {
         font-size: 0.9rem;
         min-height: calc(0.9rem * 1.4 * 2);
@@ -779,13 +766,11 @@ main {
 }
 
 
-/* ==========================================
-   13. SCROLLBAR
-   ========================================== */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--cream); }
-::-webkit-scrollbar-thumb {
-    background: var(--red-tet);
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; } /* Thanh cuộn dọc */
+::-webkit-scrollbar-track { background: var(--cream); }  /* Nền thanh cuộn */
+::-webkit-scrollbar-thumb {  
+    background: var(--red-tet); 
     border-radius: var(--radius-full);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--red-dark); }
