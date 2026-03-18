@@ -2,11 +2,18 @@
   {
     "id": 1,
     "name": "Bánh Tét Nhân Chuối",
+    "category": "Bánh",
     "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
     "description": "Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được làm hay là bán quanh năm.",
+    "shortDescription": "Bánh tét nếp sáp dẻo thơm, nước cốt dừa béo ngậy, nhân chuối xiêm đỏ ngọt thanh",
     "price": "180.000",
-    "mainImg": "assets/images/story-banh-chung-new.png",
-    "subImg1": "assets/images/product-banh-tet-chuoi-1.jpg",
+    "unit": "Đòn",
+    "mainImg": "assets/images/product-banh-tet-chuoi-1.jpg",
+    "subImg1": "assets/images/story-banh-chung-new.png",
     "subImg2": "assets/images/product-banh-tet-chuoi-2.jpg",
     "subImg3": "assets/images/story-banh-chung-new.png",
     "subImg4": "assets/images/product-banh-tet-dau-2.jpg",
@@ -16,7 +23,6 @@
     "exp": "- 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />- 03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông).",
     "uses": "- Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn. <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên bản.<br /> - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai mặt, ăn kèm với dưa món, củ kiệu hoặc tương ớt.",
     "preserve": " - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br /> - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực phẩm và bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng hoặc chiên lại.",
-
     "reviews": [
       {
         "avatar": "👩",
@@ -48,79 +54,196 @@
       }
     ]
   },
-
   {
     "id": 2,
-    "name": "Bánh Tét Nhân Chuối",
-    "rating": "⭐⭐⭐⭐",
-    "description": "Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được làm hay là bán quanh năm.",
-    "price": "180.000",
-    "mainImg": "assets/images/product-banh-tet-chuoi-1.jpg",
-    "subImg1": "assets/images/story-banh-chung-new.png",
-    "subImg2": "assets/images/story-banh-chung-new.png",
-    "subImg3": "assets/images/story-banh-chung-new.png",
-    "subImg4": "assets/images/story-banh-chung-new.png",
-    "weight": "800g - 1kg / đòn.",
-    "ingredientList": "- Bánh tét nhân đậu (Ngọt/Mặn): Gạo nếp sáp thượng hạng dẻo thơm, đậu xanh tách vỏ sên kỹ giữ được độ bùi, nước cốt dừa béo ngậy, gia vị cơ bản (muối, tiêu, đường) và lá chuối tươi. (Nếu bán kèm nhân thịt mỡ, bạn có thể bổ sung thêm: thịt ba rọi ướp vị đậm đà).<br />- Bánh tét nhân chuối (Ngọt): Gạo nếp sáp trộn đều với nước cốt dừa thơm béo, nhân chuối xiêm (chuối sứ) chín rục được ướp đường phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên, mang lại vị ngọt thanh, dẻo mềm và bọc ngoài bằng lá chuối tươi.",
-    "packing": "Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm và kéo dài thời gian bảo quản.",
-    "exp": "- 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />- 03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông).",
-    "uses": "- Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn. <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên bản.<br /> - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai mặt, ăn kèm với dưa món, củ kiệu hoặc tương ớt.",
-    "preserve": " - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br /> - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực phẩm và bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng hoặc chiên lại."
+    "name": "Bánh Chưng Truyền Thống",
+    "category": "Bánh",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
+    "description": "Bánh chưng là linh hồn của ngày Tết cổ truyền miền Bắc. Bánh có hình vuông tượng trưng cho đất, gói ghém trong đó là sự kết tinh của trời đất với gạo nếp, đỗ xanh, thịt lợn và lá dong xanh mát. Đây không chỉ là món ăn mà còn là biểu tượng của lòng biết ơn tổ tiên, sự đoàn tụ gia đình trong dịp năm mới. Một chiếc bánh chưng xanh trên bàn thờ gia tiên là điều không thể thiếu để cầu mong một năm mới mưa thuận gió hòa, sung túc bình an.",
+    "shortDescription": "Bánh chưng vuông, gạo nếp cái hoa vàng, nhân đậu xanh thịt heo đậm đà",
+    "price": "220.000",
+    "unit": "Chiếc",
+    "mainImg": "assets/images/story-banh-chung-new.png",
+    "subImg1": "assets/images/product-banh-chung-1.jpg",
+    "subImg2": "assets/images/product-banh-chung-2.jpg",
+    "subImg3": "assets/images/product-banh-chung-3.jpg",
+    "subImg4": "assets/images/product-banh-chung-4.jpg",
+    "weight": "1kg - 1.2kg / chiếc.",
+    "ingredientList": "- Gạo nếp cái hoa vàng hạt to, dẻo thơm ngâm kỹ.<br />- Đậu xanh lòng vàng xát vỏ, đồ chín tới giữ độ bùi béo.<br />- Thịt ba chỉ lợn sạch (tỉ lệ nạc mỡ hài hòa) ướp tiêu sọ, hành khô và gia vị đậm đà.<br />- Bọc ngoài bằng lá dong nếp xanh mướt, lạt giang dẻo dai.",
+    "packing": "Bọc lá dong truyền thống, bên ngoài hút chân không cẩn thận để giữ bánh lâu hỏng và giữ nguyên phom dáng vuông vức.",
+    "exp": "- 05 ngày kể từ ngày sản xuất ở nhiệt độ thường (thời tiết mát mẻ).<br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh).<br />- 02 tháng kể từ ngày sản xuất khi cấp đông.",
+    "uses": "- Dùng lạt tước nhỏ để cắt bánh thành 8 phần đều nhau (cắt bằng lạt giúp mặt bánh mịn, không bị dính như dùng dao).<br />- Thưởng thức trực tiếp ăn kèm dưa hành, thịt đông.<br />- Có thể chiên (rán) giòn ăn cùng xì dầu, tương ớt rất đưa miệng.",
+    "preserve": "- Để nơi thoáng mát, tránh ánh nắng, không ép bánh quá chặt.<br />- Nếu bảo quản tủ lạnh, khi ăn cần luộc lại, quay lò vi sóng hoặc hấp cách thủy cho bánh mềm dẻo trở lại.",
+    "reviews": [
+      {
+        "avatar": "👵",
+        "name": "Cô Bình",
+        "address": "Đống Đa, Hà Nội",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Bánh gói rất chắc tay, thịt mỡ béo ngậy thấm đều vào nhụy đậu xanh, ăn rất đúng vị Tết xưa. Sẽ ủng hộ shop dài dài."
+      },
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Hoàng",
+        "address": "Hải Phòng",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Giao hàng nhanh, bánh hút chân không sạch sẽ. Lá dong vẫn giữ được màu xanh rất đẹp mắt."
+      },
+      {
+        "avatar": "👩‍🦰",
+        "name": "Chị Thuỷ",
+        "address": "Quận 2, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Mình ở Nam nhưng thèm bánh chưng Bắc. Mua của shop ăn thử mà ghiền luôn, gạo nếp cái dẻo thơm thật sự."
+      }
+    ]
   },
-
   {
     "id": 3,
-    "name": "Bánh Tét Nhân Chuối",
-    "rating": "⭐⭐⭐",
-    "description": "Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được làm hay là bán quanh năm.",
-    "price": "180.000",
-    "mainImg": "assets/images/product-banh-tet-chuoi-2.jpg",
-    "subImg1": "assets/images/story-banh-chung-new.png",
-    "subImg2": "assets/images/story-banh-chung-new.png",
-    "subImg3": "assets/images/story-banh-chung-new.png",
-    "subImg4": "assets/images/story-banh-chung-new.png",
+    "name": "Bánh Tét Lá Cẩm",
+    "category": "Bánh",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
+    "description": "Bánh tét lá cẩm là đặc sản trứ danh của vùng đất Tây Đô (Cần Thơ). Bánh thu hút người thưởng thức không chỉ bởi hương vị vô cùng thơm ngon mà còn bởi màu tím hồng tự nhiên tuyệt đẹp từ lá cẩm. Lớp nếp dẻo thơm xào nước cốt dừa hòa quyện cùng nhân đậu xanh, thịt ba rọi mằn mặn và trứng muối béo ngậy, tạo nên một bản hòa tấu hương vị rực rỡ cho ngày Tết phương Nam.",
+    "shortDescription": "Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ trứng muối, hương vị đặc trưng miền Tây",
+    "price": "200.000",
+    "unit": "Đòn",
+    "mainImg": "assets/images/product-banh-tet-dau-1.jpg",
+    "subImg1": "assets/images/product-banh-tet-cam-1.jpg",
+    "subImg2": "assets/images/product-banh-tet-cam-2.jpg",
+    "subImg3": "assets/images/product-banh-tet-cam-3.jpg",
+    "subImg4": "assets/images/product-banh-tet-cam-4.jpg",
     "weight": "800g - 1kg / đòn.",
-    "ingredientList": "- Bánh tét nhân đậu (Ngọt/Mặn): Gạo nếp sáp thượng hạng dẻo thơm, đậu xanh tách vỏ sên kỹ giữ được độ bùi, nước cốt dừa béo ngậy, gia vị cơ bản (muối, tiêu, đường) và lá chuối tươi. (Nếu bán kèm nhân thịt mỡ, bạn có thể bổ sung thêm: thịt ba rọi ướp vị đậm đà).<br />- Bánh tét nhân chuối (Ngọt): Gạo nếp sáp trộn đều với nước cốt dừa thơm béo, nhân chuối xiêm (chuối sứ) chín rục được ướp đường phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên, mang lại vị ngọt thanh, dẻo mềm và bọc ngoài bằng lá chuối tươi.",
-    "packing": "Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm và kéo dài thời gian bảo quản.",
-    "exp": "- 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />- 03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông).",
-    "uses": "- Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn. <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên bản.<br /> - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai mặt, ăn kèm với dưa món, củ kiệu hoặc tương ớt.",
-    "preserve": " - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br /> - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực phẩm và bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng hoặc chiên lại."
+    "ingredientList": "- Gạo nếp sáp thượng hạng ngâm nước cốt lá cẩm tự nhiên, xào qua với nước cốt dừa để hạt nếp nở đều và béo bùi.<br />- Nhân đậu xanh sên kỹ, thịt ba rọi ướp gia vị đậm đà.<br />- Lòng đỏ trứng muối béo ngậy tạo điểm nhấn.<br />- Gói bằng lá chuối tươi, buộc lạt chắc chắn.",
+    "packing": "Hút chân không từng đòn, có dán tem nhãn thiết kế mang đậm phong cách miền Tây, thích hợp làm quà biếu.",
+    "exp": "- 05 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC.<br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh).",
+    "uses": "- Cắt khoanh tròn và dùng trực tiếp để cảm nhận hương vị cốt dừa dẻo thơm.<br />- Cực kỳ hợp khi ăn kèm thịt kho hột vịt và dưa giá chua ngọt ngày Tết.",
+    "preserve": "- Treo bánh hoặc để nằm nơi khô ráo thoáng mát.<br />- Bọc kín màng bọc thực phẩm phần đã cắt nếu dùng không hết rồi cho vào ngăn mát.",
+    "reviews": [
+      {
+        "avatar": "👩‍🎓",
+        "name": "Bạn Linh",
+        "address": "Gò Vấp, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Màu lá cẩm đẹp xỉu luôn á, cắt ra mâm cúng nhìn rất sang. Nhân trứng muối bên trong to và bùi lắm!"
+      },
+      {
+        "avatar": "🧔",
+        "name": "Chú Hùng",
+        "address": "Bình Dương",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Vị dừa béo vừa vặn, không bị ngấy. Bánh dẻo, để 3 ngày bên ngoài nếp vẫn không bị sượng."
+      },
+      {
+        "avatar": "👱‍♀️",
+        "name": "Chị Oanh",
+        "address": "Đà Nẵng",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Đóng gói kỹ, ship xa mà bánh vẫn ngon lành. Cả nhà mình ai cũng khen."
+      }
+    ]
   },
-
   {
     "id": 4,
-    "name": "Bánh Tét Nhân Chuối",
-    "rating": "⭐⭐",
-    "description": "Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được làm hay là bán quanh năm.",
-    "price": "180.000",
-    "mainImg": "assets/images/product-banh-tet-dau-1.jpg",
-    "subImg1": "assets/images/story-banh-chung-new.png",
-    "subImg2": "assets/images/story-banh-chung-new.png",
-    "subImg3": "assets/images/story-banh-chung-new.png",
-    "subImg4": "assets/images/story-banh-chung-new.png",
-    "weight": "800g - 1kg / đòn.",
-    "ingredientList": "- Bánh tét nhân đậu (Ngọt/Mặn): Gạo nếp sáp thượng hạng dẻo thơm, đậu xanh tách vỏ sên kỹ giữ được độ bùi, nước cốt dừa béo ngậy, gia vị cơ bản (muối, tiêu, đường) và lá chuối tươi. (Nếu bán kèm nhân thịt mỡ, bạn có thể bổ sung thêm: thịt ba rọi ướp vị đậm đà).<br />- Bánh tét nhân chuối (Ngọt): Gạo nếp sáp trộn đều với nước cốt dừa thơm béo, nhân chuối xiêm (chuối sứ) chín rục được ướp đường phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên, mang lại vị ngọt thanh, dẻo mềm và bọc ngoài bằng lá chuối tươi.",
-    "packing": "Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm và kéo dài thời gian bảo quản.",
-    "exp": "- 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />- 03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông).",
-    "uses": "- Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn. <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên bản.<br /> - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai mặt, ăn kèm với dưa món, củ kiệu hoặc tương ớt.",
-    "preserve": " - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br /> - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực phẩm và bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng hoặc chiên lại."
+    "name": "Giò Chả Thượng Hạng",
+    "category": "Tết nhâm nhi",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
+    "description": "Giò lụa (chả lụa) là món ăn không thể thiếu trên mâm cỗ Tết của người Việt, tượng trưng cho sự trọn vẹn, tinh khiết và 'trong ấm ngoài êm'. Từng khoanh giò lụa hồng hào, dai giòn sần sật, thơm lừng mùi nước mắm cốt và tiêu sọ, được chế biến từ thịt heo tươi nóng vừa mổ, mang đến trải nghiệm ẩm thực tinh tế, đậm đà bản sắc dân tộc.",
+    "shortDescription": "Giò lụa, chả quế, chả chiên — nguyên liệu tươi, chế biến thủ công",
+    "price": "280.000",
+    "unit": "Đòn",
+    "mainImg": "assets/images/product-combo-nhau.jpg",
+    "subImg1": "assets/images/product-gio-cha-1.jpg",
+    "subImg2": "assets/images/product-gio-cha-2.jpg",
+    "subImg3": "assets/images/product-gio-cha-3.jpg",
+    "subImg4": "assets/images/product-gio-cha-4.jpg",
+    "weight": "500g - 1kg / đòn.",
+    "ingredientList": "- Thịt nạc thăn heo tươi nóng (vừa mổ), lọc sạch gân mỡ, giã/xay nhuyễn tạo độ kết dính tự nhiên.<br />- Nước mắm cốt nhĩ cá cơm nguyên chất.<br />- Tiêu sọ trắng xay vỡ, chút đường thanh.<br />- Bọc lót lá chuối tươi bên trong để giò có mùi thơm đặc trưng khi luộc, bên ngoài bọc màng nhôm/nilon an toàn.",
+    "packing": "Đóng gói bọc lá chuối truyền thống, hút chân không bên ngoài. Tem nhãn thiết kế sang trọng, thích hợp đóng giỏ quà.",
+    "exp": "- 02-03 ngày ở nhiệt độ thường.<br />- 10-15 ngày trong ngăn mát tủ lạnh ở nhiệt độ 0-5oC.",
+    "uses": "- Thái khoanh tròn, cắt miếng vừa ăn, bày đĩa hoa thị đơm cỗ.<br />- Kẹp bánh mì, ăn cùng xôi, bánh cuốn hoặc bánh chưng/bánh tét đều xuất sắc.",
+    "preserve": "- Bảo quản tốt nhất trong ngăn mát tủ lạnh. Nếu đã cắt ra, dùng màng bọc thực phẩm bọc kín mặt cắt để giò không bị thâm và khô.",
+    "reviews": [
+      {
+        "avatar": "👨‍🦳",
+        "name": "Bác Tài",
+        "address": "Thanh Xuân, Hà Nội",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Giò rất thơm mùi lá chuối và nước mắm mộc nhĩ, không có vị bột, ăn dai giòn đúng chuẩn giò lụa truyền thống."
+      },
+      {
+        "avatar": "👩‍💼",
+        "name": "Chị Lan Anh",
+        "address": "Quận 7, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Thích nhất là chả không bị hàn thu, cho các bé ăn kẹp bánh mì buổi sáng rất yên tâm. 10 điểm chất lượng!"
+      },
+      {
+        "avatar": "👦",
+        "name": "Anh Phúc",
+        "address": "Đồng Nai",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Giá hơi nhỉnh hơn chợ một chút nhưng bù lại thịt thơm, đóng gói hút chân không chuyên nghiệp."
+      }
+    ]
   },
   {
     "id": 5,
-    "name": "Bánh Tét Nhân Chuối",
-    "rating": "⭐",
-    "description": "Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được làm hay là bán quanh năm.",
-    "price": "180.000",
-    "mainImg": "assets/images/product-banh-tet-dau-2.jpg",
-    "subImg1": "assets/images/story-banh-chung-new.png",
-    "subImg2": "assets/images/story-banh-chung-new.png",
-    "subImg3": "assets/images/story-banh-chung-new.png",
-    "subImg4": "assets/images/story-banh-chung-new.png",
-    "weight": "800g - 1kg / đòn.",
-    "ingredientList": "- Bánh tét nhân đậu (Ngọt/Mặn): Gạo nếp sáp thượng hạng dẻo thơm, đậu xanh tách vỏ sên kỹ giữ được độ bùi, nước cốt dừa béo ngậy, gia vị cơ bản (muối, tiêu, đường) và lá chuối tươi. (Nếu bán kèm nhân thịt mỡ, bạn có thể bổ sung thêm: thịt ba rọi ướp vị đậm đà).<br />- Bánh tét nhân chuối (Ngọt): Gạo nếp sáp trộn đều với nước cốt dừa thơm béo, nhân chuối xiêm (chuối sứ) chín rục được ướp đường phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên, mang lại vị ngọt thanh, dẻo mềm và bọc ngoài bằng lá chuối tươi.",
-    "packing": "Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm và kéo dài thời gian bảo quản.",
-    "exp": "- 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />- 03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông).",
-    "uses": "- Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn. <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên bản.<br /> - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai mặt, ăn kèm với dưa món, củ kiệu hoặc tương ớt.",
-    "preserve": " - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br /> - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực phẩm và bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng hoặc chiên lại."
+    "name": "Hộp Mứt Tết Đặc Biệt",
+    "category": "Quà cáp",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
+    "description": "Khay mứt Tết là nét văn hóa hiếu khách, là câu chuyện đầu năm rôm rả bên tách trà nóng của người Việt. Hộp Mứt Tết Đặc Biệt quy tụ những hương vị tinh hoa truyền thống: chút cay nồng ấm bụng của mứt gừng, vị chua thanh kích thích vị giác của mứt tắc, sự bùi béo của mứt hạt sen và hương dừa ngọt ngào dẻo thơm. Một món quà chứa đựng lời chúc năm mới ngọt ngào, viên mãn.",
+    "shortDescription": "Mứt gừng, mứt dừa, mứt bí, mứt quất — hộp 6 vị thượng hạng",
+    "price": "350.000",
+    "unit": "Hộp",
+    "mainImg": "assets/images/product-bia-cao-cap.jpg",
+    "subImg1": "assets/images/product-mut-tet-1.jpg",
+    "subImg2": "assets/images/product-mut-tet-2.jpg",
+    "subImg3": "assets/images/product-mut-tet-3.jpg",
+    "subImg4": "assets/images/product-mut-tet-4.jpg",
+    "weight": "800g / hộp lục giác 6 ngăn.",
+    "ingredientList": "- Mứt dừa non thái sợi, sên đường phèn dẻo ngọt vừa phải.<br />- Mứt gừng Huế sấy dẻo cay nồng.<br />- Mứt tắc (quất) cánh hoa nguyên quả chua ngọt thanh tao.<br />- Mứt hạt sen trần bùi bùi, ngọt dịu.<br />- Mứt bí đao giòn sần sật mát lành.<br />- Cam kết không sử dụng chất tẩy trắng và màu thực phẩm công nghiệp.",
+    "packing": "Mỗi loại mứt được đóng gói túi zip riêng biệt, xếp gọn trong khay nhựa bọc hộp giấy bồi cứng cáp, in họa tiết Én Xuân ép kim sang trọng.",
+    "exp": "- 03 tháng kể từ ngày sản xuất.",
+    "uses": "- Bày biện ra khay mứt tiếp khách ngày Tết.<br />- Thưởng thức nhâm nhi cùng trà mạn, trà sen hoặc trà oolong nóng để cần bằng vị ngọt.",
+    "preserve": "- Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br />- Buộc kín miệng túi hoặc đậy nắp khay mứt ngay sau khi sử dụng để tránh kiến và gió làm chảy nước.",
+    "reviews": [
+      {
+        "avatar": "👱‍♀️",
+        "name": "Chị Hồng",
+        "address": "Tân Bình, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Hộp mứt đẹp xuất sắc, mua biếu sếp mà sếp khen quá trời. Mứt ngọt thanh không bị gắt cổ."
+      },
+      {
+        "avatar": "👨‍🍳",
+        "name": "Anh Vỹ",
+        "address": "Bắc Ninh",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Mứt hạt sen làm rất khéo, không bị vỡ nát, ăn bùi béo uống trà hợp vô cùng."
+      },
+      {
+        "avatar": "👩",
+        "name": "Cô Tâm",
+        "address": "Vũng Tàu",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Thích nhất mứt gừng ở đây, cay thơm, ngày lạnh ăn vào ấm cả bụng. Sẽ giới thiệu cho bạn bè."
+      }
+    ]
   }
 ]
