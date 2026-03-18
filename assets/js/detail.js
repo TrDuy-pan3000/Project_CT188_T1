@@ -25,28 +25,28 @@ const getData = async () => {
           <div class="big-img-left">
             <img
               src="${findProductId.mainImg}"
-              alt="Anh-1"
+              alt="${findProductId.name}"
               id="main-img"
             />
             <div class="gallery-container">
               <img
                 src="${findProductId.subImg1}"
-                alt=""
+                alt="${findProductId.name}"
                 class="small-img"
               />
               <img
                 src="${findProductId.subImg2}"
-                alt=""
+                alt="${findProductId.name}"
                 class="small-img"
               />
               <img
                 src="${findProductId.subImg3}"
-                alt=""
+                alt="${findProductId.name}"
                 class="small-img"
               />
               <img
                 src="${findProductId.subImg4}"
-                alt=""
+                alt="${findProductId.name}"
                 class="small-img"
               />
             </div>
@@ -58,7 +58,7 @@ const getData = async () => {
               ${findProductId.description}
               <a href="./story.html">Xem thêm các câu chuyện ngày tết →</a>
             </p>
-            <strong class="product-price">${findProductId.price}₫ <span> / Đòn</span></strong>
+            <strong class="product-price">${findProductId.price}₫ <span> / ${findProductId.unit}</span></strong>
             <div class="buying-wrap">
               <input id="quantity" type="number" value="1" min="1" />
               <button class="add-to-cart-button" id="add-cart">
