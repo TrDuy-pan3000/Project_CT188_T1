@@ -9,6 +9,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   refreshMenuCacheFromDom();
   initHeaderSearch();
   initBackToTop();
+  document.addEventListener("DOMContentLoaded", async () => {
+  await Promise.all([
+    injectSharedSection(".header", "header.html"),
+    injectSharedSection(".footer", "footer.html")
+  ]);
+
+  markActiveNav();
+  refreshMenuCacheFromDom();
+  initHeaderSearch();
+  initBackToTop();
+  initUserUI();
+});
 });
 
 async function injectSharedSection(selector, filePath) {
@@ -367,5 +379,14 @@ function initBackToTop() {
   button.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  function initUserUI() {
+  const currentUser = localStorage.getItem("currentUser");
+  const userBtn = document.querySelector(".icon-btn[aria-label='Tài khoản']");
+
+  if (currentUser && userBtn) {
+    userBtn.innerHTML = `<i class="fa-regular fa-user"></i> ${currentUser}`;
+  }
+}
 }
 
