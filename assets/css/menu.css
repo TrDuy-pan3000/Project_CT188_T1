@@ -32,6 +32,12 @@ main {
     position: absolute;
     inset: 0;    /* top/right/bottom/left = 0 */
     z-index: 0;
+    background: linear-gradient(
+        135deg,
+        var(--red-dark) 0%,
+        var(--red-tet) 55%,
+        var(--coral) 100%
+    );
 }
 
 /* Ảnh nền: kéo full, crop đẹp + zoom nhẹ khi hover */
@@ -49,21 +55,6 @@ main {
 /* Zoom ảnh khi hover toàn hero */
 .story-hero:hover .menu-hero-bg img {
     transform: scale(1.12);
-}
-
-/* Fallback: khi ảnh không load — nền gradient đỏ Tết */
-.menu-hero-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    /* Gradient đỏ đậm → đỏ Tết → san hô */
-    background: linear-gradient(
-        135deg,
-        var(--red-dark)  0%,
-        var(--red-tet)  55%,
-        var(--coral)   100%
-    );
-    z-index: 0;
 }
 
 /* Họa tiết trang trí: hình tròn vàng mờ góc trên phải */
@@ -149,7 +140,7 @@ main {
 /* Mô tả: ẩn mặc định trong hero compact, hiện khi hover */
 .menu-hero-desc {
     color: rgba(255, 255, 255, 0.88);
-    font-size: 0.9rem;
+    font-size: clamp(0.68rem, 1.6vw, 0.9rem);  /* Nhỏ gọn, vừa phải cho mô tả dài */
     line-height: 1.65;
     margin: 0; /* Reset margin của <p> */
     font-family: 'Be Vietnam Pro', sans-serif; /* Font đơn giản, dễ đọc cho mô tả dài */
@@ -328,6 +319,7 @@ main {
 }
 
 /* Mở: trượt lên */
+.filter-modal.active,
 .filter-modal.open { bottom: 0; }
 
 /* Tiêu đề modal */
@@ -370,6 +362,7 @@ main {
     background: var(--pink-light);
 }
 /* Đang được chọn */
+.category-btn.active,
 .category-btn.selected {  /* Nền đỏ Tết, chữ trắng, viền đỏ rõ */
     background: var(--red-tet);
     border-color: var(--red-tet);
@@ -712,8 +705,7 @@ main {
 
     .story-hero        { height: 140px; }
     .story-hero:hover  { height: 158px; }
-    .menu-hero-title   { font-size: clamp(1rem, 3.5vw, 1.4rem); }
-
+    .menu-hero-title   { font-size: clamp(1rem, 3.5vw, 1.4rem); } /* Tiêu đề nhỏ hơn để phù hợp với hero thấp hơn */
     /* Toolbar: đổi thành 2 hàng */
     .top-actions {
         margin: 1.5rem 1rem 2rem;
