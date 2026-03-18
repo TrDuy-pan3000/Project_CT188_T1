@@ -52,11 +52,30 @@
         </div>
       </section>
 
-      <div class="filter-bar">
-        <button>Tất cả</button>
-        <button>Bánh truyền thống</button>
-        <button>Quà cáp</button>
-        <button>Tết nhâm nhi</button>
+      <div class="top-actions">
+        <button id="filterBtn">Bộ lọc</button>
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="search" id="searchInput" placeholder="Tìm món ngon..." />
+        </div>
+      </div>
+
+      <div class="overlay" id="overlay"></div>
+
+      <div class="filter-modal" id="filterModal">
+        <h3>Chọn danh mục</h3>
+        <div class="category-list">
+          <button class="category-btn" data-value="all">Tất cả</button>
+          <button class="category-btn" data-value="Bánh">Bánh Tết</button>
+          <button class="category-btn" data-value="Tết nhâm nhi">
+            Tết Nhâm Nhi
+          </button>
+          <button class="category-btn" data-value="Quà cáp">Quà cáp</button>
+        </div>
+        <div class="actions">
+          <button id="closeFilter">Hủy</button>
+          <button id="applyFilter" disabled>Áp dụng</button>
+        </div>
       </div>
 
       <section class="menu">
