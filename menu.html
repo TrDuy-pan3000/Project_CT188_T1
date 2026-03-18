@@ -29,117 +29,59 @@
     <header class="header"></header>
 
     <main style="padding-top: 5rem">
-      <h1
-        style="
-          font-family: &quot;Playfair Display&quot;, serif;
-          text-align: center;
-          padding: 2rem;
-          color: var(--brown-dark);
-        "
-      >
-        🍜 Thực Đơn Nhà Ngọ
-      </h1>
-
-      <div class="top-actions">
-        <button id="filterBtn">Bộ lọc</button>
-        <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input type="search" id="searchInput" placeholder="Tìm món ngon..." />
+      <section class="story-hero" id="storyHero">
+        <!-- Ảnh nền -->
+        <div class="menu-hero-bg" id="menuHeroBg">
+          <img src="" alt="Hero Image" />
+          <!-- Overlay đen dốc để text hiện lên sắc nét -->
+          <div class="menu-hero-overlay"></div>
         </div>
+
+        <!-- Nội dung trung tâm của Hero Banner -->
+        <div class="menu-hero-content menu-hero-enter" id="menuHeroContent">
+          <div class="menu-hero-sub">GIAN BẾP NHÀ NGỌ</div>
+          <h1 class="menu-hero-title">
+            <span>Trọn Vị Quê Nhà</span>
+            <span>Đậm Đà Ngày Xuân</span>
+          </h1>
+          <div class="menu-hero-divider"></div>
+          <p class="menu-hero-desc">
+            Từ gian bếp nhỏ, Nhà Ngọ gói ghém trọn vẹn hương vị Tết xưa, mang sự
+            ấm áp và tình thân lên mâm cỗ sum vầy của gia đình bạn.
+          </p>
+        </div>
+      </section>
+
+      <div class="filter-bar">
+        <button>Tất cả</button>
+        <button>Bánh truyền thống</button>
+        <button>Quà cáp</button>
+        <button>Tết nhâm nhi</button>
       </div>
 
-      <div class="overlay" id="overlay"></div>
-
-      <div class="filter-modal" id="filterModal">
-        <h3>Chọn danh mục</h3>
-        <div class="category-list">
-          <button class="category-btn" data-value="all">Tất cả</button>
-          <button class="category-btn" data-value="banh-tet">Bánh Tết</button>
-          <button class="category-btn" data-value="tet-nham-nhi">
-            Tết Nhâm Nhi
-          </button>
-          <button class="category-btn" data-value="do-uong">Đồ Uống</button>
-        </div>
-        <div class="actions">
-          <button id="closeFilter">Hủy</button>
-          <button id="applyFilter" disabled>Áp dụng</button>
-        </div>
-      </div>
-
-      <div class="menu-grid">
-        <div class="menu-card" data-category="banh-tet">
-          <div class="image-wrapper">
-            <img src="assets/images/product-combo-tet.jpg" alt="Bánh Tết" />
-            <span class="badge new">Mới</span>
+      <section class="menu">
+        <div class="menu-grid">
+          <div class="menu-card" data-category="banh-tet">
+            <a href="detail.html?id=" class="image-wrapper">
+              <img src="assets/images/product-combo-tet.jpg" alt="Bánh Tết" />
+            </a>
+            <div class="content-wrapper">
+              <span class="card-tag trad">Truyền thống</span>
+              <h3 class="food-name">Bánh Tét</h3>
+              <p class="short-description">
+                Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ, hương vị đặc
+                trưng miền Tây
+              </p>
+              <div class="card-bottom">
+                <p class="price">350.000₫</p>
+                <a href="detail.html" class="btn-add">
+                  <i class="fas fa-shopping-cart"></i> Thêm
+                </a>
+              </div>
+            </div>
           </div>
-          <h3 class="food-name">Bánh Tét</h3>
-          <span class="price">45.000₫</span>
-          <button onclick="location.href = 'detail.html'" class="buy-btn">
-            Xem chi tiết
-          </button>
         </div>
-        <div class="menu-card" data-category="do-uong">
-          <div class="image-wrapper">
-            <img src="assets/images/product-bia-cao-cap.jpg" alt="bia" />
-            <span class="badge new">Mới</span>
-          </div>
-          <h3 class="food-name">Bia</h3>
-          <span class="price">345.000₫</span>
-          <button onclick="location.href = 'detail.html'" class="buy-btn">
-            Xem chi tiết
-          </button>
-        </div>
-        <div class="menu-card" data-category="tet-nham-nhi">
-          <div class="image-wrapper">
-            <img src="assets/images/product-combo-nhau.jpg" alt="Đồ nhậu" />
-            <span class="badge new">Mới</span>
-          </div>
-          <h3 class="food-name">Đồ nhậu</h3>
-          <span class="price">45.000₫</span>
-          <button onclick="location.href = 'detail.html'" class="buy-btn">
-            Xem chi tiết
-          </button>
-        </div>
-        <div class="menu-card" data-category="banh-tet">
-          <div class="image-wrapper">
-            <img
-              src="assets/images/product-banh-tet-chuoi-1.jpg"
-              alt="Bánh Tét Chuối"
-            />
-            <span class="badge new">Best Seller</span>
-          </div>
-          <h3 class="food-name">Bánh Tét Chuối</h3>
-          <span class="price">150.000₫</span>
-          <button onclick="location.href = 'detail.html'" class="buy-btn">
-            Xem chi tiết
-          </button>
-        </div>
-        <div class="menu-card" data-category="banh-tet">
-          <div class="image-wrapper">
-            <img
-              src="assets/images/product-banh-tet-dau-1.jpg"
-              alt="Bánh Tét Đậu"
-            />
-            <span class="badge new">Mới</span>
-          </div>
-          <h3 class="food-name">Bánh Tét Đậu</h3>
-          <span class="price">120.000₫</span>
-          <button onclick="location.href = 'detail.html'" class="buy-btn">
-            Xem chi tiết
-          </button>
-        </div>
-        <div class="menu-card" data-category="tet-nham-nhi">
-          <div class="image-wrapper">
-            <img src="assets/images/product-combo-nhau.jpg" alt="Combo Nhậu" />
-            <span class="badge new">Hot</span>
-          </div>
-          <h3 class="food-name">Combo Nhậu Tết</h3>
-          <span class="price">250.000₫</span>
-          <button onclick="location.href = 'detail.html'" class="buy-btn">
-            Xem chi tiết
-          </button>
-        </div>
-      </div>
+      </section>
     </main>
 
     <footer class="footer"></footer>
