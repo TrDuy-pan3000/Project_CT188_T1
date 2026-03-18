@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   refreshMenuCacheFromDom();
   initHeaderSearch();
   initBackToTop();
+
+  initUserUI();
 });
 
 async function injectSharedSection(selector, filePath) {
@@ -367,5 +369,18 @@ function initBackToTop() {
   button.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+}
+
+function initUserUI() {
+  const userData = localStorage.getItem("currentUser");
+  const userBtn = document.getElementById("userBtn");
+
+  console.log("DEBUG:", userData, userBtn);
+
+  if (userData && userBtn) {
+    const user = JSON.parse(userData);
+    userBtn.innerHTML = `<i class="fa-regular fa-user"></i> ${user.name}`;
+  }
 }
 

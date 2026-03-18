@@ -3,27 +3,16 @@
 const choiceBox = document.getElementById("choiceBox");
 
 const loginForm = document.getElementById("loginForm");
-console.log(loginForm);
 const registerForm = document.getElementById("registerForm");
 
 const showLogin = document.getElementById("showLogin");
 const showRegister = document.getElementById("showRegister");
 
 const backBtns = document.querySelectorAll(".backBtn");
-
 const passwordIcons = document.querySelectorAll(".togglePassword");
 
 // ===== SHOW FORM =====
-const correctEmail = "admin@gmail.com";
-const correctPassword = "123456";
 
-localStorage.setItem(
-  "user",
-  JSON.stringify({
-    username: "admin@gmail.com",
-    password: "123456",
-  }),
-);
 if (showLogin) {
   showLogin.onclick = () => {
     choiceBox.classList.add("hidden");
@@ -64,46 +53,11 @@ passwordIcons.forEach((icon) => {
   };
 });
 
-// ===== LOGIN VALIDATE =====
+// ===== EMAIL REGEX ===== //
 
-if (loginForm) {
-  loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value.trim();
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (email === "" || password === "") {
-      alert("Vui lòng nhập đầy đủ thông tin");
-      return;
-    }
-
-    if (!emailRegex.test(email)) {
-      alert("Email không đúng định dạng");
-      return;
-    }
-
-    /* ===== LOGIN GIẢ LẬP ===== */
-
-    const correctEmail = "admin@gmail.com";
-    const correctPassword = "123456";
-
-    if (email === correctEmail && password === correctPassword) {
-      localStorage.setItem("user", email);
-      localStorage.setItem("user", email);
-
-      alert("Đăng nhập thành công");
-
-      window.location.href = "index.html";
-    } else {
-      alert("Sai tài khoản hoặc mật khẩu");
-    }
-  });
-}
-
-// ===== REGISTER VALIDATE =====
+// ===== REGISTER =====  //
 
 if (registerForm) {
   registerForm.addEventListener("submit", function (e) {
@@ -113,9 +67,7 @@ if (registerForm) {
     const email = document.getElementById("registerEmail").value.trim();
     const password = document.getElementById("registerPassword").value.trim();
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (name === "" || email === "" || password === "") {
+    if (!name || !email || !password) {
       alert("Vui lòng nhập đầy đủ thông tin");
       return;
     }
@@ -125,17 +77,63 @@ if (registerForm) {
       return;
     }
 
-    alert("Đăng ký thành công (giả lập)");
+    // LẤY DANH SÁCH USERS
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    choiceBox.classList.remove("hidden");
+    //  CHECK TRÙNG EMAIL
+    const isExist = users.some((u) => u.email === email);
+    if (isExist) {
+      alert("Email đã tồn tại");
+      return;
+    }
+
+    const user = { name, email, password };
+
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Đăng ký thành công");
+
     registerForm.classList.add("hidden");
+    choiceBox.classList.remove("hidden");
   });
 }
 
-// ===== HIỂN THỊ USER TRÊN HEADER =====
+// ===== LOGIN =====
 
-const user = localStorage.getItem("user");
+if (loginForm) {
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-if (user) {
-  const userBtn = document.querySelector(".icon-btn[aria-label='Tài khoản']");
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
+
+    if (!email || !password) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert("Email không đúng định dạng");
+      return;
+    }
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (!user) {
+      alert("Sai tài khoản hoặc mật khẩu");
+      return;
+    }
+
+    alert("Đăng nhập thành công");
+
+    // LƯU OBJECT
+    localStorage.setItem("currentUser", JSON.stringify(user));
+
+    window.location.href = "index.html";
+  });
 }
