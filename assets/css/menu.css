@@ -159,88 +159,84 @@ main {
 /* TOP-ACTIONS — Khung Bộ lọc + Search
    Nổi bật, viền đỏ rõ, không che hero */
 
-/* Wrapper: khung trắng, viền đỏ, bóng nổi */
 .top-actions {
     display: flex; 
-    align-items: stretch;    /* Nút filter cao bằng search */
-    max-width: 760px;   /* Giới hạn chiều rộng, không trải full */
-    margin: 2rem auto 2.5rem;                   /* Khoảng cách thường, không âm */
-    padding: 0 5%;   /* Padding ngang để nội dung không dính sát mép trên desktop */
-
-    /* Khung nổi */
+    align-items: center;
+    max-width: 800px;
+    margin: 2.5rem auto 3.5rem;
+    padding: 0;
     background: var(--white);
-    border-radius: 14px;
-    border: 2.5px solid var(--red-tet);         /* Viền đỏ Tết rõ ràng */
-    box-shadow:                 /* Bóng đổ: 2 lớp — lớp lớn mờ + lớp nhỏ rõ */
-        0 8px 28px rgba(204, 39, 41, 0.2),
-        0 2px 8px  rgba(26,  10,  0, 0.1);
-    overflow: hidden;                           /* Bo góc áp vào con */
+    border-radius: 50px;
+    border: 1px solid rgba(204, 39, 41, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
 
-    animation: fadeUp 0.65s 0.2s ease both;
+.top-actions:focus-within {
+    box-shadow: 0 15px 35px rgba(204, 39, 41, 0.12);
+    border-color: rgba(204, 39, 41, 0.3);
 }
 
 /* NÚT BỘ LỌC */
 #filterBtn {
-    flex-shrink: 0;  /* Không co lại, giữ kích thước tự nhiên */
+    flex-shrink: 0;
     display: flex;
-    align-items: center;   /* Căn giữa icon và chữ */
-    gap: 0.5rem;     /* Khoảng cách giữa icon và chữ */
-    padding: 0.9rem 1.6rem;   /* Padding rộng */
-    background: linear-gradient(135deg, var(--red-tet), var(--coral)); /* Gradient đỏ Tết → san hô */
-    color: var(--white);
-    border: none;       /* Không viền, chỉ dùng shadow */
-    border-radius: 0;        /* Toolbar đã bo rồi */
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 1.8rem;
+    background: transparent;
+    color: var(--red-dark);
+    border: none;
+    border-right: 1px solid rgba(204, 39, 41, 0.15);
+    border-radius: 50px 0 0 50px;
     cursor: pointer;
-    font-family: 'Be Vietnam Pro', sans-serif;   /* Font đậm, rõ để nổi bật */
-    font-size: 0.95rem;  /* Vừa phải, không quá lớn */
-    font-weight: 700;
-    letter-spacing: 0.02em;  /* Tăng khoảng cách chữ */
-    white-space: nowrap;     /* Không xuống dòng */
-    transition: background 0.3s ease; 
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease; 
 }
 
-/* Thêm icon ⚙ trước chữ */
-#filterBtn::before {
-    content: '⚙';
-    font-size: 0.95rem;   /* Cùng size với chữ */
-    display: inline-block;  /* Cho phép transform */
-    transition: transform 0.35s ease;   /* Hiệu ứng xoay khi hover */
+#filterBtn i, #filterBtn::before {
+    content: '\f0b0'; /* FontAwesome filter icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--red-tet);
+    transition: transform 0.3s ease;
 }
 
-/* Hover: tối hơn + icon xoay */
 #filterBtn:hover {
-    background: linear-gradient(135deg, var(--red-dark), var(--red-tet));
+    background: rgba(204, 39, 41, 0.04);
 }
 #filterBtn:hover::before {
-    transform: rotate(90deg); /* Xoay icon 90 độ khi hover */
+    transform: translateY(-2px);
 }
 
 /* Ô TÌM KIẾM  */
 .search-box {
-    flex: 1;                                    /* Chiếm hết phần còn lại */
+    flex: 1;
     display: flex;
-    align-items: center;    /* Căn giữa icon và input */
-    gap: 0.65rem;       /* Khoảng cách giữa icon và input */
-    padding: 0.85rem 1.3rem;   
-    background: transparent;   /* Nền trong suốt, chỉ có viền */
-    border-left: 1.5px solid rgba(204, 39, 41, 0.15);     /* Đường phân cách trái */
-    transition: background 0.25s;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem 1.5rem;   
+    background: transparent;
 }
 
-/* Nhấn sáng nhẹ khi focus */
 .search-box:focus-within {
-    background: rgba(204, 39, 41, 0.03);
+    background: transparent;
 }
 
 /* Icon kính lúp */
 .search-icon {
-    font-size: 1rem;
-    flex-shrink: 0;  /* Không co lại, giữ kích thước tự nhiên */
-    opacity: 0.65;  /* Mờ nhẹ khi không focus */
-    transition: opacity 0.25s;
+    font-size: 1.1rem;
+    color: var(--red-tet);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
+
 .search-box:focus-within .search-icon {
-    opacity: 1;   /* Sáng rõ khi focus vào input */
+    opacity: 1;
 }
 
 /* Input thực tế */
@@ -249,13 +245,15 @@ main {
     outline: none;
     background: transparent;
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--brown-dark);
-    width: 100%;  /* Chiếm hết chiều ngang còn lại */
+    width: 100%;
+    padding: 0.5rem 0;
 }
+
 #searchInput::placeholder {
-    color: var(--brown-light);
-    font-style: italic;
+    color: #a09995;
+    font-weight: 400;
 }
 
 
