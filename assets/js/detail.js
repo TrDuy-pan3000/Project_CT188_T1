@@ -3,6 +3,35 @@ const moreInfo = document.querySelector(".more-info");
 const productReviews = document.querySelector(".reviews");
 const relatedProducts = document.querySelector(".products");
 
+function caFindProduct() {
+  let mainContent = document.querySelector("main");
+  mainContent.innerHTML = `
+      <div class="cantFindProd">
+        <h1>Không Tìm Thấy Sản Phẩm</h1>
+        <div class="container">
+          <img src="assets/images/mascot_product_error.png" />
+          <p
+            >Xin lỗi bạn nhé, sản phẩm bạn đang tìm tạm thời chưa ra lò kịp hoặc
+            đã được khách khác 'rinh' mất rồi.<br />
+            Nhưng đừng để chiếc bụng đói phải chờ lâu, bếp nhà chúng mình vẫn
+            còn nguyên một thực đơn hấp dẫn với đủ loại nhân mặn, ngọt đang tỏa
+            hương thơm lừng. Cùng nghía qua xem có món nào vừa ý bạn hôm nay
+            không nhé</
+          >
+        </div>
+        <div class="button_wrap">
+          <a href="menu.html">
+            <button>Xem Các Sản Phẩm Khác</button>
+          </a>
+          <a href="index.html">
+            <button>Trở Về Trang Chủ</button>
+          </a>
+        </div>
+      </div>
+  `;
+  return;
+}
+
 const getData = async () => {
   const path = new URLSearchParams(window.location.search);
 
@@ -10,15 +39,21 @@ const getData = async () => {
 
   if (!productId) {
     // trả về trang chủ khi thêm đủ nội dung các sản phẩm
-    window.location.href = "detail.html?id=1";
+    caFindProduct();
     return;
   }
 
-  const respone = await fetch("assets/js/product.json");
-  const data = await respone.json();
+  const response = await fetch("assets/js/product.json");
+  const data = await response.json();
   const findProductId = data.find(
     (item) => item.id.toString() === productId.toString(),
   );
+
+  if (!findProductId) {
+    // trả về trang chủ khi thêm đủ nội dung các sản phẩm
+    caFindProduct();
+    return;
+  }
 
   singleProduct.innerHTML = `
   <div class="container">
