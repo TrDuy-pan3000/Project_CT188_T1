@@ -112,8 +112,9 @@ const getData = async () => {
 
   const reviewList = findProductId.reviews || [];
   productReviews.innerHTML = ``;
+  let productReviewsHTML = "";
   reviewList.forEach((test) => {
-    productReviews.innerHTML += `
+    productReviewsHTML += `
   <div class="review-card">
             <div class="test-author">
               <span class="test-avatar">${test.avatar}</span>
@@ -130,6 +131,7 @@ const getData = async () => {
           </div>
   `;
   });
+  if (productReviewsHTML) productReviews.innerHTML = productReviewsHTML;
 
   const otherProducts = data.filter(
     (item) => item.id.toString() !== productId.toString(),
@@ -139,16 +141,16 @@ const getData = async () => {
 
   const randomFourProducts = shuffledProducts.slice(0, 4);
 
-  relatedProducts.innerHTML = ``;
+  let relatedProductsHTML = ``;
 
   randomFourProducts.forEach((prod) => {
-    relatedProducts.innerHTML += `
+    relatedProductsHTML += `
       <article class="related-product">
         <img src="${prod.mainImg}" alt="${prod.name}">
         <div class="content-wrap">
           <h3>${prod.name}</h3>
           
-          <p>${prod.description.substring(0, 60)}...</p>
+          <p>${prod.shortDescription}</p>
           
           <div class="card-bottom">
             <p class="price">${prod.price}₫</p>
@@ -161,6 +163,7 @@ const getData = async () => {
       </article>
     `;
   });
+  if (relatedProductsHTML) relatedProducts.innerHTML = relatedProductsHTML;
 };
 
 getData();

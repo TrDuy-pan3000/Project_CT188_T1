@@ -64,6 +64,7 @@ section .title h1 {
 }
 .small-img {
   height: 100px;
+  width: 100%;
   justify-self: center;
   object-fit: cover;
   cursor: pointer;
@@ -72,7 +73,8 @@ section .title h1 {
   transition: all 0.3s ease;
   box-shadow: var(--shadow-soft);
 }
-.small-img:active , .sm-card {
+.small-img:active,
+.sm-card {
   transform: scale(1.05);
   transform: translateY(-3px);
   box-shadow: var(--shadow-clay-hover);
@@ -209,9 +211,16 @@ section .title h1 {
   justify-content: center;
 }
 .related-product {
-  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border-radius: var(--radius);
   background-color: white;
+  transition: all 0.4s ease;
+}
+.related-product:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-clay-hover);
 }
 .related-product img {
   width: 100%;
@@ -220,8 +229,8 @@ section .title h1 {
 }
 .content-wrap {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  height: 200px;
   padding: 5%;
 }
 .content-wrap h3 {

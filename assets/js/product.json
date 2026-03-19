@@ -2,25 +2,26 @@
   {
     "id": 1,
     "name": "Bánh Tét Nhân Chuối",
+    "category": "Bánh Truyền Thống",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
       "text": "Bán chạy",
       "cssClass": "hot"
     },
-    "description": "Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực của cả người Việt và một số dân tộc ít người ở miền Nam và miền Trung Việt Nam, là nét tương đồng của bánh chưng ở miền Bắc về nguyên liệu, cách nấu, chỉ khác về hình dáng và sử dụng lá chuối để gói thay vì lá dong, vì vậy nó cũng được sử dụng nhiều nhất trong dịp Tết Nguyên đán cổ truyền của dân tộc Việt Nam với vai trò không khác bánh chưng. Nhưng cũng có nhiều bánh tét nhân chuối hay đậu đen được làm hay là bán quanh năm.",
+    "description": "Bánh tét nhân chuối là món bánh truyền thống mộc mạc, đậm đà tình quê của người miền Nam. Sự kết hợp hoàn hảo giữa lớp nếp sáp dẻo thơm ngâm cùng nước cốt dừa béo ngậy, bọc lấy phần nhân chuối xiêm chín rục tươm mật đỏ hồng tạo nên một hương vị ngọt thanh, khó quên. Không chỉ là món bánh không thể thiếu trong những ngày Tết cổ truyền, bánh tét chuối còn là thức quà dân dã được yêu thích và thưởng thức quanh năm.",
     "shortDescription": "Bánh tét nếp sáp dẻo thơm, nước cốt dừa béo ngậy, nhân chuối xiêm đỏ ngọt thanh",
     "price": "180.000",
     "unit": "Đòn",
     "mainImg": "assets/images/product-banh-tet-chuoi-1.jpg",
-    "subImg1": "assets/images/story-banh-chung-new.png",
+    "subImg1": "assets/images/product-banh-tet-chuoi-1.jpg",
     "subImg2": "assets/images/product-banh-tet-chuoi-2.jpg",
-    "subImg3": "assets/images/story-banh-chung-new.png",
-    "subImg4": "assets/images/product-banh-tet-dau-2.jpg",
+    "subImg3": "assets/images/product-banh-tet-chuoi-3.jpg",
+    "subImg4": "assets/images/product-banh-tet-chuoi-4.jpg",
     "weight": "800g - 1kg / đòn.",
-    "ingredientList": "- Bánh tét nhân đậu (Ngọt/Mặn): Gạo nếp sáp thượng hạng dẻo thơm, đậu xanh tách vỏ sên kỹ giữ được độ bùi, nước cốt dừa béo ngậy, gia vị cơ bản (muối, tiêu, đường) và lá chuối tươi. (Nếu bán kèm nhân thịt mỡ, bạn có thể bổ sung thêm: thịt ba rọi ướp vị đậm đà).<br />- Bánh tét nhân chuối (Ngọt): Gạo nếp sáp trộn đều với nước cốt dừa thơm béo, nhân chuối xiêm (chuối sứ) chín rục được ướp đường phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên, mang lại vị ngọt thanh, dẻo mềm và bọc ngoài bằng lá chuối tươi.",
+    "ingredientList": "- Gạo nếp sáp thượng hạng dẻo thơm, trộn đều với nước cốt dừa vắt tay béo ngậy.<br />- Nhân chuối xiêm (chuối sứ) chín ươm, được ướp đường phèn/đường cát kỹ lưỡng để khi luộc lên màu đỏ hồng tự nhiên, mang lại vị ngọt thanh tươm mật.<br />- Gói lót bằng lá chuối tươi, buộc lạt giang chắc tay.",
     "packing": "Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm và kéo dài thời gian bảo quản.",
     "exp": "- 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />- 03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông).",
-    "uses": "- Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn. <br />- Thưởng thức trực tiếp để cảm nhận vị dẻo mềm nguyên bản.<br /> - Ngon hơn khi chiên giòn: Cắt lát mỏng và chiên vàng đều hai mặt, ăn kèm với dưa món, củ kiệu hoặc tương ớt.",
+    "uses": "- Dùng dao hoặc chính sợi lạt gói bánh để cắt thành từng khoanh tròn. <br />- Thưởng thức trực tiếp để cảm nhận vị ngọt dẻo, béo ngậy nguyên bản.<br /> - Cực kỳ hấp dẫn khi chiên giòn: Cắt lát mỏng, chiên vàng đều hai mặt, lớp vỏ nếp giòn rụm hòa quyện cùng nhân chuối tươm mật dẻo mềm bên trong.",
     "preserve": " - Để nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.<br /> - Nếu chưa dùng hết, bọc kín phần mặt cắt bằng màng bọc thực phẩm và bảo quản trong ngăn mát tủ lạnh. Khi ăn chỉ cần hấp nóng hoặc chiên lại.",
     "reviews": [
       {
@@ -28,81 +29,83 @@
         "name": "Chị Hương",
         "address": "Quận 1, TP.HCM",
         "stars": "⭐⭐⭐⭐⭐",
-        "text": "Bánh tét ngon quá trời luôn á! Vị y như bánh bà ngoại gói, ăn mà nhớ quê quá chừng. Năm sau chắc chắn đặt tiếp nha Bếp Nhà Ngọ!"
+        "text": "Bánh ngọt thanh không bị gắt, nhân chuối lên màu đỏ au rất đẹp mắt. Vị y như bánh bà ngoại gói hồi xưa!"
       },
       {
         "avatar": "👨",
         "name": "Anh Tuấn",
         "address": "Quận 3, TP.HCM",
         "stars": "⭐⭐⭐⭐",
-        "text": "Bánh dẻo, nhân vừa miệng. Giao hàng rất nhanh."
+        "text": "Nếp dẻo, cốt dừa béo ngậy. Giao hàng hút chân không rất cẩn thận và sạch sẽ."
       },
       {
         "avatar": "👱‍♀️",
         "name": "Chị Mai",
         "address": "Cần Thơ",
         "stars": "⭐⭐⭐⭐⭐",
-        "text": "Bao bì đẹp, hút chân không kỹ, đem biếu hai họ rất sang nha."
+        "text": "Bánh đem chiên giòn lên ăn nhức nách luôn shop ơi. Bao bì đẹp, đem biếu cũng rất sang."
       },
       {
         "avatar": "👱‍♂️",
         "name": "Anh Thanh",
         "address": "Bình Thủy, Cần Thơ",
         "stars": "⭐⭐⭐⭐⭐",
-        "text": "Bánh giao tới còn ấm luôn, cắt ra thơm nức mũi nhen..."
+        "text": "Bánh giao tới còn mới, nếp sáp mềm, chuối sứ ngọt lịm. Chắc chắn sẽ ủng hộ tiếp."
       }
     ]
   },
   {
     "id": 2,
-    "name": "Bánh Chưng Truyền Thống",
+    "name": "Bánh Tét Nhân Đậu Xanh",
+    "category": "Bánh Truyền Thống",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
-      "text": "Bán chạy",
-      "cssClass": "hot"
+      "text": "Truyền thống",
+      "cssClass": "classic"
     },
-    "description": "Bánh chưng là linh hồn của ngày Tết cổ truyền miền Bắc. Bánh có hình vuông tượng trưng cho đất, gói ghém trong đó là sự kết tinh của trời đất với gạo nếp, đỗ xanh, thịt lợn và lá dong xanh mát. Đây không chỉ là món ăn mà còn là biểu tượng của lòng biết ơn tổ tiên, sự đoàn tụ gia đình trong dịp năm mới. Một chiếc bánh chưng xanh trên bàn thờ gia tiên là điều không thể thiếu để cầu mong một năm mới mưa thuận gió hòa, sung túc bình an.",
-    "shortDescription": "Bánh chưng vuông, gạo nếp cái hoa vàng, nhân đậu xanh thịt heo đậm đà",
-    "price": "220.000",
-    "unit": "Chiếc",
-    "mainImg": "assets/images/story-banh-chung-new.png",
-    "subImg1": "assets/images/product-banh-chung-1.jpg",
-    "subImg2": "assets/images/product-banh-chung-2.jpg",
-    "subImg3": "assets/images/product-banh-chung-3.jpg",
-    "subImg4": "assets/images/product-banh-chung-4.jpg",
-    "weight": "1kg - 1.2kg / chiếc.",
-    "ingredientList": "- Gạo nếp cái hoa vàng hạt to, dẻo thơm ngâm kỹ.<br />- Đậu xanh lòng vàng xát vỏ, đồ chín tới giữ độ bùi béo.<br />- Thịt ba chỉ lợn sạch (tỉ lệ nạc mỡ hài hòa) ướp tiêu sọ, hành khô và gia vị đậm đà.<br />- Bọc ngoài bằng lá dong nếp xanh mướt, lạt giang dẻo dai.",
-    "packing": "Bọc lá dong truyền thống, bên ngoài hút chân không cẩn thận để giữ bánh lâu hỏng và giữ nguyên phom dáng vuông vức.",
-    "exp": "- 05 ngày kể từ ngày sản xuất ở nhiệt độ thường (thời tiết mát mẻ).<br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh).<br />- 02 tháng kể từ ngày sản xuất khi cấp đông.",
-    "uses": "- Dùng lạt tước nhỏ để cắt bánh thành 8 phần đều nhau (cắt bằng lạt giúp mặt bánh mịn, không bị dính như dùng dao).<br />- Thưởng thức trực tiếp ăn kèm dưa hành, thịt đông.<br />- Có thể chiên (rán) giòn ăn cùng xì dầu, tương ớt rất đưa miệng.",
-    "preserve": "- Để nơi thoáng mát, tránh ánh nắng, không ép bánh quá chặt.<br />- Nếu bảo quản tủ lạnh, khi ăn cần luộc lại, quay lò vi sóng hoặc hấp cách thủy cho bánh mềm dẻo trở lại.",
+    "description": "Bánh tét nhân đậu xanh là hương vị mộc mạc, thân thuộc bậc nhất trong văn hóa ẩm thực miền Nam. Lớp nếp sáp dẻo thơm, xanh mát màu lá chuối ôm trọn lấy phần nhân đậu xanh được đánh nhuyễn, bùi bùi và béo ngậy. Tùy theo sở thích, bánh có thể là nhân đậu xanh ngọt thanh tao, hoặc nhân đậu mặn kết hợp cùng dải mỡ heo trong veo, tẩm ướp tiêu hành thơm lừng. Cắn một miếng bánh, vị dẻo, bùi, béo hòa quyện mang đến cảm giác trọn vẹn của ngày Tết quê hương.",
+    "shortDescription": "Bánh tét nếp sáp dẻo thơm, nhân đậu xanh đánh nhuyễn bùi bùi béo ngậy, đậm đà vị quê",
+    "price": "180.000",
+    "unit": "Đòn",
+    "mainImg": "assets/images/product-banh-tet-dau-1.jpg",
+    "subImg1": "assets/images/product-banh-tet-dau-1.jpg",
+    "subImg2": "assets/images/product-banh-tet-dau-2.jpg",
+    "subImg3": "assets/images/product-banh-tet-dau-3.jpg",
+    "subImg4": "assets/images/product-banh-tet-dau-4.jpg",
+    "weight": "800g - 1kg / đòn.",
+    "ingredientList": "- Gạo nếp sáp thượng hạng, ngâm kỹ giúp hạt nếp nở đều và dẻo mềm.<br />- Đậu xanh xát vỏ, đồ chín và sên thật kỹ để giữ được độ bùi tơi mịn.<br />- Gia vị cơ bản (muối, tiêu, đường) và có thể thêm dải thịt mỡ heo tẩm ướp đậm đà (đối với bánh nhân mặn).<br />- Gói cẩn thận bằng nhiều lớp lá chuối tươi, buộc lạt chắc chắn để nước không lọt vào khi luộc.",
+    "packing": "Hút chân không từng đòn giúp đảm bảo vệ sinh an toàn thực phẩm và giữ bánh được lâu hơn.",
+    "exp": "- 06 ngày kể từ ngày sản xuất ở nhiệt độ thường 16-20 oC <br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh)<br />- 03 tháng kể từ ngày sản xuất ở nhiệt độ 5 -18oC (cấp đông).",
+    "uses": "- Dùng lạt gói bánh tước nhỏ để cắt thành từng khoanh tròn đẹp mắt, không bị dính dao. <br />- Bánh nhân mặn cực kỳ đưa miệng khi ăn kèm dưa giá, củ kiệu và thịt kho hột vịt.<br /> - Nếu thích sự phá cách, bạn có thể cắt lát mỏng và chiên vàng đều hai mặt để có món bánh tét chiên giòn rụm ngoài vỏ, mềm bùi bên trong.",
+    "preserve": " - Để bánh nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp hoặc nơi có nhiệt độ cao.<br /> - Nếu cắt ra ăn chưa hết, dùng màng bọc thực phẩm bọc kín phần mặt cắt lại và cho vào ngăn mát tủ lạnh.",
     "reviews": [
       {
         "avatar": "👵",
-        "name": "Cô Bình",
-        "address": "Đống Đa, Hà Nội",
+        "name": "Cô Lan",
+        "address": "Tân Bình, TP.HCM",
         "stars": "⭐⭐⭐⭐⭐",
-        "text": "Bánh gói rất chắc tay, thịt mỡ béo ngậy thấm đều vào nhụy đậu xanh, ăn rất đúng vị Tết xưa. Sẽ ủng hộ shop dài dài."
+        "text": "Đậu xanh sên rất khéo, ăn bùi mà không bị nghẹn. Nếp dẻo thơm mùi lá chuối, rất ưng ý."
       },
       {
         "avatar": "👨‍💼",
         "name": "Anh Hoàng",
-        "address": "Hải Phòng",
+        "address": "Bình Dương",
         "stars": "⭐⭐⭐⭐",
-        "text": "Giao hàng nhanh, bánh hút chân không sạch sẽ. Lá dong vẫn giữ được màu xanh rất đẹp mắt."
+        "text": "Mình mua loại nhân mặn có chút mỡ, mỡ luộc kỹ trong veo ăn béo béo với dưa món là nhức nách."
       },
       {
         "avatar": "👩‍🦰",
-        "name": "Chị Thuỷ",
-        "address": "Quận 2, TP.HCM",
+        "name": "Chị Thảo",
+        "address": "Biên Hòa",
         "stars": "⭐⭐⭐⭐⭐",
-        "text": "Mình ở Nam nhưng thèm bánh chưng Bắc. Mua của shop ăn thử mà ghiền luôn, gạo nếp cái dẻo thơm thật sự."
+        "text": "Bánh để tủ lạnh mấy ngày đem ra chiên nếp vẫn dẻo, không bị sượng cứng. Sẽ giới thiệu cho đồng nghiệp."
       }
     ]
   },
   {
     "id": 3,
     "name": "Bánh Tét Lá Cẩm",
+    "category": "Bánh Truyền Thống",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
       "text": "Bán chạy",
@@ -112,7 +115,7 @@
     "shortDescription": "Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ trứng muối, hương vị đặc trưng miền Tây",
     "price": "200.000",
     "unit": "Đòn",
-    "mainImg": "assets/images/product-banh-tet-dau-1.jpg",
+    "mainImg": "assets/images/product-banh-tet-cam-1.jpg",
     "subImg1": "assets/images/product-banh-tet-cam-1.jpg",
     "subImg2": "assets/images/product-banh-tet-cam-2.jpg",
     "subImg3": "assets/images/product-banh-tet-cam-3.jpg",
@@ -149,7 +152,56 @@
   },
   {
     "id": 4,
+    "name": "Bánh Chưng Truyền Thống",
+    "category": "Bánh Truyền Thống",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
+    "description": "Bánh chưng là linh hồn của ngày Tết cổ truyền miền Bắc. Bánh có hình vuông tượng trưng cho đất, gói ghém trong đó là sự kết tinh của trời đất với gạo nếp, đỗ xanh, thịt lợn và lá dong xanh mát. Đây không chỉ là món ăn mà còn là biểu tượng của lòng biết ơn tổ tiên, sự đoàn tụ gia đình trong dịp năm mới. Một chiếc bánh chưng xanh trên bàn thờ gia tiên là điều không thể thiếu để cầu mong một năm mới mưa thuận gió hòa, sung túc bình an.",
+    "shortDescription": "Bánh chưng vuông, gạo nếp cái hoa vàng, nhân đậu xanh thịt heo đậm đà",
+    "price": "220.000",
+    "unit": "Chiếc",
+    "mainImg": "assets/images/product-banh-chung-1.jpg",
+    "subImg1": "assets/images/product-banh-chung-1.jpg",
+    "subImg2": "assets/images/product-banh-chung-2.jpg",
+    "subImg3": "assets/images/product-banh-chung-3.jpg",
+    "subImg4": "assets/images/product-banh-chung-4.jpg",
+    "weight": "1kg - 1.2kg / chiếc.",
+    "ingredientList": "- Gạo nếp cái hoa vàng hạt to, dẻo thơm ngâm kỹ.<br />- Đậu xanh lòng vàng xát vỏ, đồ chín tới giữ độ bùi béo.<br />- Thịt ba chỉ lợn sạch (tỉ lệ nạc mỡ hài hòa) ướp tiêu sọ, hành khô và gia vị đậm đà.<br />- Bọc ngoài bằng lá dong nếp xanh mướt, lạt giang dẻo dai.",
+    "packing": "Bọc lá dong truyền thống, bên ngoài hút chân không cẩn thận để giữ bánh lâu hỏng và giữ nguyên phom dáng vuông vức.",
+    "exp": "- 05 ngày kể từ ngày sản xuất ở nhiệt độ thường (thời tiết mát mẻ).<br />- 15 ngày kể từ ngày sản xuất ở nhiệt độ 5 - 10oC (ngăn mát tủ lạnh).<br />- 02 tháng kể từ ngày sản xuất khi cấp đông.",
+    "uses": "- Dùng lạt tước nhỏ để cắt bánh thành 8 phần đều nhau (cắt bằng lạt giúp mặt bánh mịn, không bị dính như dùng dao).<br />- Thưởng thức trực tiếp ăn kèm dưa hành, thịt đông.<br />- Có thể chiên (rán) giòn ăn cùng xì dầu, tương ớt rất đưa miệng.",
+    "preserve": "- Để nơi thoáng mát, tránh ánh nắng, không ép bánh quá chặt.<br />- Nếu bảo quản tủ lạnh, khi ăn cần luộc lại, quay lò vi sóng hoặc hấp cách thủy cho bánh mềm dẻo trở lại.",
+    "reviews": [
+      {
+        "avatar": "👵",
+        "name": "Cô Bình",
+        "address": "Đống Đa, Hà Nội",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Bánh gói rất chắc tay, thịt mỡ béo ngậy thấm đều vào nhụy đậu xanh, ăn rất đúng vị Tết xưa. Sẽ ủng hộ shop dài dài."
+      },
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Hoàng",
+        "address": "Hải Phòng",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Giao hàng nhanh, bánh hút chân không sạch sẽ. Lá dong vẫn giữ được màu xanh rất đẹp mắt."
+      },
+      {
+        "avatar": "👩‍🦰",
+        "name": "Chị Thuỷ",
+        "address": "Quận 2, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Mình ở Nam nhưng thèm bánh chưng Bắc. Mua của shop ăn thử mà ghiền luôn, gạo nếp cái dẻo thơm thật sự."
+      }
+    ]
+  },
+  {
+    "id": 5,
     "name": "Giò Chả Thượng Hạng",
+    "category": "Món Ngon Ngày Tết",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
       "text": "Bán chạy",
@@ -159,7 +211,7 @@
     "shortDescription": "Giò lụa, chả quế, chả chiên — nguyên liệu tươi, chế biến thủ công",
     "price": "280.000",
     "unit": "Đòn",
-    "mainImg": "assets/images/product-combo-nhau.jpg",
+    "mainImg": "assets/images/product-gio-cha-1.jpg",
     "subImg1": "assets/images/product-gio-cha-1.jpg",
     "subImg2": "assets/images/product-gio-cha-2.jpg",
     "subImg3": "assets/images/product-gio-cha-3.jpg",
@@ -195,8 +247,9 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Hộp Mứt Tết Đặc Biệt",
+    "category": "Quà Tặng Ngày Tết",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
       "text": "Bán chạy",
@@ -206,7 +259,7 @@
     "shortDescription": "Mứt gừng, mứt dừa, mứt bí, mứt quất — hộp 6 vị thượng hạng",
     "price": "350.000",
     "unit": "Hộp",
-    "mainImg": "assets/images/product-bia-cao-cap.jpg",
+    "mainImg": "assets/images/product-mut-tet-1.jpg",
     "subImg1": "assets/images/product-mut-tet-1.jpg",
     "subImg2": "assets/images/product-mut-tet-2.jpg",
     "subImg3": "assets/images/product-mut-tet-3.jpg",
@@ -238,6 +291,177 @@
         "address": "Vũng Tàu",
         "stars": "⭐⭐⭐⭐",
         "text": "Thích nhất mứt gừng ở đây, cay thơm, ngày lạnh ăn vào ấm cả bụng. Sẽ giới thiệu cho bạn bè."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Thùng Bia Tiger Xuân",
+    "category": "Thức Uống Khai Xuân",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
+    "description": "Bia Tiger từ lâu đã trở thành biểu tượng không thể thiếu trong các buổi tiệc Tất niên, Tân niên của người Việt. Với hương vị bia vàng đậm đà, sảng khoái được ủ từ những nguyên liệu chọn lọc, Tiger mang đến cảm giác thăng hoa trong từng ngụm uống. Đặc biệt, phiên bản Thùng Xuân với thiết kế bao bì đỏ rực rỡ, mang ý nghĩa 'Khai Xuân Đắc Lộc', không chỉ thức uống giải khát tuyệt vời mà còn là món quà biếu tặng thiết thực, sang trọng gửi đến đối tác, gia đình và bạn bè dịp đầu năm.",
+    "shortDescription": "Thùng bia Tiger 24 lon vị đậm đà sảng khoái, bao bì Tết rực rỡ, món quà khai xuân đắc lộc.",
+    "price": "365.000",
+    "unit": "Thùng",
+    "mainImg": "assets/images/product-tiger-tet-1.jpg",
+    "subImg1": "assets/images/product-tiger-tet-1.jpg",
+    "subImg2": "assets/images/product-tiger-tet-2.jpg",
+    "subImg3": "assets/images/product-tiger-tet-3.jpg",
+    "subImg4": "assets/images/product-tiger-tet-4.jpg",
+    "weight": "24 lon x 330ml / thùng.",
+    "ingredientList": "- Nước tinh khiết.<br />- Đại mạch thượng hạng.<br />- Hoa bia và men bia độc quyền, mang lại hương vị ủ tuyệt hảo.",
+    "packing": "Thùng carton cứng cáp in họa tiết Xuân sắc nét, bên trong gồm 24 lon nhôm dung tích 330ml/lon.",
+    "exp": "- 09 đến 12 tháng kể từ ngày sản xuất (in dưới đáy lon và trên thùng).",
+    "uses": "- Bật nắp và thưởng thức trực tiếp.<br />- Ngon hơn rất nhiều khi ướp lạnh ở nhiệt độ 10 - 15 độ C hoặc uống cùng với đá lạnh.<br />- Tuyệt vời khi dùng kèm các món nhậu ngày Tết như giò lụa, tôm khô củ kiệu, thịt kho tàu.",
+    "preserve": "- Bảo quản nơi sạch sẽ, khô ráo, thoáng mát.<br />- Tránh tiếp xúc trực tiếp với ánh nắng mặt trời hoặc để gần các nguồn nhiệt mạnh.",
+    "reviews": [
+      {
+        "avatar": "👨",
+        "name": "Anh Thanh Phương",
+        "address": "Bình Tân, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Năm nào cũng quất 5 thùng Tiger về đãi khách. Bia uống đầm, bao bì năm nay nhìn rất đỏ và bắt mắt."
+      },
+      {
+        "avatar": "👱‍♂️",
+        "name": "Anh Quốc Dũng",
+        "address": "Cần Thơ",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Giao hàng nguyên thùng không bị móp méo. Mua online tiện hơn chở từ siêu thị về nhiều."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Thùng Nước Ngọt Coca-Cola Tết",
+    "category": "Thức Uống Khai Xuân",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Phiên bản Tết",
+      "cssClass": "tet-edition"
+    },
+    "description": "Coca-Cola không chỉ là một loại nước giải khát mà đã trở thành sứ giả của niềm vui và sự gắn kết gia đình mỗi độ Xuân về. Vị ngọt lịm đặc trưng kết hợp cùng những bọt ga sảng khoái giúp xua tan cảm giác ngấy của những bữa cỗ Tết nhiều dầu mỡ. Phiên bản Tết luôn nổi bật với sắc đỏ may mắn và họa tiết Én Vàng đặc trưng, mang theo thông điệp chúc một năm mới An Khang, Thịnh Vượng và đong đầy hạnh phúc.",
+    "shortDescription": "Thùng 24 lon Coca-Cola thiết kế én Xuân đỏ rực, vị ga sảng khoái, mang lại may mắn đầu năm.",
+    "price": "210.000",
+    "unit": "Thùng",
+    "mainImg": "assets/images/product-cocacola-tet-1.jpg",
+    "subImg1": "assets/images/product-cocacola-tet-1.jpg",
+    "subImg2": "assets/images/product-cocacola-tet-2.jpg",
+    "subImg3": "assets/images/product-cocacola-tet-3.jpg",
+    "subImg4": "assets/images/product-cocacola-tet-4.jpg",
+    "weight": "24 lon x 320ml / thùng.",
+    "ingredientList": "- Nước bão hòa CO2.<br />- Đường HFCS, đường mía.<br />- Màu thực phẩm (Caramen nhóm IV), chất tạo chua (axit photphoric).<br />- Hương cola tự nhiên và caffeine.",
+    "packing": "Thùng giấy in hình Én Xuân rực rỡ, thích hợp chưng bàn thờ gia tiên. Gồm 24 lon nhôm 320ml tiện lợi.",
+    "exp": "- 12 tháng kể từ ngày sản xuất (chi tiết xem dưới đáy lon).",
+    "uses": "- Thức uống giải khát tuyệt vời cho mọi lứa tuổi (đặc biệt được trẻ nhỏ yêu thích).<br />- Giúp tiêu hóa tốt hơn sau các bữa ăn nhiều đạm ngày Tết.<br />- Uống trực tiếp, ngon nhất khi được ướp lạnh ở 3-5 độ C hoặc rót ra ly thêm đá.",
+    "preserve": "- Để nơi khô thoáng, tránh ánh sáng trực tiếp.<br />- Không để lon nước trong ngăn đá tủ lạnh (có thể gây nứt vỡ).",
+    "reviews": [
+      {
+        "avatar": "👩‍🦰",
+        "name": "Chị Mai Anh",
+        "address": "Hai Bà Trưng, Hà Nội",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Tết là cứ phải có thùng Coca đỏ chót để góc nhà cho hên. Mấy đứa nhỏ nhà mình thích mê."
+      },
+      {
+        "avatar": "👵",
+        "name": "Cô Thu",
+        "address": "Đà Nẵng",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Thùng đẹp, mua thắp hương mùng 1 rất hợp lý. Uống vào ợ cái cho nhẹ bụng sau khi ăn bánh chưng."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Hộp Bánh Quy Bơ Danisa",
+    "category": "Quà Tặng Ngày Tết",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Quốc dân",
+      "cssClass": "popular"
+    },
+    "description": "Danisa từ lâu đã được mệnh danh là 'món quà quốc dân' trong mọi giỏ quà Tết của người Việt. Bánh quy bơ mang hương vị hoàng gia Đan Mạch thơm lừng, cắn vào giòn rụm và tan ngay trong miệng với vị bơ sữa béo ngậy. Chiếc hộp thiếc màu xanh hoàng gia sang trọng đi kèm túi xách giấy lịch sự giúp Danisa luôn là lựa chọn hàng đầu để biếu tặng họ hàng, đối tác thay cho lời chúc năm mới sung túc, ngọt ngào.",
+    "shortDescription": "Hộp bánh quy bơ hoàng gia Đan Mạch thơm lừng, món quà quốc dân sang trọng mỗi dịp Xuân về",
+    "price": "235.000",
+    "unit": "Hộp",
+    "mainImg": "assets/images/product-danisa-1.jpg",
+    "subImg1": "assets/images/product-danisa-1.jpg",
+    "subImg2": "assets/images/product-danisa-2.jpg",
+    "subImg3": "assets/images/product-danisa-3.jpg",
+    "subImg4": "assets/images/product-danisa-4.jpg",
+    "weight": "681g / hộp thiếc.",
+    "ingredientList": "- Bột mì, bơ nguyên chất, đường, trứng, dừa bào sợi, nho khô.<br />- Gồm 5 tạo hình bánh khác nhau: Harvest Moon, Butter Pretzel, Sugar Slice, Vanilla Ring, Currant Crunch.",
+    "packing": "Đóng gói trong hộp thiếc dày dặn, bảo quản bánh tuyệt đối khỏi không khí. Đi kèm túi xách giấy thiết kế riêng cho dịp Tết.",
+    "exp": "- 15 tháng kể từ ngày sản xuất.",
+    "uses": "- Dùng trực tiếp khi mở hộp.<br />- Cực kỳ bắt vị khi nhâm nhi cùng một tách trà nóng hoặc cà phê trong buổi sáng mùng 1 Tết.",
+    "preserve": "- Đậy kín nắp hộp thiếc ngay sau khi lấy bánh để bánh không bị ỉu do tiếp xúc với gió.<br />- Để nơi khô ráo, tránh nhiệt độ cao.",
+    "reviews": [
+      {
+        "avatar": "👩",
+        "name": "Chị Mai Phương",
+        "address": "Cầu Giấy, Hà Nội",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Bánh này thì quốc dân rồi, năm nào mình cũng mua vài hộp biếu hai bên nội ngoại. Hộp thiếc màu xanh chưng lên bàn thờ rất sang, bánh thơm nức mùi bơ."
+      },
+      {
+        "avatar": "👨",
+        "name": "Anh Hoàng Sơn",
+        "address": "Hải Châu, Đà Nẵng",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Shop đóng gói cẩn thận, bọc chống sốc kỹ nên hộp không bị móp méo chút nào. Có kèm túi xách giấy của hãng rất lịch sự, mang đi biếu đối tác cực kỳ yên tâm."
+      },
+      {
+        "avatar": "👵",
+        "name": "Cô Thu Nga",
+        "address": "Quận 5, TP.HCM",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Date bánh mới tinh. Tụi nhỏ nhà cô thích nhất mấy cái bánh có rắc đường hạt với nho khô ở trên. Sẽ ủng hộ shop thêm vài hộp nữa trước Tết."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Giỏ Quà Tết Sum Vầy",
+    "category": "Quà Tặng Ngày Tết",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Thiết thực",
+      "cssClass": "practical"
+    },
+    "description": "Giỏ quà Tết Sum Vầy là sự lựa chọn thiết thực và ý nghĩa nhất dành tặng công nhân viên, người thân hoặc họ hàng ở quê. Không hoa mỹ xa hoa, giỏ quà hội tụ đầy đủ những sản phẩm quốc dân quen thuộc trong mọi gian bếp Việt như bánh ChocoPie, trà Lipton, cà phê G7 cùng các gia vị thiết yếu. Tặng giỏ quà này chính là gửi gắm lời chúc về một năm mới ấm no, đủ đầy, bếp lửa luôn rực hồng và gia đạo bình an.",
+    "shortDescription": "Giỏ quà thiết thực hội tụ các thương hiệu quốc dân (ChocoPie, G7, gia vị...), mang lời chúc ấm no sung túc.",
+    "price": "399.000",
+    "unit": "Giỏ",
+    "mainImg": "assets/images/product-hamper-1.jpg",
+    "subImg1": "assets/images/product-hamper-1.jpg",
+    "subImg2": "assets/images/product-hamper-2.jpg",
+    "subImg3": "assets/images/product-hamper-3.jpg",
+    "subImg4": "assets/images/product-hamper-4.jpg",
+    "weight": "2.5kg - 3kg / giỏ.",
+    "ingredientList": "- 01 Hộp bánh ChocoPie Orion (6 cái).<br />- 01 Hộp cà phê hòa tan G7 Trung Nguyên (18 gói).<br />- 01 Hộp trà Lipton nhãn vàng.<br />- 01 Chai dầu ăn Simply 1L.<br />- 01 Chai nước mắm Nam Ngư 500ml.<br />- 01 Gói đường tinh luyện Biên Hòa 1kg.",
+    "packing": "Các sản phẩm được sắp xếp khéo léo trên khay mây tre đan, bọc màng co trong suốt, đính kèm thiệp chúc Xuân và thắt nơ ruy băng đỏ rực rỡ.",
+    "exp": "- Từ 06 đến 12 tháng tùy theo từng sản phẩm (chi tiết ngày hết hạn xem trực tiếp trên bao bì từng món).",
+    "uses": "- Dùng để biếu tặng ông bà, cô chú, người thân, hoặc làm quà Tết tri ân cho nhân viên, đối tác.<br />- Các sản phẩm bên trong phục vụ trực tiếp cho nhu cầu ăn uống, tiếp khách và nấu nướng mâm cỗ Tết của mọi gia đình.",
+    "preserve": "- Để giỏ quà nơi khô ráo, thoáng mát.<br />- Tránh để trực tiếp dưới ánh nắng mặt trời hoặc gần nguồn nhiệt để màng co và các sản phẩm bên trong không bị biến chất.",
+    "reviews": [
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Quốc Hưng",
+        "address": "Bình Dương",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Năm nay kinh tế khó khăn nên mình chọn giỏ quà này tặng nhân viên xưởng. Vừa thiết thực, vừa đầy đặn, anh em ai cũng thích."
+      },
+      {
+        "avatar": "👩",
+        "name": "Chị Thanh",
+        "address": "Gò Vấp, TP.HCM",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Giỏ quà bọc màng co rất căng và chắc chắn. Thắt nơ đỏ nhìn sang lắm, xách đi biếu họ hàng ở quê rất hợp lý."
       }
     ]
   }
