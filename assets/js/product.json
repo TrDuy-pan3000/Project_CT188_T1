@@ -464,5 +464,46 @@
         "text": "Giỏ quà bọc màng co rất căng và chắc chắn. Thắt nơ đỏ nhìn sang lắm, xách đi biếu họ hàng ở quê rất hợp lý."
       }
     ]
+  },
+  {
+    "id": 11,
+    "name": "Combo Khô Bò Miếng & Khô Gà Lá Chanh",
+    "category": "Món Ngon Ngày Tết",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
+    "description": "Sự kết hợp bùng nổ vị giác 'hai trong một' không thể thiếu trên bàn tiệc ngày Xuân. Đĩa mồi hấp dẫn thu hút ánh nhìn với sắc nâu sậm óng ả của những miếng khô bò đùi nguyên thớ đậm đà, dai ngọt tự nhiên, nằm quyện sát bên sắc vàng ươm của khô gà xé sợi giòn rụm, thơm nức mùi lá chanh sấy và ớt cay nồng. Khay mứt Tết hay bàn tiệc đầu năm chỉ cần bày ra đĩa combo này, đảm bảo sẽ là món 'tốn mồi, hao bia' nhất để khách khứa hàn huyên, lai rai không dứt.",
+    "shortDescription": "Sự kết hợp hoàn hảo giữa khô bò miếng dai ngọt và khô gà lá chanh giòn cay. Món lai rai hao bia nhất dịp Xuân về.",
+    "price": "290.000",
+    "unit": "Hộp",
+    "mainImg": "assets/images/product-combo-kho-1.jpg",
+    "subImg1": "assets/images/product-combo-kho-1.jpg",
+    "subImg2": "assets/images/product-combo-kho-2.jpg",
+    "subImg3": "assets/images/product-combo-kho-3.jpg",
+    "subImg4": "assets/images/product-combo-kho-4.jpg",
+    "weight": "500g / hộp.",
+    "ingredientList": "- Khô bò miếng: 100% đùi bò tươi nguyên tảng tẩm ướp sả ớt, ngũ vị hương sấy mềm.<br />- Khô gà lá chanh: Ức gà ta xé sợi sấy giòn cùng lá chanh tươi thái chỉ, tỏi, ớt sừng khô.<br />- Cam kết không sử dụng chất bảo quản hay phẩm màu công nghiệp, màu sắc hoàn toàn tự nhiên từ nguyên liệu.",
+    "packing": "Đựng trong hộp nhựa PET nắp nhôm sang trọng, có màng seal niêm phong kín kẽ. Bên trong mix đều tỉ lệ 50:50 đẹp mắt.",
+    "exp": "- 06 tháng kể từ ngày sản xuất (in trên bao bì).",
+    "uses": "- Dùng tay xé sợi khô bò hoặc bày nguyên miếng ra đĩa cùng khô gà. Ăn trực tiếp, vắt thêm xíu nước cốt chanh/tắc lên khô bò để kích thích vị giác.<br />- Mồi nhậu 'đỉnh cao' khi nhâm nhi cùng bia lạnh, rượu vang hoặc ăn vặt đãi khách ngày Tết.",
+    "preserve": "- Luôn đậy kín nắp hộp ngay sau khi dùng để khô gà không bị ỉu gió và khô bò không bị cứng.<br />- Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.",
+    "reviews": [
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Thanh Tùng",
+        "address": "Tân Bình, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Nhìn đĩa này là thấy tốn bia rồi. Khô bò miếng dày thịt nhai rất đã, khô gà thì giòn thơm mùi lá chanh. Đãi khách ngày Tết bằng món này là hết sẩy."
+      },
+      {
+        "avatar": "👩",
+        "name": "Chị Kim Liên",
+        "address": "Gò Vấp, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Mình thích combo này ở chỗ mua 1 được 2, đỡ phải mua lắt nhắt nhiều hộp. Vị tẩm ướp rất vừa miệng, cay cay ngòn ngọt dễ ăn."
+      }
+    ]
   }
 ]
