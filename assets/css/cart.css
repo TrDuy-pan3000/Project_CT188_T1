@@ -42,7 +42,7 @@
 }
 
 /* .cart-wrapper - Vùng bọc toàn bộ nội dung trang giỏ hàng
- * padding-top: 100px → đẩy nội dung xuống dưới header đang fixed */
+ * padding-top: 100px → đẩy nội dung xuống dưới header  */
 .cart-wrapper {
     padding-top: 100px;
     margin-bottom: 50px;
@@ -228,7 +228,7 @@ h1 {
     align-items: center;
     gap: 5px;
     flex-shrink: 0;
-    height: 30px; /* FIX: cố định chiều cao bằng đúng height của qty-btn */
+    height: 30px; /* cố định chiều cao bằng đúng height của qty-btn */
 }
 
 /* .qty-btn - Nút + và - điều chỉnh số lượng */
@@ -274,7 +274,7 @@ h1 {
     min-width: 85px;
     text-align: right;
     flex-shrink: 0;
-    white-space: nowrap; /* FIX: ngăn giá tiền xuống dòng */
+    white-space: nowrap; /* ngăn giá tiền xuống dòng */
 }
 
 /* .remove-btn - Nút xóa sản phẩm, kiểu icon nhẹ, không nền */
@@ -340,7 +340,7 @@ h1 {
     overflow: visible;
 }
 
-/* .envelope-decoration - Con ngựa b3 thay bao lì xì, nhô lên đỉnh cột phải
+/* .envelope-decoration - Con ngựa nhô lên đỉnh cột phải
  * top: -50px, width: 110px, pointer-events: none không chặn form */
 .envelope-decoration {
     position: absolute;
@@ -608,7 +608,7 @@ h1 {
 @media (max-width: 600px) {
     body { font-size: 14px; }
 
-    .cart-item   { flex-wrap: nowrap; gap: 8px; } /* FIX: không wrap để nút +/- không lệch */
+    .cart-item   { flex-wrap: nowrap; gap: 8px; } /* không wrap để nút +/- không lệch */
     .item-image  { width: 50px; height: 50px; }
     .item-subtotal { min-width: 80px; font-size: 0.85em; }
 

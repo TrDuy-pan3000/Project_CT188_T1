@@ -30,9 +30,9 @@ async function loadMenu() {
             <span>${prod.rating}</span>
             <div class="card-bottom">
               <p class="price">${prod.price}₫</p>
-              <button class="btn-add" onclick="addToCart({id:'${prod.id}',name:'${prod.name}',price:${Number(String(prod.price).replace(/[^\d]/g,''))},image:'${prod.mainImg}',quantity:1}); showToast('✅ Đã thêm ${prod.name} vào giỏ!')">
+              <a href="detail.html?id=${prod.id}" class="btn-add">
                 <i class="fas fa-shopping-cart"></i> Thêm
-              </button>
+              </a>
             </div>
           </div>
         </div>
