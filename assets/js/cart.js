@@ -31,6 +31,25 @@ function formatMoney(amount) {
 // Render giỏ hàng 
 function renderCart() {
     cartData = loadCartFromStorage();
+
+    // dùng đúng selector .cart-badge như main.js
+    // Header được inject async nên dùng MutationObserver để retry nếu badge chưa có
+    function applyBadge() {
+        const totalQty = cartData.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        const badges = document.querySelectorAll('.cart-badge');
+        if (badges.length > 0) {
+            badges.forEach(b => { b.textContent = totalQty; });
+            return true;
+        }
+        return false;
+    }
+    if (!applyBadge()) {
+        const observer = new MutationObserver(() => {
+            if (applyBadge()) observer.disconnect();
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+
     const cartContainer = document.getElementById('cartItems');
     if (!cartContainer) return;
 
@@ -168,4 +187,3 @@ window.addEventListener('storage', (e) => {
         renderCart();
     }
 });
-
