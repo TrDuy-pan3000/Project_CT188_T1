@@ -1,191 +1,111 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-    <!-- Khai báo bộ ký tự tiếng Việt và thiết lập giao diện responsive -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Mô tả trang — hiển thị khi chia sẻ link hoặc tìm kiếm trên Google -->
-    <meta name="description"
-        content="Bếp Nhà Ngọ - Ăn là Mê, Rước Lộc về! Món ăn Tết truyền thống, giao hàng tận nơi tại Cần Thơ. Bánh tét, bánh chưng, đồ nhậu Tết chất lượng.">
-    <title>Bếp Nhà Ngọ - Ăn là Mê, Rước Lộc về!</title>
-
-    <!-- Google Fonts: Baloo 2 (tiêu đề vui), Nunito (nội dung), Cormorant Garamond (sang trọng), Inter (giao diện) -->
+    <meta name="description" content="Đăng nhập hoặc đăng ký tài khoản Bếp Nhà Ngọ">
+    <title>Đăng nhập - Bếp Nhà Ngọ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Favicon - icon nhỏ hiển thị trên tab trình duyệt -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
-
-    <!-- Font Awesome - thư viện icon (giỏ hàng, tìm kiếm, mạng xã hội...) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- CSS: style.css (dùng chung)-->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
-
 <body>
+    <header class="header"></header>
 
-     <header class="header"></header>
-<!-- MAIN -->
-
-<main class="auth-wrapper">
-<div class="auth-card">
-<h2 class="auth-title">Tài khoản</h2>
-
-<!-- lựa chọn -->
-
-<div id="choiceBox" class="auth-choice">
-
-<button id="showLogin" class="auth-btn">
-Đăng nhập
-</button>
-
-<button id="showRegister" class="auth-btn outline">
-Đăng ký
-</button>
-
-</div>
-<!-- LOGIN -->
-
-<form id="loginForm" class="auth-form hidden">
-<button type="button" class="backBtn">← Quay lại</button>
-<input
-type="email"
-id="loginEmail"
-placeholder="Email"
-class="auth-input"
-required
->
-
-<div class="password-box">
-
-<input
-type="password"
-id="loginPassword"
-placeholder="Mật khẩu"
-class="auth-input"
-required
->
-
-<i class="fa-solid fa-eye togglePassword"></i>
-
-</div>
-
-<button class="auth-btn">
-Đăng nhập
-</button>
-
-</form>
-
-
-
-<!-- REGISTER -->
-
-<form id="registerForm" class="auth-form hidden">
-
-<button type="button" class="backBtn">← Quay lại</button>
-
-<input
-type="text"
-id="name"
-placeholder="Tên"
-class="auth-input"
-required
->
-
-<input
-type="email"
-id="registerEmail"
-placeholder="Email"
-class="auth-input"
-required
->
-
-<div class="password-box">
-
-<input
-type="password"
-id="registerPassword"
-placeholder="Mật khẩu"
-class="auth-input"
-required
->
-
-<i class="fa-solid fa-eye togglePassword"></i>
-
-</div>
-
-<button class="auth-btn">
-Đăng ký
-</button>
-
-</form>
-
-</div>
-
-</main>
-
-<!-- ======================== FOOTER CHUẨN (Kéo từ Trang Chủ) ======================== -->
-
-<footer class="footer">
-        <!-- Đường kẻ trang trí gradient ở trên cùng footer -->
-        <div class="footerdivider footer-deco"></div>
-        <div class="footertop footer-content">
-            <!-- Cột 1: Logo, mô tả, slogan, liên kết mạng xã hội -->
-            <div class="footer-col">
-                <div class="footer-brand">
-                    <img src="assets/images/logo.png" alt="Bếp Nhà Ngọ">
-                    <span class="footer-brand-text">Bếp Nhà Ngọ</span>
-                </div>
-                <p class="footer-text">Mang hương vị Tết truyền thống đến mọi nhà. Chúng tôi tự hào là địa chỉ tin cậy
-                    cho những món ăn ngày Tết!</p>
-                <p class="footer-slogan">"Ăn là Mê, Rước Lộc về!" 🐴</p>
-                <div class="social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-
-            <!-- Cột 2: Các trang liên kết -->
-            <div class="footer-col">
-                <h4 class="footer-title">Liên Kết Nhanh</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
-                    <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Thực đơn</a></li>
-                    <li><a href="story.html"><i class="fas fa-chevron-right"></i> Câu chuyện</a></li>
-                    <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Giỏ hàng</a></li>
-                </ul>
-            </div>
-
-            <!-- Cột 3: Thông tin liên hệ (địa chỉ, sđt, email, giờ mở cửa) -->
-            <div class="footer-col">
-                <h4 class="footer-title">Liên Hệ Ngựa</h4>
-                <ul class="contact">
-                    <li><i class="fas fa-map-marker-alt"></i><span>123 Đường 3/2, Q. Ninh Kiều, Cần Thơ</span></li>
-                    <li><i class="fas fa-phone"></i><span>0909 123 456</span></li>
-                    <li><i class="fas fa-envelope"></i><span>xin.chao@bepnhangngo.vn</span></li>
-                    <li><i class="fas fa-clock"></i><span>7:00 - 22:00 (Giao cả Tết!)</span></li>
+    <main class="auth-page">
+        <!-- Cột trái — trang trí -->
+        <div class="auth-hero">
+            <div class="auth-hero-content">
+                <h1>Chào mừng đến<br><span>Bếp Nhà Ngọ</span></h1>
+                <p class="auth-hero-slogan">🐴 Ăn là Mê, Rước Lộc về!</p>
+                <p class="auth-hero-desc">Đăng nhập để đặt hàng nhanh hơn, theo dõi đơn hàng và nhận ưu đãi mùa Tết!</p>
+                <ul class="auth-hero-perks">
+                    <li><i class="fas fa-bolt"></i> Đặt hàng siêu tốc</li>
+                    <li><i class="fas fa-gift"></i> Nhận voucher giảm giá</li>
+                    <li><i class="fas fa-truck"></i> Theo dõi giao hàng</li>
                 </ul>
             </div>
         </div>
-        <!-- Dòng bản quyền cuối cùng -->
-        <div class="footerbottom">
-            <p>© 2026 Bếp Nhà Ngọ. Made with <i class="fas fa-heart"></i> by Group 1 | Năm Giáp Ngọ 🐴</p>
-        </div>
-    </footer>
 
-    <!-- JavaScript chính của trang -->
+        <!-- Cột phải — form -->
+        <div class="auth-form-side">
+            <div class="auth-card">
+                <h2 class="auth-title">Tài khoản</h2>
+                <p class="auth-subtitle">Đăng nhập hoặc tạo tài khoản mới</p>
+
+                <!-- Lựa chọn -->
+                <div id="choiceBox" class="auth-choice">
+                    <button id="showLogin" class="auth-btn primary"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>
+                    <div class="auth-divider"><span>hoặc</span></div>
+                    <button id="showRegister" class="auth-btn outline"><i class="fas fa-user-plus"></i> Tạo tài khoản mới</button>
+                </div>
+
+                <!-- Form đăng nhập -->
+                <form id="loginForm" class="auth-form hidden">
+                    <button type="button" class="backBtn"><i class="fas fa-arrow-left"></i> Quay lại</button>
+                    <h3 class="form-heading">Đăng nhập</h3>
+                    <div class="input-group">
+                        <label for="loginEmail"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="loginEmail" placeholder="vd: ngua@bepnhango.vn" class="auth-input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="loginPassword"><i class="fas fa-lock"></i> Mật khẩu</label>
+                        <div class="password-box">
+                            <input type="password" id="loginPassword" placeholder="Nhập mật khẩu" class="auth-input" required>
+                            <i class="fa-solid fa-eye togglePassword"></i>
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="remember-me"><input type="checkbox"> Ghi nhớ</label>
+                        <a href="#" class="forgot-link">Quên mật khẩu?</a>
+                    </div>
+                    <button type="submit" class="auth-btn primary"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>
+                </form>
+
+                <!-- Form đăng ký -->
+                <form id="registerForm" class="auth-form hidden">
+                    <button type="button" class="backBtn"><i class="fas fa-arrow-left"></i> Quay lại</button>
+                    <h3 class="form-heading">Tạo tài khoản</h3>
+                    <div class="input-group">
+                        <label for="name"><i class="fas fa-user"></i> Họ và tên</label>
+                        <input type="text" id="name" placeholder="vd: Nguyễn Văn Ngọ" class="auth-input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="registerEmail"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="registerEmail" placeholder="vd: ngua@bepnhango.vn" class="auth-input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="registerPhone"><i class="fas fa-phone"></i> Số điện thoại</label>
+                        <input type="tel" id="registerPhone" placeholder="vd: 0909 123 456" class="auth-input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="registerPassword"><i class="fas fa-lock"></i> Mật khẩu</label>
+                        <div class="password-box">
+                            <input type="password" id="registerPassword" placeholder="Tối thiểu 6 ký tự" class="auth-input" required>
+                            <i class="fa-solid fa-eye togglePassword"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmPassword"><i class="fas fa-lock"></i> Xác nhận mật khẩu</label>
+                        <div class="password-box">
+                            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" class="auth-input" required>
+                            <i class="fa-solid fa-eye togglePassword"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-btn primary"><i class="fas fa-user-plus"></i> Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer"></footer>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/login.js"></script>
     <script src="assets/js/script.js"></script>
-    
+    <script src="assets/js/login.js"></script>
 </body>
 </html>

@@ -1,314 +1,766 @@
-.overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(74, 59, 50, 0.5);
-    display: none;
-    z-index: 1000;
-    backdrop-filter: blur(4px);
+/* MAIN */
+/* Nền kem, tối thiểu full màn hình */
+main {
+    background: var(--cream);
+    min-height: 100vh;
 }
 
-.top-actions {
+
+/* HERO SECTION — .story-hero
+   Ảnh nền full, overlay gradient, text trắng */
+
+/* Container hero: thu nhỏ vừa phải — không chiếm quá nhiều màn hình */
+.story-hero {
+    position: relative;
+    height: 180px;      /* Compact — chỉ đủ thấy tiêu đề */
+    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin: 0 5% 2rem;
-    flex-wrap: wrap;
+    justify-content: center;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Hiệu ứng mở rộng khi hover */
+    cursor: default; /* Không đổi con trỏ, chỉ hover để mở rộng và xem mô tả thêm */
 }
 
-.search-box {
-    position: relative;
-    width: 280px;
+/* Hover: mở ra thêm 24px */
+.story-hero:hover {
+    height: 204px;
 }
 
-.search-box input {
-    width: 100%;
-    padding: 12px 16px 12px 44px;
-    border-radius: var(--radius-full);
-    border: 2px solid var(--pink-peach);
-    font-size: 14px;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    outline: none;
-    transition: all 0.3s ease;
-    background: var(--white);
-    box-shadow: var(--shadow-clay);
-}
-
-.search-icon {
+/* ── Lớp ảnh nền ── */
+/* .menu-hero-bg: bọc ảnh + overlay, phủ toàn bộ hero */
+.menu-hero-bg {
     position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
-    font-size: 16px;
+    inset: 0;    /* top/right/bottom/left = 0 */
+    z-index: 0;
+    background: linear-gradient(
+        135deg,
+        var(--red-dark) 0%,
+        var(--red-tet) 55%,
+        var(--coral) 100%
+    );
+}
+
+/* Ảnh nền: kéo full, crop đẹp + zoom nhẹ khi hover */
+.menu-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    color: transparent;
+    font-size: 0;
+    transform: scale(1.05);    /* Luôn scale 1.05 để có buffer zoom */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Zoom ảnh khi hover toàn hero */
+.story-hero:hover .menu-hero-bg img {
+    transform: scale(1.12);
+}
+
+/* Họa tiết trang trí: hình tròn vàng mờ góc trên phải */
+.menu-hero-bg::after {
+    content: '';
+    position: absolute;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    background: rgba(255, 247, 0, 0.07);        /* Vàng cực mờ */
+    top: -80px; right: -80px;
+    z-index: 1;   /* Nằm trên ảnh nhưng dưới nội dung */
     pointer-events: none;
 }
 
-.search-box input:hover,
-.search-box input:focus {
-    border-color: var(--red-tet);
+/* ── Overlay đen dốc ── */
+/* Tạo độ tối để chữ dễ đọc khi có ảnh */
+.menu-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(    /* Gradient từ tối bên trái → nhạt bên phải */
+        to bottom,
+        rgba(26, 10, 0, 0.35) 0%,
+        rgba(26, 10, 0, 0.65) 100%
+    );
+    z-index: 1;
 }
 
-#filterBtn {
-    padding: 12px 24px;
-    border-radius: var(--radius-full);
-    border: none;
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    color: var(--white);
+/* ── Nội dung hero ── */
+.menu-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 680px;
+    padding: 0 2rem; /* Padding ngang để nội dung không dính sát mép trên desktop */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);   /* Lift nhẹ khi hover hero */
+}
+.story-hero:hover .menu-hero-content {
+    transform: translateY(-6px);                /* Chữ nổi lên 6px khi hover */
+}
+
+/* Hiệu ứng xuất hiện — class .menu-hero-enter */
+.menu-hero-enter {
+    animation: heroFadeDown 0.75s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Nhãn nhỏ phía trên tiêu đề: "GIAN BẾP NHÀ NGỌ" */
+.menu-hero-sub {
+    display: inline-block;
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 14px;
+    font-size: 0.62rem;
     font-weight: 700;
+    letter-spacing: 0.14em;  /* Tăng khoảng cách chữ để tạo cảm giác "phủ" hơn */
+    text-transform: uppercase; /* Viết hoa toàn bộ */
+    color: var(--gold);
+    background: rgba(255, 247, 0, 0.12); /* Vàng cực mờ làm nền cho chữ */
+    border: 1px solid rgba(255, 247, 0, 0.35);
+    padding: 0.22rem 0.75rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 0.4rem;
+}
+
+/* Tiêu đề lớn: 2 dòng span — nhỏ hơn cho hero compact */
+.menu-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);   /* Nhỏ gọn */
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;  /* Dãn dòng */
+    margin: 0 0 0.35rem;   /* Khoảng cách dưới tiêu đề, không có khoảng cách trên */
+    display: flex;
+    flex-direction: column;  /* Cho phép tiêu đề có 2 dòng */
+    gap: 0.02em;
+}
+
+/* Gạch vàng ngắn phân cách */
+.menu-hero-divider {
+    width: 44px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), rgba(255,247,0,0.3));
+    border-radius: var(--radius-full); /* Bo tròn hai đầu gạch */
+    margin: 0 auto 0.6rem;
+}
+
+/* Mô tả: ẩn mặc định trong hero compact, hiện khi hover */
+.menu-hero-desc {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(0.68rem, 1.6vw, 0.9rem);  /* Nhỏ gọn, vừa phải cho mô tả dài */
+    line-height: 1.65;
+    margin: 0; /* Reset margin của <p> */
+    font-family: 'Be Vietnam Pro', sans-serif; /* Font đơn giản, dễ đọc cho mô tả dài */
+    opacity: 0; /* Ẩn bằng opacity để có thể transition mượt */
+    max-height: 0;
+    overflow: hidden; /* Ẩn phần mô tả khi không hover */
+    transition: opacity 0.35s ease, max-height 0.35s ease; /* Hiệu ứng mượt khi hiện mô tả */
+}
+/* Hiện mô tả khi hover toàn hero */
+.story-hero:hover .menu-hero-desc {
+    opacity: 1;
+    max-height: 80px;        /* Đủ chứa 2-3 dòng */
+}
+
+
+/* TOP-ACTIONS — Khung Bộ lọc + Search
+   Nổi bật, viền đỏ rõ, không che hero */
+
+.top-actions {
+    display: flex; 
+    align-items: center;
+    max-width: 800px;
+    margin: 2.5rem auto 3.5rem;
+    padding: 0;
+    background: var(--white);
+    border-radius: 50px;
+    border: 1px solid rgba(204, 39, 41, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.top-actions:focus-within {
+    box-shadow: 0 15px 35px rgba(204, 39, 41, 0.12);
+    border-color: rgba(204, 39, 41, 0.3);
+}
+
+/* NÚT BỘ LỌC */
+#filterBtn {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.6rem;
+    padding: 1rem 1.8rem;
+    background: transparent;
+    color: var(--red-dark);
+    border: none;
+    border-right: 1px solid rgba(204, 39, 41, 0.15);
+    border-radius: 50px 0 0 50px;
     cursor: pointer;
-    box-shadow: var(--shadow-clay);
-    transition: all 0.3s ease;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease; 
+}
+
+#filterBtn i, #filterBtn::before {
+    content: '\f0b0'; /* FontAwesome filter icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--red-tet);
+    transition: transform 0.3s ease;
 }
 
 #filterBtn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-clay-hover);
+    background: rgba(204, 39, 41, 0.04);
 }
-
-#filterBtn:active {
-    transform: scale(0.98);
-}
-
-.filter-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.95);
-    background: var(--white);
-    width: 320px;
-    padding: 24px;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-clay-hover);
-    display: none;
-    transition: 0.3s;
-    z-index: 1001;
-}
-
-.filter-modal h3 {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 1.3rem;
-    color: var(--brown-dark);
-    margin-bottom: 1rem;
-}
-
-.filter-modal.active {
-    display: block;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.overlay.active {
-    display: block;
-}
-
-.category-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 16px 0;
-}
-
-.category-btn {
-    padding: 12px;
-    border-radius: var(--radius);
-    border: 2px solid var(--pink-light);
-    background: var(--cream);
-    cursor: pointer;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--brown-dark);
-    transition: all 0.3s ease;
-}
-
-.category-btn:hover {
-    border-color: var(--pink-peach);
-    background: var(--pink-light);
-}
-
-.category-btn.active {
-    background: linear-gradient(135deg, var(--red-tet), var(--coral));
-    color: var(--white);
-    border-color: var(--red-tet);
-}
-
-.actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 1rem;
-}
-
-.actions button {
-    padding: 10px 20px;
-    border-radius: var(--radius-full);
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.actions #closeFilter {
-    background: var(--cream);
-    color: var(--brown-dark);
-}
-
-.actions #applyFilter {
-    background: linear-gradient(135deg, var(--mint), #7BC9B7);
-    color: var(--brown-dark);
-}
-
-.actions button:hover {
+#filterBtn:hover::before {
     transform: translateY(-2px);
 }
 
-#applyFilter:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
+/* Ô TÌM KIẾM  */
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem 1.5rem;   
+    background: transparent;
 }
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 24px;
-    padding: 0 5%;
-    max-width: 1400px;
+.search-box:focus-within {
+    background: transparent;
+}
+
+/* Icon kính lúp */
+.search-icon {
+    font-size: 1.1rem;
+    color: var(--red-tet);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.search-box:focus-within .search-icon {
+    opacity: 1;
+}
+
+/* Input thực tế */
+#searchInput {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1.05rem;
+    color: var(--brown-dark);
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+#searchInput::placeholder {
+    color: #a09995;
+    font-weight: 400;
+}
+
+
+/* OVERLAY — Lớp tối khi filter modal mở */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 10, 0, 0.6);
+    backdrop-filter: blur(2px);    /* Làm mờ nền phía sau để tăng độ tương phản cho modal */
+    z-index: 200;    /* Nằm dưới modal (z-index: 300) nhưng trên hero và toolbar */
+    opacity: 0;
+    pointer-events: none;   /* Không nhận sự kiện khi ẩn */
+    transition: opacity 0.3s ease;
+}
+/* JS toggle .active để hiện */
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;  /* Nhận sự kiện khi active */
+}
+
+
+/* FILTER MODAL — Bottom sheet */
+
+/* Ẩn bên dưới màn hình ban đầu */
+.filter-modal {
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 300;
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    padding: 0 1.5rem 2.5rem;
+    width: min(500px, 100%);   /* Giới hạn chiều rộng, không trải full trên desktop */
+    box-shadow:     /* Bóng đổ: 2 lớp — lớp lớn mờ + lớp nhỏ rõ */
+        0 -8px 40px rgba(26, 10, 0, 0.18),
+        0 -2px 8px rgba(204, 39, 41, 0.1);
+    transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Thanh kéo trang trí (mobile style) */
+.filter-modal::before {
+    content: '';
+    display: block;
+    width: 40px; height: 4px;
+    background: rgba(204, 39, 41, 0.25);
+    border-radius: var(--radius-full);   /* Bo tròn hai đầu thanh kéo */
+    margin: 1rem auto 0;   /* Cách đều trên cùng, nằm giữa */
+}
+
+/* Viền gradient đỏ→vàng trên cùng modal */
+.filter-modal::after {
+    content: '';
+    position: absolute;  /* Nằm trên cùng, phủ ngang hết modal */
+    top: 0; left: 0; right: 0;   /* Đặt ở trên cùng, trải rộng toàn bộ chiều ngang */
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--red-tet), var(--gold)); 
+    border-radius: 20px 20px 0 0;
+    pointer-events: none;  /* Không nhận sự kiện chuột, tránh cản trở thao tác trên modal */
+}
+
+/* Mở: trượt lên */
+.filter-modal.active,
+.filter-modal.open { bottom: 0; }
+
+/* Tiêu đề modal */
+.filter-modal h3 {
+    font-family: 'Playfair Display', serif;   /* Font serif sang trọng cho tiêu đề */
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brown-dark);
+    text-align: center;
+    margin: 1.25rem 0 1.2rem;
+    padding-bottom: 1rem;  /* Cách đều dưới tiêu đề + tạo khoảng cách với nội dung */
+    border-bottom: 1px solid rgba(204, 39, 41, 0.1);   /* Đường kẻ nhẹ dưới tiêu đề để phân tách rõ ràng */
+}
+
+/* Danh sách nút danh mục */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;   /* Cho phép xuống dòng nếu không đủ chỗ */
+    gap: 0.6rem; 
+    justify-content: center;  /* Căn giữa hàng nút */
+    margin-bottom: 1.4rem;  /* Khoảng cách giữa danh sách nút và phần actions dưới */
+}
+
+/* Nút danh mục mặc định */
+.category-btn {
+    background: var(--mint-light);
+    border: 2px solid transparent;    /*  Viền mặc định trong suốt, chỉ hiện khi hover hoặc selected */
+    color: var(--brown-light);
+    padding: 0.52rem 1.2rem;
+    border-radius: var(--radius-full);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;  
+}
+.category-btn:hover {  /* Hover: viền đỏ, chữ đỏ, nền hồng nhạt */
+    border-color: var(--red-tet);
+    color: var(--red-tet);
+    background: var(--pink-light);
+}
+/* Đang được chọn */
+.category-btn.active,
+.category-btn.selected {  /* Nền đỏ Tết, chữ trắng, viền đỏ rõ */
+    background: var(--red-tet);
+    border-color: var(--red-tet);
+    color: var(--white);
+    box-shadow: var(--shadow-clay);
+    transform: scale(1.05);
+}
+
+/* Hàng nút Hủy / Áp dụng */
+.actions {
+    display: flex;
+    gap: 0.75rem;
+}
+#closeFilter, #applyFilter { 
+    flex: 1;
+    padding: 0.85rem;
+    border-radius: var(--radius-full);  /* Bo góc đầy tạo cảm giác "nút bấm" rõ ràng */
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid transparent;  /* Viền mặc định trong suốt, chỉ hiện khi hover */
+    transition: all 0.3s ease;  /* Hiệu ứng hover mượt cho cả hai nút */
+}
+/* Hủy: viền đỏ */
+#closeFilter {
+    background: var(--white);
+    color: var(--red-tet);
+    border-color: var(--red-tet);
+}
+#closeFilter:hover { background: var(--red-tet); color: var(--white); }  
+
+/* Áp dụng: gradient đỏ */
+#applyFilter {
+    background: linear-gradient(135deg, var(--red-tet), var(--coral));
+    color: var(--white);
+    box-shadow: var(--shadow-clay);
+}
+#applyFilter:not(:disabled):hover {  /* Hover chỉ khi không disabled: tối hơn + nổi lên */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-clay-hover); /* Bóng đổ sâu hơn khi hover */
+}
+#applyFilter:disabled {
+    background: var(--mint-light);
+    color: var(--brown-light);
+    box-shadow: none;
+    cursor: not-allowed;  /* Con trỏ không được phép khi disabled */
+    opacity: 0.65;  /* Mờ hơn khi disabled */
+}
+
+
+/* MENU SECTION + GRID */
+/* Vùng bọc section menu */
+.menu {
+    padding: 0 5% 5rem;  /* Padding ngang, dưới rộng để tạo khoảng cách */
+    max-width: 1240px;
     margin: 0 auto;
 }
 
+/* Lưới sản phẩm: 4 cột lớn, tự xuống dòng */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));  /* Tự động tạo cột, mỗi cột tối thiểu 240px, nếu đủ chỗ sẽ trải đều */
+    gap: 1.5rem;
+    align-items: stretch;  /* Tất cả card cùng chiều cao */
+}
+
+
+/*  MENU CARD — .menu-card
+ * Viền rõ ràng, chiều cao đồng đều, hover đẹp 
+ * Card: nền trắng, bo góc lớn, viền đỏ nhạt */
 .menu-card {
     background: var(--white);
-    border-radius: var(--radius-xl);
-    padding: 14px;
-    box-shadow: var(--shadow-clay);
+    border-radius: 16px;
+
+    /* VIỀN RÕ: 2px đỏ opacity 20% — luôn hiện, không mờ hoàn toàn */
+    border: 2px solid rgba(204, 39, 41, 0.2);
+
+    overflow: hidden;
+
+    /* Bóng đổ nhẹ — cảm giác nổi trên nền kem */
+    box-shadow:
+        0 4px 20px rgba(204, 39, 41, 0.09),
+        0 1px 5px  rgba(26,  10,  0,  0.06);
+
+    /* Flex column để đẩy nút xuống cuối */
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    transition: all 0.4s ease;
+    height: 100%;
+
+    transition: all 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center bottom;
+
+    /* Animation xuất hiện từ dưới */
+    animation: cardUp 0.5s ease both;
 }
 
+/* Stagger delay — card lần lượt xuất hiện */
+.menu-card:nth-child(1) { animation-delay: 0.05s; }
+.menu-card:nth-child(2) { animation-delay: 0.13s; }
+.menu-card:nth-child(3) { animation-delay: 0.21s; }
+.menu-card:nth-child(4) { animation-delay: 0.29s; }
+.menu-card:nth-child(5) { animation-delay: 0.37s; }
+.menu-card:nth-child(6) { animation-delay: 0.45s; }
+
+/* Hover: nổi lên + viền đậm + scale nhẹ */
 .menu-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-clay-hover);
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(204, 39, 41, 0.45);
+    box-shadow:
+        0 20px 50px rgba(204, 39, 41, 0.18),
+        0 6px  14px rgba(26,  10,  0,  0.1);
 }
 
-.menu-card.hidden {
-    display: none;
-}
-
+/* ── Vùng ảnh — .image-wrapper <a> ── */
 .image-wrapper {
+    display: block;   /* <a> cần display block */
     position: relative;
-    border-radius: var(--radius-lg);
+    height: 14rem;  /* Chiều cao cố định đồng đều */
     overflow: hidden;
+    background: var(--mint-light);  /* Màu chờ khi ảnh chưa load */
+    flex-shrink: 0;
+    text-decoration: none;
 }
 
+/* Ảnh sản phẩm */
 .image-wrapper img {
     width: 100%;
-    height: 160px;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    object-position: center;
+    display: block;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Zoom ảnh khi hover card */
 .menu-card:hover .image-wrapper img {
     transform: scale(1.08);
 }
 
-.badge {
+/* Overlay gradient mờ dưới ảnh — hiện khi hover */
+.image-wrapper::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 55%, rgba(26,10,0,0.22) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.38s ease;
+}
+.menu-card:hover .image-wrapper::after { opacity: 1; }
+
+/* ── Tag nhãn loại sản phẩm — .card-tag ── */
+/* Tag nằm góc trên trái ảnh */
+.card-tag {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 5px 12px;
+    top: 0.75rem; left: 0.75rem;
+    z-index: 3;
+    padding: 0.3rem 0.85rem;
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 12px;
+    font-size: 0.72rem;
     font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     border-radius: var(--radius-full);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     color: var(--white);
-    box-shadow: var(--shadow-soft);
+    /* Mặc định: hồng đào */
+    background: var(--pink-peach);
+    animation: badgeIn 0.45s 0.4s ease both;
 }
 
-.badge.new {
-    background: linear-gradient(135deg, var(--mint), #7BC9B7);
-    color: var(--brown-dark);
+/* Tag "Truyền thống" — đỏ + chữ vàng */
+.card-tag.trad {
+    background: var(--red-tet);
+    color: var(--gold);
 }
 
-.badge.spicy {
+/* Tag "Mới" — hồng đào */
+.card-tag.new  { background: var(--pink-peach); color: var(--white); }
+
+/* Tag "Hot" / "Bán chạy" — gradient đỏ */
+.card-tag.hot {
     background: linear-gradient(135deg, var(--red-tet), var(--coral));
+    color: var(--white);
 }
 
+/* ── Phần nội dung bên dưới ảnh — .content-wrapper ── */
+.content-wrapper {
+    padding: 1.1rem 1.2rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;  /* Chiếm hết chiều cao còn lại */
+    gap: 0;
+}
+
+/* Tên sản phẩm: tối đa 2 dòng để card đồng đều */
 .food-name {
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 1.1rem;
     font-weight: 700;
+    font-size: 1.08rem;
     color: var(--brown-dark);
-    margin: 0;
+    line-height: 1.4;
+    margin: 0.4rem 0 0.5rem;
+
+    /* Clamp 2 dòng — tên dài không vỡ card */
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* min-height = 2 dòng: mọi card đặt giá cùng vị trí */
+    min-height: calc(1.08rem * 1.4 * 2);
 }
 
+/* Mô tả ngắn: tối đa 3 dòng */
+.short-description {
+    font-size: 0.88rem;
+    color: var(--brown-light);
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-box-orient: vertical; /* Đặt hướng cột dọc để line-clamp hoạt động */
+    overflow: hidden;
+    min-height: calc(0.88rem * 1.65 * 3);      /* Giữ chỗ đều 3 dòng */
+}
+
+/* ── Footer card: giá + nút — .card-bottom ── */
+.card-bottom {
+    margin-top: auto;   /* Dính xuống đáy card */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   /* Giá bên trái, nút bên phải */
+    gap: 0.6rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(204, 39, 41, 0.1);  /* Đường kẻ nhẹ phân tách nội dung với giá + nút */
+}
+
+/* Giá tiền: đỏ, to, đậm */
 .price {
     font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1.15rem;
     font-weight: 800;
-    font-size: 1.2rem;
     color: var(--red-tet);
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin: 0; /* Reset margin của <p> */
 }
 
-.buy-btn {
-    margin-top: auto;
-    padding: 10px 16px;
-    border-radius: var(--radius-full);
-    border: none;
-    background: linear-gradient(135deg, var(--mint), #7BC9B7);
-    color: var(--brown-dark);
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
-    box-shadow: var(--shadow-clay);
-    transition: all 0.3s ease;
-    align-self: center;
-}
+/* Nút "Thêm vào giỏ" — .btn-add */
+.btn-add {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.1rem;
 
-.buy-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-clay-hover);
     background: linear-gradient(135deg, var(--red-tet), var(--coral));
     color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm); /* Bo góc nhỏ hơn để tạo cảm giác "nút bấm" rõ ràng */
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(204, 39, 41, 0.28);
+    transition: all 0.3s ease;
+
+    /* Ripple wrapper */
+    position: relative;
+    overflow: hidden;
 }
 
+/* Hiệu ứng ripple sáng chạy qua nút khi hover */
+.btn-add::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: -80%;
+    width: 55%; height: 200%;
+    background: rgba(255,255,255,0.22);
+    transform: translateY(-50%) skewX(-20deg); /* Tạo hiệu ứng ánh sáng nghiêng */
+    transition: left 0.38s ease; /* Di chuyển từ trái sang phải khi hover */
+    pointer-events: none;
+}
+.btn-add:hover::before { left: 120%; } /* Khi hover, ánh sáng chạy qua nút từ trái sang phải */
+
+/* Hover nút */
+.btn-add:hover {
+    transform: translateY(-2px);  /* Nổi lên nhẹ */
+    background: linear-gradient(135deg, var(--red-dark), var(--red-tet));
+    box-shadow: 0 6px 18px rgba(204, 39, 41, 0.38);
+    color: var(--white);
+}
+.btn-add:active { transform: translateY(0); }
+
+
+/* CARD ẨN — bị filter/search lọc ra */
+.menu-card.hidden { display: none; }
+
+
+/* ANIMATIONS */
+
+/* Hero content rơi từ trên xuống */
+@keyframes heroFadeDown {
+    from { opacity: 0; transform: translateY(-22px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Toolbar xuất hiện từ dưới lên */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Card xuất hiện từ dưới + scale */
+@keyframes cardUp {
+    from { opacity: 0; transform: translateY(28px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+/* Badge/tag trượt từ trái vào */
+@keyframes badgeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+
+/* RESPONSIVE — Tablet (≤ 992px) */
+@media (max-width: 992px) {
+    .story-hero        { height: 155px; }
+    .story-hero:hover  { height: 175px; }
+}
+
+
+/* RESPONSIVE — Tablet nhỏ (≤ 768px) */
 @media (max-width: 768px) {
+
+    .story-hero        { height: 140px; }
+    .story-hero:hover  { height: 158px; }
+    .menu-hero-title   { font-size: clamp(1rem, 3.5vw, 1.4rem); } /* Tiêu đề nhỏ hơn để phù hợp với hero thấp hơn */
+    /* Toolbar: đổi thành 2 hàng */
     .top-actions {
-        flex-direction: column;
-        align-items: stretch;
+        margin: 1.5rem 1rem 2rem;
+        flex-wrap: wrap;
     }
-
-    .search-box {
-        width: 100%;
-    }
-
+    /* Filter full width hàng đầu */
     #filterBtn {
         width: 100%;
         justify-content: center;
+        padding: 0.85rem;
+    }
+    /* Search full width hàng thứ 2 */
+    .search-box {
+        width: 100%;
+        border-left: none;
+        border-top: 1.5px solid rgba(204, 39, 41, 0.15);
     }
 
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
+    /* Grid 2 cột */
+    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .image-wrapper { height: 11rem; }
 
-    .menu-card:nth-child(odd),
-    .menu-card:nth-child(even) {
-        transform: rotate(0);
-        margin-top: 0;
-    }
+    .menu { padding: 0 4% 3rem; }
+    .filter-modal { width: 100%; }
 }
 
+
+/* RESPONSIVE — Mobile (≤ 480px) */
 @media (max-width: 480px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
+
+    .story-hero        { height: 120px; }
+    .story-hero:hover  { height: 136px; }
+    .menu-hero-desc    { display: none; }
+
+    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; } /* Giữ 2 cột nhưng giảm gap */
+    .menu { padding: 0 3% 2.5rem; }   /* Giảm padding tổng thể */
+    .image-wrapper { height: 9rem; }  /* Ảnh thấp hơn để phù hợp với màn hình nhỏ hơn */
+
+    .content-wrapper { padding: 0.8rem 0.9rem; } /* Thu nhỏ padding nội dung card */
+    .food-name {
+        font-size: 0.9rem;
+        min-height: calc(0.9rem * 1.4 * 2);
     }
+    .short-description { display: none; }       /* Ẩn mô tả ngắn trên mobile nhỏ */
+    .price { font-size: 1rem; }
+    .btn-add { font-size: 0.78rem; padding: 0.48rem 0.75rem; }
+
+    .card-tag { font-size: 0.62rem; padding: 0.22rem 0.6rem; }
+    .top-actions { margin: 1.2rem 0.5rem 1.75rem; }
 }
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; } /* Thanh cuộn dọc */
+::-webkit-scrollbar-track { background: var(--cream); }  /* Nền thanh cuộn */
+::-webkit-scrollbar-thumb {  
+    background: var(--red-tet); 
+    border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--red-dark); }
