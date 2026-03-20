@@ -15,6 +15,17 @@ section {
   margin: 0;
   padding: 2% 5%;
 }
+section > .title {
+  position: relative;
+  z-index: 1;
+}
+.top-mascot {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  filter: drop-shadow(0 2px 2px var(--white));
+  z-index: 2;
+}
 .container {
   width: 100%;
   display: flex;
@@ -164,6 +175,11 @@ section .title h1 {
 .more-info {
   background-color: var(--mint-light);
 }
+.more-info .top-mascot {
+  width: 159px;
+  bottom: -50px;
+  right: 0;
+}
 .more-info > .container {
   width: 100%;
   flex-direction: column;
@@ -185,9 +201,6 @@ section .title h1 {
 /* ======================= Phần các đánh giá ================== */
 .product-reviews > .container {
   flex-direction: column;
-}
-.overall-rating {
-  border: 2px solid gold;
 }
 .review-card {
   background-color: var(--white);
@@ -251,7 +264,10 @@ section .title h1 {
   margin: 0;
 }
 .view-all-btn-container {
-  margin-top: 2rem;
+  margin: 1rem;
+}
+.related-products .top-mascot {
+  right: 0;
 }
 /* ========== Báo lỗi khi không tìm thấy sản phẩm ============== */
 .cantFindProd {
@@ -262,7 +278,7 @@ section .title h1 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding:1rem;
+  padding: 1rem;
 }
 .cantFindProd > h1 {
   font-size: 60px;
@@ -270,7 +286,7 @@ section .title h1 {
   text-align: center;
   font-family: "Playfair Display", serif;
 }
-.cantFindProd .container{
+.cantFindProd .container {
   justify-content: center;
   align-items: center;
 }
@@ -283,7 +299,7 @@ section .title h1 {
   font-weight: 400;
   font-family: "Be Vietnam Pro", sans-serif;
   padding: 0.5rem;
-  border-radius:var(--radius);
+  border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
 }
 .cantFindProd img {
@@ -375,8 +391,11 @@ section .title h1 {
     border-radius: var(--radius);
     transition: all 0.3s ease;
   }
+  .more-info .top-mascot {
+    width: 80px;
+    bottom: -15px;
+  }
 }
-
 /* Mobile*/
 @media (max-width: 768px) {
   section {
@@ -385,10 +404,15 @@ section .title h1 {
   .big-img-left > img {
     height: 350px;
   }
-  .tab-content > h4 {
-    font-size: 12px;
+  section .title h1 {
+    font-size: 1.2rem;
   }
-  .tab-content > p {
-    font-size: 10px;
+  .top-mascot {
+    width: 50px;
+    bottom: 5px;
+  }
+  .more-info .top-mascot {
+    width: 50px;
+    bottom: -5px;
   }
 }

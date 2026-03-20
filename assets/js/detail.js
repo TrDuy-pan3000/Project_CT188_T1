@@ -117,6 +117,7 @@ const getData = async () => {
   moreInfo.innerHTML = `
     <div class="title">
             <h1>Chi Tiết Sản Phẩm</h1>
+            <img src="assets/images/top-bar-mascot-detail.png" class="top-mascot" />
     </div>
     <div class="container" id="more-details">
          
