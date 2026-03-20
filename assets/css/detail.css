@@ -15,6 +15,17 @@ section {
   margin: 0;
   padding: 2% 5%;
 }
+section > .title {
+  position: relative;
+  z-index: 1;
+}
+.top-mascot {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  filter: drop-shadow(0 2px 2px var(--white));
+  z-index: 2;
+}
 .container {
   width: 100%;
   display: flex;
@@ -64,6 +75,7 @@ section .title h1 {
 }
 .small-img {
   height: 100px;
+  width: 100%;
   justify-self: center;
   object-fit: cover;
   cursor: pointer;
@@ -72,7 +84,8 @@ section .title h1 {
   transition: all 0.3s ease;
   box-shadow: var(--shadow-soft);
 }
-.small-img:active , .sm-card {
+.small-img:active,
+.sm-card {
   transform: scale(1.05);
   transform: translateY(-3px);
   box-shadow: var(--shadow-clay-hover);
@@ -162,6 +175,11 @@ section .title h1 {
 .more-info {
   background-color: var(--mint-light);
 }
+.more-info .top-mascot {
+  width: 159px;
+  bottom: -50px;
+  right: 0;
+}
 .more-info > .container {
   width: 100%;
   flex-direction: column;
@@ -183,9 +201,6 @@ section .title h1 {
 /* ======================= Phần các đánh giá ================== */
 .product-reviews > .container {
   flex-direction: column;
-}
-.overall-rating {
-  border: 2px solid gold;
 }
 .review-card {
   background-color: var(--white);
@@ -209,9 +224,16 @@ section .title h1 {
   justify-content: center;
 }
 .related-product {
-  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border-radius: var(--radius);
   background-color: white;
+  transition: all 0.4s ease;
+}
+.related-product:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-clay-hover);
 }
 .related-product img {
   width: 100%;
@@ -220,8 +242,8 @@ section .title h1 {
 }
 .content-wrap {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  height: 200px;
   padding: 5%;
 }
 .content-wrap h3 {
@@ -242,9 +264,73 @@ section .title h1 {
   margin: 0;
 }
 .view-all-btn-container {
-  margin-top: 2rem;
+  margin: 1rem;
 }
-/* ================== RESPONSIVE - GIAO DIỆN TRÊEN MÀN HÌNH NHỎ ================== */
+.related-products .top-mascot {
+  right: 0;
+}
+/* ========== Báo lỗi khi không tìm thấy sản phẩm ============== */
+.cantFindProd {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+.cantFindProd > h1 {
+  font-size: 60px;
+  font: weight 600;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+.cantFindProd .container {
+  justify-content: center;
+  align-items: center;
+}
+.cantFindProd .container p {
+  flex: 1;
+  background-color: white;
+  font-size: 20px;
+  color: var(--brown-dark);
+  text-align: left;
+  font-weight: 400;
+  font-family: "Be Vietnam Pro", sans-serif;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+.cantFindProd img {
+  flex: 1;
+  max-width: 200px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+  object-fit: contain;
+}
+.button_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: 80px;
+}
+.cantFindProd a > button {
+  width: 200px;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Be Vietnam Pro", sans-serif;
+  padding: 2%;
+  background-color: var(--red-tet);
+  color: var(--cream);
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+.cantFindProd a > button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-clay-hover);
+}
+/* ================== RESPONSIVE - GIAO DIỆN TRÊN MÀN HÌNH NHỎ ================== */
 
 @media (max-width: 968px) {
   /* Đổi flex-direction phù hợp với màn hình dọc */
@@ -276,8 +362,40 @@ section .title h1 {
   .pic {
     width: 100%;
   }
-}
 
+  .cantFindProd {
+    width: 100%;
+  }
+  .cantFindProd > h1 {
+    font-size: 50px;
+  }
+  .cantFindProd .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cantFindProd .container p {
+    font-size: 16px;
+  }
+  .button_wrap {
+    max-width: 100%;
+  }
+  .cantFindProd a > button {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Be Vietnam Pro", sans-serif;
+    padding: 2%;
+    background-color: var(--red-tet);
+    color: var(--cream);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+  }
+  .more-info .top-mascot {
+    width: 80px;
+    bottom: -15px;
+  }
+}
 /* Mobile*/
 @media (max-width: 768px) {
   section {
@@ -286,10 +404,15 @@ section .title h1 {
   .big-img-left > img {
     height: 350px;
   }
-  .tab-content > h4 {
-    font-size: 12px;
+  section .title h1 {
+    font-size: 1.2rem;
   }
-  .tab-content > p {
-    font-size: 10px;
+  .top-mascot {
+    width: 50px;
+    bottom: 5px;
+  }
+  .more-info .top-mascot {
+    width: 50px;
+    bottom: -5px;
   }
 }
