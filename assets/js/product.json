@@ -5,8 +5,8 @@
     "category": "Bánh Truyền Thống",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
-      "text": "Bán chạy",
-      "cssClass": "hot"
+      "text": "Đặc sản miền Nam",
+      "cssClass": "special"
     },
     "description": "Bánh tét nhân chuối là món bánh truyền thống mộc mạc, đậm đà tình quê của người miền Nam. Sự kết hợp hoàn hảo giữa lớp nếp sáp dẻo thơm ngâm cùng nước cốt dừa béo ngậy, bọc lấy phần nhân chuối xiêm chín rục tươm mật đỏ hồng tạo nên một hương vị ngọt thanh, khó quên. Không chỉ là món bánh không thể thiếu trong những ngày Tết cổ truyền, bánh tét chuối còn là thức quà dân dã được yêu thích và thưởng thức quanh năm.",
     "shortDescription": "Bánh tét nếp sáp dẻo thơm, nước cốt dừa béo ngậy, nhân chuối xiêm đỏ ngọt thanh",
@@ -60,8 +60,8 @@
     "category": "Bánh Truyền Thống",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
-      "text": "Truyền thống",
-      "cssClass": "classic"
+      "text": "Đặc sản miền Nam",
+      "cssClass": "special"
     },
     "description": "Bánh tét nhân đậu xanh là hương vị mộc mạc, thân thuộc bậc nhất trong văn hóa ẩm thực miền Nam. Lớp nếp sáp dẻo thơm, xanh mát màu lá chuối ôm trọn lấy phần nhân đậu xanh được đánh nhuyễn, bùi bùi và béo ngậy. Tùy theo sở thích, bánh có thể là nhân đậu xanh ngọt thanh tao, hoặc nhân đậu mặn kết hợp cùng dải mỡ heo trong veo, tẩm ướp tiêu hành thơm lừng. Cắn một miếng bánh, vị dẻo, bùi, béo hòa quyện mang đến cảm giác trọn vẹn của ngày Tết quê hương.",
     "shortDescription": "Bánh tét nếp sáp dẻo thơm, nhân đậu xanh đánh nhuyễn bùi bùi béo ngậy, đậm đà vị quê",
@@ -204,8 +204,8 @@
     "category": "Món Ngon Ngày Tết",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
-      "text": "Bán chạy",
-      "cssClass": "hot"
+      "text": "Truyền thống",
+      "cssClass": "trad"
     },
     "description": "Giò lụa (chả lụa) là món ăn không thể thiếu trên mâm cỗ Tết của người Việt, tượng trưng cho sự trọn vẹn, tinh khiết và 'trong ấm ngoài êm'. Từng khoanh giò lụa hồng hào, dai giòn sần sật, thơm lừng mùi nước mắm cốt và tiêu sọ, được chế biến từ thịt heo tươi nóng vừa mổ, mang đến trải nghiệm ẩm thực tinh tế, đậm đà bản sắc dân tộc.",
     "shortDescription": "Giò lụa, chả quế, chả chiên — nguyên liệu tươi, chế biến thủ công",
@@ -252,8 +252,8 @@
     "category": "Quà Tặng Ngày Tết",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
-      "text": "Bán chạy",
-      "cssClass": "hot"
+      "text": "Mới",
+      "cssClass": "new"
     },
     "description": "Khay mứt Tết là nét văn hóa hiếu khách, là câu chuyện đầu năm rôm rả bên tách trà nóng của người Việt. Hộp Mứt Tết Đặc Biệt quy tụ những hương vị tinh hoa truyền thống: chút cay nồng ấm bụng của mứt gừng, vị chua thanh kích thích vị giác của mứt tắc, sự bùi béo của mứt hạt sen và hương dừa ngọt ngào dẻo thơm. Một món quà chứa đựng lời chúc năm mới ngọt ngào, viên mãn.",
     "shortDescription": "Mứt gừng, mứt dừa, mứt bí, mứt quất — hộp 6 vị thượng hạng",
@@ -341,8 +341,8 @@
     "category": "Thức Uống Khai Xuân",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
-      "text": "Phiên bản Tết",
-      "cssClass": "tet-edition"
+      "text": "Bán chạy",
+      "cssClass": "hot"
     },
     "description": "Coca-Cola không chỉ là một loại nước giải khát mà đã trở thành sứ giả của niềm vui và sự gắn kết gia đình mỗi độ Xuân về. Vị ngọt lịm đặc trưng kết hợp cùng những bọt ga sảng khoái giúp xua tan cảm giác ngấy của những bữa cỗ Tết nhiều dầu mỡ. Phiên bản Tết luôn nổi bật với sắc đỏ may mắn và họa tiết Én Vàng đặc trưng, mang theo thông điệp chúc một năm mới An Khang, Thịnh Vượng và đong đầy hạnh phúc.",
     "shortDescription": "Thùng 24 lon Coca-Cola thiết kế én Xuân đỏ rực, vị ga sảng khoái, mang lại may mắn đầu năm.",
@@ -382,8 +382,8 @@
     "category": "Quà Tặng Ngày Tết",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
-      "text": "Quốc dân",
-      "cssClass": "popular"
+      "text": "Mới",
+      "cssClass": "new"
     },
     "description": "Danisa từ lâu đã được mệnh danh là 'món quà quốc dân' trong mọi giỏ quà Tết của người Việt. Bánh quy bơ mang hương vị hoàng gia Đan Mạch thơm lừng, cắn vào giòn rụm và tan ngay trong miệng với vị bơ sữa béo ngậy. Chiếc hộp thiếc màu xanh hoàng gia sang trọng đi kèm túi xách giấy lịch sự giúp Danisa luôn là lựa chọn hàng đầu để biếu tặng họ hàng, đối tác thay cho lời chúc năm mới sung túc, ngọt ngào.",
     "shortDescription": "Hộp bánh quy bơ hoàng gia Đan Mạch thơm lừng, món quà quốc dân sang trọng mỗi dịp Xuân về",
@@ -430,8 +430,8 @@
     "category": "Quà Tặng Ngày Tết",
     "rating": "⭐⭐⭐⭐⭐",
     "tag": {
-      "text": "Thiết thực",
-      "cssClass": "practical"
+      "text": "Mới",
+      "cssClass": "new"
     },
     "description": "Giỏ quà Tết Sum Vầy là sự lựa chọn thiết thực và ý nghĩa nhất dành tặng công nhân viên, người thân hoặc họ hàng ở quê. Không hoa mỹ xa hoa, giỏ quà hội tụ đầy đủ những sản phẩm quốc dân quen thuộc trong mọi gian bếp Việt như bánh ChocoPie, trà Lipton, cà phê G7 cùng các gia vị thiết yếu. Tặng giỏ quà này chính là gửi gắm lời chúc về một năm mới ấm no, đủ đầy, bếp lửa luôn rực hồng và gia đạo bình an.",
     "shortDescription": "Giỏ quà thiết thực hội tụ các thương hiệu quốc dân (ChocoPie, G7, gia vị...), mang lời chúc ấm no sung túc.",
