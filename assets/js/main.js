@@ -25,7 +25,7 @@ window.showToast = showToast;
 
 function updateCartBadge() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
     const badges = document.querySelectorAll('.cart-badge');
     badges.forEach(badge => {
         badge.textContent = totalItems;
