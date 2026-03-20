@@ -178,6 +178,34 @@
     font-weight: 700;
 }
 
+/* Nút tài khoản khi đã đăng nhập - mở rộng, hiện tên người dùng */
+#userBtn.logged-in {
+    width: auto;
+    padding: 0 1rem;
+    background: rgba(255, 247, 0, 0.15);
+    border: 1px solid rgba(255, 247, 0, 0.5);
+    border-radius: var(--radius-full);
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+#userBtn.logged-in:hover {
+    background: rgba(255, 247, 0, 0.25);
+    border-color: var(--gold);
+}
+
+/* Tên người dùng hiển thị cạnh icon */
+.user-name-span {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gold);
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* 2. HERO - Phần giới thiệu lớn đầu trang
    Nền đỏ đậm với hình mây trang trí, chia 2 cột: text + hình mascot */
 .hero-section {
