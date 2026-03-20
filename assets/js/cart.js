@@ -168,3 +168,4 @@ window.addEventListener('storage', (e) => {
         renderCart();
     }
 });
+

@@ -2,36 +2,6 @@ const singleProduct = document.querySelector(".single-product");
 const moreInfo = document.querySelector(".more-info");
 const productReviews = document.querySelector(".reviews");
 const relatedProducts = document.querySelector(".products");
-
-function caFindProduct() {
-  let mainContent = document.querySelector("main");
-  mainContent.innerHTML = `
-      <div class="cantFindProd">
-        <h1>Không Tìm Thấy Sản Phẩm</h1>
-        <div class="container">
-          <img src="assets/images/mascot_product_error.png" />
-          <p
-            >Xin lỗi bạn nhé, sản phẩm bạn đang tìm tạm thời chưa ra lò kịp hoặc
-            đã được khách khác 'rinh' mất rồi.<br />
-            Nhưng đừng để chiếc bụng đói phải chờ lâu, bếp nhà chúng mình vẫn
-            còn nguyên một thực đơn hấp dẫn với đủ loại nhân mặn, ngọt đang tỏa
-            hương thơm lừng. Cùng nghía qua xem có món nào vừa ý bạn hôm nay
-            không nhé</
-          >
-        </div>
-        <div class="button_wrap">
-          <a href="menu.html">
-            <button>Xem Các Sản Phẩm Khác</button>
-          </a>
-          <a href="index.html">
-            <button>Trở Về Trang Chủ</button>
-          </a>
-        </div>
-      </div>
-  `;
-  return;
-}
-
 const getData = async () => {
   const path = new URLSearchParams(window.location.search);
 
@@ -39,49 +9,43 @@ const getData = async () => {
 
   if (!productId) {
     // trả về trang chủ khi thêm đủ nội dung các sản phẩm
-    caFindProduct();
+    window.location.href = "detail.html?id=1";
     return;
   }
 
-  const response = await fetch("assets/js/product.json");
-  const data = await response.json();
+  const respone = await fetch("assets/js/product.json");
+  const data = await respone.json();
   const findProductId = data.find(
     (item) => item.id.toString() === productId.toString(),
   );
-
-  if (!findProductId) {
-    // trả về trang chủ khi thêm đủ nội dung các sản phẩm
-    caFindProduct();
-    return;
-  }
 
   singleProduct.innerHTML = `
   <div class="container">
           <div class="big-img-left">
             <img
               src="${findProductId.mainImg}"
-              alt="${findProductId.name}"
+              alt="Anh-1"
               id="main-img"
             />
             <div class="gallery-container">
               <img
                 src="${findProductId.subImg1}"
-                alt="${findProductId.name}"
+                alt=""
                 class="small-img"
               />
               <img
                 src="${findProductId.subImg2}"
-                alt="${findProductId.name}"
+                alt=""
                 class="small-img"
               />
               <img
                 src="${findProductId.subImg3}"
-                alt="${findProductId.name}"
+                alt=""
                 class="small-img"
               />
               <img
                 src="${findProductId.subImg4}"
-                alt="${findProductId.name}"
+                alt=""
                 class="small-img"
               />
             </div>
@@ -93,7 +57,7 @@ const getData = async () => {
               ${findProductId.description}
               <a href="./story.html">Xem thêm các câu chuyện ngày tết →</a>
             </p>
-            <strong class="product-price">${findProductId.price}₫ <span> / ${findProductId.unit}</span></strong>
+            <strong class="product-price">${findProductId.price}₫ <span> / Đòn</span></strong>
             <div class="buying-wrap">
               <input id="quantity" type="number" value="1" min="1" />
               <button class="add-to-cart-button" id="add-cart">
@@ -117,7 +81,10 @@ const getData = async () => {
   moreInfo.innerHTML = `
     <div class="title">
             <h1>Chi Tiết Sản Phẩm</h1>
-            <img src="assets/images/top-bar-mascot-detail.png" class="top-mascot" />
+            <img
+            src="assets/images/top-bar-mascot-detail.png"
+            class="top-mascot"
+          />
     </div>
     <div class="container" id="more-details">
          
@@ -148,9 +115,8 @@ const getData = async () => {
 
   const reviewList = findProductId.reviews || [];
   productReviews.innerHTML = ``;
-  let productReviewsHTML = "";
   reviewList.forEach((test) => {
-    productReviewsHTML += `
+    productReviews.innerHTML += `
   <div class="review-card">
             <div class="test-author">
               <span class="test-avatar">${test.avatar}</span>
@@ -167,7 +133,6 @@ const getData = async () => {
           </div>
   `;
   });
-  if (productReviewsHTML) productReviews.innerHTML = productReviewsHTML;
 
   const otherProducts = data.filter(
     (item) => item.id.toString() !== productId.toString(),
@@ -177,16 +142,16 @@ const getData = async () => {
 
   const randomFourProducts = shuffledProducts.slice(0, 4);
 
-  let relatedProductsHTML = ``;
+  relatedProducts.innerHTML = ``;
 
   randomFourProducts.forEach((prod) => {
-    relatedProductsHTML += `
+    relatedProducts.innerHTML += `
       <article class="related-product">
         <img src="${prod.mainImg}" alt="${prod.name}">
         <div class="content-wrap">
           <h3>${prod.name}</h3>
           
-          <p>${prod.shortDescription}</p>
+          <p>${prod.description.substring(0, 60)}...</p>
           
           <div class="card-bottom">
             <p class="price">${prod.price}₫</p>
@@ -199,55 +164,55 @@ const getData = async () => {
       </article>
     `;
   });
-  if (relatedProductsHTML) relatedProducts.innerHTML = relatedProductsHTML;
+
+  const addCartBtn = document.getElementById("add-cart");
+
+  function parsePrice(rawPrice) {
+    return Number(String(rawPrice).replace(/[^\d]/g, "")) || 0;
+  }
+
+  function makeProductId(name) {
+    return (
+      String(name)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/Đ/g, "D")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "") || "san-pham"
+    );
+  }
+
+  if (addCartBtn) {
+    addCartBtn.addEventListener("click", () => {
+      const name =
+        document.querySelector(".product-name")?.textContent?.trim() ||
+        "Món ăn";
+      const quantityInput = document.getElementById("quantity");
+      const quantity = Math.max(1, Number(quantityInput?.value) || 1);
+      const priceText =
+        document.querySelector(".product-price")?.textContent || "0";
+      const price = parsePrice(priceText);
+      const image =
+        document.getElementById("main-img")?.getAttribute("src") ||
+        "assets/images/logo.png";
+
+      if (typeof addToCart === "function") {
+        addToCart({
+          id: findProductId.id,
+          name,
+          price,
+          image,
+          quantity,
+        });
+      }
+
+      if (typeof showToast === "function") {
+        showToast(`✅ Đã thêm ${quantity} ${name} vào giỏ!`);
+      }
+    });
+  }
 };
 
 getData();
-
-const addCartBtn = document.getElementById("add-cart");
-
-function parsePrice(rawPrice) {
-  return Number(String(rawPrice).replace(/[^\d]/g, "")) || 0;
-}
-
-function makeProductId(name) {
-  return (
-    String(name)
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/đ/g, "d")
-      .replace(/Đ/g, "D")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "") || "san-pham"
-  );
-}
-
-if (addCartBtn) {
-  addCartBtn.addEventListener("click", () => {
-    const name =
-      document.querySelector(".product-name")?.textContent?.trim() || "Món ăn";
-    const quantityInput = document.getElementById("quantity");
-    const quantity = Math.max(1, Number(quantityInput?.value) || 1);
-    const priceText =
-      document.querySelector(".product-price")?.textContent || "0";
-    const price = parsePrice(priceText);
-    const image =
-      document.querySelector(".main-img")?.getAttribute("src") ||
-      "assets/images/logo.png";
-
-    if (typeof addToCart === "function") {
-      addToCart({
-        id: makeProductId(name),
-        name,
-        price,
-        image,
-        quantity,
-      });
-    }
-
-    if (typeof showToast === "function") {
-      showToast(`✅ Đã thêm ${quantity} ${name} vào giỏ!`);
-    }
-  });
-}
