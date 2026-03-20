@@ -2,7 +2,6 @@ const singleProduct = document.querySelector(".single-product");
 const moreInfo = document.querySelector(".more-info");
 const productReviews = document.querySelector(".reviews");
 const relatedProducts = document.querySelector(".products");
-
 const getData = async () => {
   const path = new URLSearchParams(window.location.search);
 
@@ -82,6 +81,10 @@ const getData = async () => {
   moreInfo.innerHTML = `
     <div class="title">
             <h1>Chi Tiết Sản Phẩm</h1>
+            <img
+            src="assets/images/top-bar-mascot-detail.png"
+            class="top-mascot"
+          />
     </div>
     <div class="container" id="more-details">
          
@@ -161,54 +164,55 @@ const getData = async () => {
       </article>
     `;
   });
+
+  const addCartBtn = document.getElementById("add-cart");
+
+  function parsePrice(rawPrice) {
+    return Number(String(rawPrice).replace(/[^\d]/g, "")) || 0;
+  }
+
+  function makeProductId(name) {
+    return (
+      String(name)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/Đ/g, "D")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "") || "san-pham"
+    );
+  }
+
+  if (addCartBtn) {
+    addCartBtn.addEventListener("click", () => {
+      const name =
+        document.querySelector(".product-name")?.textContent?.trim() ||
+        "Món ăn";
+      const quantityInput = document.getElementById("quantity");
+      const quantity = Math.max(1, Number(quantityInput?.value) || 1);
+      const priceText =
+        document.querySelector(".product-price")?.textContent || "0";
+      const price = parsePrice(priceText);
+      const image =
+        document.getElementById("main-img")?.getAttribute("src") ||
+        "assets/images/logo.png";
+
+      if (typeof addToCart === "function") {
+        addToCart({
+          id: findProductId.id,
+          name,
+          price,
+          image,
+          quantity,
+        });
+      }
+
+      if (typeof showToast === "function") {
+        showToast(`✅ Đã thêm ${quantity} ${name} vào giỏ!`);
+      }
+    });
+  }
 };
 
 getData();
-
-const addCartBtn = document.getElementById("add-cart");
-
-function parsePrice(rawPrice) {
-  return Number(String(rawPrice).replace(/[^\d]/g, "")) || 0;
-}
-
-function makeProductId(name) {
-  return (
-    String(name)
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/đ/g, "d")
-      .replace(/Đ/g, "D")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "") || "san-pham"
-  );
-}
-
-if (addCartBtn) {
-  addCartBtn.addEventListener("click", () => {
-    const name =
-      document.querySelector(".product-name")?.textContent?.trim() || "Món ăn";
-    const quantityInput = document.getElementById("quantity");
-    const quantity = Math.max(1, Number(quantityInput?.value) || 1);
-    const priceText =
-      document.querySelector(".product-price")?.textContent || "0";
-    const price = parsePrice(priceText);
-    const image =
-      document.querySelector(".main-img")?.getAttribute("src") ||
-      "assets/images/logo.png";
-
-    if (typeof addToCart === "function") {
-      addToCart({
-        id: makeProductId(name),
-        name,
-        price,
-        image,
-        quantity,
-      });
-    }
-
-    if (typeof showToast === "function") {
-      showToast(`✅ Đã thêm ${quantity} ${name} vào giỏ!`);
-    }
-  });
-}

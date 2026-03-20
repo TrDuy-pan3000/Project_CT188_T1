@@ -13,7 +13,7 @@ def remove_background(img_path, output_path):
         print(f"Error processing {img_path}: {e}")
 
 img_dir = 'd:/Nhập môn web/Project-T1/assets/images'
-icons_to_process = glob.glob(os.path.join(img_dir, '3d_simple_*.png'))
+icons_to_process = glob.glob(os.path.join(img_dir, 'b*.png'))
 
 for img_path in icons_to_process:
     remove_background(img_path, img_path)

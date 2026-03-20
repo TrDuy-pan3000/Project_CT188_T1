@@ -14,6 +14,24 @@
     to   { transform: translateX(0);     opacity: 1; }
 }
 
+/* horse-float - Con ngựa b3 lơ lửng, giữ translateX(-50%) để không lệch */
+@keyframes horse-float {
+    0%, 100% { transform: translateX(-50%) translateY(0px)  rotate(-2deg); }
+    50%       { transform: translateX(-50%) translateY(-8px) rotate(2deg);  }
+}
+
+/* horse-ride-in - Con ngựa b4 lao vào từ trái khi load */
+@keyframes horse-ride-in {
+    from { transform: translateX(-140px); opacity: 0; }
+    to   { transform: translateX(0);      opacity: 1; }
+}
+
+/* horse-bob - Con ngựa b4 nhún nhẹ sau khi chạy vào xong */
+@keyframes horse-bob {
+    0%, 100% { transform: translateY(0px);  }
+    50%       { transform: translateY(-7px); }
+}
+
 
 /* LAYOUT */
 
@@ -97,7 +115,7 @@ h1 {
 /* .main-content - Chia 2 cột đều nhau bằng CSS Grid */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;   
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* 50/50 cân bằng */   
     gap: 25px;
 }
 
@@ -120,9 +138,11 @@ h1 {
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
 
-/* .left-section - Cột trái: Danh sách sản phẩm trong giỏ hàng */
+/* .left-section - Cột trái: overflow visible + padding-bottom cho ngựa b4 */
 .left-section {
     background: white;
+    overflow: visible;
+    padding-bottom: 80px;
 }
 
 /* .section-title - Tiêu đề mỗi cột, gạch chân vàng thay thẻ <hr>
@@ -173,48 +193,53 @@ h1 {
     flex-shrink: 0;
 }
 
-/* .item-info - Vùng chứa tên và giá, flex:1 để chiếm hết chỗ còn lại */
+/* .item-info - Vùng chứa tên và giá, flex:1 để chiếm hết chỗ còn lại
+ * min-width: 0 → bắt buộc phải có để flex-child không tràn ra ngoài */
 .item-info {
     flex: 1;
-    min-width: 0; /* tránh overflow tên dài */
+    min-width: 0;
+    overflow: hidden;
 }
 
 /* .item-name - Tên sản phẩm, cắt "..." nếu tên quá dài */
 .item-name {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 600;
     color: var(--brown-dark);
     margin-bottom: 4px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 /* .item-price - Giá đơn vị, màu đỏ Tết nổi bật */
 .item-price {
-    font-size: 1em;
+    font-size: 0.88em;
     font-weight: 700;
     color: var(--red-tet);
+    white-space: nowrap;
 }
 
-/* .item-qty - Nhóm nút +/- và số lượng, nằm ngang */
+/* .item-qty - Nhóm nút +/- và số lượng, nằm ngang
+ * height cố định + align-items center → 2 nút không bị lệch khi layout thay đổi */
 .item-qty {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     flex-shrink: 0;
+    height: 30px; /* FIX: cố định chiều cao bằng đúng height của qty-btn */
 }
 
-/* .qty-btn - Nút + và - điều chỉnh số lượng
- * 30x30px → đủ to để bấm trên màn hình cảm ứng */
+/* .qty-btn - Nút + và - điều chỉnh số lượng */
 .qty-btn {
-    width: 44px;
-    height: 44px;
+    width: 28px;
+    height: 28px;
     border: 2px solid var(--gold);
     background: white;
     color: var(--red-tet);
     border-radius: 6px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 700;
     cursor: pointer;
     display: flex;
@@ -241,28 +266,28 @@ h1 {
 }
 
 /* .item-subtotal - Thành tiền (đơn giá × số lượng), căn phải
- * min-width: 85px → không bị nhảy layout khi số tiền thay đổi độ dài */
+ * min-width: 85px + white-space: nowrap → không bị nhảy layout dù số tiền lên hàng triệu */
 .item-subtotal {
-    font-size: 1em;
+    font-size: 0.85em;
     color: var(--red-tet);
     font-weight: 700;
     min-width: 85px;
     text-align: right;
     flex-shrink: 0;
+    white-space: nowrap; /* FIX: ngăn giá tiền xuống dòng */
 }
 
-/* .remove-btn - Nút xóa sản phẩm, kiểu icon nhẹ, không nền
- * Chỉ đổi màu đỏ khi hover để không lấn át nội dung chính */
+/* .remove-btn - Nút xóa sản phẩm, kiểu icon nhẹ, không nền */
 .remove-btn {
     background: none;
     color: #bbb;
     border: 1.5px solid #e0e0e0;
-    min-width: 44px;
-    min-height: 44px;
-    padding: 10px 12px;
+    min-width: 30px;
+    min-height: 30px;
+    padding: 6px 8px;
     border-radius: 7px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.9em;
     transition: color 0.2s, border-color 0.2s;
     flex-shrink: 0;
     display: inline-flex;
@@ -303,43 +328,70 @@ h1 {
 
 /* .right-section - Cột phải chứa form nhận hàng
  * Gradient đỏ Tết, viền vàng, position relative để .envelope-decoration định vị đúng */
+/* .right-section - padding-top: 55px nhường chỗ ngựa b3 nhô xuống */
 .right-section {
     background: linear-gradient(135deg, var(--red-dark), var(--red-tet));
     border-radius: 20px;
     padding: 30px;
+    padding-top: 55px;
     box-shadow: 0 8px 25px rgba(198, 40, 40, 0.25);
     border: 3px solid var(--gold);
     position: relative;
+    overflow: visible;
 }
 
-/* .envelope-decoration - Icon bao lì xì 🧧 nhô lên trên cạnh trên cột phải
- * top: -15px → nhô ra khỏi khung, left: 50% + translateX(-50%) → căn giữa */
+/* .envelope-decoration - Con ngựa b3 thay bao lì xì, nhô lên đỉnh cột phải
+ * top: -50px, width: 110px, pointer-events: none không chặn form */
 .envelope-decoration {
     position: absolute;
-    top: -15px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2em;
-    line-height: 1;
+    width: 110px;
+    font-size: unset;
+    line-height: unset;
+    pointer-events: none;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.3));
+    animation: horse-float 3s ease-in-out infinite;
     transition: transform 0.3s ease;
+    z-index: 10;
 }
 
-/* Hover right-section → bao lì xì phóng to nhẹ thay vì rung liên tục
- * Đơn giản hơn lucky-shake, ít gây phân tâm */
+/* Hover right-section → ngựa phóng to nhẹ */
 .right-section:hover .envelope-decoration {
-    transform: translateX(-50%) scale(1.2);
+    transform: translateX(-50%) scale(1.1);
 }
 
 /* .right-section .section-title - Override sang vàng gold
- * Vì màu đỏ mặc định sẽ bị chìm vào nền đỏ cột phải */
+ * margin-top: 0 → padding-top right-section đủ chỗ rồi */
 .right-section .section-title {
     color: var(--gold);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     border-bottom-color: rgba(255, 215, 0, 0.5);
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 
+
+
+/* CON NGỰA B4 - Cột trái, góc dưới trái */
+
+/* .horse-b4 - Ngựa vespa chạy vào từ trái khi load
+ * bottom: 10px + translateY(50%) → nhô đúng nửa thân ra đáy section
+ * pointer-events: none → không chặn click danh sách */
+.horse-b4 {
+    position: absolute;
+    bottom: 10px;
+    left: -15px;
+    width: 175px;
+    transform: translateY(50%);
+    pointer-events: none;
+    filter: drop-shadow(0 8px 18px rgba(0,0,0,0.28));
+    animation:
+        horse-ride-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) both,
+        horse-bob 2.8s ease-in-out 0.75s infinite;
+    z-index: 5;
+}
 /* FORM NHẬP THÔNG TIN KHÁCH HÀNG */
 
 /* .form-group - Wrapper bọc từng cặp label + input/textarea */
@@ -400,21 +452,38 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* .payment-option - Mỗi lựa chọn thanh toán nằm ngang */
+/* .payment-option - Dạng card chọn được: border vàng + nền mờ
+ * :has(input:checked) → card được chọn nổi lên với viền vàng đậm */
 .payment-option {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(255,215,0,0.3);
+    background: rgba(255,255,255,0.08);
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+.payment-option:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,215,0,0.7);
+}
+.payment-option:has(input:checked) {
+    background: rgba(255,215,0,0.18);
+    border-color: var(--gold);
+    font-weight: 600;
 }
 
-/* Radio button - Phóng to 20x20px, màu vàng khi chọn */
+/* Radio button - 18x18px accent vàng, margin-right 0 vì dùng gap trên .payment-option */
 .payment-option input[type="radio"] {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    flex-shrink: 0;
     cursor: pointer;
     accent-color: var(--gold);
 }
@@ -539,8 +608,9 @@ h1 {
 @media (max-width: 600px) {
     body { font-size: 14px; }
 
-    .cart-item   { flex-wrap: wrap; }
-    .item-image  { width: 60px; height: 60px; }
+    .cart-item   { flex-wrap: nowrap; gap: 8px; } /* FIX: không wrap để nút +/- không lệch */
+    .item-image  { width: 50px; height: 50px; }
+    .item-subtotal { min-width: 80px; font-size: 0.85em; }
 
     h1             { font-size: 1.5em; }
     .subtitle      { font-size: 0.9em; }
@@ -548,6 +618,12 @@ h1 {
     .checkout-btn  { font-size: 1.1em; }
     .total-row     { font-size: 1.2em; }
     .item-subtotal { min-width: 65px; font-size: 0.9em; }
+
+    /* Ẩn ngựa trên điện thoại tránh che nội dung */
+    .horse-b4            { display: none; }
+    .envelope-decoration { display: none; }
+    .left-section        { padding-bottom: 30px; }
+    .right-section       { padding-top: 30px; }
 
     /* Notification full width trên màn hình nhỏ */
     .notification {
@@ -563,7 +639,9 @@ h1 {
     .cart-header::after,
     .checkout-btn,
     .checkout-btn::after,
-    .notification {
+    .notification,
+    .horse-b4,
+    .envelope-decoration {
         animation: none !important;
         transition: none !important;
     }
