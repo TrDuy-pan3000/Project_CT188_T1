@@ -33,10 +33,22 @@
 }
 
 /* === CỘT PHẢI — FORM === */
-.auth-form-side { width: 55%; display: flex; align-items: center; justify-content: center; padding: 3rem 2rem; background: var(--cream); }
+.auth-form-side { width: 55%; display: flex; align-items: center; 
+    justify-content: center; padding: 3rem 2rem; background: var(--cream);
+    position: relative; 
+ }
 .auth-card {
     width: 100%; max-width: 460px; background: var(--white); padding: 3rem;
     border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.06); border: 1px solid rgba(204,39,41,0.08);
+}
+
+.top-mascot {
+  width: 200px; 
+  position: absolute;
+  bottom: 3;
+  right: -20px;
+  filter: drop-shadow(0 4px 4px var(--white));
+  z-index: 2;
 }
 
 /* === TIÊU ĐỀ === */
