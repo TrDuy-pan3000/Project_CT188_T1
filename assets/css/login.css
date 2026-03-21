@@ -45,8 +45,8 @@
 .top-mascot {
   width: 200px; 
   position: absolute;
-  bottom: 3;
-  right: -20px;
+  bottom: 200px;
+  right: -15px;
   filter: drop-shadow(0 4px 4px var(--white));
   z-index: 2;
 }

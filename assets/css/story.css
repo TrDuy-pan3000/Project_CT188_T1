@@ -538,9 +538,9 @@ body {
 }
 
 .story-mascot {
-  width: 300px; 
+  width: 250px; 
   position: relative;
-  top: 5px;   
+  top: 350px;   
   right: 20px; 
   filter: drop-shadow(0 4px 4px rgba(255,255,255,0.8));
   z-index: 10;
