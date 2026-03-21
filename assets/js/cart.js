@@ -273,10 +273,6 @@ function showOrderModal({ name, address, phone, paymentText, note, itemsHtml, to
 // Xử lý đóng modal
     const closeModal = () => {
         modal.remove();
-        cartData = [];
-        saveCartToStorage(cartData);
-        renderCart();
-        showNotification('🧧 Chốt đơn thành công! Chúc mừng năm mới! 🎊');
     };
 
     document.getElementById('closeOrderModal').addEventListener('click', closeModal);
