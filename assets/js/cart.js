@@ -302,7 +302,7 @@ function showOrderModal({ name, address, phone, note, paymentText, total, orderD
     const modal = document.createElement('div');
     modal.id = 'orderSuccessModal';
     modal.innerHTML = `
-        <div class="osm-overlay" onclick="document.getElementById('orderSuccessModal').remove()"></div>
+        <div class="osm-overlay" id="osmOverlay"></div>
         <div class="osm-card">
             <div class="osm-header">
                 <div class="osm-icon">🎊</div>
@@ -325,7 +325,7 @@ function showOrderModal({ name, address, phone, note, paymentText, total, orderD
                 </div>
             </div>
             <div class="osm-footer">
-                <button class="osm-close-btn" onclick="document.getElementById('orderSuccessModal').remove()">
+                <button class="osm-close-btn" id="osmCloseBtn">
                     🎁 Xác nhận đơn hàng
                 </button>
             </div>
@@ -364,6 +364,16 @@ function showOrderModal({ name, address, phone, note, paymentText, total, orderD
     }
 
     document.body.appendChild(modal);
+    const closeModal = () => {
+        modal.remove();
+        cartData = [];
+        saveCartToStorage(cartData);
+        renderCart();
+        showNotification('🧧 Chốt đơn thành công! Chúc mừng năm mới! 🎊');
+    };
+
+    document.getElementById('osmCloseBtn').addEventListener('click', closeModal);
+    document.getElementById('osmOverlay').addEventListener('click', closeModal);
 }
 // Hiển thị thông báo
 function showNotification(message) {
