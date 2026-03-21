@@ -1,3 +1,13 @@
+// Check login trước khi vào trang cart
+function protectCartPage() {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+        window.location.href = "login.html";
+        return false;
+    }
+    return true;
+}
+
 // Load / Save localStorage 
 function loadCartFromStorage() {
     try {
@@ -177,6 +187,7 @@ function showNotification(message) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (!protectCartPage()) return;
     renderCart();
 });
 

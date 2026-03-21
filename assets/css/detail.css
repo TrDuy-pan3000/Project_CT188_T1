@@ -300,6 +300,7 @@ section .title h1 {
   font-family: "Be Vietnam Pro", sans-serif;
   padding: 0.5rem;
   border-radius: var(--radius);
+  border: 2px solid var(--red-tet);
   box-shadow: var(--shadow-soft);
 }
 .cantFindProd img {

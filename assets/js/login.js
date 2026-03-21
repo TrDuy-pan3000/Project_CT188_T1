@@ -137,3 +137,15 @@ if (loginForm) {
     window.location.href = "index.html";
   });
 }
+
+// ===== SHOW LOGIN MESSAGE ON PAGE LOAD =====
+
+document.addEventListener("DOMContentLoaded", () => {
+  const needLoginMessage = localStorage.getItem("needLoginMessage");
+  if (needLoginMessage) {
+    if (typeof showToast === "function") {
+      showToast("🔒 Bạn cần đăng nhập để tiếp tục mua sắm!");
+    }
+    localStorage.removeItem("needLoginMessage");
+  }
+});
