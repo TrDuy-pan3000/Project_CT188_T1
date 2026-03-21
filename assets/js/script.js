@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     injectSharedSection(".header", "header.html"), 
     injectSharedSection(".footer", "footer.html")
   ]);
+  if (typeof window.updateCartBadge === "function") {
+    window.updateCartBadge();
+  }
   markActiveNav();
   initBackToTop();
   initUserUI();
@@ -56,6 +59,17 @@ function escapeHtml(value) {
   return div.innerHTML;
 }
 
+function handleLogout() {
+  localStorage.removeItem("currentUser");
+  localStorage.removeItem("cart");
+  if (typeof window.updateCartBadge === "function") {
+    window.updateCartBadge();
+  }
+  window.location.href = "index.html";
+}
+
+window.handleLogout = handleLogout;
+
 function initBackToTop() {
   let button = document.getElementById("backToTop");
   if (!button) {
@@ -87,13 +101,41 @@ function initBackToTop() {
 function initUserUI() {
   const userData = localStorage.getItem("currentUser");
   const userBtn = document.getElementById("userBtn");
+  const logoutBtn = document.getElementById("logoutBtn");
 
   if (userData && userBtn) {
     const user = JSON.parse(userData);
-    if(user.name) {
-      // Đổi icon và thêm tên người dùng vào header
+    if (user.name) {
+      // Đã đăng nhập - hiển thị tên kế bên icon user
       userBtn.innerHTML = `<i class="fa-regular fa-user"></i> <span class="user-name-span">${escapeHtml(user.name)}</span>`;
       userBtn.classList.add("logged-in");
+      if (logoutBtn) {
+        logoutBtn.style.display = "flex";
+        logoutBtn.setAttribute("title", "Đăng xuất");
+        logoutBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          handleLogout();
+        });
+      }
     }
+  } else {
+    // Chưa đăng nhập
+    if (userBtn) {
+      userBtn.innerHTML = `<i class="fa-regular fa-user"></i>`;
+      userBtn.classList.remove("logged-in");
+    }
+    if (logoutBtn) logoutBtn.style.display = "none";
+  }
+
+  // Protect cart link - kiểm tra login khi click giỏ hàng
+  const cartLink = document.querySelector("a.cart");
+  if (cartLink) {
+    cartLink.addEventListener("click", (e) => {
+      if (!userData) {
+        e.preventDefault();
+        localStorage.setItem("needLoginMessage", "true");
+        window.location.href = "login.html";
+      }
+    });
   }
 }
