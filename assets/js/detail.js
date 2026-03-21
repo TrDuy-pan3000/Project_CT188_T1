@@ -3,8 +3,10 @@ const moreInfo = document.querySelector(".more-info");
 const productReviews = document.querySelector(".reviews");
 const relatedProducts = document.querySelector(".products");
 
-function caFindProduct() {
-  let mainContent = document.querySelector("main");
+function renderNotFoundProduct() {
+  const mainContent = document.querySelector("main");
+  if (!mainContent) return;
+
   mainContent.innerHTML = `
       <div class="cantFindProd">
         <h1>Không Tìm Thấy Sản Phẩm</h1>
@@ -29,59 +31,63 @@ function caFindProduct() {
         </div>
       </div>
   `;
-  return;
+}
+
+function parsePrice(rawPrice) {
+  return Number(String(rawPrice).replace(/[^\d]/g, "")) || 0;
 }
 
 const getData = async () => {
   const path = new URLSearchParams(window.location.search);
-
   const productId = path.get("id");
 
   if (!productId) {
-    caFindProduct();
+    renderNotFoundProduct();
     return;
   }
 
-  const reponse = await fetch("assets/js/product.json");
-  const data = await reponse.json();
+  const response = await fetch("assets/js/product.json");
+  const data = await response.json();
   const findProductId = data.find(
     (item) => item.id.toString() === productId.toString(),
   );
 
   if (!findProductId) {
-    caFindProduct();
+    renderNotFoundProduct();
     return;
   }
+
+  const productImages = [
+    findProductId.mainImg,
+    findProductId.subImg1,
+    findProductId.subImg2,
+    findProductId.subImg3,
+    findProductId.subImg4,
+  ].filter(Boolean);
+
+  const uniqueImages = [...new Set(productImages)];
+  const mainImage = uniqueImages[0] || "assets/images/logo.png";
+  const galleryHtml = uniqueImages
+    .map(
+      (image, index) => `
+              <img
+                src="${image}"
+                alt="${findProductId.name} ${index + 1}"
+                class="small-img ${index === 0 ? "sm-card" : ""}"
+              />`,
+    )
+    .join("");
 
   singleProduct.innerHTML = `
   <div class="container">
           <div class="big-img-left">
             <img
-              src="${findProductId.mainImg}"
+              src="${mainImage}"
               alt=""
               id="main-img"
             />
             <div class="gallery-container">
-              <img
-                src="${findProductId.subImg1}"
-                alt=""
-                class="small-img"
-              />
-              <img
-                src="${findProductId.subImg2}"
-                alt=""
-                class="small-img"
-              />
-              <img
-                src="${findProductId.subImg3}"
-                alt=""
-                class="small-img"
-              />
-              <img
-                src="${findProductId.subImg4}"
-                alt=""
-                class="small-img"
-              />
+              ${galleryHtml}
             </div>
           </div>
           <div class="content-right">
@@ -103,8 +109,15 @@ const getData = async () => {
   `;
 
   const featuredImg = document.getElementById("main-img");
+  const galleryContainer = document.querySelector(".gallery-container");
   const smallImgs = document.querySelectorAll(".small-img");
-  smallImgs.forEach((img, index) => {
+
+  if (galleryContainer) {
+    const colCount = Math.max(1, Math.min(smallImgs.length, 4));
+    galleryContainer.style.gridTemplateColumns = `repeat(${colCount}, 1fr)`;
+  }
+
+  smallImgs.forEach((img) => {
     img.addEventListener("click", () => {
       featuredImg.src = img.src;
       smallImgs.forEach((i) => i.classList.remove("sm-card"));
@@ -148,9 +161,9 @@ const getData = async () => {
         `;
 
   const reviewList = findProductId.reviews || [];
-  productReviews.innerHTML = ``;
-  reviewList.forEach((test) => {
-    productReviews.innerHTML += `
+  productReviews.innerHTML = reviewList
+    .map(
+      (test) => `
   <div class="review-card">
             <div class="test-author">
               <span class="test-avatar">${test.avatar}</span>
@@ -165,21 +178,21 @@ const getData = async () => {
               ${test.text}
             </p>
           </div>
-  `;
-  });
+  `,
+    )
+    .join("");
 
   const otherProducts = data.filter(
     (item) => item.id.toString() !== productId.toString(),
   );
 
-  const shuffledProducts = otherProducts.sort(() => 0.5 - Math.random());
+  const randomFourProducts = otherProducts
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
 
-  const randomFourProducts = shuffledProducts.slice(0, 4);
-
-  relatedProducts.innerHTML = ``;
-
-  randomFourProducts.forEach((prod) => {
-    relatedProducts.innerHTML += `
+  relatedProducts.innerHTML = randomFourProducts
+    .map(
+      (prod) => `
       <article class="related-product">
         <a href="detail.html?id=${prod.id}"><img src="${prod.mainImg}" alt="${prod.name}"></a>
         <div class="content-wrap">
@@ -196,41 +209,21 @@ const getData = async () => {
           </div>
         </div>
       </article>
-    `;
-  });
+    `,
+    )
+    .join("");
 
   const addCartBtn = document.getElementById("add-cart");
 
-  function parsePrice(rawPrice) {
-    return Number(String(rawPrice).replace(/[^\d]/g, "")) || 0;
-  }
-
-  function makeProductId(name) {
-    return (
-      String(name)
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/đ/g, "d")
-        .replace(/Đ/g, "D")
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "") || "san-pham"
-    );
-  }
-
   if (addCartBtn) {
     addCartBtn.addEventListener("click", () => {
-      const name =
-        document.querySelector(".product-name")?.textContent?.trim() ||
-        "Món ăn";
+      if (!window.ensureLogin || !window.ensureLogin()) return;
+
+      const name = findProductId.name || "Món ăn";
       const quantityInput = document.getElementById("quantity");
       const quantity = Math.max(1, Number(quantityInput?.value) || 1);
-      const priceText =
-        document.querySelector(".product-price")?.textContent || "0";
-      const price = parsePrice(priceText);
-      const image =
-        document.getElementById("main-img")?.getAttribute("src") ||
-        "assets/images/logo.png";
+      const price = parsePrice(findProductId.price);
+      const image = featuredImg?.getAttribute("src") || "assets/images/logo.png";
 
       if (typeof addToCart === "function") {
         addToCart({
