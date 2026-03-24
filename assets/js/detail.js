@@ -11,7 +11,7 @@ function renderNotFoundProduct() {
       <div class="cantFindProd">
         <h1>Không Tìm Thấy Sản Phẩm</h1>
         <div class="container">
-          <img src="assets/images/mascot_product_error.png" />
+          <img src="assets/images/mascots/mascot_product_error.png" />
           <p
             >Xin lỗi bạn nhé, sản phẩm bạn đang tìm tạm thời chưa ra lò kịp hoặc
             đã được khách khác 'rinh' mất rồi.<br />
@@ -66,7 +66,7 @@ const getData = async () => {
   ].filter(Boolean);
 
   const uniqueImages = [...new Set(productImages)];
-  const mainImage = uniqueImages[0] || "assets/images/logo.png";
+  const mainImage = uniqueImages[0] || "assets/images/ui/logo.png";
   const galleryHtml = uniqueImages
     .map(
       (image, index) => `
@@ -129,7 +129,7 @@ const getData = async () => {
     <div class="title">
             <h1>Chi Tiết Sản Phẩm</h1>
             <img
-            src="assets/images/top-bar-mascot-detail.png"
+            src="assets/images/mascots/top-bar-mascot-detail.png"
             class="top-mascot"
           />
     </div>
@@ -223,7 +223,7 @@ const getData = async () => {
       const quantityInput = document.getElementById("quantity");
       const quantity = Math.max(1, Number(quantityInput?.value) || 1);
       const price = parsePrice(findProductId.price);
-      const image = featuredImg?.getAttribute("src") || "assets/images/logo.png";
+      const image = featuredImg?.getAttribute("src") || "assets/images/ui/logo.png";
 
       if (typeof addToCart === "function") {
         addToCart({

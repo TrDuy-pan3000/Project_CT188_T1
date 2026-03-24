@@ -20,6 +20,35 @@ function initStoryScrollReveal() {
     }
 
     const getOffsetConfig = (item) => {
+        const w = window.innerWidth;
+        // Mobile nhỏ: chỉ trượt dọc nhẹ, không trượt ngang
+        if (w <= 600) {
+            if (item.classList.contains('reveal-left') || item.classList.contains('reveal-right')) {
+                return { x: 0, y: 30 };
+            }
+            return { x: 0, y: 36 };
+        }
+        // Tablet: giảm trượt ngang, trượt dọc vừa phải
+        if (w <= 768) {
+            if (item.classList.contains('reveal-left')) {
+                return { x: -40, y: 14 };
+            }
+            if (item.classList.contains('reveal-right')) {
+                return { x: 40, y: 14 };
+            }
+            return { x: 0, y: 48 };
+        }
+        // Tablet ngang: giảm nhẹ so với desktop
+        if (w <= 992) {
+            if (item.classList.contains('reveal-left')) {
+                return { x: -60, y: 16 };
+            }
+            if (item.classList.contains('reveal-right')) {
+                return { x: 60, y: 16 };
+            }
+            return { x: 0, y: 56 };
+        }
+        // Desktop: giữ nguyên
         if (item.classList.contains('reveal-left')) {
             return { x: -100, y: 18 };
         }
@@ -133,10 +162,20 @@ function initStoryHeroParallax() {
             return;
         }
 
+        const w = window.innerWidth;
+        // Tắt parallax hoàn toàn trên mobile nhỏ
+        if (w <= 600) {
+            ticking = false;
+            return;
+        }
+
         const scrollProgress = Math.max(0, Math.min(1, -rect.top / heroHeight));
-        const bgOffset = scrollProgress * 18;
-        const contentOffset = scrollProgress * 26;
-        const contentOpacity = Math.max(0.7, 1 - scrollProgress * 0.26);
+
+        // Giảm cường độ parallax trên tablet
+        const intensity = w <= 768 ? 0.5 : 1;
+        const bgOffset = scrollProgress * 18 * intensity;
+        const contentOffset = scrollProgress * 26 * intensity;
+        const contentOpacity = Math.max(0.7, 1 - scrollProgress * 0.26 * intensity);
 
         heroBg.style.transform = `translateY(${bgOffset}px)`;
         heroContent.style.transform = `translateY(${contentOffset}px)`;

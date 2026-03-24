@@ -1,8 +1,8 @@
-<!-- Logo - bấm vào sẽ về trang chủ. Nếu ảnh lỗi thì hiển chữ thay thế (onerror) -->
+<!-- Logo - bấm vào sẽ về trang chủ -->
 <div class="logo">
   <a href="index.html">
     <img
-      src="assets/images/logo.png"
+      src="assets/images/ui/logo.png"
       alt="Bếp Nhà Ngọ Logo"
       onerror="
         this.style.display = 'none';
@@ -13,29 +13,40 @@
   </a>
 </div>
 
-<!-- Thanh điều hướng - class "active" đánh dấu trang đang xem -->
+<!-- Thanh điều hướng desktop -->
 <nav class="nav-links">
   <ul>
-    <li>
-      <a href="index.html" class="nav-link header__main">Trang chủ</a>
-    </li>
+    <li><a href="index.html" class="nav-link header__main">Trang chủ</a></li>
     <li><a href="menu.html" class="nav-link header__menu">Thực đơn</a></li>
-    <li>
-      <a href="story.html" class="nav-link header__story">Câu chuyện</a>
-    </li>
+    <li><a href="story.html" class="nav-link header__story">Câu chuyện</a></li>
   </ul>
 </nav>
 
-<!-- Các nút: tìm kiếm, tài khoản, giỏ hàng (có badge đếm số lượng) -->
+<!-- Nhóm icon desktop + nút hamburger -->
 <div class="cart-button">
-  <a href="login.html" class="icon-btn" id="userBtn" aria-label="Tài khoản">
+  <!-- Nút hamburger — chỉ hiện trên mobile -->
+  <button type="button" class="icon-btn hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+  <!-- Các icon desktop — ẩn trên mobile -->
+  <a href="login.html" class="icon-btn desktop-only" id="userBtn" aria-label="Tài khoản">
     <i class="fa-regular fa-user"></i>
   </a>
-  <button type="button" class="icon-btn" id="logoutBtn" aria-label="Đăng xuất" style="display: none;">
+  <button type="button" class="icon-btn desktop-only" id="logoutBtn" aria-label="Đăng xuất" style="display: none;">
     <i class="fas fa-sign-out-alt"></i>
   </button>
-  <a href="cart.html" class="icon-btn cart" aria-label="Giỏ hàng">
+  <a href="cart.html" class="icon-btn cart desktop-only" aria-label="Giỏ hàng">
     <i class="fas fa-shopping-cart"></i>
     <span class="cart-badge">0</span>
   </a>
 </div>
+
+<!-- Menu mobile dropdown — gom hết nav + auth + giỏ hàng -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="mobile-nav-link header__main">🏠 Trang chủ</a>
+  <a href="menu.html" class="mobile-nav-link header__menu">🍽️ Thực đơn</a>
+  <a href="story.html" class="mobile-nav-link header__story">📖 Câu chuyện</a>
+  <div class="mobile-nav-divider"></div>
+  <a href="login.html" class="mobile-nav-link" id="mobileUserBtn">👤 Tài khoản</a>
+  <a href="cart.html" class="mobile-nav-link mobile-cart-link">🛒 Giỏ hàng <span class="cart-badge mobile-cart-badge">0</span></a>
+</nav>

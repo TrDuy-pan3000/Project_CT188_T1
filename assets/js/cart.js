@@ -82,7 +82,7 @@ function renderCart() {
                 src="${escapeHtml(item.image)}"
                 alt="${escapeHtml(item.name)}"
                 class="item-image"
-                onerror="this.src='assets/images/logo.png'"
+                onerror="this.src='assets/images/ui/logo.png'"
             >
             <div class="item-info">
                 <div class="item-name">${escapeHtml(item.name)}</div>

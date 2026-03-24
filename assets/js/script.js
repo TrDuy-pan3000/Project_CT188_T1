@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   markActiveNav();
   initBackToTop();
   initUserUI();
+  initHamburgerMenu();
 });
 
 async function injectSharedSection(selector, filePath) {
@@ -41,10 +42,45 @@ function markActiveNav() {
     return;
   }
 
-  const activeLink = document.querySelector(activeSelector);
-  if (activeLink) {
-    activeLink.classList.add("active");
-  }
+  // Đánh dấu active cho cả desktop nav và mobile nav
+  const activeLinks = document.querySelectorAll(activeSelector);
+  activeLinks.forEach(link => {
+    link.classList.add("active");
+  });
+}
+
+function initHamburgerMenu() {
+  const btn = document.getElementById("hamburgerBtn");
+  const mobileNav = document.getElementById("mobileNav");
+  if (!btn || !mobileNav) return;
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = mobileNav.classList.toggle("open");
+    // Đổi icon: ☰ ↔ ✕
+    const icon = btn.querySelector("i");
+    if (icon) {
+      icon.className = isOpen ? "fas fa-times" : "fas fa-bars";
+    }
+  });
+
+  // Đóng menu khi bấm ra ngoài
+  document.addEventListener("click", (e) => {
+    if (!mobileNav.contains(e.target) && !btn.contains(e.target)) {
+      mobileNav.classList.remove("open");
+      const icon = btn.querySelector("i");
+      if (icon) icon.className = "fas fa-bars";
+    }
+  });
+
+  // Đóng menu khi bấm vào link
+  mobileNav.querySelectorAll(".mobile-nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+      const icon = btn.querySelector("i");
+      if (icon) icon.className = "fas fa-bars";
+    });
+  });
 }
 
 function getCurrentPageName() {
@@ -102,11 +138,12 @@ function initUserUI() {
   const userData = localStorage.getItem("currentUser");
   const userBtn = document.getElementById("userBtn");
   const logoutBtn = document.getElementById("logoutBtn");
+  const mobileUserBtn = document.getElementById("mobileUserBtn");
 
   if (userData && userBtn) {
     const user = JSON.parse(userData);
     if (user.name) {
-      // Đã đăng nhập - hiển thị tên kế bên icon user
+      // Desktop: hiển thị tên kế bên icon user
       userBtn.innerHTML = `<i class="fa-regular fa-user"></i> <span class="user-name-span">${escapeHtml(user.name)}</span>`;
       userBtn.classList.add("logged-in");
       if (logoutBtn) {
@@ -117,6 +154,16 @@ function initUserUI() {
           handleLogout();
         });
       }
+      // Mobile: đổi text "Tài khoản" → tên user + nút đăng xuất
+      if (mobileUserBtn) {
+        mobileUserBtn.textContent = `👤 ${user.name}`;
+        mobileUserBtn.href = "#";
+        mobileUserBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          handleLogout();
+        });
+        mobileUserBtn.textContent = `🚪 Đăng xuất (${user.name})`;
+      }
     }
   } else {
     // Chưa đăng nhập
@@ -125,6 +172,10 @@ function initUserUI() {
       userBtn.classList.remove("logged-in");
     }
     if (logoutBtn) logoutBtn.style.display = "none";
+    if (mobileUserBtn) {
+      mobileUserBtn.textContent = "👤 Đăng nhập";
+      mobileUserBtn.href = "login.html";
+    }
   }
 
   // Protect cart link - kiểm tra login khi click giỏ hàng
