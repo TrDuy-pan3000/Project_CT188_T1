@@ -211,7 +211,7 @@
 .hero-section {
     position: relative;
     padding: 12rem 5% 6rem;
-    background: linear-gradient(rgba(138, 16, 18, 0.85), rgba(138, 16, 18, 0.85)), url('../images/pattern-clouds-outline.png') repeat center center;
+    background: linear-gradient(rgba(138, 16, 18, 0.85), rgba(138, 16, 18, 0.85)), url('../images/ui/pattern-clouds-outline.png') repeat center center;
     display: flex;
     align-items: center;
     justify-content: space-between;

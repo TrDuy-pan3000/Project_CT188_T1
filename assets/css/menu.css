@@ -693,20 +693,34 @@ main {
 }
 
 
-/* RESPONSIVE — Tablet (≤ 992px) */
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — Tablet ngang (≤992px)
+   ═══════════════════════════════════════════════ */
 @media (max-width: 992px) {
-    .story-hero        { height: 155px; }
-    .story-hero:hover  { height: 175px; }
+    .story-hero        { height: 160px; }
+    .story-hero:hover  { height: 180px; }
+
+    .menu { max-width: 100%; }
+
+    /* Grid 3 cột trên tablet */
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+    }
+    .image-wrapper { height: 12rem; }
 }
 
 
-/* RESPONSIVE — Tablet nhỏ (≤ 768px) */
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — Tablet dọc (≤768px)
+   ═══════════════════════════════════════════════ */
 @media (max-width: 768px) {
-
     .story-hero        { height: 140px; }
     .story-hero:hover  { height: 158px; }
-    .menu-hero-title   { font-size: clamp(1rem, 3.5vw, 1.4rem); } /* Tiêu đề nhỏ hơn để phù hợp với hero thấp hơn */
-    /* Toolbar: đổi thành 2 hàng */
+    .menu-hero-title   { font-size: clamp(1rem, 3.5vw, 1.4rem); }
+    .menu-hero-sub     { font-size: 0.55rem; padding: 0.18rem 0.6rem; }
+
+    /* Toolbar: đổi thành 2 hàng dọc */
     .top-actions {
         margin: 1.5rem 1rem 2rem;
         flex-wrap: wrap;
@@ -730,39 +744,119 @@ main {
 
     .menu { padding: 0 4% 3rem; }
     .filter-modal { width: 100%; }
+
+    /* Card content thu gọn */
+    .content-wrapper { padding: 0.95rem 1rem; }
+    .food-name { font-size: 1rem; min-height: calc(1rem * 1.4 * 2); }
+    .short-description {
+        font-size: 0.82rem;
+        min-height: calc(0.82rem * 1.65 * 2);
+        line-clamp: 2;
+    }
+    .price { font-size: 1.05rem; }
+    .btn-add { font-size: 0.82rem; padding: 0.5rem 0.9rem; }
 }
 
 
-/* RESPONSIVE — Mobile (≤ 480px) */
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — Mobile (≤480px)
+   ═══════════════════════════════════════════════ */
 @media (max-width: 480px) {
-
     .story-hero        { height: 120px; }
     .story-hero:hover  { height: 136px; }
     .menu-hero-desc    { display: none; }
+    .menu-hero-sub     { font-size: 0.5rem; letter-spacing: 0.1em; }
+    .menu-hero-title   { font-size: clamp(0.9rem, 4vw, 1.2rem); }
 
-    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; } /* Giữ 2 cột nhưng giảm gap */
-    .menu { padding: 0 3% 2.5rem; }   /* Giảm padding tổng thể */
-    .image-wrapper { height: 9rem; }  /* Ảnh thấp hơn để phù hợp với màn hình nhỏ hơn */
+    /* Grid giữ 2 cột nhưng gap nhỏ hơn */
+    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 0.65rem; }
+    .menu { padding: 0 3% 2.5rem; }
+    .image-wrapper { height: 9rem; }
 
-    .content-wrapper { padding: 0.8rem 0.9rem; } /* Thu nhỏ padding nội dung card */
+    /* Card nội dung compact */
+    .content-wrapper { padding: 0.7rem 0.8rem; }
     .food-name {
-        font-size: 0.9rem;
-        min-height: calc(0.9rem * 1.4 * 2);
+        font-size: 0.88rem;
+        min-height: calc(0.88rem * 1.4 * 2);
+        margin: 0.3rem 0 0.4rem;
     }
-    .short-description { display: none; }       /* Ẩn mô tả ngắn trên mobile nhỏ */
-    .price { font-size: 1rem; }
-    .btn-add { font-size: 0.78rem; padding: 0.48rem 0.75rem; }
+    .short-description { display: none; }
+    .price { font-size: 0.95rem; }
+    .btn-add { font-size: 0.75rem; padding: 0.45rem 0.7rem; gap: 0.3rem; }
 
-    .card-tag { font-size: 0.62rem; padding: 0.22rem 0.6rem; }
+    .card-tag { font-size: 0.6rem; padding: 0.2rem 0.55rem; top: 0.5rem; left: 0.5rem; }
     .top-actions { margin: 1.2rem 0.5rem 1.75rem; }
+
+    /* Card bottom compact */
+    .card-bottom {
+        padding-top: 0.65rem;
+        gap: 0.4rem;
+    }
+
+    /* Filter modal */
+    .filter-modal {
+        padding: 0 1rem 2rem;
+    }
+    .category-btn {
+        font-size: 0.8rem;
+        padding: 0.45rem 1rem;
+    }
+    #closeFilter, #applyFilter {
+        font-size: 0.88rem;
+        padding: 0.75rem;
+    }
+
+    /* Hero content */
+    .menu-hero-content { padding: 0 1.2rem; }
+    .menu-hero-divider { width: 32px; height: 2px; margin: 0 auto 0.4rem; }
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — Mobile rất nhỏ (≤360px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 360px) {
+    .story-hero        { height: 100px; }
+    .story-hero:hover  { height: 112px; }
+    .menu-hero-title   { font-size: clamp(0.8rem, 4.5vw, 1rem); }
+    .menu-hero-sub     { display: none; }
+
+    .menu-grid { gap: 0.5rem; }
+    .image-wrapper { height: 7.5rem; }
+
+    .content-wrapper { padding: 0.55rem 0.65rem; }
+    .food-name {
+        font-size: 0.8rem;
+        min-height: calc(0.8rem * 1.4 * 2);
+        margin: 0.2rem 0 0.3rem;
+    }
+    .price { font-size: 0.88rem; }
+    .btn-add {
+        font-size: 0.68rem;
+        padding: 0.4rem 0.6rem;
+    }
+    .card-tag { font-size: 0.55rem; padding: 0.18rem 0.45rem; }
+
+    .top-actions {
+        margin: 1rem 0.3rem 1.5rem;
+        border-radius: 10px;
+    }
+    #filterBtn { padding: 0.75rem; font-size: 0.85rem; }
+    #searchInput { font-size: 0.85rem; }
+    .search-box { padding: 0.7rem 1rem; }
+
+    .menu { padding: 0 2% 2rem; }
+
+    .card-bottom { flex-direction: column; align-items: stretch; gap: 0.4rem; }
+    .btn-add { justify-content: center; width: 100%; }
 }
 
 
 /* SCROLLBAR */
-::-webkit-scrollbar { width: 6px; } /* Thanh cuộn dọc */
-::-webkit-scrollbar-track { background: var(--cream); }  /* Nền thanh cuộn */
-::-webkit-scrollbar-thumb {  
-    background: var(--red-tet); 
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb {
+    background: var(--red-tet);
     border-radius: var(--radius-full);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--red-dark); }

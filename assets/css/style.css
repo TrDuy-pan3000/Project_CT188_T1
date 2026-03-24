@@ -115,6 +115,8 @@ main {
     background: var(--red-tet);
     border-bottom: 2px solid rgba(255, 247, 0, 0.15);
     transition: all 0.3s ease;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
 }
 
 /* Header khi cuộn xuống — thêm bóng đổ cho rõ hơn */
@@ -124,10 +126,15 @@ main {
 }
 
 /* --- Logo: ảnh + tên thương hiệu cạnh nhau --- */
+.logo {
+    flex-shrink: 0;
+}
+
 .logo a {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    white-space: nowrap;
 }
 
 /* Ảnh logo - chiều cao cố định, bo góc nhẹ */
@@ -142,6 +149,27 @@ main {
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--gold);
+    white-space: nowrap;
+}
+
+/* Nav links container */
+.nav-links {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.nav-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+}
+
+/* Cart button group — không co lại */
+.cart-button {
+    flex-shrink: 0;
 }
 
 /* Mỗi link điều hướng - bo góc tròn, hover lên trên 2px */
@@ -155,6 +183,7 @@ main {
     color: var(--white);
     transition: all 0.3s ease;
     position: relative;
+    white-space: nowrap;
 }
 
 /* Hover: nền trắng mờ, bay lên 2px */
@@ -581,22 +610,171 @@ main {
 }
 
 /* ==========================================
-   RESPONSIVE: Tablet (≤768px)
-   Ẩn nav, thu gọn header & footer 1 cột
+   HAMBURGER BUTTON — Ẩn trên desktop, hiện khi ≤900px
+   ========================================== */
+.icon-btn.hamburger-btn {
+    display: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================
+   MOBILE NAV — Menu dropdown khi bấm hamburger
+   ========================================== */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--red-dark);
+    flex-direction: column;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Khi mở: trượt xuống + hiện ra */
+.mobile-nav.open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 0.9rem 1.8rem;
+    color: var(--white);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-nav-link:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link.active {
+    background: var(--red-tet);
+    color: var(--gold);
+}
+
+.mobile-nav-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0.3rem 1.2rem;
+}
+
+.mobile-cart-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gold);
+    color: var(--red-dark);
+    font-size: 0.7rem;
+    font-weight: 700;
+    min-width: 1.2rem;
+    height: 1.2rem;
+    border-radius: var(--radius-full);
+    margin-left: 0.4rem;
+}
+
+/* ==========================================
+   RESPONSIVE: Tablet ngang (≤992px)
+   Nav link nhỏ hơn, logo gọn, footer vẫn 3 cột
+   ========================================== */
+@media (max-width: 992px) {
+    .header {
+        padding: 0.1rem 4%;
+    }
+
+    .logo img {
+        height: 3.8rem;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .icon-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .footer-content {
+        gap: 2rem;
+        padding: 3rem 5% 2rem;
+    }
+}
+
+/* ==========================================
+   Nav ẩn sớm tại 900px — tránh vùng chữ bị ép xuống dòng
+   ========================================== */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+    .icon-btn.hamburger-btn {
+        display: flex;
+    }
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE: Tablet dọc (≤768px)
+   Header compact, footer 1 cột
    ========================================== */
 @media (max-width: 768px) {
     .header {
-        padding: 0.8rem 4%;
+        padding: 0.6rem 4%;
+    }
+
+    .logo img {
+        height: 3.2rem;
     }
 
     .logo-text {
         font-size: 1.3rem;
     }
 
-    .nav {
-        display: none;
+    .icon-btn {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 0.88rem;
     }
 
+    .cart-button {
+        gap: 0.5rem;
+    }
+
+    .cart-badge {
+        font-size: 0.6rem;
+        min-width: 1.1rem;
+        height: 1.1rem;
+    }
 
     .section-title {
         font-size: 1.8rem;
@@ -607,14 +785,25 @@ main {
         display: none;
     }
 
+    .section-desc {
+        font-size: 1rem;
+    }
+
+    /* Footer: 1 cột, căn giữa */
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
+        padding: 2.5rem 5% 1.5rem;
     }
 
     .footer-title::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .footer-brand {
+        justify-content: center;
     }
 
     .social {
@@ -624,31 +813,233 @@ main {
     .contact li {
         justify-content: center;
     }
+
+    .footer-links a {
+        justify-content: center;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-brand-text {
+        font-size: 1.2rem;
+    }
+
+    .footer-title {
+        font-size: 1.1rem;
+    }
+
+    .footerbottom {
+        font-size: 0.82rem;
+        padding: 1rem 4%;
+    }
+
+    /* Nút bấm chỉnh cho vừa */
+    .btn-primary {
+        padding: 0.85rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .btn-secondary {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
 }
 
 /* ==========================================
-   RESPONSIVE: Mobile nhỏ (≤480px)
-   Icon nhỏ hơn, sản phẩm 1 cột
+   RESPONSIVE: Mobile (≤480px)
+   Header siêu gọn, footer compact
    ========================================== */
 @media (max-width: 480px) {
-    .cart-button {
-        gap: 0.45rem;
+    .header {
+        padding: 0.5rem 3%;
     }
 
+    .logo img {
+        height: 2.8rem;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .logo a {
+        gap: 0.4rem;
+    }
+
+    .cart-button {
+        gap: 0.4rem;
+    }
+
+    .icon-btn {
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: 0.82rem;
+    }
+
+    .cart-badge {
+        font-size: 0.55rem;
+        min-width: 1rem;
+        height: 1rem;
+        top: -0.2rem;
+        right: -0.2rem;
+    }
+
+    .icon-btn.logged-in {
+        padding: 0 0.8rem;
+        gap: 0.3rem;
+    }
+
+    .user-name-span {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-desc {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.4rem;
+        font-size: 0.92rem;
+    }
+
+    .btn-secondary {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.88rem;
+    }
+
+    /* Footer compact */
+    .footer-content {
+        padding: 2rem 4% 1.2rem;
+        gap: 1.8rem;
+    }
+
+    .footer-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-brand-text {
+        font-size: 1.1rem;
+    }
+
+    .footer-text {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .footer-slogan {
+        font-size: 0.9rem;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links a,
+    .contact li {
+        font-size: 0.88rem;
+    }
+
+    .social a {
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 0.88rem;
+    }
+
+    .footerbottom {
+        font-size: 0.75rem;
+        padding: 0.8rem 3%;
+    }
 
     .app-toast {
         right: 0.7rem;
         bottom: 4.7rem;
+        font-size: 0.88rem;
+        padding: 0.8rem 1rem;
     }
 
-    .icon-btn {
-        width: 2.4rem;
+    .back-to-top {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+        right: 0.8rem;
+        bottom: 0.8rem;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE: Mobile rất nhỏ (≤360px)
+   Mọi thứ thu gọn tối đa
+   ========================================== */
+@media (max-width: 360px) {
+    .header {
+        padding: 0.4rem 2.5%;
+    }
+
+    .logo img {
         height: 2.4rem;
     }
 
-    /* Nút chính: nhỏ hơn cho vừa màn hình */
-    .btn-primary {
-        padding: 0.8rem 1.5rem;
+    .logo-text {
+        font-size: 0.95rem;
+    }
+
+    .icon-btn {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.75rem;
+    }
+
+    .cart-badge {
+        font-size: 0.5rem;
+        min-width: 0.9rem;
+        height: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .footer-content {
+        padding: 1.5rem 3% 1rem;
+        gap: 1.5rem;
+    }
+
+    .footer-brand img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer-brand-text {
         font-size: 1rem;
+    }
+
+    .footer-text,
+    .footer-links a,
+    .contact li {
+        font-size: 0.82rem;
+    }
+
+    .social a {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .footerbottom {
+        font-size: 0.7rem;
+    }
+
+    .btn-primary {
+        padding: 0.65rem 1.2rem;
+        font-size: 0.85rem;
     }
 }
