@@ -505,5 +505,286 @@
         "text": "Mình thích combo này ở chỗ mua 1 được 2, đỡ phải mua lắt nhắt nhiều hộp. Vị tẩm ướp rất vừa miệng, cay cay ngòn ngọt dễ ăn."
       }
     ]
+  },
+  {
+    "id": 12,
+    "name": "Thùng Nước Ngọt Mirinda Xá Xị Tết",
+    "category": "Thức Uống Khai Xuân",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Bán chạy",
+      "cssClass": "hot"
+    },
+    "description": "Bên cạnh các dòng nước giải khát quen thuộc, Mirinda Xá Xị từ lâu đã trở thành thức uống mang đậm ký ức tuổi thơ và văn hóa ẩm thực của người miền Nam dịp Tết. Vị xá xị đặc trưng thơm nồng, ngòn ngọt kết hợp cùng bọt ga sảng khoái cực kỳ hiệu quả trong việc kích thích tiêu hóa, đánh bay cảm giác đầy bụng sau những bữa cỗ ngập tràn thịt kho, bánh tét. Phiên bản Thùng Tết rực rỡ mang theo lời chúc năm mới an khang, tràn đầy năng lượng và tiếng cười cho cả gia đình.",
+    "shortDescription": "Thùng 24 lon Mirinda vị xá xị thơm nồng đặc trưng, ga sảng khoái giải ngán hiệu quả mâm cỗ Tết.",
+    "price": "195.000",
+    "unit": "Thùng",
+    "mainImg": "assets/images/products/product-mirinda-xaxi-1.jpg",
+    "subImg1": "assets/images/products/product-mirinda-xaxi-1.jpg",
+    "subImg2": "assets/images/products/product-mirinda-xaxi-2.jpg",
+    "subImg3": "assets/images/products/product-mirinda-xaxi-3.jpg",
+    "subImg4": "assets/images/products/product-mirinda-xaxi-1.jpg",
+    "weight": "24 lon x 320ml / thùng.",
+    "ingredientList": "- Nước bão hòa CO2.<br />- Đường mía, hương xá xị tự nhiên và tổng hợp.<br />- Chất điều chỉnh độ axit, màu thực phẩm (Caramen) an toàn được Bộ Y Tế cấp phép.",
+    "packing": "Thùng giấy carton in họa tiết Tết rộn ràng, bắt mắt. Bên trong gồm 24 lon nhôm dung tích 320ml/lon.",
+    "exp": "- 12 tháng kể từ ngày sản xuất (chi tiết xem dưới đáy lon).",
+    "uses": "- Thức uống giải khát tuyệt vời, hương vị xá xị thơm nồng vô cùng cuốn hút.<br />- Cực kỳ 'đã' khi uống lạnh ở 3-5 độ C hoặc rót ra ly thêm nhiều đá.<br />- Giúp tiêu hóa cực tốt, chống ngán hiệu quả khi ăn đồ nếp, đồ chiên xào nhiều dầu mỡ.",
+    "preserve": "- Để thùng nước nơi khô thoáng, tránh ánh sáng trực tiếp.<br />- Không để lon nước trong ngăn đá (ngăn đông) tủ lạnh để tránh hiện tượng nứt vỡ lon.",
+    "reviews": [
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Thanh Tuấn",
+        "address": "Ninh Kiều, Cần Thơ",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Dân miền Tây mình ăn Tết là trên mâm phải có lon xá xị. Uống vô ợ một cái là nhẹ bụng, bay luôn nồi thịt kho hột vịt. Thùng năm nay thiết kế đẹp, giao hàng nguyên vẹn."
+      },
+      {
+        "avatar": "👩",
+        "name": "Chị Hồng Ngọc",
+        "address": "Bình Chánh, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Nhà mình ai cũng ghiền vị xá xị của Mirinda, thơm nồng mà không bị ngọt gắt. Mua 2 thùng để dành khách tới chúc Tết mời uống với nhâm nhi hạt dưa là đúng bài."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Canh Khổ Qua Nhồi Thịt",
+    "category": "Món Ngon Ngày Tết",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Truyền thống",
+      "cssClass": "trad"
+    },
+    "description": "Bát canh khổ qua nhồi thịt là món ăn mang đậm triết lý dân gian của người miền Nam dịp Tết: mong mọi sự 'khổ' cực sẽ 'qua' đi, đón năm mới bình an, tươi sáng. Khổ qua gai xanh được móc ruột khéo léo, nhồi đầy ắp nhân thịt băm, mộc nhĩ, miến dong và chút cá thác lác để tăng độ dai ngọt. Canh được hầm bằng nước xương trong vắt, vị đắng dịu thanh mát hậu ngọt lịm. Sản phẩm nấu sẵn tiện lợi, giúp bạn thảnh thơi ngày Tết mà mâm cúng vẫn vẹn tròn ý nghĩa.",
+    "shortDescription": "Khổ qua xanh dồn thịt nạc, mộc nhĩ dai sần sật. Nước dùng thanh mát ngọt xương, giải nhiệt ngày Tết.",
+    "price": "95.000",
+    "unit": "Hộp",
+    "mainImg": "assets/images/products/product-canh-kho-qua-1.jpg",
+    "subImg1": "assets/images/products/product-canh-kho-qua-1.jpg",
+    "subImg2": "assets/images/products/product-canh-kho-qua-2.jpg",
+    "subImg3": "assets/images/products/product-canh-kho-qua-3.jpg",
+    "subImg4": "assets/images/products/product-canh-kho-qua-2.jpg",
+    "weight": "800g / hộp (Gồm 3-4 trái khổ qua và nước dùng hầm xương).",
+    "ingredientList": "- Khổ qua xanh chọn trái nở gai to (vị đắng dịu, không bị đắng gắt).<br />- Nhân dồn: Thịt nạc dăm heo băm, chả cá thác lác nạo, nấm mèo (mộc nhĩ), bún tàu (miến dong).<br />- Gia vị: Hành tím, tiêu sọ đập dập, nước mắm ngon.<br />- Nước dùng: Hầm từ xương ống heo vớt bọt kỹ để giữ độ trong và ngọt thanh.",
+    "packing": "Khổ qua và nước dùng được cấp đông sâu, đóng gói trong túi PA hút chân không dày dặn 2 lớp chống bục rách, đặt trong hộp nhựa PP chịu nhiệt (an toàn khi dùng lò vi sóng).",
+    "exp": "- 05 ngày khi để ở ngăn mát (0-5 độ C).<br />- 02 tháng khi bảo quản ở ngăn đông.",
+    "uses": "- Rã đông tự nhiên hoặc ngâm túi nguyên seal vào nước mát.<br />- Cắt miệng túi, đổ ra tô sành sứ quay lò vi sóng 5-7 phút, hoặc đổ vào nồi đun sôi lại trên bếp đến khi tỏa mùi thơm là dùng được ngay.<br />- Tuyệt vời khi ăn kèm cơm trắng và đồ kho mặn.",
+    "preserve": "- Bảo quản xuyên suốt trong tủ lạnh. Sau khi đã rã đông hâm nóng thì nên dùng hết trong bữa.",
+    "reviews": [
+      {
+        "avatar": "👩",
+        "name": "Chị Thanh Hằng",
+        "address": "Bình Tân, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Canh nấu rất chuẩn vị, nước trong vắt mà ngọt xương, khổ qua đắng nhẹ hậu ngọt rất dễ ăn. Tết bề bộn mua hộp này về hâm lại cúng Giao thừa là nhất."
+      },
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Hoàng Quân",
+        "address": "Bình Dương",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Gói hút chân không chắc chắn, nước không bị xì ra ngoài tí nào. Nhân dồn có cá thác lác nên dai và thơm mùi tiêu lắm."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Thịt Kho Hột Vịt",
+    "category": "Món Ngon Ngày Tết",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Truyền thống",
+      "cssClass": "trad"
+    },
+    "description": "Nhắc đến Tết phương Nam là phải nhắc đến nồi Thịt kho hột vịt (thịt kho rệu) thơm lừng góc bếp. Từng miếng thịt ba rọi rút sườn vuông vức, tỉ lệ mỡ nạc đan xen hoàn hảo được kho liu riu nhiều giờ bằng 100% nước dừa tươi Bến Tre tươi ngọt. Thịt mềm rệu nhưng không nát, mỡ trong veo béo ngậy tan ngay trong miệng, nước kho sánh màu nâu đỏ cánh gián tự nhiên tuyệt đẹp mặn ngọt hài hòa, ôm lấy từng quả hột vịt bùi bùi. Sự tiện lợi của công nghệ hút chân không giúp món ăn truyền thống có mặt ngay trên bàn ăn nhà bạn chỉ sau 5 phút.",
+    "shortDescription": "Thịt ba rọi kho rệu mềm mọng bằng 100% nước dừa tươi, hột vịt béo ngậy. Chuẩn vị Tết Nam Bộ.",
+    "price": "185.000",
+    "unit": "Hộp",
+    "mainImg": "assets/images/products/product-thit-kho-1.jpg",
+    "subImg1": "assets/images/products/product-thit-kho-1.jpg",
+    "subImg2": "assets/images/products/product-thit-kho-2.jpg",
+    "subImg3": "assets/images/products/product-thit-kho-3.jpg",
+    "subImg4": "assets/images/products/product-thit-kho-2.jpg",
+    "weight": "800g / hộp (Gồm 500g thịt, 4 hột vịt và nước kho sánh kẹo).",
+    "ingredientList": "- Thịt heo ba rọi rút sườn tươi ngon, xắt cục vuông to.<br />- Hột vịt (trứng vịt) luộc bóc vỏ (độ dai vừa phải, lòng đỏ bùi béo).<br />- 100% Nước dừa tươi Bến Tre, nước mắm cốt nhĩ cá cơm 40 độ đạm.<br />- Tỏi, ớt sừng, hành tím. Cam kết không dùng nước hàng công nghiệp tạo màu.",
+    "packing": "Thịt kho cùng nước sốt được đóng gói hút chân không trong túi chịu nhiệt độ cao (Retort pouch), bên ngoài là hộp giấy thiết kế đậm chất Xuân, biếu tặng rất lịch sự.",
+    "exp": "- 07 ngày ở ngăn mát tủ lạnh.<br />- 03 tháng ở ngăn đông mà không hề làm suy giảm kết cấu thịt.",
+    "uses": "- Cắt túi hút chân không, trút thịt và hột vịt vào nồi nhỏ, đun lửa riu riu cho nóng hổi rệu mềm lại.<br />- Nếu vội, có thể để nguyên túi đun cách thủy trong nước sôi 10 phút.<br />- 'Bắt cơm' thần sầu khi chan nước kho ăn cùng cơm trắng, kèm thêm dưa giá, dưa chua hay củ kiệu là nhức nách.",
+    "preserve": "- Bảo quản lạnh. Khi hâm lại tránh dùng đũa khuấy mạnh tay làm nát hột vịt và phần mỡ rệu.",
+    "reviews": [
+      {
+        "avatar": "👵",
+        "name": "Cô Mỹ Lệ",
+        "address": "Tân Bình, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Thịt kho đúng chuẩn vị nước dừa miền Tây, ngọt thanh chứ không gắt đường. Mỡ kho rệu trong veo ăn không hề ngán. Đi làm về trễ nấu nồi cơm rồi hâm lại là xong bữa ngon."
+      },
+      {
+        "avatar": "👱‍♀️",
+        "name": "Chị Thảo Nguyên",
+        "address": "Đồng Nai",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Màu thịt lên bằng nước dừa tự nhiên rất đẹp. Đóng gói túi hút chân không dán mép bự chà bá, ship tới không hề đổ nước. Hột vịt thấm gia vị ăn bùi lắm."
+      },
+      {
+        "avatar": "👨",
+        "name": "Anh Quốc Đạt",
+        "address": "Vũng Tàu",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Ngon như má nấu ở nhà. Vợ mình mua thử 1 hộp ăn khen quá chừng nên phải đặt thêm cất tủ đông để dành Tết khách tới dọn ra cho lẹ."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Hũ Dưa Kiệu Chua Ngọt Truyền Thống",
+    "category": "Món Ngon Ngày Tết",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Truyền thống",
+      "cssClass": "trad"
+    },
+    "description": "Dưa kiệu chua ngọt là linh hồn của mâm cỗ Tết Việt, món ăn 'chống ngán' thần thánh không thể thiếu bên cạnh bánh chưng, bánh tét và thịt kho tàu. Những củ kiệu được chọn lọc kỹ càng, phơi héo dẻo và ngâm lên men tự nhiên theo công thức gia truyền, mang lại độ giòn rụm, trắng ngần mà tuyệt đối không sử dụng chất tẩy trắng hay hàn the. Vị chua thanh, ngọt dịu kết hợp chút cay nồng nhẹ của kiệu sẽ đánh thức mọi giác quan, làm bữa ăn ngày Xuân thêm phần trọn vẹn.",
+    "shortDescription": "Củ kiệu chua ngọt giòn rụm, trắng tự nhiên không hóa chất. Món ăn kèm giải ngán hoàn hảo cho mâm cỗ Tết.",
+    "price": "150.000",
+    "unit": "Hũ",
+    "mainImg": "assets/images/products/product-dua-kieu-1.jpg",
+    "subImg1": "assets/images/products/product-dua-kieu-1.jpg",
+    "subImg2": "assets/images/products/product-dua-kieu-2.jpg",
+    "subImg3": "assets/images/products/product-dua-kieu-3.jpg",
+    "subImg4": "assets/images/products/product-dua-kieu-1.jpg",
+    "weight": "500g / hũ.",
+    "ingredientList": "- Củ kiệu ta (kiệu Huế) thân nở, đuôi nhỏ, giòn và thơm đặc trưng.<br />- Giấm gạo lên men tự nhiên, đường cát trắng, muối tinh luyện.<br />- Ớt sừng tươi nguyên trái (tạo vị cay nhẹ và màu sắc đẹp mắt).<br />- Cam kết không chất bảo quản, không chất tạo độ giòn hay tẩy trắng công nghiệp.",
+    "packing": "Đóng trong hũ nhựa PET cao cấp tiệt trùng, nắp nhôm vặn chặt có dán màng seal nhiệt bên trong. Cam kết nước ngâm kiệu tuyệt đối không bị rỉ hay trào ra ngoài trong quá trình vận chuyển đi xa.",
+    "exp": "- 03 tháng ở nhiệt độ thường (nơi thoáng mát, tránh nắng trực tiếp).<br />- 06 tháng khi bảo quản trong ngăn mát tủ lạnh.",
+    "uses": "- Mở nắp và thưởng thức ngay không cần chế biến.<br />- Cực kỳ 'bắt miệng' khi ăn kèm thịt kho hột vịt, tôm khô, chả lụa hoặc kẹp cùng bánh tét, bánh chưng.",
+    "preserve": "- Luôn dùng đũa sạch, khô ráo để gắp kiệu (không dùng đũa đang ăn dính dầu mỡ để gắp, tránh làm nổi váng nước ngâm).<br />- Đậy kín nắp và cho vào ngăn mát tủ lạnh sau khi mở seal để kiệu giữ được độ giòn rụm lâu nhất.",
+    "reviews": [
+      {
+        "avatar": "👵",
+        "name": "Cô Cẩm Tú",
+        "address": "Bình Thủy, Cần Thơ",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Kiệu làm rất sạch, không bị dính cát ở phần rễ. Vị chua ngọt vừa vặn, nhai giòn rụm rụm nghe rất đã tai. Năm nay nhà cô khỏi mất công ngồi lặt kiệu phơi nắng nữa."
+      },
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Thanh Bình",
+        "address": "Quận 7, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Đóng gói hũ rất chắc chắn, seal kỹ nên lúc nhận hàng hũ khô ráo, không trào một giọt nước nào. Mua kèm ít tôm khô nữa là lai rai tới bến."
+      },
+      {
+        "avatar": "👩",
+        "name": "Chị Lan Phương",
+        "address": "Đà Nẵng",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Kiệu trắng ngà tự nhiên chứ không trắng bóc kiểu ngâm hóa chất tẩy, ăn cho xá cả nhà thấy an tâm. Vị ngọt thanh rất hợp khẩu vị miền Nam."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Combo Xuân Sum Vầy",
+    "category": "Quà Tặng Ngày Tết",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Mới",
+      "cssClass": "new"
+    },
+    "description": "Combo Xuân Sum Vầy là bộ quà tặng tinh túy, hội tụ những loại hạt dinh dưỡng 'thượng hạng' nhất, được chọn lọc kỹ càng để mang đến hương vị bùi béo, thơm ngon và nguồn sức khỏe dồi dào. Không chỉ là món ăn vặt giải ngán tuyệt vời bên chén trà Xuân, combo này còn gửi gắm lời chúc một năm mới may mắn, sung túc, trọn vẹn và an khang. Đây là lựa chọn đẳng cấp để gửi tặng đối tác, biếu cấp trên, tặng người thân hoặc chưng trang trọng trên bàn thờ gia tiên.",
+    "shortDescription": "Hội tụ 5 loại hạt thượng hạng: Macca, Hạnh nhân, Óc chó, Dẻ cười, Bí xanh. Món quà sức khỏe, may mắn dịp Tết.",
+    "price": "450.000",
+    "unit": "Bộ",
+    "mainImg": "assets/images/products/product-combo-hat-1.jpg",
+    "subImg1": "assets/images/products/product-combo-hat-1.jpg",
+    "subImg2": "assets/images/products/product-combo-hat-2.jpg",
+    "subImg3": "assets/images/products/product-combo-hat-1.jpg",
+    "subImg4": "assets/images/products/product-combo-hat-2.jpg",
+    "weight": "Khoảng 1.8kg - 2kg / bộ.",
+    "ingredientList": "Combo gồm 05 hũ thuỷ tinh cao cấp đựng 5 loại hạt nổi bật:<br />- Hạt Macca Úc Nguyên Vỏ (400g): 'Nữ hoàng các loại hạt', bùi béo, giàu Omega-7, tốt cho tim mạch và làn da. Biểu tượng của sự sang trọng, thịnh vượng.<br />- Hạnh Nhân Mỹ Rang Mộc (400g): Giàu Vitamin E, chất xơ và Omega-3, hỗ trợ giảm cholesterol, tốt cho tim. Thể hiện sự tinh tế, chu đáo.<br />- Nhân Hạt Óc Chó Chile (350g): 'Vua của các loại hạt', giàu Omega-3 và chất chống oxy hóa, tốt cho trí não và sức khỏe toàn diện. Tượng trưng cho sự thông minh, minh mẫn.<br />- Hạt Dẻ Cười Mỹ (350g): Vị bùi, hơi mặn, giàu Kali và Vitamin B6, tốt cho người tiểu đường và sức khỏe tim mạch. Tượng trưng cho niềm vui, nụ cười và sự lạc quan.<br />- Nhân Hạt Bí Xanh Mông Cổ (300g): Vị thơm nhẹ, giàu Magiê, Kẽm và chất xơ, tốt cho tuyến tiền liệt và hệ miễn dịch. Tượng trưng cho mùa màng bội thu, may mắn và bình an.",
+    "packing": "05 hũ thủy tinh cao cấp có nắp nhôm vặn chặt và màng seal kín kẽ, xếp ngay ngắn trong hộp quà tặng gỗ hoặc carton cứng thiết kế theo phong cách Xuân đỏ/vàng sang trọng, kèm túi xách đồng bộ. Rất đẹp mắt để chưng hoặc biếu.",
+    "exp": "- 12 tháng kể từ ngày sản xuất (in trên từng hũ).<br />- Sử dụng tốt nhất trong vòng 2-3 tháng sau khi mở nắp.",
+    "uses": "- Bóc vỏ (Macca) hoặc ăn trực tiếp nhân hạt.<br />- Nhâm nhi cùng trà Xuân, cà phê hoặc rượu vang mứt Tết.<br />- Có thể dùng làm nguyên liệu nấu sữa hạt, làm bánh hoặc mix cùng sữa chua, salad.<br />- Món ăn vặt giải ngán tuyệt vời cho mâm cỗ Tết nhiều dầu mỡ.",
+    "preserve": "- Luôn đậy kín nắp hộp ngay sau khi dùng để hạt không bị ỉu gió hoặc hôi dầu.<br />- Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. Ngon hơn khi bảo quản lạnh.",
+    "reviews": [
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Quốc Đạt",
+        "address": "Bình Thạnh, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Mình mua combo này biếu sếp dịp Tết. Hộp gỗ nhìn rất sang trọng, các hũ thủy tinh đựng hạt bên trong rất đẹp. Sếp khen hạt Macca Úc to đều, bùi béo, sếp rất thích."
+      },
+      {
+        "avatar": "👩",
+        "name": "Chị Minh Thư",
+        "address": "Đà Nẵng",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Mình chọn set quà này để gửi cho người thân ở quê. Tết về nhà thấy ai cũng khen hạt ngon, không bị hôi dầu chút nào. Đồ ngon, ý nghĩa, lại tốt cho sức khỏe."
+      },
+      {
+        "avatar": "👵",
+        "name": "Cô Lan",
+        "address": "Quận 1, TP.HCM",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Năm nào cũng đặt shop này. Hạt điều và dẻ cười ở đây vị rất vừa miệng, không bị ngọt gắt. Thích nhất khoản đóng gói rất có tâm, ship nhanh."
+      },
+      {
+        "avatar": "👦",
+        "name": "Bạn Minh Trí",
+        "address": "Thủ Đức, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Combo 5 hũ rất hợp lý để đãi khách. Nhà mình mix Macca, Hạnh nhân với Bí xanh thành một đĩa lớn, khách tới ai cũng thích, vừa ăn vừa nói chuyện trà Xuân."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Thùng Nước Ngọt Pepsi Tết",
+    "category": "Thức Uống Khai Xuân",
+    "rating": "⭐⭐⭐⭐⭐",
+    "tag": {
+      "text": "Mới",
+      "cssClass": "new"
+    },
+    "description": "Pepsi, thương hiệu nước ngọt cola hàng đầu thế giới, mang đến phiên bản đặc biệt dành cho dịp Tết Nguyên Đán với thông điệp \"Khai Xuân Như Ý\". Thùng Pepsi Tết không chỉ là thức uống giải khát sảng khoái với hương vị cola đặc trưng bùng nổ mà còn khoác lên mình lớp áo Tết rực rỡ, là món quà ý nghĩa gửi gắm lời chúc may mắn, thành công đến người thân, bạn bè, đối tác. Thiết kế bao bì tinh tế, kết hợp hài hòa giữa màu xanh dương đặc trưng và sắc đỏ, vàng truyền thống của Tết, tạo nên không khí sôi động, rộn ràng cho bữa cỗ gia đình và những buổi họp mặt Xuân.",
+    "shortDescription": "Thùng 24 lon Pepsi vị cola đặc trưng sảng khoái, thiết kế bao bì Tết rực rỡ với lời chúc \"Khai Xuân Như Ý\".",
+    "price": "200.000",
+    "unit": "Thùng",
+    "mainImg": "assets/images/products/product-pepsi-tet-1.jpg",
+    "subImg1": "assets/images/products/product-pepsi-tet-1.jpg",
+    "subImg2": "assets/images/products/product-pepsi-tet-2.jpg",
+    "subImg3": "assets/images/products/product-pepsi-tet-3.jpg",
+    "subImg4": "assets/images/products/product-pepsi-tet-4.jpg",
+    "weight": "24 lon x 320ml / thùng.",
+    "ingredientList": "- Nước bão hòa CO2.<br />- Đường.<br />- Màu thực phẩm (Caramen nhóm IV).<br />- Chất điều chỉnh độ axit (338).<br />- Hương cola tự nhiên.<br />- Cafein.",
+    "packing": "Thùng giấy carton cứng cáp in họa tiết Tết rực rỡ, bắt mắt với câu chúc \"Khai Xuân Như Ý\". Bên trong gồm 24 lon nhôm dung tích 320ml/lon.",
+    "exp": "- 12 tháng kể từ ngày sản xuất (chi tiết xem dưới đáy lon).",
+    "uses": "- Thức uống giải khát sảng khoái, vị cola bùng nổ được nhiều người yêu thích.<br />- Giúp cân bằng vị giác, xua tan cảm giác đầy bụng sau khi ăn nhiều đồ nếp, đồ chiên rán ngày Tết.<br />- Uống trực tiếp, ngon nhất khi ướp lạnh ở 3-5 độ C hoặc rót ra ly thêm đá.<br />- Món quà Tết ý nghĩa, chưng bàn thờ gia tiên gửi gắm lời chúc năm mới an khang, thịnh vượng.",
+    "preserve": "- Để thùng nước nơi khô thoáng, tránh ánh sáng trực tiếp.<br />- Tuyệt đối không để lon nước trong ngăn đá (ngăn đông) tủ lạnh để tránh hiện tượng nứt vỡ lon.",
+    "reviews": [
+      {
+        "avatar": "👨‍💼",
+        "name": "Anh Thanh Bình",
+        "address": "Bình Dương",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Tết nào cũng phải thủ vài thùng Pepsi vị cola sảng khoái cho đám trẻ ở nhà và bạn bè tới chơi. Phiên bản Tết năm nay bao bì đẹp, ý nghĩa \"Khai Xuân Như Ý\" rất hợp để biếu tặng."
+      },
+      {
+        "avatar": "👩",
+        "name": "Chị Thu Hương",
+        "address": "Gò Vấp, TP.HCM",
+        "stars": "⭐⭐⭐⭐⭐",
+        "text": "Mình thích Pepsi vì vị ngọt thanh vừa phải, ga sảng khoái giúp giải ngán hiệu quả mấy món thịt mỡ măng miến ngày Tết. Giao hàng nhanh, thùng hàng nguyên vẹn, giá cả phải chăng."
+      },
+      {
+        "avatar": "👦",
+        "name": "Bạn Minh Đức",
+        "address": "Quận 10, TP.HCM",
+        "stars": "⭐⭐⭐⭐",
+        "text": "Hương vị Pepsi trẻ trung, bùng nổ, uống lạnh thì hết sẩy. Tết chưng thùng Pepsi đỏ vàng này trên bàn thờ gia tiên nhìn rất không khí và may mắn."
+      }
+    ]
   }
 ]

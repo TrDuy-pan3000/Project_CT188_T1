@@ -597,9 +597,9 @@ h1 {
 /* Tablet (≤ 968px) - Thu layout về 1 cột dọc */
 @media (max-width: 968px) {
     .main-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
-
+    
     h1 { font-size: 1.8em; }
     .section-title { font-size: 1.3em; }
 }
