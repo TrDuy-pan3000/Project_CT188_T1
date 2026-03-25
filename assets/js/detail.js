@@ -97,7 +97,7 @@ const getData = async () => {
               ${findProductId.description}
               <a href="./story.html">Xem thêm các câu chuyện ngày tết →</a>
             </p>
-            <strong class="product-price">${findProductId.price}₫ <span> / Đòn</span></strong>
+            <strong class="product-price">${findProductId.price}₫ <span> / ${findProductId.unit}</span></strong>
             <div class="buying-wrap">
               <input id="quantity" type="number" value="1" min="1" />
               <button class="add-to-cart-button" id="add-cart">
@@ -223,7 +223,8 @@ const getData = async () => {
       const quantityInput = document.getElementById("quantity");
       const quantity = Math.max(1, Number(quantityInput?.value) || 1);
       const price = parsePrice(findProductId.price);
-      const image = featuredImg?.getAttribute("src") || "assets/images/ui/logo.png";
+      const image =
+        featuredImg?.getAttribute("src") || "assets/images/ui/logo.png";
 
       if (typeof addToCart === "function") {
         addToCart({
