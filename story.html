@@ -1,241 +1,295 @@
 <!doctype html>
+<!-- Khai báo HTML5 -->
+
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ."
+<!-- Ngôn ngữ: tiếng Việt (SEO + accessibility) -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Hỗ trợ Unicode (tiếng Việt) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Responsive cho mobile -->
+
+  <meta
+    name="description"
+    content="Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ."
+  />
+  <!-- Mô tả SEO -->
+
+  <title>Câu Chuyện Bếp Nhà Ngọ</title>
+  <!-- Tiêu đề tab -->
+
+  <!-- Preconnect để load font nhanh hơn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Import font (Playfair + Be Vietnam Pro) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icon tab -->
+  <link rel="icon" type="image/png" href="assets/images/ui/logo.png" />
+
+  <!-- Font Awesome (icon) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- CSS chung -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- CSS trang chủ  -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+
+  <!-- CSS riêng trang story -->
+  <link rel="stylesheet" href="assets/css/story.css" />
+</head>
+
+<body>
+  <!-- HEADER load động bằng JS -->
+  <header class="header"></header>
+
+  <!-- MAIN -->
+  <main class="gourmet-story">
+    <!-- Container chính của trang story -->
+
+    <!-- ================= HERO ================= -->
+    <section class="story-hero" id="storyHero">
+      <!-- Section banner đầu trang -->
+
+      <div class="story-hero-bg" id="storyHeroBg">
+        <!-- Thẻ div background image -->
+
+        <img src="assets/images/story/story-hero-bg.png" alt="Hero Image" />
+        <!-- Background-image <img> -->
+
+        <div class="story-hero-overlay"></div>
+        <!-- Overlay giúp chữ nổi bật -->
+      </div>
+
+      <div class="story-hero-content story-hero-enter" id="storyHeroContent">
+        <!-- Nội dung hero + animation -->
+
+        <div class="story-hero-sub">CÂU CHUYỆN BẾP NHÀ NGỌ</div>
+        <!-- Subtitle -->
+
+        <h1 class="story-hero-title">
+          <!-- Tiêu đề chính (H1 - rất quan trọng cho SEO) -->
+          <span>Tinh Hoa Ẩm Thực</span>
+          <span>Ngày Tết</span>
+        </h1>
+
+        <div class="story-hero-divider"></div>
+        <!-- Line trang trí -->
+
+        <p class="story-hero-desc">
+          Mỗi món ăn mang lên mâm cỗ Tết là một câu chuyện thấm đẫm ân tình
+          quê hương.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mascot -->
+    <img
+      src="assets/images/mascots/bstory.png"
+      alt="Ngựa Tết kể chuyện"
+      class="story-mascot"
     />
-    <title>Câu Chuyện Bếp Nhà Ngọ</title>
 
-    <!-- Nạp các font chữ cao cấp từ Google Fonts (Cormorant Garamond, Inter, Be Vietnam Pro) cho thiết kế tạp chí -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- ================= STORY 1 ================= -->
+    <section class="story-section s1 reveal-section" data-reveal-group>
+      <!-- reveal-section dùng cho animation scroll -->
 
-    <!-- Link Icon Favicon và FontAwesome cho các icon mxh, giỏ hàng -->
-    <link rel="icon" type="image/png" href="assets/images/ui/logo.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+      <div class="story-container">
+        <!-- Wrapper layout -->
 
-    <!-- Link CSS dùng chung và CSS cho trang thiết kế tạp chí (story.css) -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="assets/css/story.css" />
-  </head>
-  <body>
-    <!-- ======================== HEADER - Thanh điều hướng cố định trên cùng ======================== -->
-    <header class="header"></header>
+        <div class="story-img-wrapper reveal-item reveal-left">
+          <!-- Cột ảnh -->
 
-    <!-- ======================== MAIN CONTAINER ======================== -->
-    <main class="gourmet-story">
-      <!-- ======================== HERO BANNER ======================== -->
-      <!-- Khối Banner siêu to khổng lồ bắt mắt ở trên cùng -->
-      <section class="story-hero" id="storyHero">
-        <!-- Ảnh nền -->
-        <div class="story-hero-bg" id="storyHeroBg">
-          <img src="assets/images/story/story-hero-bg.png" alt="Hero Image" />
-          <!-- Overlay đen dốc để text hiện lên sắc nét -->
-          <div class="story-hero-overlay"></div>
+          <div class="story-img-decor"></div>
+          <!-- Decor phía sau ảnh (style magazine) -->
+
+          <img
+            class="story-img"
+            src="assets/images/story/story-banh-chung-new.png"
+            alt="Bánh Chưng"
+          />
         </div>
 
-        <!-- Nội dung trung tâm của Hero Banner -->
-        <div class="story-hero-content story-hero-enter" id="storyHeroContent">
-          <div class="story-hero-sub">CÂU CHUYỆN BẾP NHÀ NGỌ</div>
-          <h1 class="story-hero-title">
-            <span>Tinh Hoa Ẩm Thực</span>
-            <span>Ngày Tết</span>
-          </h1>
-          <div class="story-hero-divider"></div>
-          <p class="story-hero-desc">
-            Mỗi món ăn mang lên mâm cỗ Tết là một câu chuyện thấm đẫm ân tình
-            quê hương.
+        <div class="story-text-col reveal-item reveal-up">
+          <!-- Cột nội dung -->
+
+          <div class="story-header">
+            <span class="story-num">01.</span>
+            <!-- Số thứ tự -->
+
+            <h2 class="story-title">
+              Nếp Nương Gói Trọn Ân Tình Đất Trời
+            </h2>
+          </div>
+
+          <div class="story-quote-frame">
+            <!-- Khung quote -->
+
+            <div class="story-quote-line"></div>
+            <!-- Line trang trí -->
+
+            <p class="story-quote">
+              "Gói bánh chưng xanh, buộc lạt ân tình<br />
+              Nếp cẩm điểm tô, sắc xuân tươi rạng..."
+            </p>
+          </div>
+
+          <p class="story-desc">
+            Tại Bếp Nhà Ngọ, từng đòn Bánh Tét Lá Cẩm hay chiếc Bánh Chưng
+            xanh đều được nâng niu tỉ mỉ từ khâu chọn nếp cái hoa vàng hạt đều
+            tăm tắp, đến thịt mỡ và đậu xanh bùi béo. Sự hòa quyện giữa vị mặn
+            của thịt, vị bùi của đậu và hương thơm lừng của nếp mới không đơn
+            thuần là một món ăn, mà là bản giao hưởng gọi Tết về, gói ghém
+            trọn vẹn lời chúc năm mới an khang, sum vầy và thịnh vượng.
           </p>
         </div>
-      </section>
-      
-      <img src="assets/images/mascots/bstory.png" alt="Ngựa Tết kể chuyện" class="story-mascot">
-      <!-- ======================== CÂU CHUYỆN 1 - Hình Trái, Chữ Phải ======================== -->
-      <section class="story-section s1 reveal-section" data-reveal-group>
-        <div class="story-container">
-          <!-- Khối bọc cụm ảnh bên trái -->
-          <div class="story-img-wrapper reveal-item reveal-left">
-            <!-- Khối chữ nhật rỗng màu kem chườm ra ngoài như thiết kế tạp chí -->
-            <div class="story-img-decor"></div>
-            <!-- Ảnh món ăn -->
-            <img
-              class="story-img"
-              src="assets/images/story/story-banh-chung-new.png"
-              alt="Bánh Chưng"
-            />
+      </div>
+    </section>
+
+    <!-- ================= STORY 2 ================= -->
+    <section class="story-section s2 reveal-section" data-reveal-group>
+      <div class="story-container row-reverse">
+        <!-- row-reverse → đảo layout -->
+
+        <div class="story-text-col reveal-item reveal-up">
+          <div class="story-header">
+            <span class="story-num">02.</span>
+            <h2 class="story-title">Giò Lụa Chả Quế Thượng Hạng</h2>
           </div>
 
-          <!-- Cột nội dung văn bản bên phải -->
-          <div class="story-text-col reveal-item reveal-up">
-            <div class="story-header">
-              <span class="story-num">01.</span>
-              <h2 class="story-title">Nếp Nương Gói Trọn Ân Tình Đất Trời</h2>
-            </div>
-            <!-- Khối câu trích dẫn có vạch đỏ mớm cạnh -->
-            <div class="story-quote-frame">
-              <div class="story-quote-line"></div>
-              <p class="story-quote">
-                "Gói bánh chưng xanh, buộc lạt ân tình<br />Nếp cẩm điểm tô, sắc
-                xuân tươi rạng..."
-              </p>
-            </div>
-            <!-- Nội dung miêu tả chi tiết -->
-            <p class="story-desc">
-              Tại Bếp Nhà Ngọ, từng đòn Bánh Tét Lá Cẩm hay chiếc Bánh Chưng
-              xanh đều được nâng niu tỉ mỉ từ khâu chọn nếp cái hoa vàng hạt đều
-              tăm tắp, đến thịt mỡ và đậu xanh bùi béo. Sự hòa quyện giữa vị mặn
-              của thịt, vị bùi của đậu và hương thơm lừng của nếp mới không đơn
-              thuần là một món ăn, mà là bản giao hưởng gọi Tết về, gói ghém
-              trọn vẹn lời chúc năm mới an khang, sum vầy và thịnh vượng.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ======================== CÂU CHUYỆN 2 - Chữ Trái, Hình Phải (row-reverse) ======================== -->
-      <!-- Background sẽ tự đổi thành be sậm xen kẽ theo CSS .s2 -->
-      <section class="story-section s2 reveal-section" data-reveal-group>
-        <div class="story-container row-reverse">
-          <!-- Cột nội dung văn bản bên trái -->
-          <div class="story-text-col reveal-item reveal-up">
-            <div class="story-header">
-              <span class="story-num">02.</span>
-              <h2 class="story-title">Giò Lụa Chả Quế Thượng Hạng</h2>
-            </div>
-            <div class="story-quote-frame">
-              <div class="story-quote-line"></div>
-              <p class="story-quote">
-                "Mâm cao cỗ đầy không gì sánh bằng tấm lòng.<br />Giò chả thơm
-                lừng, đậm tình nồng nàn góc bếp."
-              </p>
-            </div>
-            <p class="story-desc">
-              Giò Chả là phần tinh túy nhất trong mâm cỗ truyền thống. Để miếng
-              giò lụa được trắng dòn sần sật, thịt phải là phần mông nạc vừa mới
-              mổ, vẫn còn hơi ấm, đem giã đều tay ngay tức khắc.<br />Miếng chả
-              quế thì lại đòi hỏi sự khéo léo để nướng cho lớp vỏ ngoài ánh vàng
-              như mật ong, cắn vào mềm ẩm, đượm quế tinh khiết. Chúng tôi gìn
-              giữ công thức gia truyền trăm năm, hoàn toàn không chất bảo quản,
-              chỉ gói ghém hương vị mộc mạc và chân thành nhất để trao đến vị
-              giác của bạn.
+          <div class="story-quote-frame">
+            <div class="story-quote-line"></div>
+            <p class="story-quote">
+              "Mâm cao cỗ đầy không gì sánh bằng tấm lòng.<br />
+              Giò chả thơm lừng, đậm tình nồng nàn góc bếp."
             </p>
           </div>
 
-          <!-- Cụm ảnh nằm bên phải -->
-          <div class="story-img-wrapper reveal-item reveal-right">
-            <!-- Tương tự decor hình dội ra phía sau cho s2 -->
-            <div class="story-img-decor"></div>
-            <img
-              class="story-img"
-              src="assets/images/story/story-gio-cha.png"
-              alt="Giò Lụa Chả Quế"
-            />
-          </div>
+          <p class="story-desc">
+            Giò Chả là phần tinh túy nhất trong mâm cỗ truyền thống...
+            <br />
+            Miếng chả quế thì lại đòi hỏi sự khéo léo...
+          </p>
         </div>
-      </section>
 
-      <!-- ======================== CÂU CHUYỆN 3 - Hình Trái, Chữ Phải  ======================== -->
-      <section class="story-section s3 reveal-section" data-reveal-group>
-        <div class="story-container">
-          <div class="story-img-wrapper reveal-item reveal-left">
-            <div class="story-img-decor"></div>
-            <img
-              class="story-img"
-              src="assets/images/story/story-khay-mut.png"
-              alt="Khay Mứt Tết"
-            />
+        <div class="story-img-wrapper reveal-item reveal-right">
+          <div class="story-img-decor"></div>
+
+          <img
+            class="story-img"
+            src="assets/images/story/story-gio-cha.png"
+            alt="Giò Lụa Chả Quế"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STORY 3 ================= -->
+    <section class="story-section s3 reveal-section" data-reveal-group>
+      <div class="story-container">
+
+        <div class="story-img-wrapper reveal-item reveal-left">
+          <div class="story-img-decor"></div>
+
+          <img
+            class="story-img"
+            src="assets/images/story/story-khay-mut.png"
+            alt="Khay Mứt Tết"
+          />
+        </div>
+
+        <div class="story-text-col reveal-item reveal-up">
+          <div class="story-header">
+            <span class="story-num">03.</span>
+            <h2 class="story-title">Ngọt Ngào Dư Vị Khay Mứt Tết</h2>
           </div>
-          <div class="story-text-col reveal-item reveal-up">
-            <div class="story-header">
-              <span class="story-num">03.</span>
-              <h2 class="story-title">Ngọt Ngào Dư Vị Khay Mứt Tết</h2>
-            </div>
-            <div class="story-quote-frame">
-              <div class="story-quote-line"></div>
-              <p class="story-quote">
-                "Trà đắng đố kị mứt thơm ngọt<br />Như đời nhân thế nếm đắng
-                cay..."
-              </p>
-            </div>
-            <p class="story-desc">
-              Khay mứt Tết không chỉ là niềm vui trẻ nhỏ mà còn là những lời rôm
-              rả mở đầu câu chuyện đầu năm của người lớn. Mứt dừa trắng muốt
-              ngọt bùi, mứt gừng vàng ánh cay nồng ấm bụng, mứt sen trần thanh
-              nhã như tà áo cô gái Hà Thành...<br />Chúng tôi sên tay từng mẻ
-              mứt mộc bằng đường phèn, không nhuộm màu giả, để vị ngọt tự nhiên
-              bừng lên dịu êm. Cùng một ấm chà xanh nóng hổi, ngày Xuân dường
-              như chậm lại, để ta thưởng thực vị thanh tao và đón những bình yên
-              chậm rãi.
+
+          <div class="story-quote-frame">
+            <div class="story-quote-line"></div>
+
+            <p class="story-quote">
+              "Trà đắng đố kị mứt thơm ngọt<br />
+              Như đời nhân thế nếm đắng cay..."
             </p>
           </div>
-        </div>
-      </section>
 
-      <!-- ======================== CÂU CHUYỆN 4 - Chữ Trái, Hình Phải (row-reverse) ======================== -->
-      <section class="story-section s2 reveal-section" data-reveal-group>
-        <div class="story-container row-reverse">
-          <div class="story-text-col reveal-item reveal-up">
-            <div class="story-header">
-              <span class="story-num">04.</span>
-              <h2 class="story-title">Dư Vị Lai Rai Nồng Đượm</h2>
-            </div>
-            <div class="story-quote-frame">
-              <div class="story-quote-line"></div>
-              <p class="story-quote">
-                "Khách đến dâng chén sương lam<br />Kèm thêm chút mồi thắm đượm
-                thâm giao"
-              </p>
-            </div>
-            <p class="story-desc">
-              Ngày Xuân sao có thể thiếu những chầu hàn huyên rôm rả, vài chén
-              rượu nâng cạn cùng nhâm nhi miếng Khô Bò, Khô Gà đậm vị. Thay vì
-              ngợp trong cỗ ngọt béo ngậy, chính vị mặn mặn, cay cay kích thích
-              vị giác trở thành điểm nhấn thăng hoa cho bàn tiệc.<br /><br />Từng
-              thớ thịt tẩm ướp tiêu hạt, mắc khén rừng và sấy củi gai làm bùng
-              nổ hương sắc. Những cái chạm ly len lỏi giữa mùi thơm thớ khô, là
-              dư vị khó tả của tình bằng hữu, chốn đoàn viên thiêng liêng rộn rã
-              cười nói.
+          <p class="story-desc">
+            Khay mứt Tết không chỉ là niềm vui trẻ nhỏ...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STORY 4 ================= -->
+    <section class="story-section s2 reveal-section" data-reveal-group>
+      <div class="story-container row-reverse">
+
+        <div class="story-text-col reveal-item reveal-up">
+          <div class="story-header">
+            <span class="story-num">04.</span>
+            <h2 class="story-title">Dư Vị Lai Rai Nồng Đượm</h2>
+          </div>
+
+          <div class="story-quote-frame">
+            <div class="story-quote-line"></div>
+
+            <p class="story-quote">
+              "Khách đến dâng chén sương lam<br />
+              Kèm thêm chút mồi thắm đượm thâm giao"
             </p>
           </div>
-          <div class="story-img-wrapper reveal-item reveal-right">
-            <div class="story-img-decor"></div>
-            <img
-              class="story-img"
-              src="assets/images/story/story-kho-bo.png"
-              alt="Khô Bò Khô Gà"
-            />
-          </div>
-        </div>
-      </section>
 
-      <!-- ======================== CALL TO ACTION (CTA) CTA Cuối Cùng Dưới Đáy Phễu ======================== -->
-      <section class="story-cta reveal-section" data-reveal-group>
-        <div class="story-cta-inner reveal-item reveal-up">
-          <h3 class="story-cta-desc">
-            Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ.
-          </h3>
-          <!-- Nút bấm dắt qua trang Thực Đơn -->
-          <a href="menu.html" class="story-cta-btn">KHÁM PHÁ THỰC ĐƠN</a>
+          <p class="story-desc">
+            Ngày Xuân sao có thể thiếu những chầu hàn huyên...
+          </p>
         </div>
-      </section>
-    </main>
 
-    <!-- ======================== FOOTER CHUẨN (Kéo từ Trang Chủ) ======================== -->
-    <footer class="footer"></footer>
-    <!-- Link file chức năng chung -->
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/story.js"></script>
-  </body>
+        <div class="story-img-wrapper reveal-item reveal-right">
+          <div class="story-img-decor"></div>
+
+          <img
+            class="story-img"
+            src="assets/images/story/story-kho-bo.png"
+            alt="Khô Bò Khô Gà"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="story-cta reveal-section" data-reveal-group">
+
+      <div class="story-cta-inner reveal-item reveal-up">
+        <h3 class="story-cta-desc">
+          Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ.
+        </h3>
+
+        <a href="menu.html" class="story-cta-btn">
+          KHÁM PHÁ THỰC ĐƠN
+        </a>
+        <!-- CTA điều hướng -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER load động -->
+  <footer class="footer"></footer>
+
+  <!-- JavaScript chính của trang -->
+  <script src="assets/js/script.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/story.js"></script>
+</body>
 </html>
