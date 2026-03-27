@@ -3,6 +3,7 @@ const moreInfo = document.querySelector(".more-info");
 const productReviews = document.querySelector(".reviews");
 const relatedProducts = document.querySelector(".products");
 
+// hàm render trang khi không tìm thấy thông tin id sản phẩm hoặc id không hợp lệ
 function renderNotFoundProduct() {
   const mainContent = document.querySelector("main");
   if (!mainContent) return;
@@ -36,11 +37,10 @@ function renderNotFoundProduct() {
 function parsePrice(rawPrice) {
   return Number(String(rawPrice).replace(/[^\d]/g, "")) || 0;
 }
-
+// hàm lấy thông tin từ file product.json và render nội dung trang
 const getData = async () => {
   const path = new URLSearchParams(window.location.search);
   const productId = path.get("id");
-
   if (!productId) {
     renderNotFoundProduct();
     return;
@@ -116,7 +116,7 @@ const getData = async () => {
     const colCount = Math.max(1, Math.min(smallImgs.length, 4));
     galleryContainer.style.gridTemplateColumns = `repeat(${colCount}, 1fr)`;
   }
-
+  // thay đổi ảnh chính khi click
   smallImgs.forEach((img) => {
     img.addEventListener("click", () => {
       featuredImg.src = img.src;
@@ -185,7 +185,7 @@ const getData = async () => {
   const otherProducts = data.filter(
     (item) => item.id.toString() !== productId.toString(),
   );
-
+  // hiển thị ngẫu nhiên 4 sản phẩm bằng cách trộn và slice otherProducts
   const randomFourProducts = otherProducts
     .sort(() => 0.5 - Math.random())
     .slice(0, 4);
@@ -214,7 +214,7 @@ const getData = async () => {
     .join("");
 
   const addCartBtn = document.getElementById("add-cart");
-
+  
   if (addCartBtn) {
     addCartBtn.addEventListener("click", () => {
       if (!window.ensureLogin || !window.ensureLogin()) return;

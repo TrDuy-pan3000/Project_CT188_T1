@@ -6,6 +6,7 @@ main {
   align-items: center;
   margin-top: 10px;
 }
+/* Kiểu dáng chung cho tất cả các phần (section) trong trang */
 section {
   flex: 1;
   width: 100%;
@@ -15,29 +16,12 @@ section {
   margin: 0;
   padding: 2% 5%;
 }
-section > .title {
-  position: relative;
-  z-index: 1;
-}
-.top-mascot {
-  width: 100px;
-  position: absolute;
-  bottom: 0;
-  filter: drop-shadow(0 2px 2px var(--white));
-  z-index: 2;
-}
-.container {
-  width: 100%;
-  display: flex;
-  justify-items: center;
-  align-items: start;
-  max-width: 1280px;
-  gap: 1rem;
-}
-section .title {
+section  .title {
   width: 100%;
   max-width: 1280px;
   text-align: center;
+  position: relative;
+  z-index: 1;  /* thiết kế phần title nằm dưới ảnh linh vật */
 }
 section .title h1 {
   font-family: "Playfair Display", serif;
@@ -46,6 +30,21 @@ section .title h1 {
   background-color: var(--red-dark);
   color: var(--gold);
   margin-bottom: 0.8rem;
+}
+.top-mascot {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  filter: drop-shadow(0 2px 2px var(--white));
+  z-index: 2; 
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: start;
+  max-width: 1280px;
+  gap: 1rem;
 }
 /* =================== Phần ảnh và thông tin sản phẩm ==================== */
 .single-product {
@@ -67,6 +66,7 @@ section .title h1 {
   background-color: var(--white);
   box-shadow: var(--shadow-soft);
 }
+/* gallery chứa cá ảnh nhỏ bên dưới */
 .gallery-container {
   margin-top: 1rem;
   display: grid;
@@ -84,6 +84,7 @@ section .title h1 {
   transition: all 0.3s ease;
   box-shadow: var(--shadow-soft);
 }
+/* hiệu ứng khi ảnh được click vào -> thay làm ảnh chính lớn phía trên thông qua js */
 .small-img:active,
 .sm-card {
   transform: scale(1.05);
@@ -100,6 +101,7 @@ section .title h1 {
   margin: 0;
   padding: 0 2%;
 }
+/* Tên sản phẩm với font chữ lớn, màu sắc nổi bật */
 .product-name {
   color: var(--red-dark);
   font-family: "Playfair Display", serif;
@@ -117,6 +119,7 @@ section .title h1 {
   color: var(--brown-dark);
   text-align: justify;
 }
+/* làm nổi bật phần đường dẫn dến trang story.html*/
 .product-description > a {
   color: var(--coral);
   font-weight: 600;
@@ -163,10 +166,12 @@ section .title h1 {
   border-radius: 5px;
   transition: all 0.3s ease;
 }
+/* Hiệu ứng nút mua khi di chuột */
 .buying-wrap > button:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-clay-hover);
 }
+/* Hiệu ứng nút mua khi click chuột */
 .buying-wrap > button:active {
   background-color: var(--cream);
   color: var(--red-tet);
@@ -177,7 +182,7 @@ section .title h1 {
 }
 .more-info .top-mascot {
   width: 159px;
-  bottom: -50px;
+  bottom: -50px; /* tinh chỉnh vị trí phù hơp với ảnh linh vật */
   right: 0;
 }
 .more-info > .container {
@@ -216,6 +221,7 @@ section .title h1 {
 .related-products > .container {
   flex-direction: column;
 }
+/* tạo grid container cho các thẻ sản phẩm */
 .related-products > .container .grid {
   width: 100%;
   display: grid;
@@ -231,6 +237,7 @@ section .title h1 {
   background-color: white;
   transition: all 0.4s ease;
 }
+/* Hiệu ứng khi di chuột vào các thẻ related-product */
 .related-product:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-clay-hover);
@@ -382,16 +389,8 @@ section .title h1 {
   }
   .cantFindProd a > button {
     width: 100%;
-    height: 100%;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: "Be Vietnam Pro", sans-serif;
-    padding: 2%;
-    background-color: var(--red-tet);
-    color: var(--cream);
-    border-radius: var(--radius);
-    transition: all 0.3s ease;
   }
+  /* tinh chỉnh vị trí, kích thước ảnh linh vật phù hợp với layout*/
   .more-info .top-mascot {
     width: 80px;
     bottom: -15px;
