@@ -2,69 +2,111 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Thực đơn Bếp Nhà Ngọ - Bánh tét, bánh chưng, đồ nhậu Tết và nhiều món ngon khác. Đặt hàng ngay!"
     />
+    <!-- Tiêu đề hiện trên tab trình duyệt -->
     <title>Thực đơn - Bếp Nhà Ngọ</title>
+
+    <!-- Kết nối trước tới Google Fonts để tải font nhanh hơn -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Tải 2 font chữ từ Google Fonts:
+         - Playfair Display: font serif sang trọng, dùng cho tiêu đề lớn
+         - Be Vietnam Pro: font sans-serif hiện đại, dùng cho nội dung thông thường -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Favicon: icon nhỏ hiện trên tab trình duyệt, dùng logo của shop -->
     <link rel="icon" type="image/png" href="assets/images/ui/logo.png" />
+    <!-- Font Awesome: thư viện icon (dùng các icon như giỏ hàng, kính lúp...) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <!-- style.css: CSS dùng chung cho toàn bộ website (biến màu, reset, font...) -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- index.css: CSS của trang chủ, dùng lại một số thành phần chung -->
     <link rel="stylesheet" href="assets/css/index.css" />
+    <!-- menu.css: CSS riêng cho trang thực đơn này -->
     <link rel="stylesheet" href="assets/css/menu.css" />
   </head>
 
   <body>
-    <!-- ======================== HEADER - Thanh điều hướng cố định trên cùng ======================== -->
+    <!-- ======================== HEADER ========================
+         Header được tải động bằng JS (script.js),
+         không cần viết nội dung ở đây, JS sẽ tự điền vào -->
     <header class="header"></header>
 
+    <!-- padding-top: 5rem để nội dung không bị header che khuất
+         vì header đang được position: fixed (dính trên cùng) -->
     <main style="padding-top: 5rem">
+
+      <!-- ======================== HERO BANNER ========================
+           Phần banner lớn ở đầu trang, có ảnh nền + tiêu đề giới thiệu -->
       <section class="story-hero" id="storyHero">
-        <!-- Ảnh nền -->
+
+        <!-- Lớp chứa hình ảnh nền và overlay đen phía sau text -->
         <div class="menu-hero-bg" id="menuHeroBg">
+          <!-- Ảnh nền hero: src được để trống vì không dùng ảnh cụ thể,
+               gradient màu đỏ từ CSS sẽ hiện lên thay thế -->
           <img src="" alt="Hero Image" />
-          <!-- Overlay đen dốc để text hiện lên sắc nét -->
+          <!-- Overlay: lớp tối màu phủ lên ảnh để chữ dễ đọc hơn -->
           <div class="menu-hero-overlay"></div>
         </div>
 
-        <!-- Nội dung trung tâm của Hero Banner -->
+        <!-- Phần nội dung chữ nằm giữa hero banner
+             class "menu-hero-enter" có animation fade từ trên xuống (xem menu.css) -->
         <div class="menu-hero-content menu-hero-enter" id="menuHeroContent">
+          <!-- Nhãn nhỏ màu vàng phía trên tiêu đề -->
           <div class="menu-hero-sub">GIAN BẾP NHÀ NGỌ</div>
+          <!-- Tiêu đề lớn chia 2 dòng bằng 2 thẻ <span> lồng trong flexbox column -->
           <h1 class="menu-hero-title">
             <span>Trọn Vị Quê Nhà</span>
             <span>Đậm Đà Ngày Xuân</span>
           </h1>
+          <!-- Đường kẻ vàng ngắn trang trí phân cách tiêu đề và mô tả -->
           <div class="menu-hero-divider"></div>
+          <!-- Mô tả ngắn, ban đầu bị ẩn, chỉ hiện khi người dùng hover vào hero -->
           <p class="menu-hero-desc">
             Từ gian bếp nhỏ, Nhà Ngọ gói ghém trọn vẹn hương vị Tết xưa, mang sự
             ấm áp và tình thân lên mâm cỗ sum vầy của gia đình bạn.
           </p>
         </div>
       </section>
-      <!-- Thanh filter và tìm kiếm sản phẩm -->
+
+      <!-- ======================== THANH LỌC VÀ TÌM KIẾM ========================
+           Gồm nút "Bộ lọc" (mở modal chọn danh mục) và ô tìm kiếm theo tên món -->
       <div class="top-actions">
+        <!-- Nút bộ lọc: khi click sẽ mở filter-modal và overlay bên dưới
+             (xử lý ở menu.js) -->
         <button id="filterBtn">Bộ lọc</button>
+        <!-- Ô tìm kiếm: gồm icon kính lúp + input
+             Người dùng gõ vào đây để lọc sản phẩm theo tên (xử lý ở menu.js) -->
         <div class="search-box">
           <span class="search-icon">🔍</span>
           <input type="search" id="searchInput" placeholder="Tìm món ngon..." />
         </div>
       </div>
 
+      <!-- ======================== OVERLAY ========================
+           Lớp tối phủ toàn màn hình khi modal bộ lọc mở ra
+           JS sẽ toggle class "active" để hiện/ẩn (xem menu.js) -->
       <div class="overlay" id="overlay"></div>
 
+      <!-- ======================== MODAL BỘ LỌC ========================
+           Panel trượt lên từ dưới khi người dùng bấm "Bộ lọc"
+           JS toggle class "active" để mở/đóng (xem menu.js) -->
       <div class="filter-modal" id="filterModal">
         <h3>Chọn danh mục</h3>
+        <!-- Danh sách các nút danh mục để lọc sản phẩm
+             data-value sẽ được JS dùng để so sánh với data-category của từng card -->
         <div class="category-list">
+          <!-- "all" nghĩa là hiển thị tất cả, không lọc gì -->
           <button class="category-btn" data-value="all">Tất cả</button>
           <button class="category-btn" data-value="Bánh Truyền Thống">
             Bánh Truyền Thống
@@ -79,28 +121,45 @@
             Thức Uống Khai Xuân
           </button>
         </div>
+        <!-- 2 nút hành động trong modal:
+             - Hủy: đóng modal, không áp dụng gì
+             - Áp dụng: lọc sản phẩm theo danh mục đã chọn, mặc định bị disabled -->
         <div class="actions">
           <button id="closeFilter">Hủy</button>
           <button id="applyFilter" disabled>Áp dụng</button>
         </div>
       </div>
 
+      <!-- ======================== LƯỚI SẢN PHẨM ========================
+           Section này chứa toàn bộ các thẻ sản phẩm
+           menu-grid được JS (menu.js) điền sản phẩm từ product.json vào -->
       <section class="menu">
-        <!-- menu-grid chứa các sản phẩm từ product.json thông qua js -->
+        <!-- menu-grid: lưới hiển thị các card sản phẩm
+             Nội dung HTML bên trong đây chỉ là placeholder tĩnh dùng để xem layout,
+             khi trang chạy thật JS sẽ xóa và thay bằng dữ liệu thực từ product.json -->
         <div class="menu-grid">
+          <!-- Đây là 1 card sản phẩm mẫu tĩnh (placeholder).
+               Khi JS chạy loadMenu(), toàn bộ nội dung này sẽ bị thay thế.
+               data-category dùng để lọc theo danh mục,
+               data-product-id dùng để liên kết sang trang detail.html -->
           <div class="menu-card" data-category="banh-tet">
+            <!-- Bọc ảnh bằng thẻ <a> để khi click ảnh sẽ chuyển sang trang chi tiết -->
             <a href="detail.html?id=" class="image-wrapper">
               <img src="assets/images/products/product-combo-tet.jpg" alt="Bánh Tết" />
             </a>
+            <!-- Phần nội dung chữ bên dưới ảnh -->
             <div class="content-wrapper">
+              <!-- Nhãn tag loại sản phẩm: "trad" = truyền thống (xem CSS) -->
               <span class="card-tag trad">Truyền thống</span>
               <h3 class="food-name">Bánh Tét</h3>
               <p class="short-description">
                 Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ, hương vị đặc
                 trưng miền Tây
               </p>
+              <!-- Hàng cuối card: giá bên trái, nút thêm giỏ hàng bên phải -->
               <div class="card-bottom">
                 <p class="price">350.000₫</p>
+                <!-- Nút "Thêm": click sẽ thêm vào giỏ hàng, xử lý ở menu.js -->
                 <a href="detail.html" class="btn-add">
                   <i class="fas fa-shopping-cart"></i> Thêm
                 </a>
@@ -111,9 +170,17 @@
       </section>
     </main>
 
+    <!-- ======================== FOOTER ========================
+         Footer được tải động bằng JS (script.js), tương tự header -->
     <footer class="footer"></footer>
+
+    <!-- script.js: xử lý chung (header/footer động, giỏ hàng, toast thông báo...)
+         Phải load trước các file JS khác vì menu.js và detail.js dùng hàm từ đây -->
     <script src="assets/js/script.js"></script>
+    <!-- main.js: xử lý các tính năng chung của toàn trang -->
     <script src="assets/js/main.js"></script>
+    <!-- menu.js: xử lý riêng cho trang thực đơn này
+         (tải sản phẩm từ JSON, lọc danh mục, tìm kiếm) -->
     <script src="assets/js/menu.js"></script>
   </body>
 </html>

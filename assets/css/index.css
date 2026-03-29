@@ -73,23 +73,12 @@
 /* 1. HEADER - Ghi đè style header cho trang chủ 
    Cao 80px cố định, nền đỏ đậm */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
     height: 80px;
-    padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: var(--red-dark);
-    border-bottom: 2px solid rgba(255, 247, 0, 0.15);
+    padding: 0 5%; /* Ghi đè padding top/bottom */
 }
 
 .logo a {
-    display: flex;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -98,94 +87,44 @@
     height: 65px;
 }
 
-.logo-text {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--gold);
-}
-
-/* Thanh điều hướng - các link nằm ngang */
+/* Thanh điều hướng - khoảng cách lớn hơn chút xíu */
 .nav-links ul {
-    display: flex;
     gap: 1rem;
 }
 
 .nav-link {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 600;
     font-size: 1.1rem;
-    padding: 0.6rem 1.4rem;
     border-radius: var(--radius);
-    color: var(--white);
-    transition: all 0.3s ease;
 }
 
-.nav-link:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
+/* .nav-link:hover, .nav-link.active, .cart-button, .icon-btn được kế thừa từ style.css nên xóa những code trùng lặp */
 
-.nav-link.active {
-    background: var(--gold);
-    color: var(--red-tet);
-}
-
-/* Cụm nút giỏ hàng, tìm kiếm, tài khoản */
+/* Cụm nút giỏ hàng, tìm kiếm, tài khoản - khoảng cách rộng hơn */
 .cart-button {
-    display: flex;
     gap: 1rem;
 }
 
-/* Nút icon tròn trong header */
+/* Ghi đè icon-btn trên trang chủ */
 .icon-btn {
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: var(--radius-full);
-    background: rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    border: none;
     font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.icon-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
-}
-
-.icon-btn.cart {
-    position: relative;
-}
-
-/* Badge số lượng giỏ hàng - hình tròn vàng góc trên icon */
+/* Badge số lượng giỏ hàng - kế thừa từ style.css, chỉ ghi đè tọa độ */
 .cart-badge {
-    position: absolute;
     top: -5px;
     right: -5px;
     background: var(--gold);
     color: var(--red-tet);
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 0.8rem;
-    font-weight: 700;
 }
 
 /* Nút tài khoản khi đã đăng nhập - mở rộng, hiện tên người dùng */
 #userBtn.logged-in {
-    width: auto;
     padding: 0 1rem;
     background: rgba(255, 247, 0, 0.15);
     border: 1px solid rgba(255, 247, 0, 0.5);
-    border-radius: var(--radius-full);
-    gap: 0.5rem;
     font-size: 0.9rem;
 }
 
@@ -196,14 +135,10 @@
 
 /* Tên người dùng hiển thị cạnh icon */
 .user-name-span {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
     color: var(--gold);
     max-width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 /* 2. HERO - Phần giới thiệu lớn đầu trang
@@ -379,48 +314,34 @@
     margin: 0 auto 3rem;
 }
 
-/* Thẻ sản phẩm - nền trắng, bóng nhẹ, hover nổi lên */
+/* Thẻ sản phẩm - kế thừa style chung, chỉ thêm flex layout và border vuông hơn */
 .card {
-    background: var(--white);
     border-radius: var(--radius);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: var(--shadow-clay);
-    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-clay-hover);
+    transform: translateY(-5px); /* Ghi đè hiệu ứng hover của thẻ trên trang chủ nhẹ nhàng hơn */
 }
 
-/* Khung ảnh vuông (aspect-ratio: 1) */
+/* Khung ảnh vuông, ghi đè height 14rem của style chung */
 .card-img {
-    overflow: hidden;
-    position: relative;
     aspect-ratio: 1;
+    height: auto;
 }
 
-/* Ảnh lấp đầy khung, cắt nếu cần (object-fit: cover) */
-.card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-/* Hover card: ảnh zoom nhẹ 1.05 lần */
+/* Hover card: ảnh zoom 1.05 lần, nhẹ hơn style chung (1.1) */
 .card:hover .card-img img {
     transform: scale(1.05);
 }
 
-/* Phần body: chứa tag, tên, mô tả, giá, nút */
+/* Phần body: flex để giãn chữ, đẩy nút xuống dưới cùng */
 .card-body {
     display: flex;
     flex-direction: column;
-    flex: 1;                     /* Co dãn lấp đầy card */
+    flex: 1;
     text-align: left;
     padding: 1.5rem;
 }
@@ -448,9 +369,10 @@
     background: var(--mint);
 }
 
-/* Tag hồng: "Mới" */
+/* Tag xanh nhạt: "Mới" */
 .card-tag.new {
-    background: var(--pink-peach);
+    background: var(--light-blue);
+    color: var(--navy); /* Chữ tối để dễ đọc trên nền sáng */
 }
 
 /* Tên sản phẩm - font sang trọng */

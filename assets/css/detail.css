@@ -1,3 +1,17 @@
+/* ============================
+   DETAIL.CSS — Trang Chi Tiết Sản Phẩm
+   ============================
+   File này style cho trang detail.html, bao gồm:
+     - Layout main và section dùng chung
+     - Khu vực ảnh chính + gallery ảnh nhỏ (click đổi ảnh)
+     - Thông tin sản phẩm bên phải: tên, giá, mô tả, nút mua
+     - Phần chi tiết sản phẩm (thành phần, bảo quản, hạn dùng)
+     - Phần đánh giá (review cards)
+     - Phần sản phẩm liên quan (grid 4 card)
+     - Màn hình lỗi khi không tìm thấy sản phẩm
+     - Responsive: tablet (≤968px) và mobile (≤768px)
+*/
+
 /* ================= Các thuộc tính dùng chung cho trang ============= */
 main {
   display: flex;
@@ -66,11 +80,12 @@ section .title h1 {
   background-color: var(--white);
   box-shadow: var(--shadow-soft);
 }
-/* gallery chứa cá ảnh nhỏ bên dưới */
+/* Gallery chứa các ảnh nhỏ bên dưới ảnh chính
+   Số cột được điều chỉnh động bằng JS theo số ảnh thực tế của sản phẩm */
 .gallery-container {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* JS sẽ override thuộc tính này */
   gap: 0.5rem;
 }
 .small-img {
@@ -123,9 +138,6 @@ section .title h1 {
 .product-description > a {
   color: var(--coral);
   font-weight: 600;
-}
-
-.product-description > a {
   text-decoration: underline;
 }
 .product-price {
@@ -137,6 +149,7 @@ section .title h1 {
   color: var(--brown-dark);
   font-size: 30px;
 }
+/* Vùng nhập số lượng + nút mua: flex row, input chiếm 20%, nút chiếm 70% */
 .buying-wrap {
   display: flex;
   width: 100%;
@@ -204,9 +217,11 @@ section .title h1 {
 }
 
 /* ======================= Phần các đánh giá ================== */
+/* Container đổi sang flex-direction column để các card xếp dọc */
 .product-reviews > .container {
   flex-direction: column;
 }
+/* Mỗi review-card là một khối trắng bo góc, padding để nội dung không sát viền */
 .review-card {
   background-color: var(--white);
   width: 100%;
@@ -229,6 +244,8 @@ section .title h1 {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
 }
+/* Mỗi thẻ sản phẩm liên quan: flex column để nội dung text đẩy nút xuống đáy card
+   transition 0.4s để hiệu ứng hover mượt mà hơn so với 0.3s mặc định */
 .related-product {
   display: flex;
   flex-direction: column;
@@ -316,12 +333,14 @@ section .title h1 {
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
   object-fit: contain;
 }
+/* Hai nút "Xem sản phẩm khác" và "Về trang chủ" xếp ngang bằng grid 2 cột */
 .button_wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   height: 80px;
 }
+/* Nút bên trong thẻ <a>: chiếm hết chiều rộng và chiều cao của ô grid */
 .cantFindProd a > button {
   width: 200px;
   height: 100%;
@@ -340,6 +359,7 @@ section .title h1 {
 }
 /* ================== RESPONSIVE - GIAO DIỆN TRÊN MÀN HÌNH NHỎ ================== */
 
+/* Tablet / Laptop nhỏ (≤ 968px): chuyển layout 2 cột sang 1 cột dọc */
 @media (max-width: 968px) {
   /* Đổi flex-direction phù hợp với màn hình dọc */
   section .title h1 {

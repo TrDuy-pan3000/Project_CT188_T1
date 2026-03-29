@@ -43,12 +43,10 @@
                     </div>
                 </div>
 
-                <!-- Con ngựa b4 (vespa giao hàng) - góc dưới trái cột trái -->
-                <img src="assets/images/mascots/b4.png" alt="Ngựa giao hàng" class="horse-b4">
+
             </div>
                 <!-- KHU VỰC PHẢI - Thanh toán -->
             <div class="right-section">
-                <!-- Con ngựa b3 nhô lên đỉnh cột phải -->
                 <img src="assets/images/mascots/b3.png" alt="Ngựa Tết" class="envelope-decoration">
                 <h2 class="section-title"> Thông Tin Nhận Hàng </h2>
                 <form id="checkoutForm">
@@ -72,19 +70,7 @@
                         <textarea id="customerNote" name="customerNote" placeholder="Ghi chú thêm về đơn hàng"></textarea>
                     </div>
 
-                <div class="payment-methods">
-                            <div class="form-group">
-                                <label> Hình Thức Thanh Toán:</label>
-                                <div class="payment-option">
-                                    <input type="radio" id="cod" name="payment" value="cod" checked>
-                                    <label for="cod"> Thanh Toán Khi Nhận Hàng (COD)</label>
-                                </div>
-                                <div class="payment-option">
-                                    <input type="radio" id="transfer" name="payment" value="transfer">
-                                    <label for="transfer"> Chuyển Khoản Ngân Hàng</label>
-                                </div>
-                            </div>
-                        </div>
+                <input type="hidden" name="payment" value="cod">
                         <button type="button" class="checkout-btn" onclick="checkout()">
                             MÃ ĐÁO THÀNH CÔNG 
                         </button>

@@ -1,72 +1,68 @@
 <!DOCTYPE html>
-<!-- Khai báo đây là tài liệu HTML5 -->
-
 <html lang="vi">
-<!-- Ngôn ngữ trang là tiếng Việt -->
-
 <head>
     <meta charset="UTF-8">
-    <!-- Hỗ trợ hiển thị tiếng Việt (Unicode) -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsive: giúp web hiển thị đúng trên mobile -->
+    <!-- Responsive: nói cho trình duyệt mobile biết là đừng thu nhỏ trang, hiển thị đúng kích thước -->
 
     <meta name="description" content="Đăng nhập hoặc đăng ký tài khoản Bếp Nhà Ngọ">
-    <!-- Mô tả trang (SEO, Google) -->
+    <!-- Mô tả ngắn hiện trên Google khi search, giúp SEO tốt hơn -->
 
     <title>Đăng nhập - Bếp Nhà Ngọ</title>
-    <!-- Tiêu đề tab trình duyệt -->
+    <!-- Tiêu đề hiện trên tab trình duyệt -->
 
-    <!-- Tối ưu load font -->
+    <!-- Preconnect để kết nối trước với Google Fonts, tải font nhanh hơn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Import font chữ -->
+    <!-- Import 2 font: Playfair Display (chữ serif đẹp cho tiêu đề) + Be Vietnam Pro (chữ thường) -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Icon tab -->
+    <!-- Favicon: ảnh icon nhỏ hiện trên tab, dùng logo của quán -->
     <link rel="icon" type="image/png" href="assets/images/ui/logo.png">
 
-    <!-- Font Awesome (icon như eye, lock, user...) -->
+    <!-- Font Awesome: thư viện icon miễn phí, dùng kiểu CDN cho tiện -->
+    <!-- Dùng các icon như fa-sign-in-alt, fa-eye, fa-lock, fa-envelope... -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- CSS tổng -->
+    <!-- CSS chung cho toàn bộ trang (biến màu, font, reset...) -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- CSS riêng trang index -->
+    <!-- CSS của trang chủ - load thêm vì trang login dùng chung một số style header/footer -->
     <link rel="stylesheet" href="assets/css/index.css">
 
-    <!-- CSS riêng trang login -->
+    <!-- CSS riêng cho trang đăng nhập / đăng ký -->
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
 
-    <!-- HEADER (load động bằng JS) -->
+    <!-- HEADER: để trống, JS trong main.js sẽ fetch và nhét header.html vào đây -->
     <header class="header"></header>
 
     <main class="auth-page">
-        <!-- MAIN chia 2 cột -->
+        <!-- Trang này chia 2 cột: trái là hero/quảng cáo, phải là form đăng nhập -->
 
-        <!-- ================= LEFT: HERO ================= -->
+        <!-- ================= CỘT TRÁI: HERO / QUẢNG CÁO ================= -->
         <div class="auth-hero">
-            <!-- Cột trái: trang trí + marketing -->
+            <!-- Phần trang trí bên trái: gradient đỏ, có chữ chào mừng và list lợi ích -->
 
             <div class="auth-hero-content">
                 <h1>
                     Chào mừng đến<br>
                     <span>Bếp Nhà Ngọ</span>
+                    <!-- span để đổi màu "Bếp Nhà Ngọ" thành màu vàng gold -->
                 </h1>
 
-                <!-- slogan -->
+                <!-- Slogan ngắn, vui vẻ theo chủ đề Tết -->
                 <p class="auth-hero-slogan">🐴 Ăn là Mê, Rước Lộc về!</p>
 
-                <!-- mô tả -->
+                <!-- Mô tả thêm lý do cần đăng nhập -->
                 <p class="auth-hero-desc">
                     Đăng nhập để đặt hàng nhanh hơn, theo dõi đơn hàng và nhận ưu đãi mùa Tết!
                 </p>
 
-                <!-- lợi ích -->
+                <!-- Danh sách 3 lợi ích khi đăng nhập, dùng icon Font Awesome cho đẹp -->
                 <ul class="auth-hero-perks">
                     <li><i class="fas fa-bolt"></i> Đặt hàng siêu tốc</li>
                     <li><i class="fas fa-gift"></i> Nhận voucher giảm giá</li>
@@ -75,95 +71,103 @@
             </div>
         </div>
 
-        <!-- ================= RIGHT: FORM ================= -->
+        <!-- ================= CỘT PHẢI: FORM ĐĂNG NHẬP / ĐĂNG KÝ ================= -->
         <div class="auth-form-side">
 
-            <!-- Mascot (ảnh con ngựa) -->
+            <!-- Ảnh mascot con ngựa, đặt absolute ở góc bên phải cho vui -->
             <img src="assets/images/mascots/blogin.png"
                  alt="Ngựa Tết mời đăng nhập"
                  class="top-mascot">
 
             <div class="auth-card">
-                <!-- Khung form chính -->
+                <!-- Khung card trắng chứa toàn bộ phần form bên trong -->
 
                 <h2 class="auth-title">Tài khoản</h2>
                 <p class="auth-subtitle">Đăng nhập hoặc tạo tài khoản mới</p>
 
-                <!-- ================= CHỌN LOGIN / REGISTER ================= -->
+                <!-- ================= PHẦN CHỌN: ĐĂNG NHẬP hay ĐĂNG KÝ ================= -->
+                <!-- Ban đầu hiện 2 nút này, khi bấm thì JS sẽ ẩn đi và hiện form tương ứng -->
                 <div id="choiceBox" class="auth-choice">
-                    <!-- Ban đầu hiện phần này -->
 
+                    <!-- Nút đăng nhập: class "primary" = kiểu nút vàng nổi bật -->
                     <button id="showLogin" class="auth-btn primary">
                         <i class="fas fa-sign-in-alt"></i> Đăng nhập
                     </button>
 
+                    <!-- Dòng "hoặc" giữa 2 nút -->
                     <div class="auth-divider">
                         <span>hoặc</span>
                     </div>
 
+                    <!-- Nút đăng ký: class "outline" = kiểu nút viền, không nền -->
                     <button id="showRegister" class="auth-btn outline">
                         <i class="fas fa-user-plus"></i> Tạo tài khoản mới
                     </button>
                 </div>
 
-                <!-- ================= FORM LOGIN ================= -->
+                <!-- ================= FORM ĐĂNG NHẬP ================= -->
+                <!-- class="hidden" → ẩn mặc định, JS remove class này khi người dùng bấm "Đăng nhập" -->
                 <form id="loginForm" class="auth-form hidden">
-                    <!-- hidden = ban đầu bị ẩn -->
 
-                    <!-- nút quay lại -->
+                    <!-- Nút quay lại để trở về màn hình chọn ban đầu -->
                     <button type="button" class="backBtn">
                         <i class="fas fa-arrow-left"></i> Quay lại
                     </button>
 
                     <h3 class="form-heading">Đăng nhập</h3>
 
-                    <!-- Email -->
+                    <!-- Trường Email -->
                     <div class="input-group">
                         <label for="loginEmail">
                             <i class="fas fa-envelope"></i> Email
                         </label>
+                        <!-- type="email" để trình duyệt tự validate định dạng email cơ bản -->
                         <input type="email"
                                id="loginEmail"
                                placeholder="vd: ngua@bepnhango.vn"
                                class="auth-input"
                                required>
+                        <!-- required: HTML5 tự báo lỗi nếu để trống, nhưng JS vẫn kiểm tra thêm -->
                     </div>
 
-                    <!-- Password -->
+                    <!-- Trường Mật khẩu -->
                     <div class="input-group">
                         <label for="loginPassword">
                             <i class="fas fa-lock"></i> Mật khẩu
                         </label>
 
+                        <!-- password-box để chứa input + icon mắt cùng 1 hàng (position relative/absolute) -->
                         <div class="password-box">
-                            <!-- input password -->
                             <input type="password"
                                    id="loginPassword"
                                    placeholder="Nhập mật khẩu"
                                    class="auth-input"
                                    required>
 
-                            <!-- icon show/hide password -->
+                            <!-- Icon mắt: bấm vào để show/hide mật khẩu, JS xử lý trong login.js -->
                             <i class="fa-solid fa-eye togglePassword"></i>
                         </div>
                     </div>
 
-                    <!-- tùy chọn -->
+                    <!-- Tùy chọn: checkbox "ghi nhớ" và link "quên mật khẩu" -->
                     <div class="form-options">
                         <label class="remember-me">
                             <input type="checkbox"> Ghi nhớ
+                            <!-- Checkbox này chưa được xử lý JS (chưa lưu gì cả, để sau làm thêm) -->
                         </label>
 
                         <a href="#" class="forgot-link">Quên mật khẩu?</a>
+                        <!-- Link này cũng chưa làm chức năng, placeholder tạm thôi -->
                     </div>
 
-                    <!-- submit -->
+                    <!-- Nút submit form đăng nhập -->
                     <button type="submit" class="auth-btn primary">
                         <i class="fas fa-sign-in-alt"></i> Đăng nhập
                     </button>
                 </form>
 
-                <!-- ================= FORM REGISTER ================= -->
+                <!-- ================= FORM ĐĂNG KÝ ================= -->
+                <!-- Cũng ẩn mặc định, hiện lên khi bấm "Tạo tài khoản mới" -->
                 <form id="registerForm" class="auth-form hidden">
 
                     <button type="button" class="backBtn">
@@ -172,7 +176,7 @@
 
                     <h3 class="form-heading">Tạo tài khoản</h3>
 
-                    <!-- Tên -->
+                    <!-- Trường Họ và tên -->
                     <div class="input-group">
                         <label for="name">
                             <i class="fas fa-user"></i> Họ và tên
@@ -184,7 +188,7 @@
                                required>
                     </div>
 
-                    <!-- Email -->
+                    <!-- Trường Email đăng ký (id khác với email đăng nhập để JS phân biệt) -->
                     <div class="input-group">
                         <label for="registerEmail">
                             <i class="fas fa-envelope"></i> Email
@@ -196,7 +200,7 @@
                                required>
                     </div>
 
-                    <!-- Phone -->
+                    <!-- Trường Số điện thoại: type="tel" gợi ý bàn phím số trên mobile -->
                     <div class="input-group">
                         <label for="registerPhone">
                             <i class="fas fa-phone"></i> Số điện thoại
@@ -206,9 +210,10 @@
                                placeholder="vd: 0909 123 456"
                                class="auth-input"
                                required>
+                        <!-- JS sẽ kiểm tra regex số điện thoại Việt Nam (10 số, đầu 03/05/07/08/09) -->
                     </div>
 
-                    <!-- Password -->
+                    <!-- Trường Mật khẩu mới -->
                     <div class="input-group">
                         <label for="registerPassword">
                             <i class="fas fa-lock"></i> Mật khẩu
@@ -225,7 +230,7 @@
                         </div>
                     </div>
 
-                    <!-- Confirm Password -->
+                    <!-- Trường Xác nhận mật khẩu: JS so sánh 2 password phải giống nhau -->
                     <div class="input-group">
                         <label for="confirmPassword">
                             <i class="fas fa-lock"></i> Xác nhận mật khẩu
@@ -242,7 +247,7 @@
                         </div>
                     </div>
 
-                    <!-- submit -->
+                    <!-- Nút submit form đăng ký -->
                     <button type="submit" class="auth-btn primary">
                         <i class="fas fa-user-plus"></i> Đăng ký
                     </button>
@@ -251,14 +256,16 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER: cũng load động như header -->
     <footer class="footer"></footer>
 
-    <!-- JavaScript chính của trang -->
+    <!-- main.js: load header/footer và các hàm chung như showToast, updateCartBadge -->
     <script src="assets/js/main.js"></script>
 
+    <!-- script.js: các hàm chung khác, thứ tự load trước login.js -->
     <script src="assets/js/script.js"></script>
 
+    <!-- login.js: xử lý đăng nhập, đăng ký, show/hide form, toggle mật khẩu -->
     <script src="assets/js/login.js"></script>
 
 </body>
