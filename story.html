@@ -1,91 +1,96 @@
-<!doctype html>
-<!-- Khai báo HTML5 -->
+<!DOCTYPE html>
 
 <html lang="vi">
-<!-- Ngôn ngữ: tiếng Việt (SEO + accessibility) -->
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Hỗ trợ Unicode (tiếng Việt) -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Responsive cho mobile -->
 
   <meta
     name="description"
     content="Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ."
   />
-  <!-- Mô tả SEO -->
+  <!-- Mô tả SEO: Google hiện đoạn này dưới tiêu đề khi search, nên ngắn gọn và hấp dẫn -->
 
   <title>Câu Chuyện Bếp Nhà Ngọ</title>
-  <!-- Tiêu đề tab -->
+  <!-- Tiêu đề hiện trên tab trình duyệt + kết quả tìm kiếm Google -->
 
-  <!-- Preconnect để load font nhanh hơn -->
+  <!-- Preconnect: báo trình duyệt kết nối trước với server Google Fonts
+       để khi cần tải font thì không mất thêm thời gian bắt tay TCP/TLS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Import font (Playfair + Be Vietnam Pro) -->
+  <!-- Import 2 font:
+       - Playfair Display: serif sang trọng, dùng cho tiêu đề, số thứ tự, quote
+       - Be Vietnam Pro: sans-serif hiện đại, dùng cho subtile và mô tả dài -->
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Icon tab -->
+  <!-- Favicon: icon nhỏ hiện trên tab, dùng logo Bếp Nhà Ngọ -->
   <link rel="icon" type="image/png" href="assets/images/ui/logo.png" />
 
-  <!-- Font Awesome (icon) -->
+  <!-- Font Awesome 6: thư viện icon miễn phí qua CDN -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 
-  <!-- CSS chung -->
+  <!-- style.css: CSS biến màu (--red-tet, --gold, --cream...) + reset toàn trang -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- CSS trang chủ  -->
+  <!-- index.css: CSS trang chủ — dùng chung vì story dùng lại 1 số class header/footer -->
   <link rel="stylesheet" href="assets/css/index.css" />
 
-  <!-- CSS riêng trang story -->
+  <!-- story.css: CSS riêng cho trang Câu Chuyện (hero, layout 2 cột, quote, CTA...) -->
   <link rel="stylesheet" href="assets/css/story.css" />
 </head>
 
 <body>
-  <!-- HEADER load động bằng JS -->
+  <!-- HEADER: để rỗng, main.js sẽ fetch file header.html và nhét HTML vào đây -->
   <header class="header"></header>
 
-  <!-- MAIN -->
+  <!-- MAIN: bọc toàn bộ nội dung trang bằng class gourmet-story -->
   <main class="gourmet-story">
-    <!-- Container chính của trang story -->
 
-    <!-- ================= HERO ================= -->
+    <!-- =====================================================================
+         PHẦN 1: HERO SECTION — Banner toàn màn hình đầu trang
+         Có ảnh nền, overlay tối, và khung chứa text tiêu đề chính (H1)
+    ===================================================================== -->
     <section class="story-hero" id="storyHero">
-      <!-- Section banner đầu trang -->
+      <!-- id="storyHero" → story.js dùng getElementById để gắn hiệu ứng parallax -->
 
+      <!-- story-hero-bg: chứa ảnh nền phủ kín section
+           id="storyHeroBg" → JS dùng để dịch chuyển ảnh khi scroll (parallax) -->
       <div class="story-hero-bg" id="storyHeroBg">
-        <!-- Thẻ div background image -->
-
         <img src="assets/images/story/story-hero-bg.png" alt="Hero Image" />
-        <!-- Background-image <img> -->
+        <!-- Ảnh này sẽ được CSS đặt object-fit: cover → tự cắt và phủ kín div -->
 
+        <!-- Lớp phủ gradient tối đè lên ảnh nền
+             Mục đích: tăng độ tương phản cho chữ trắng phía trên -->
         <div class="story-hero-overlay"></div>
-        <!-- Overlay giúp chữ nổi bật -->
       </div>
 
+      <!-- story-hero-content: khung chứa text tiêu đề ở giữa màn hình
+           class "story-hero-enter" → CSS có animation keyframe heroReveal
+           id="storyHeroContent" → JS dùng để dịch chuyển nhẹ khi scroll -->
       <div class="story-hero-content story-hero-enter" id="storyHeroContent">
-        <!-- Nội dung hero + animation -->
 
+        <!-- Subtitle: chữ nhỏ, cách thưa, in hoa → phong cách tạp chí -->
         <div class="story-hero-sub">CÂU CHUYỆN BẾP NHÀ NGỌ</div>
-        <!-- Subtitle -->
 
+        <!-- H1: tiêu đề chính, quan trọng nhất cho SEO — mỗi trang chỉ nên có 1 H1 -->
         <h1 class="story-hero-title">
-          <!-- Tiêu đề chính (H1 - rất quan trọng cho SEO) -->
-          <span>Tinh Hoa Ẩm Thực</span>
-          <span>Ngày Tết</span>
+          <span>Tinh Hoa Ẩm Thực</span>   <!-- span 1: màu trắng -->
+          <span>Ngày Tết</span>            <!-- span 2: CSS đổi màu vàng kem nhạt -->
         </h1>
 
+        <!-- Đường kẻ ngang trang trí gradient vàng mờ ở giữa -->
         <div class="story-hero-divider"></div>
-        <!-- Line trang trí -->
 
+        <!-- Dòng mô tả ngắn bên dưới tiêu đề, màu sáng, font nhẹ -->
         <p class="story-hero-desc">
           Mỗi món ăn mang lên mâm cỗ Tết là một câu chuyện thấm đẫm ân tình
           quê hương.
@@ -93,26 +98,26 @@
       </div>
     </section>
 
-    <!-- Mascot -->
-    <img
-      src="assets/images/mascots/bstory.png"
-      alt="Ngựa Tết kể chuyện"
-      class="story-mascot"
-    />
-
-    <!-- ================= STORY 1 ================= -->
+    <!-- =====================================================================
+         PHẦN 2: CÂU CHUYỆN 1 — Bánh Chưng / Bánh Tét
+         Layout: ẢNH TRÁI — CHỮ PHẢI
+         Class s1: dùng để định vị .story-img-decor lệch sang trái
+    ===================================================================== -->
     <section class="story-section s1 reveal-section" data-reveal-group>
-      <!-- reveal-section dùng cho animation scroll -->
+      <!-- reveal-section + data-reveal-group: CSS/JS dùng để nhận biết cần
+           kích hoạt animation reveal-item khi section đi vào viewport -->
 
       <div class="story-container">
-        <!-- Wrapper layout -->
+        <!-- story-container: flex row, chia ảnh + chữ 2 cột, max-width 1120px -->
 
+        <!-- COT TRÁI: ảnh + decor
+             reveal-item reveal-left: JS sẽ dịch chuyển từ trái vào trung tâm khi scroll -->
         <div class="story-img-wrapper reveal-item reveal-left">
-          <!-- Cột ảnh -->
-
+          <!-- story-img-decor: hình chữ nhật màu kem lệch phía sau ảnh
+               Kỹ thuật layering: z-index thấp hơn ảnh → tạo cảm giác "khung lót" -->
           <div class="story-img-decor"></div>
-          <!-- Decor phía sau ảnh (style magazine) -->
 
+          <!-- Ảnh chính: position absolute đè lên decor, z-index cao hơn -->
           <img
             class="story-img"
             src="assets/images/story/story-banh-chung-new.png"
@@ -120,30 +125,34 @@
           />
         </div>
 
+        <!-- CỘT PHẢI: text
+             reveal-item reveal-up: trượt từ dưới lên khi scroll vào viewport -->
         <div class="story-text-col reveal-item reveal-up">
-          <!-- Cột nội dung -->
 
+          <!-- Header: số thứ tự + tên câu chuyện -->
           <div class="story-header">
             <span class="story-num">01.</span>
-            <!-- Số thứ tự -->
+            <!-- Số thứ tự màu đỏ, font Playfair serif -->
 
             <h2 class="story-title">
               Nếp Nương Gói Trọn Ân Tình Đất Trời
             </h2>
+            <!-- H2: tiêu đề phụ (thấp hơn H1), SEO quan trọng thứ 2 -->
           </div>
 
+          <!-- Khung quote: gồm đường kẻ đỏ dọc + chữ nghiêng -->
           <div class="story-quote-frame">
-            <!-- Khung quote -->
-
             <div class="story-quote-line"></div>
-            <!-- Line trang trí -->
+            <!-- Đường kẻ đỏ dọc 4px: tạo cảm giác blockquote kiểu tạp chí -->
 
             <p class="story-quote">
               "Gói bánh chưng xanh, buộc lạt ân tình<br />
               Nếp cẩm điểm tô, sắc xuân tươi rạng..."
+              <!-- <br /> để xuống dòng bên trong thẻ p -->
             </p>
           </div>
 
+          <!-- Đoạn mô tả dài, font đọc thoải mái, line-height rộng -->
           <p class="story-desc">
             Tại Bếp Nhà Ngọ, từng đòn Bánh Tét Lá Cẩm hay chiếc Bánh Chưng
             xanh đều được nâng niu tỉ mỉ từ khâu chọn nếp cái hoa vàng hạt đều
@@ -156,11 +165,17 @@
       </div>
     </section>
 
-    <!-- ================= STORY 2 ================= -->
+    <!-- =====================================================================
+         PHẦN 3: CÂU CHUYỆN 2 — Giò Lụa Chả Quế
+         Layout: CHỮ TRÁI — ẢNH PHẢI (đảo so với story 1)
+         .row-reverse → CSS dùng flex-direction: row-reverse để đảo thứ tự
+         .s2 → nền màu mint nhạt (zebra stripe effect)
+    ===================================================================== -->
     <section class="story-section s2 reveal-section" data-reveal-group>
       <div class="story-container row-reverse">
-        <!-- row-reverse → đảo layout -->
+        <!-- row-reverse: đảo chiều flex → text hiện bên trái, ảnh bên phải -->
 
+        <!-- CỘT TRÁI: chữ (nhưng trong HTML viết trước, CSS đổi thứ tự qua flex-direction) -->
         <div class="story-text-col reveal-item reveal-up">
           <div class="story-header">
             <span class="story-num">02.</span>
@@ -182,9 +197,10 @@
           </p>
         </div>
 
+        <!-- CỘT PHẢI: ảnh
+             reveal-right: trượt từ phải vào khi scroll xuống -->
         <div class="story-img-wrapper reveal-item reveal-right">
           <div class="story-img-decor"></div>
-
           <img
             class="story-img"
             src="assets/images/story/story-gio-cha.png"
@@ -194,13 +210,16 @@
       </div>
     </section>
 
-    <!-- ================= STORY 3 ================= -->
+    <!-- =====================================================================
+         PHẦN 4: CÂU CHUYỆN 3 — Khay Mứt Tết
+         Layout: ẢNH TRÁI — CHỮ PHẢI (giống story 1)
+         .s3: dùng cùng với s1 để định vị .story-img-decor lệch trái
+    ===================================================================== -->
     <section class="story-section s3 reveal-section" data-reveal-group>
       <div class="story-container">
 
         <div class="story-img-wrapper reveal-item reveal-left">
           <div class="story-img-decor"></div>
-
           <img
             class="story-img"
             src="assets/images/story/story-khay-mut.png"
@@ -216,7 +235,6 @@
 
           <div class="story-quote-frame">
             <div class="story-quote-line"></div>
-
             <p class="story-quote">
               "Trà đắng đố kị mứt thơm ngọt<br />
               Như đời nhân thế nếm đắng cay..."
@@ -230,7 +248,11 @@
       </div>
     </section>
 
-    <!-- ================= STORY 4 ================= -->
+    <!-- =====================================================================
+         PHẦN 5: CÂU CHUYỆN 4 — Dư Vị Lai Rai / Khô Bò
+         Layout: CHỮ TRÁI — ẢNH PHẢI (giống story 2)
+         Tái dùng class s2 → nền mint nhạt giống story 2 (zebra stripe tiếp tục)
+    ===================================================================== -->
     <section class="story-section s2 reveal-section" data-reveal-group>
       <div class="story-container row-reverse">
 
@@ -242,7 +264,6 @@
 
           <div class="story-quote-frame">
             <div class="story-quote-line"></div>
-
             <p class="story-quote">
               "Khách đến dâng chén sương lam<br />
               Kèm thêm chút mồi thắm đượm thâm giao"
@@ -256,7 +277,6 @@
 
         <div class="story-img-wrapper reveal-item reveal-right">
           <div class="story-img-decor"></div>
-
           <img
             class="story-img"
             src="assets/images/story/story-kho-bo.png"
@@ -266,30 +286,41 @@
       </div>
     </section>
 
-    <!-- ================= CTA ================= -->
-    <section class="story-cta reveal-section" data-reveal-group">
+    <!-- =====================================================================
+         PHẦN 6: CALL TO ACTION (CTA) — Nền đỏ cuối trang
+         Kêu gọi người dùng sang trang menu để đặt hàng
+    ===================================================================== -->
+    <section class="story-cta reveal-section" data-reveal-group>
+    <!-- Lưu ý: HTML gốc có lỗi dư dấu " ở attribute: data-reveal-group" — nên bỏ dấu " thừa đó -->
 
       <div class="story-cta-inner reveal-item reveal-up">
+        <!-- Khung vàng bo tròn bên trong, chứa chữ và nút -->
+
+        <!-- Dòng slogan, font Playfair nghiêng, màu vàng gold -->
         <h3 class="story-cta-desc">
           Khởi mạch nguồn ẩm thực năm mới cùng Bếp Nhà Ngọ.
         </h3>
 
+        <!-- Nút CTA: link đến trang menu.html
+             Dùng thẻ <a> thay vì <button> vì đây là điều hướng sang trang khác -->
         <a href="menu.html" class="story-cta-btn">
           KHÁM PHÁ THỰC ĐƠN
         </a>
-        <!-- CTA điều hướng -->
       </div>
     </section>
+
   </main>
 
-  <!-- FOOTER load động -->
+  <!-- FOOTER: cũng load động như header bằng main.js -->
   <footer class="footer"></footer>
 
-  <!-- JavaScript chính của trang -->
+  <!-- script.js: các hàm tiện ích dùng chung (phải load trước main.js) -->
   <script src="assets/js/script.js"></script>
 
+  <!-- main.js: load header/footer, updateCartBadge, showToast... -->
   <script src="assets/js/main.js"></script>
 
+  <!-- story.js: hiệu ứng scroll reveal (trượt vào) + parallax cho hero -->
   <script src="assets/js/story.js"></script>
 </body>
 </html>

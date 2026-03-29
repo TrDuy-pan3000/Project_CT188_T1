@@ -1,57 +1,73 @@
 <!doctype html>
 <html lang="vi">
   <head>
-    <!-- Khai báo bộ ký tự tiếng Việt và thiết lập giao diện responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Mô tả trang — hiển thị khi chia sẻ link hoặc tìm kiếm trên Google -->
     <meta
       name="description"
       content="Bếp Nhà Ngọ - Ăn là Mê, Rước Lộc về! Món ăn Tết truyền thống, giao hàng tận nơi tại Cần Thơ. Bánh tét, bánh chưng, đồ nhậu Tết chất lượng."
     />
+    <!-- Tiêu đề hiện trên tab trình duyệt -->
     <title>Bếp Nhà Ngọ - Ăn là Mê, Rước Lộc về!</title>
 
-    <!-- Google Fonts: Baloo 2 (tiêu đề vui), Nunito (nội dung), Cormorant Garamond (sang trọng), Inter (giao diện) -->
+    <!-- Kết nối trước tới Google Fonts để tải font nhanh hơn -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Tải 2 font chữ từ Google Fonts:
+         - Playfair Display: font serif sang trọng, dùng cho tiêu đề lớn
+         - Be Vietnam Pro: font sans-serif hiện đại, dùng cho nội dung thông thường -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Favicon - icon nhỏ hiển thị trên tab trình duyệt -->
+    <!-- Favicon: icon nhỏ hiện trên tab trình duyệt, dùng logo của shop -->
     <link rel="icon" type="image/png" href="assets/images/ui/logo.png" />
 
-    <!-- Font Awesome - thư viện icon (giỏ hàng, tìm kiếm, mạng xã hội...) -->
+    <!-- Font Awesome: thư viện icon (giỏ hàng, tìm kiếm, mạng xã hội...) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <!-- CSS: style.css (dùng chung) + index.css (riêng cho trang chủ) -->
+    <!-- style.css: CSS dùng chung cho toàn bộ website (biến màu, reset, font...) -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- index.css: CSS của trang chủ, dùng lại một số thành phần chung -->
     <link rel="stylesheet" href="assets/css/index.css" />
+    <!-- detail.css: CSS riêng cho trang chi tiết sản phẩm này -->
     <link rel="stylesheet" href="assets/css/detail.css" />
   </head>
   <body>
-    <!-- ======================== HEADER - Thanh điều hướng cố định trên cùng ======================== -->
+    <!-- ======================== HEADER ========================
+         Header được tải động bằng JS (script.js),
+         không cần viết nội dung ở đây, JS sẽ tự điền vào -->
     <header class="header"></header>
 
-    <main style="padding-top: 5rem"> 
+    <!-- padding-top: 5rem để nội dung không bị header che khuất
+         vì header đang được position: fixed (dính trên cùng) -->
+    <main style="padding-top: 5rem">
 
-      <!-- Phần chứa nội dung chi tiết sản phẩm -->
+      <!-- ======================== PHẦN ẢNH VÀ THÔNG TIN SẢN PHẨM ========================
+           Section này hiển thị ảnh lớn bên trái và thông tin sản phẩm bên phải.
+           Toàn bộ nội dung HTML tĩnh bên trong sẽ bị JS (detail.js) thay thế
+           bằng dữ liệu thực lấy từ product.json dựa theo ?id= trên URL -->
       <section class="single-product">
         <div class="container">
-          <!-- Hình ảnh sản phẩm bên trái -->
+
+          <!-- Ảnh sản phẩm lớn bên trái kèm gallery ảnh nhỏ phía dưới -->
           <div class="big-img-left">
+            <!-- Ảnh chính lớn: src mặc định này sẽ bị JS ghi đè khi tải xong dữ liệu -->
             <img
               src="assets/images/story/story-banh-chung-new.png"
               alt=""
               id="main-img"
             />
-            <!-- gallery-container chứa các ảnh sản phẩm dưới ảnh lớn -->
+            <!-- gallery-container: lưới 4 ảnh nhỏ bên dưới ảnh chính.
+                 Khi click vào ảnh nhỏ, JS sẽ cập nhật src của #main-img phía trên -->
             <div class="gallery-container">
+              <!-- Các ảnh nhỏ placeholder tĩnh — JS sẽ thay bằng ảnh thực từ JSON.
+                   class="small-img" dùng để JS attach sự kiện click -->
               <img
                 src="assets/images/story/story-banh-chung-new.png"
                 alt=""
@@ -74,10 +90,14 @@
               />
             </div>
           </div>
-          <!-- Phần nội dung sản phẩm bên phải -->
+
+          <!-- Phần nội dung chữ bên phải: tên, rating, mô tả, giá, nút mua -->
           <div class="content-right">
+            <!-- Tên sản phẩm: font lớn màu đỏ đậm -->
             <h2 class="product-name">Bánh Tét Nhân Chuối</h2>
+            <!-- Đánh giá sao: hiện bằng emoji ⭐ lấy từ JSON -->
             <span class="product-rating">⭐⭐⭐⭐⭐</span>
+            <!-- Mô tả ngắn về sản phẩm + link sang trang story.html -->
             <p class="product-description">
               Bánh tét, có nơi gọi là bánh đòn, là một loại bánh trong ẩm thực
               của cả người Việt và một số dân tộc ít người ở miền Nam và miền
@@ -89,9 +109,14 @@
               hay đậu đen được làm hay là bán quanh năm.
               <a href="./story.html">Xem thêm các câu chuyện ngày tết →</a>
             </p>
-            <strong class="product-price">180.000₫ <span> / Đòn</span></strong>
+            <!-- Giá sản phẩm: số lớn màu đỏ, đơn vị tính nhỏ hơn bên cạnh -->
+            <strong class="product-price">180.000₫ <span>/ Đòn</span></strong>
+
+            <!-- Khu vực chọn số lượng và nút thêm vào giỏ hàng -->
             <div class="buying-wrap">
+              <!-- Ô nhập số lượng: min=1 để không nhập âm hoặc bằng 0 -->
               <input id="quantity" type="number" value="1" min="1" />
+              <!-- Nút thêm vào giỏ: JS (detail.js) lắng nghe click và gọi addToCart() -->
               <button class="add-to-cart-button" id="add-cart">
                 BỎ VÀO MÂM
               </button>
@@ -100,18 +125,24 @@
         </div>
       </section>
 
-      <!-- Phần Thông tin thêm về sản phẩm -->
+      <!-- ======================== PHẦN CHI TIẾT SẢN PHẨM ========================
+           Thông tin đầy đủ hơn: trọng lượng, thành phần, đóng gói, hẹn dùng, bảo quản.
+           JS (detail.js) sẽ điền dữ liệu từ JSON vào #more-details bên dưới -->
       <section class="more-info">
-        <!-- title section và ảnh linh vật -->
+        <!-- Thanh tiêu đề section + ảnh linh vật trang trí góc phải -->
         <div class="title">
           <h1>Chi Tiết Sản Phẩm</h1>
+          <!-- Ảnh linh vật nhỏ đặt góc dưới phải của title,
+               z-index cao hơn để nổi lên trên nền -->
           <img
             src="assets/images/mascots/top-bar-mascot-detail.png"
             class="top-mascot"
           />
         </div>
-        <!-- nội dung section -->
+        <!-- Container chứa nội dung chi tiết: các cặp h4 (tiêu đề) + p (nội dung).
+             JS dùng id "more-details" để tìm và cập nhật khi tải dữ liệu xong -->
         <div class="container" id="more-details">
+          <!-- id="weight", id="ingredient-list" v.v. để dễ nhắm mục tiêu khi debug -->
           <h4 id="weight">Trọng lượng:</h4>
           <p>800g - 1kg / đòn.</p>
           <h4 id="ingredient-list">Thành phần chính:</h4>
@@ -154,9 +185,11 @@
         </div>
       </section>
 
-      <!-- Phần đánh giá từ khách hàng -->
+      <!-- ======================== PHẦN ĐÁNH GIÁ KHÁCH HÀNG ========================
+           Hiển thị danh sách review từ khách.
+           JS (detail.js) điền review-card động vào div.reviews -->
       <section class="product-reviews">
-        <!-- title section và ảnh linh vật -->
+        <!-- Thanh tiêu đề section + ảnh linh vật trang trí -->
         <div class="title">
           <h1>Đánh Giá Từ Khách Hàng Nhà Ngọ</h1>
           <img
@@ -165,15 +198,38 @@
           />
         </div>
 
-        <!-- nội dung section -->
+        <!-- div.reviews.container: vừa là container flex/grid, vừa là nơi JS
+             (detail.js) inject HTML các review-card từ mảng reviews trong JSON.
+             Nội dung tĩnh bên dưới chỉ là placeholder, sẽ bị ghi đè khi JS chạy -->
         <div class="reviews container">
+          <!-- Một review-card mẫu: gồm avatar + thông tin người dùng + nội dung nhận xét -->
+          <div class="review-card">
+            <!-- test-author: hàng trên cùng của card, flex ngang -->
+            <div class="test-author">
+              <!-- Avatar dạng emoji, lấy từ trường "avatar" trong JSON -->
+              <span class="test-avatar">👩</span>
+              <div class="test-info">
+                <h4>Chị Hương</h4>
+                <!-- Địa chỉ / vùng miền của người đánh giá -->
+                <p>Quận 1, TP.HCM</p>
+                <!-- Số sao đánh giá hiển thị bằng emoji ⭐ lấy từ JSON -->
+                <div class="test-stars">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <!-- Nội dung nhận xét -->
+            <p class="test-text">
+              Bánh tét ngon quá trời luôn á! Vị y như bánh bà ngoại gói, ăn mà
+              nhớ quê quá chừng. Năm sau chắc chắn đặt tiếp nha Bếp Nhà Ngọ!
+            </p>
+          </div>
+
+          <!-- (Các review-card tương tự, sẽ bị thay ở runtime — giữ lại để xem layout) -->
           <div class="review-card">
             <div class="test-author">
               <span class="test-avatar">👩</span>
               <div class="test-info">
                 <h4>Chị Hương</h4>
                 <p>Quận 1, TP.HCM</p>
-
                 <div class="test-stars">⭐⭐⭐⭐⭐</div>
               </div>
             </div>
@@ -189,23 +245,6 @@
               <div class="test-info">
                 <h4>Chị Hương</h4>
                 <p>Quận 1, TP.HCM</p>
-
-                <div class="test-stars">⭐⭐⭐⭐⭐</div>
-              </div>
-            </div>
-            <p class="test-text">
-              Bánh tét ngon quá trời luôn á! Vị y như bánh bà ngoại gói, ăn mà
-              nhớ quê quá chừng. Năm sau chắc chắn đặt tiếp nha Bếp Nhà Ngọ!
-            </p>
-          </div>
-
-          <div class="review-card">
-            <div class="test-author">
-              <span class="test-avatar">👩</span>
-              <div class="test-info">
-                <h4>Chị Hương</h4>
-                <p>Quận 1, TP.HCM</p>
-
                 <div class="test-stars">⭐⭐⭐⭐⭐</div>
               </div>
             </div>
@@ -217,9 +256,11 @@
         </div>
       </section>
 
-      <!-- Phần các sản phẩm liên quan -->
+      <!-- ======================== PHẦN SẢN PHẨM LIÊN QUAN ========================
+           Hiển thị ngẫu nhiên 4 sản phẩm khác từ product.json.
+           JS (detail.js) điền article.related-product vào div.products.grid -->
       <section class="related-products">
-        <!-- title section và ảnh linh vật -->
+        <!-- Thanh tiêu đề section + ảnh linh vật trang trí -->
         <div class="title">
           <h1>Các Món Ngon Khác Trong Gian Bếp</h1>
           <img
@@ -228,9 +269,14 @@
           />
         </div>
 
-        <!-- nội dung section -->
+        <!-- Container ngoài để căn giữa lưới sản phẩm -->
         <div class="container">
+          <!-- div.products.grid: lưới auto-fit chứa các card.
+               JS dùng querySelector(".products") để lấy phần tử này và inject HTML.
+               Nội dung article tĩnh bên dưới là placeholder xem layout. -->
           <div class="products grid">
+            <!-- Mỗi article là một card sản phẩm liên quan.
+                 Cấu trúc: ảnh (link sang detail) + nội dung (tên, mô tả ngắn, giá, nút thêm) -->
             <article class="related-product" href="detail.html?id=">
               <img src="assets/images/products/product-banh-tet-chuoi-1.jpg" alt="" />
               <div class="content-wrap">
@@ -239,6 +285,7 @@
                   Bánh tét nếp lá cẩm tím, nhân đậu xanh thịt mỡ, hương vị đặc
                   trưng miền Tây
                 </p>
+                <!-- card-bottom: flex ngang, giá bên trái, nút bên phải -->
                 <div class="card-bottom">
                   <p class="price">180.000₫</p>
                   <a href="detail.html?id=" class="btn-add"
@@ -300,18 +347,25 @@
             </article>
           </div>
         </div>
+        <!-- Nút "Xem tất cả" chuyển sang trang menu.html -->
         <div class="view-all-btn-container">
           <a href="menu.html" class="btn-outline">Xem tất cả món →</a>
         </div>
       </section>
     </main>
 
-    <!-- ======================== FOOTER - Chân trang ======================== -->
-    <!-- Gồm 3 cột: giới thiệu + mạng xã hội, liên kết nhanh, thông tin liên hệ -->
-    <!-- Footer -->
+    <!-- ======================== FOOTER ========================
+         Footer được tải động bằng JS (script.js),
+         gồm 3 cột: giới thiệu + mạng xã hội, liên kết nhanh, thông tin liên hệ -->
     <footer class="footer"></footer>
+
+    <!-- script.js: xử lý chung (header/footer động, giỏ hàng, toast thông báo...)
+         Phải load trước các file JS khác vì detail.js dùng hàm từ đây -->
     <script src="assets/js/script.js"></script>
+    <!-- main.js: xử lý các tính năng chung của toàn trang -->
     <script src="assets/js/main.js"></script>
+    <!-- detail.js: xử lý riêng cho trang chi tiết sản phẩm
+         (tải dữ liệu từ JSON theo ?id=, render ảnh, thêm giỏ hàng) -->
     <script src="assets/js/detail.js"></script>
   </body>
 </html>
