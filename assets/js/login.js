@@ -139,8 +139,8 @@ if (registerForm) {
     // --- Kiểm tra email đã tồn tại chưa ---
     // .some() trả về true nếu có ít nhất 1 phần tử thỏa điều kiện
     const isExist = users.some((u) => u.email === email);
-    if (isExist) {
-      alert("Email này đã được đăng ký");
+    if (isExist || email === "admin@gmail.com") {
+      alert("Email này đã được đăng ký hoặc không sử dụng được");
       return;
     }
 
@@ -177,6 +177,16 @@ if (loginForm) {
     // --- Kiểm tra không để trống ---
     if (!email || !password) {
       alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
+
+    // --- TÀI KHOẢN QUẢN TRỊ (ADMIN) ---
+    // Bỏ qua mọi check hợp lệ bên dưới nếu login đúng tài khoản admin
+    if (email === "admin@gmail.com" && password === "1") {
+      const adminUser = { name: "Quản trị viên", email: "admin@gmail.com", phone: "0999999999", role: "admin" };
+      localStorage.setItem("currentUser", JSON.stringify(adminUser));
+      alert("Đăng nhập quyền Admin thành công!");
+      window.location.href = "index.html";
       return;
     }
 
