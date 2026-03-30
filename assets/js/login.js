@@ -180,12 +180,12 @@ if (loginForm) {
       return;
     }
 
-    // --- TÀI KHOẢN QUẢN TRỊ (ADMIN) ---
+    // --- TÀI KHOẢN DÙNG THỬ (ADMIN) ---
     // Bỏ qua mọi check hợp lệ bên dưới nếu login đúng tài khoản admin
     if (email === "admin@gmail.com" && password === "1") {
-      const adminUser = { name: "Quản trị viên", email: "admin@gmail.com", phone: "0999999999", role: "admin" };
+      const adminUser = { name: "admin", email: "admin@gmail.com", phone: "0999999999" };
       localStorage.setItem("currentUser", JSON.stringify(adminUser));
-      alert("Đăng nhập quyền Admin thành công!");
+      alert("Đăng nhập thành công");
       window.location.href = "index.html";
       return;
     }
