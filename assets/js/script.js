@@ -200,6 +200,8 @@ function initUserUI() {
       // Desktop: thêm tên user bên cạnh icon, thêm class để CSS style khác đi
       userBtn.innerHTML = `<i class="fa-regular fa-user"></i> <span class="user-name-span">${escapeHtml(user.name)}</span>`;
       userBtn.classList.add("logged-in");
+      userBtn.removeAttribute("href"); // Ngăn click vào tên bị chuyển về trang login
+      userBtn.style.cursor = "default"; // Đổi con trỏ chuột
       if (logoutBtn) {
         logoutBtn.style.display = "flex";              // Hiển thị nút đăng xuất
         logoutBtn.setAttribute("title", "Đăng xuất"); // Tooltip khi hover
